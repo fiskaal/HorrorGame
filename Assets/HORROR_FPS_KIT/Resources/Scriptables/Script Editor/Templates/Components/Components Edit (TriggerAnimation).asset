@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (TriggerAnimation)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Trigger_Manual
+    original: "\t\tvoid OnTriggerEnter(Collider other)\r\n\t\t{\r\n\t\t\tif (other.CompareTag(\"Player\")
+      && !isPlayed)\r\n\t\t\t{\r\n\t\t\t\tAnimationObject.GetComponent<Animation>().Play();\r\n\r\n\t\t\t\tif
+      (AnimationSound)\r\n\t\t\t\t{\r\n\t\t\t\t\tif (!is2D)\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tAudioSource.PlayClipAtPoint(AnimationSound,
+      AnimationObject.transform.position, Volume);\r\n\t\t\t\t\t}\r\n\t\t\t\t\telse\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tUtilities.PlayOneShot2D(transform.position,
+      AnimationSound, Volume);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\r\n\t\t\t\tisPlayed
+      = true;\r\n\t\t\t}\r\n\t\t}"
+    edit: "\t\tvoid OnTriggerEnter(Collider other)\r\n\t\t{\r\n\t\t\tif (other.CompareTag(\"Player\")
+      && !isPlayed)\r\n\t\t\t{\r\n\t\t\t\tAnimationObject.GetComponent<Animation>().Play();\r\n\r\n\t\t\t\tif
+      (AnimationSound)\r\n\t\t\t\t{\r\n\t\t\t\t\tif (!is2D)\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tAudioSource.PlayClipAtPoint(AnimationSound,
+      AnimationObject.transform.position, Volume);\r\n\t\t\t\t\t}\r\n\t\t\t\t\telse\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tUtilities.PlayOneShot2D(transform.position,
+      AnimationSound, Volume);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\r\n\t\t\t\tisPlayed
+      = true;\r\n\t\t\t}\r\n\t\t}\r\n        \r\n\t\tpublic void Trigger_Manual()
+      {\r\n        \r\n\t\t\tif (!isPlayed)\r\n\t\t\t{\r\n\t\t\t\tAnimationObject.GetComponent<Animation>().Play();\r\n\r\n\t\t\t\tif
+      (AnimationSound)\r\n\t\t\t\t{\r\n\t\t\t\t\tif (!is2D)\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tAudioSource.PlayClipAtPoint(AnimationSound,
+      AnimationObject.transform.position, Volume);\r\n\t\t\t\t\t}\r\n\t\t\t\t\telse\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tUtilities.PlayOneShot2D(transform.position,
+      AnimationSound, Volume);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\r\n\t\t\t\tisPlayed
+      = true;\r\n\t\t\t}\r\n            \r\n\t\t}//Trigger_Manual\r\n        \r\n\t\tpublic
+      void TriggerMulti_Manual() {\r\n        \r\n\t\t\tAnimationObject.GetComponent<Animation>().Play();\r\n\r\n\t\t\tif
+      (AnimationSound)\r\n\t\t\t{\r\n\t\t\t\tif (!is2D)\r\n\t\t\t\t{\r\n\t\t\t\t   
+      AudioSource.PlayClipAtPoint(AnimationSound, AnimationObject.transform.position,
+      Volume);\r\n\t\t\t\t}\r\n\t\t\t\telse\r\n\t\t\t\t{\r\n\t\t\t\t    Utilities.PlayOneShot2D(transform.position,
+      AnimationSound, Volume);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t}//TriggerMulti_Manual\r\n"

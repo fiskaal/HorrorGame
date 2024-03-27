@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (DynamicObject)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Start State Enum
+    original: "    public enum Type_Axis\r\n    {\r\n        AxisX,\r\n        AxisY,\r\n       
+      AxisZ\r\n    }"
+    edit: "    public enum Type_Axis\r\n    {\r\n        AxisX,\r\n        AxisY,\r\n       
+      AxisZ\r\n    }\r\n    \r\n    public enum Start_State {\r\n    \r\n       
+      Closed = 0,\r\n        Open = 1,\r\n    \r\n    }//Start_State\r\n"
+  - name: Start State Values
+    original: "        public Type_Interact interactType = Type_Interact.Animation;\r\n       
+      public Type_Key keyType = Type_Key.Script;"
+    edit: "        public Type_Interact interactType = Type_Interact.Animation;\r\n       
+      public Type_Key keyType = Type_Key.Script;\r\n        public Start_State startState;\r\n       
+      public bool startStateLocked;"
+  - name: UseQuickAnim Add
+    original: "        public string useAnim;\r\n        public string backUseAnim;"
+    edit: "        public string useAnim;\r\n        public string backUseAnim;\r\n       
+      public string useQuickAnim;"
+  - name: Late Start Update
+    original: "        void LateStart()\r\n        {\r\n            if (useSR) {
+      isOpened = true; transform.localEulerAngles = startingRotation; }\r\n           
+      load = false;\r\n        }"
+    edit: "        void LateStart()\r\n        {\r\n            if (useSR) { isOpened
+      = true; transform.localEulerAngles = startingRotation; }\r\n            load
+      = false;\r\n            \r\n            if(dynamicType == Type_Dynamic.Door
+      | dynamicType == Type_Dynamic.Drawer){\r\n            \r\n                if(!startStateLocked){\r\n           
+      \r\n                    if(startState == Start_State.Open){\r\n\r\n                       
+      if(useQuickAnim != \"\"){\r\n                        \r\n                           
+      m_Animation.Play(useQuickAnim);\r\n                            defaultAngle
+      = transform.eulerAngles.y;\r\n                            \r\n                           
+      isOpened = true;\r\n                            startStateLocked = true;\r\n                           
+      \r\n                            //Debug.Log(\"Door Open State Init\");\r\n\r\n                       
+      }//useQuickAnim != null\r\n                        \r\n                   
+      }//startState = open\r\n                \r\n                }//!startStateLocked\r\n           
+      \r\n            }//dynamicType = door or drawer\r\n            \r\n       
+      }"
+  - name: OnSave Update
+    original: "        public Dictionary<string, object> OnSave()\r\n        {\r\n           
+      Dictionary<string, object> SaveData = new Dictionary<string, object>();\r\n\r\n           
+      if (dynamicType == Type_Dynamic.Door)\r\n            {"
+    edit: "        public Dictionary<string, object> OnSave()\r\n        {\r\n           
+      Dictionary<string, object> SaveData = new Dictionary<string, object>();\r\n\r\n           
+      if(dynamicType == Type_Dynamic.Door | dynamicType == Type_Dynamic.Drawer) {\r\n           
+      \r\n                SaveData.Add(\"startStateLocked\", startStateLocked);\r\n           
+      \r\n            }//dynamicType = door or drawer\r\n\r\n            if (dynamicType
+      == Type_Dynamic.Door)\r\n            {"
+  - name: OnLoad Update
+    original: "        public void OnLoad(JToken token)\r\n        {\r\n           
+      if (dynamicType == Type_Dynamic.Door)\r\n            {"
+    edit: "        public void OnLoad(JToken token)\r\n        {\r\n            if(dynamicType
+      == Type_Dynamic.Door | dynamicType == Type_Dynamic.Drawer) {\r\n           
+      \r\n                startStateLocked = (bool)token[\"startStateLocked\"];\r\n           
+      \r\n            }//dynamicType = door or drawer\r\n        \r\n           
+      if (dynamicType == Type_Dynamic.Door)\r\n            {"

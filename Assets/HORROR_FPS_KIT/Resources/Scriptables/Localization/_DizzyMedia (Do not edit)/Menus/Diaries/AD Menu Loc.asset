@@ -1,0 +1,1271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: AD Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Info
+            text: '
+
+              The Audio Diaries Version file is missing from
+              your project, Audio Diaries cannot run without it!
+
+
+              You
+              can re-import the Audio Diaries Version file from the Audio Diaries
+              asset pack on the
+
+              asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: Welcome
+          texts:
+          - name: Audio Diaries Not Active
+            text: AUDIO DIARIES NOT ACTIVE! Check the SETUP tab for instructions.
+          - name: Audio Diaries Active
+            text: AUDIO DIARIES ACTIVE!
+          - name: Instructions
+            text: '
+
+              Hello and welcome to Audio Diaries!
+
+
+              Before
+              getting started make sure to check the Setup tab for the initial setup
+              instructions.
+
+'
+          - name: Support Info
+            text: SUPPORTS HFPS 1.6.3a+ | UNITY 2020+
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Documentation
+            local: Documentation
+          - name: Tutorials
+            local: Tutorials
+          - name: Review Asset
+            local: Review Asset
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: Show On Start
+        - name: Setup
+          local: Setup
+          texts:
+          - name: Audio Diaries Not Active
+            text: AUDIO DIARIES NOT ACTIVE! Follow the instructions below.
+          - name: Audio Diaries Active
+            text: AUDIO DIARIES ACTIVE!
+          - name: Instructions
+            text: "\nMost of Audio Diaries features are available to use right away
+              however a few features do require minor edits to the HFPS system components
+              in order to function properly.\n\nBEFORE activating Audio Diaries use
+              the Script Editor extension, this extension will make automatic edits
+              to scripts that Audio Diaries uses.\n\nSetup steps are as follows:\n\n1.
+              Script Editor \r\n2. Activate Audio Diaries\r\n3. Import Gizmos\n4.
+              Documentation > Add Ons > Download / Import asset packs listed\r\n5.
+              Done!\n"
+          buttons:
+          - name: Open Script Editor
+            local: Open Script Editor
+          - name: Open Version Detect
+            local: Open Version Detect
+          - name: Activate Audio Diaries
+            local: Activate Audio Diaries
+          - name: Deactivate Audio Diaries
+            local: Deactivate Audio Diaries
+          - name: Import Gizmos
+            local: Import Gizmos
+          - name: Remove Gizmos
+            local: Remove Gizmos
+          toggles: []
+          prompts:
+          - name: Add Symbols
+            header: Add Symbols?
+            message: "You are about to add new Define Symbols to your settings, this
+              will force your scripts to re-compile. Make sure to save before adding
+              new Define Symbols. \n\nAre you sure?"
+            buttons:
+            - name: Add
+              local: Add
+            - name: Cancel
+              local: Cancel
+          - name: Remove Symbols
+            header: Remove Symbols?
+            message: "You are about to remove Define Symbols from your settings,
+              this will force your scripts to re-compile. Make sure to save before
+              adding new Define Symbols. \n\nAre you sure?"
+            buttons:
+            - name: Remove
+              local: Remove
+            - name: Cancel
+              local: Cancel
+          - name: Symbols Present
+            header: Symbols Present
+            message: 'The Define Symbols you are trying to add is already present. '
+            buttons:
+            - name: Ok
+              local: Ok
+          - name: Import Gizmos
+            header: Import Gizmos?
+            message: You are about to move Gizmo files from the Dizzy Media parent
+              folder to the Gizmos folder. If you've already done this, close this
+              window.
+            buttons:
+            - name: Move
+              local: Move
+            - name: Cancel
+              local: Cancel
+          - name: Remove Gizmos
+            header: Remove Gizmos?
+            message: 'You are about to remove Audio Diaries Gizmos files from your
+              project.
+
+
+              Are you sure?'
+            buttons:
+            - name: Remove
+              local: Remove
+            - name: Cancel
+              local: Cancel
+          - name: HFPS Version Symbol
+            header: HFPS Version Symbol
+            message: Which HFPS version are you using?
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: More
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: Cancel
+          singleValues:
+          - name: Compiling
+            local: Compiling
+          - name: 'Adding Symbols - '
+            local: 'Adding Symbols - '
+          - name: 'Removing Symbols - '
+            local: 'Removing Symbols - '
+          - name: Removing All Version Symbols
+            local: Removing All Version Symbols
+          - name: Nothing to Add
+            local: Nothing to Add
+          - name: Nothing to Remove
+            local: Nothing to Remove
+        - name: Integrations
+          local: Integrations
+          texts:
+          - name: DM Setup
+            text: '
+
+              Audio Diaries for HFPS currently supports integration
+              with all of my HFPS add ons and requires no setup on your part!
+
+'
+          - name: 3rd Party Setup
+            text: '
+
+              Use the toggles below to display setup instructions
+              for each third party integration.
+
+'
+          - name: HFPS Localization Not Active
+            text: HFPS LOCALIZATION NOT ACTIVE!
+          - name: HFPS Localization Active
+            text: HFPS LOCALIZATION ACTIVE!
+          - name: DM Localization Not Active
+            text: DM LOCALIZATION NOT ACTIVE!
+          - name: DM Localization Active
+            text: DM LOCALIZATION ACTIVE!
+          - name: Localization Instructions
+            text: '
+
+              Audio Diaries supports and works with HFPS Localization
+              System!
+
+
+              However in order to use this integration you
+              must do the following:
+
+
+              1. Activate HFPS Localization
+
+              2.
+              Activate DM Localization
+
+              3. Import Dizzy Media Localization
+              Map
+
+              4. Import AD Localization Pack
+
+
+              Demo
+              scenes for full localization setups are provided in the scenes folder
+              for each asset.
+
+              Demo Localization maps and text tables
+              are provided globally across all HFPS add on assets.
+
+'
+          buttons:
+          - name: Dizzy Media
+            local: Dizzy Media
+          - name: Third Party
+            local: Third Party
+          - name: HFPS Localization
+            local: HFPS Localization
+          - name: Activate DM Localization
+            local: Activate DM Localization
+          - name: Deactivate DM Localization
+            local: Deactivate DM Localization
+          - name: Import Localization Map
+            local: Import Localization Map
+          - name: Import AD Localization
+            local: Import AD Localization
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: Add Symbol?
+            message: "You are about to add a new Define Symbol to your settings,
+              this will force your scripts to re-compile. Make sure to save before
+              adding new Define Symbols. \n\nAre you sure?"
+            buttons:
+            - name: Add
+              local: Add
+            - name: Cancel
+              local: Cancel
+          singleValues: []
+    - name: Chinese Simplified
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Info
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11\u97F3\u9891\u65E5\u8BB0\u7248\u672C\u6587\u4EF6\uFF0C\u6CA1\u6709\u5B83\u5C31\u65E0\u6CD5\u8FD0\u884C\u97F3\u9891\u65E5\u8BB0\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u97F3\u9891\u65E5\u8BB0\u8D44\u4EA7\u5305\u4E2D\u91CD\u65B0\u5BFC\u5165\u97F3\u9891\u65E5\u8BB0\u7248\u672C\u6587\u4EF6\r\n\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: "\u6B22\u8FCE"
+          texts:
+          - name: Audio Diaries Not Active
+            text: "\u97F3\u9891\u65E5\u8BB0\u4E0D\u6D3B\u8DC3\uFF01\u67E5\u770B\u201C\u8BBE\u7F6E\u201D\u9009\u9879\u5361\u4EE5\u83B7\u53D6\u8BF4\u660E\u3002"
+          - name: Audio Diaries Active
+            text: "\u97F3\u9891\u65E5\u8BB0\u6D3B\u8DC3\uFF01"
+          - name: Instructions
+            text: "\n\u60A8\u597D\uFF0C\u6B22\u8FCE\u6765\u5230\u97F3\u9891\u65E5\u8BB0\uFF01\r\n\r\n\u5728\u5F00\u59CB\u4E4B\u524D\uFF0C\u8BF7\u52A1\u5FC5\u68C0\u67E5\u201C\u8BBE\u7F6E\u201D\u9009\u9879\u5361\u4EE5\u83B7\u53D6\u521D\u59CB\u8BBE\u7F6E\u8BF4\u660E\u3002\n"
+          - name: Support Info
+            text: "\u652F\u6301 HFPS 1.6.3a+ | \u56E2\u7ED3 2020+"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Documentation
+            local: "\u6587\u6863"
+          - name: Tutorials
+            local: "\u6559\u7A0B"
+          - name: Review Asset
+            local: "\u5BA1\u67E5\u8D44\u4EA7"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: "\u5F00\u59CB\u65F6\u663E\u793A"
+        - name: Setup
+          local: "\u8BBE\u7F6E"
+          texts:
+          - name: Audio Diaries Not Active
+            text: "\u97F3\u9891\u65E5\u8BB0\u4E0D\u6D3B\u8DC3\uFF01\u6309\u7167\u4EE5\u4E0B\u8BF4\u660E\u8FDB\u884C\u64CD\u4F5C\u3002"
+          - name: Audio Diaries Active
+            text: "\u97F3\u9891\u65E5\u8BB0\u6D3B\u8DC3\uFF01"
+          - name: Instructions
+            text: "\nAudio Diaries \u7684\u5927\u90E8\u5206\u529F\u80FD\u90FD\u53EF\u4EE5\u7ACB\u5373\u4F7F\u7528\uFF0C\u4F46\u662F\u4E00\u4E9B\u529F\u80FD\u9700\u8981\u5BF9
+              HFPS \u7CFB\u7EDF\u7EC4\u4EF6\u8FDB\u884C\u5C11\u91CF\u7F16\u8F91\u624D\u80FD\u6B63\u5E38\u8FD0\u884C\u3002\r\n\r\n\u5728\u6FC0\u6D3B\u97F3\u9891\u65E5\u8BB0\u4E4B\u524D\u4F7F\u7528\u811A\u672C\u7F16\u8F91\u5668\u6269\u5C55\uFF0C\u6B64\u6269\u5C55\u5C06\u81EA\u52A8\u7F16\u8F91\u97F3\u9891\u65E5\u8BB0\u4F7F\u7528\u7684\u811A\u672C\u3002\r\n\r\n\u8BBE\u7F6E\u6B65\u9AA4\u5982\u4E0B\uFF1A\r\n\r\n1.\u811A\u672C\u7F16\u8F91\u5668\r\n2.\u6FC0\u6D3B\u97F3\u9891\u65E5\u8BB0\r\n3.\u5BFC\u5165\u5C0F\u53D1\u660E\r\n4.
+              \u6587\u6863 > \u9644\u52A0\u7EC4\u4EF6 > \u4E0B\u8F7D/\u5BFC\u5165\u5217\u51FA\u7684\u8D44\u4EA7\u5305\r\n5.
+              \u5B8C\u6210\uFF01\n"
+          buttons:
+          - name: Open Script Editor
+            local: "\u6253\u5F00\u811A\u672C\u7F16\u8F91\u5668"
+          - name: Open Version Detect
+            local: "\u6253\u5F00\u7248\u672C\u68C0\u6D4B"
+          - name: Activate Audio Diaries
+            local: "\u6FC0\u6D3B\u97F3\u9891\u65E5\u8BB0"
+          - name: Deactivate Audio Diaries
+            local: "\u505C\u7528\u97F3\u9891\u65E5\u8BB0"
+          - name: Import Gizmos
+            local: "\u5BFC\u5165 Gizmo"
+          - name: Remove Gizmos
+            local: "\u5220\u9664 Gizmo"
+          toggles: []
+          prompts:
+          - name: Add Symbols
+            header: "\u6DFB\u52A0\u7B26\u53F7\uFF1F"
+            message: "\u60A8\u5373\u5C06\u5411\u60A8\u7684\u8BBE\u7F6E\u6DFB\u52A0\u65B0\u7684\u5B9A\u4E49\u7B26\u53F7\uFF0C\u8FD9\u5C06\u5F3A\u5236\u60A8\u7684\u811A\u672C\u91CD\u65B0\u7F16\u8BD1\u3002\u786E\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u4E49\u7B26\u53F7\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Add
+              local: "\u6DFB\u52A0"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Remove Symbols
+            header: "\u5220\u9664\u7B26\u53F7\uFF1F"
+            message: "\u60A8\u5373\u5C06\u4ECE\u8BBE\u7F6E\u4E2D\u5220\u9664\u5B9A\u4E49\u7B26\u53F7\uFF0C\u8FD9\u5C06\u5F3A\u5236\u60A8\u7684\u811A\u672C\u91CD\u65B0\u7F16\u8BD1\u3002\u786E\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u4E49\u7B26\u53F7\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Remove
+              local: "\u6D88\u9664"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Symbols Present
+            header: "\u7B26\u53F7\u5B58\u5728"
+            message: "\u60A8\u5C1D\u8BD5\u6DFB\u52A0\u7684\u5B9A\u4E49\u7B26\u53F7\u5DF2\u7ECF\u5B58\u5728\u3002"
+            buttons:
+            - name: Ok
+              local: "\u597D\u7684"
+          - name: Import Gizmos
+            header: "\u5BFC\u5165\u5C0F\u73A9\u610F\u513F\uFF1F"
+            message: "\u60A8\u5373\u5C06\u5C06 Gizmo \u6587\u4EF6\u4ECE Dizzy Media
+              \u7236\u6587\u4EF6\u5939\u79FB\u52A8\u5230 Gizmos \u6587\u4EF6\u5939\u3002\u5982\u679C\u60A8\u5DF2\u7ECF\u8FD9\u6837\u505A\u4E86\uFF0C\u8BF7\u5173\u95ED\u6B64\u7A97\u53E3\u3002"
+            buttons:
+            - name: Move
+              local: "\u79FB\u52A8"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Remove Gizmos
+            header: "\u5220\u9664\u5C0F\u5DE5\u5177\uFF1F"
+            message: "\u60A8\u5373\u5C06\u4ECE\u9879\u76EE\u4E2D\u5220\u9664 Audio
+              Diaries Gizmos \u6587\u4EF6\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Remove
+              local: "\u6D88\u9664"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: HFPS Version Symbol
+            header: "HFPS \u7248\u672C\u7B26\u53F7"
+            message: "\u60A8\u4F7F\u7528\u7684\u662F\u54EA\u4E2A HFPS \u7248\u672C\uFF1F"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: "\u66F4\u591A\u7684"
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: Compiling
+            local: "\u7F16\u8BD1"
+          - name: 'Adding Symbol - '
+            local: "\u6DFB\u52A0\u7B26\u53F7 -"
+          - name: 'Removing Symbol - '
+            local: "\u5220\u9664\u7B26\u53F7 -"
+          - name: Removing All Version Symbols
+            local: "\u5220\u9664\u6240\u6709\u7248\u672C\u7B26\u53F7"
+          - name: Nothing to Add
+            local: "\u65E0\u9700\u6DFB\u52A0"
+          - name: Nothing to remove
+            local: "\u6CA1\u6709\u4EC0\u4E48\u53EF\u5220\u9664\u7684"
+        - name: Integrations
+          local: "\u96C6\u6210"
+          texts:
+          - name: DM Setup
+            text: "\nHFPS \u97F3\u9891\u65E5\u8BB0\u76EE\u524D\u652F\u6301\u4E0E\u6211\u7684\u6240\u6709
+              HFPS \u9644\u52A0\u7EC4\u4EF6\u96C6\u6210\uFF0C\u65E0\u9700\u60A8\u8FDB\u884C\u4EFB\u4F55\u8BBE\u7F6E\uFF01\n"
+          - name: 3rd Party Setup
+            text: "\n\u4F7F\u7528\u4E0B\u9762\u7684\u5207\u6362\u663E\u793A\u6BCF\u4E2A\u7B2C\u4E09\u65B9\u96C6\u6210\u7684\u8BBE\u7F6E\u8BF4\u660E\u3002\n"
+          - name: HFPS Localization Not Active
+            text: "HFPS \u672C\u5730\u5316\u672A\u6FC0\u6D3B\uFF01"
+          - name: HFPS Localization Active
+            text: "HFPS \u672C\u5730\u5316\u6FC0\u6D3B\uFF01"
+          - name: DM Localization Not Active
+            text: "DM \u672C\u5730\u5316\u672A\u6FC0\u6D3B\uFF01"
+          - name: DM Localization Active
+            text: "DM \u672C\u5730\u5316\u6D3B\u52A8\uFF01"
+          - name: Localization Instructions
+            text: "\n\u97F3\u9891\u65E5\u8BB0\u652F\u6301 HFPS \u672C\u5730\u5316\u7CFB\u7EDF\u5E76\u4E0E\u4E4B\u914D\u5408\u4F7F\u7528\uFF01\r\n\r\n\u4F46\u662F\uFF0C\u4E3A\u4E86\u4F7F\u7528\u6B64\u96C6\u6210\uFF0C\u60A8\u5FC5\u987B\u6267\u884C\u4EE5\u4E0B\u64CD\u4F5C\uFF1A\r\n\r\n1.
+              \u6FC0\u6D3B HFPS \u672C\u5730\u5316\r\n2. \u6FC0\u6D3B DM \u672C\u5730\u5316\r\n3.\u5BFC\u5165Dizzy
+              Media\u672C\u5730\u5316\u5730\u56FE\r\n4.\u5BFC\u5165AD\u672C\u5730\u5316\u5305\r\n\r\n\u6BCF\u4E2A\u8D44\u4EA7\u7684\u573A\u666F\u6587\u4EF6\u5939\u4E2D\u63D0\u4F9B\u4E86\u5B8C\u6574\u672C\u5730\u5316\u8BBE\u7F6E\u7684\u6F14\u793A\u573A\u666F\u3002\r\n\u6240\u6709
+              HFPS \u9644\u52A0\u8D44\u4EA7\u5747\u5728\u5168\u7403\u8303\u56F4\u5185\u63D0\u4F9B\u6F14\u793A\u672C\u5730\u5316\u5730\u56FE\u548C\u6587\u672C\u8868\u3002\n"
+          buttons:
+          - name: Dizzy Media
+            local: "\u5934\u6655\u5A92\u4F53"
+          - name: Third Party
+            local: "\u7B2C\u4E09\u8005"
+          - name: HFPS Localization
+            local: "HFPS \u672C\u5730\u5316"
+          - name: Activate DM Localization
+            local: "\u6FC0\u6D3B DM \u672C\u5730\u5316"
+          - name: Deactivate DM Localization
+            local: "\u505C\u7528 DM \u672C\u5730\u5316"
+          - name: Import Localization Map
+            local: "\u5BFC\u5165\u672C\u5730\u5316\u5730\u56FE"
+          - name: Import AD Localization
+            local: "\u5BFC\u5165\u5E7F\u544A\u672C\u5730\u5316"
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "\u6DFB\u52A0\u7B26\u53F7\uFF1F"
+            message: "\u60A8\u5373\u5C06\u5728\u8BBE\u7F6E\u4E2D\u6DFB\u52A0\u4E00\u4E2A\u65B0\u7684\u5B9A\u4E49\u7B26\u53F7\uFF0C\u8FD9\u5C06\u5F3A\u5236\u60A8\u7684\u811A\u672C\u91CD\u65B0\u7F16\u8BD1\u3002\u786E\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u4E49\u7B26\u53F7\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Add
+              local: "\u6DFB\u52A0"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues: []
+    - name: Chinese Traditional
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Info
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11\u97F3\u983B\u65E5\u8A18\u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83\u5C31\u7121\u6CD5\u904B\u884C\u97F3\u983B\u65E5\u8A18\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u97F3\u983B\u65E5\u8A18\u8CC7\u7522\u5305\u91CD\u65B0\u5C0E\u5165\u97F3\u983B\u65E5\u8A18\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: "\u6B61\u8FCE"
+          texts:
+          - name: Audio Diaries Not Active
+            text: "\u97F3\u983B\u65E5\u8A18\u4E0D\u6D3B\u8E8D\uFF01\u67E5\u770B\u201C\u8A2D\u7F6E\u201D\u9078\u9805\u5361\u4EE5\u7372\u53D6\u8AAA\u660E\u3002"
+          - name: Audio Diaries Active
+            text: "\u97F3\u983B\u65E5\u8A18\u6D3B\u8E8D\uFF01"
+          - name: Instructions
+            text: "\n\u60A8\u597D\uFF0C\u6B61\u8FCE\u4F86\u5230\u97F3\u983B\u65E5\u8A18\uFF01\r\n\r\n\u5728\u958B\u59CB\u4E4B\u524D\uFF0C\u8ACB\u52D9\u5FC5\u6AA2\u67E5\u201C\u8A2D\u7F6E\u201D\u9078\u9805\u5361\u4EE5\u7372\u53D6\u521D\u59CB\u8A2D\u7F6E\u8AAA\u660E\u3002\n"
+          - name: Support Info
+            text: "\u652F\u6301 HFPS 1.6.3a+ | \u5718\u7D50 2020+"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Documentation
+            local: "\u6587\u6A94"
+          - name: Tutorials
+            local: "\u6559\u7A0B"
+          - name: Review Asset
+            local: "\u5BE9\u67E5\u8CC7\u7522"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: "\u958B\u59CB\u6642\u986F\u793A"
+        - name: Setup
+          local: "\u8A2D\u7F6E"
+          texts:
+          - name: Audio Diaries Not Active
+            text: "\u97F3\u983B\u65E5\u8A18\u4E0D\u6D3B\u8E8D\uFF01\u6309\u7167\u4EE5\u4E0B\u8AAA\u660E\u9032\u884C\u64CD\u4F5C\u3002"
+          - name: Audio Diaries Active
+            text: "\u97F3\u983B\u65E5\u8A18\u6D3B\u8E8D\uFF01"
+          - name: Instructions
+            text: "\nAudio Diaries \u7684\u5927\u90E8\u5206\u529F\u80FD\u90FD\u53EF\u4EE5\u7ACB\u5373\u4F7F\u7528\uFF0C\u4F46\u662F\u4E00\u4E9B\u529F\u80FD\u9700\u8981\u5C0D
+              HFPS \u7CFB\u7D71\u7D44\u4EF6\u9032\u884C\u5C11\u91CF\u7DE8\u8F2F\u624D\u80FD\u6B63\u5E38\u904B\u884C\u3002\r\n\r\n\u5728\u6FC0\u6D3B\u97F3\u983B\u65E5\u8A18\u4E4B\u524D\u4F7F\u7528\u8173\u672C\u7DE8\u8F2F\u5668\u64F4\u5C55\uFF0C\u6B64\u64F4\u5C55\u5C07\u81EA\u52D5\u7DE8\u8F2F\u97F3\u983B\u65E5\u8A18\u4F7F\u7528\u7684\u8173\u672C\u3002\r\n\r\n\u8A2D\u7F6E\u6B65\u9A5F\u5982\u4E0B\uFF1A\r\n\r\n1.\u8173\u672C\u7DE8\u8F2F\u5668\r\n2.\u6FC0\u6D3B\u97F3\u983B\u65E5\u8A18\r\n3.\u5C0E\u5165\u5C0F\u767C\u660E\r\n4.
+              \u6587\u6A94 > \u9644\u52A0\u7D44\u4EF6 > \u4E0B\u8F09/\u5C0E\u5165\u5217\u51FA\u7684\u8CC7\u7522\u5305\r\n5.
+              \u5B8C\u6210\uFF01\n"
+          buttons:
+          - name: Open Script Editor
+            local: "\u6253\u958B\u8173\u672C\u7DE8\u8F2F\u5668"
+          - name: Open Version Detect
+            local: "\u6253\u958B\u7248\u672C\u6AA2\u6E2C"
+          - name: Activate Audio Diaries
+            local: "\u6FC0\u6D3B\u97F3\u983B\u65E5\u8A18"
+          - name: Deactivate Audio Diaries
+            local: "\u505C\u7528\u97F3\u983B\u65E5\u8A18"
+          - name: Import Gizmos
+            local: "\u5C0E\u5165 Gizmo"
+          - name: Remove Gizmos
+            local: "\u522A\u9664 Gizmo"
+          toggles: []
+          prompts:
+          - name: Add Symbols
+            header: "\u6DFB\u52A0\u7B26\u865F\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5411\u60A8\u7684\u8A2D\u7F6E\u6DFB\u52A0\u65B0\u7684\u5B9A\u7FA9\u7B26\u865F\uFF0C\u9019\u5C07\u5F37\u5236\u60A8\u7684\u8173\u672C\u91CD\u65B0\u7DE8\u8B6F\u3002\u78BA\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u7FA9\u7B26\u865F\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Add
+              local: "\u6DFB\u52A0"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Remove Symbols
+            header: "\u522A\u9664\u7B26\u865F\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5F9E\u8A2D\u7F6E\u4E2D\u522A\u9664\u5B9A\u7FA9\u7B26\u865F\uFF0C\u9019\u5C07\u5F37\u5236\u60A8\u7684\u8173\u672C\u91CD\u65B0\u7DE8\u8B6F\u3002\u78BA\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u7FA9\u7B26\u865F\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Remove
+              local: "\u6D88\u9664"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Symbols Present
+            header: "\u7B26\u865F\u5B58\u5728"
+            message: "\u60A8\u5617\u8A66\u6DFB\u52A0\u7684\u5B9A\u7FA9\u7B26\u865F\u5DF2\u7D93\u5B58\u5728\u3002"
+            buttons:
+            - name: Ok
+              local: "\u597D\u7684"
+          - name: Import Gizmos
+            header: "\u5C0E\u5165\u5C0F\u73A9\u610F\u5152\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5C07 Gizmo \u6587\u4EF6\u5F9E Dizzy Media
+              \u7236\u6587\u4EF6\u593E\u79FB\u52D5\u5230 Gizmos \u6587\u4EF6\u593E\u3002\u5982\u679C\u60A8\u5DF2\u7D93\u9019\u6A23\u505A\u4E86\uFF0C\u8ACB\u95DC\u9589\u6B64\u7A97\u53E3\u3002"
+            buttons:
+            - name: Move
+              local: "\u79FB\u52D5"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Remove Gizmos
+            header: "\u522A\u9664\u5C0F\u5DE5\u5177\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5F9E\u9805\u76EE\u4E2D\u522A\u9664 Audio
+              Diaries Gizmos \u6587\u4EF6\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Remove
+              local: "\u6D88\u9664"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: HFPS Version Symbol
+            header: "HFPS \u7248\u672C\u7B26\u865F"
+            message: "\u60A8\u4F7F\u7528\u7684\u662F\u54EA\u500B HFPS \u7248\u672C\uFF1F"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: "\u66F4\u591A\u7684"
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: Compiling
+            local: "\u7DE8\u8B6F"
+          - name: 'Adding Symbol - '
+            local: "\u6DFB\u52A0\u7B26\u865F -"
+          - name: 'Removing Symbol - '
+            local: "\u522A\u9664\u7B26\u865F -"
+          - name: Removing All Version Symbols
+            local: "\u522A\u9664\u6240\u6709\u7248\u672C\u7B26\u865F"
+          - name: Nothing to Add
+            local: "\u7121\u9700\u6DFB\u52A0"
+          - name: Nothing to remove
+            local: "\u6C92\u6709\u4EC0\u9EBC\u53EF\u522A\u9664\u7684"
+        - name: Integrations
+          local: "\u96C6\u6210"
+          texts:
+          - name: DM Setup
+            text: "\nHFPS \u97F3\u8A0A\u65E5\u8A18\u76EE\u524D\u652F\u63F4\u8207\u6211\u7684\u6240\u6709
+              HFPS \u9644\u52A0\u5143\u4EF6\u96C6\u6210\u200B\u200B\uFF0C\u7121\u9700\u60A8\u9032\u884C\u4EFB\u4F55\u8A2D\u5B9A\uFF01\n"
+          - name: 3rd Party Setup
+            text: "\n\u4F7F\u7528\u4E0B\u9762\u7684\u5207\u63DB\u986F\u793A\u6BCF\u500B\u7B2C\u4E09\u65B9\u96C6\u6210\u7684\u8A2D\u7F6E\u8AAA\u660E\u3002\n"
+          - name: HFPS Localization Not Active
+            text: "HFPS \u672C\u5730\u5316\u672A\u6FC0\u6D3B\uFF01"
+          - name: HFPS Localization Active
+            text: "HFPS \u672C\u5730\u5316\u6FC0\u6D3B\uFF01"
+          - name: DM Localization Not Active
+            text: "DM \u672C\u5730\u5316\u672A\u6FC0\u6D3B\uFF01"
+          - name: DM Localization Active
+            text: "DM \u672C\u5730\u5316\u6D3B\u52D5\uFF01"
+          - name: Localization Instructions
+            text: "\n\u97F3\u983B\u65E5\u8A18\u652F\u63F4 HFPS \u672C\u5730\u5316\u7CFB\u7D71\u4E26\u8207\u4E4B\u914D\u5408\u4F7F\u7528\uFF01\r\n\r\n\u4F46\u662F\uFF0C\u70BA\u4E86\u4F7F\u7528\u6B64\u96C6\u6210\uFF0C\u60A8\u5FC5\u9808\u57F7\u884C\u4EE5\u4E0B\u64CD\u4F5C\uFF1A\r\n\r\n1.
+              \u555F\u52D5 HFPS \u672C\u5730\u5316\r\n2. \u555F\u52D5 DM \u672C\u5730\u5316\r\n3.\u5C0E\u5165Dizzy
+              Media\u672C\u5730\u5316\u5730\u5716\r\n4.\u5C0E\u5165AD\u672C\u5730\u5316\u5305\r\n\r\n\u6BCF\u500B\u8CC7\u7522\u7684\u5834\u666F\u8CC7\u6599\u593E\u4E2D\u63D0\u4F9B\u4E86\u5B8C\u6574\u672C\u5730\u5316\u8A2D\u5B9A\u7684\u6F14\u793A\u5834\u666F\u3002\r\n\u6240\u6709
+              HFPS \u9644\u52A0\u8CC7\u7522\u5747\u5728\u5168\u7403\u7BC4\u570D\u5167\u63D0\u4F9B\u6F14\u793A\u672C\u5730\u5316\u5730\u5716\u548C\u6587\u5B57\u8868\u3002\n"
+          buttons:
+          - name: Dizzy Media
+            local: "\u982D\u6688\u5A92\u9AD4"
+          - name: Third Party
+            local: "\u7B2C\u4E09\u8005"
+          - name: HFPS Localization
+            local: "HFPS \u672C\u5730\u5316"
+          - name: Activate DM Localization
+            local: "\u6FC0\u6D3B DM \u672C\u5730\u5316"
+          - name: Deactivate DM Localization
+            local: "\u505C\u7528 DM \u672C\u5730\u5316"
+          - name: Import Localization Map
+            local: "\u5C0E\u5165\u672C\u5730\u5316\u5730\u5716"
+          - name: Import AD Localization
+            local: "\u5C0E\u5165\u5EE3\u544A\u672C\u5730\u5316"
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "\u6DFB\u52A0\u7B26\u865F\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5728\u8A2D\u7F6E\u4E2D\u6DFB\u52A0\u4E00\u500B\u65B0\u7684\u5B9A\u7FA9\u7B26\u865F\uFF0C\u9019\u5C07\u5F37\u5236\u60A8\u7684\u8173\u672C\u91CD\u65B0\u7DE8\u8B6F\u3002\u78BA\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u7FA9\u7B26\u865F\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Add
+              local: "\u6DFB\u52A0"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues: []
+    - name: French
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Info
+            text: "\nLe fichier Audio Diaries Version est absent de votre projet,
+              Audio Diaries ne peut pas fonctionner sans lui\_!\r\n\r\nVous pouvez
+              r\xE9importer le fichier Audio Diaries Version du pack de ressources
+              Audio Diaries sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: Bienvenu
+          texts:
+          - name: Audio Diaries Not Active
+            text: "JOURNAUX AUDIO NON ACTIFS\_! Consultez l'onglet CONFIGURATION
+              pour obtenir des instructions."
+          - name: Audio Diaries Active
+            text: "JOURNAUX AUDIO ACTIFS\_!"
+          - name: Instructions
+            text: "\nBonjour et bienvenue sur Audio Diaries\_!\r\n\r\nAvant de commencer,
+              assurez-vous de v\xE9rifier l'onglet Configuration pour les instructions
+              de configuration initiales.\n"
+          - name: Support Info
+            text: "PREND EN CHARGE HFPS 1.6.3a+ | UNIT\xC9 2020+"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Documentation
+            local: Documentation
+          - name: Tutorials
+            local: Tutoriels
+          - name: Review Asset
+            local: Examiner l'actif
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: "Afficher au d\xE9marrage"
+        - name: Setup
+          local: Installer
+          texts:
+          - name: Audio Diaries Not Active
+            text: "JOURNAUX AUDIO NON ACTIFS\_! Suivez les instructions ci-dessous."
+          - name: Audio Diaries Active
+            text: "JOURNAUX AUDIO ACTIFS\_!"
+          - name: Instructions
+            text: "\nLa plupart des fonctionnalit\xE9s des journaux audio peuvent
+              \xEAtre utilis\xE9es imm\xE9diatement, mais certaines fonctionnalit\xE9s
+              n\xE9cessitent des modifications mineures des composants du syst\xE8me
+              HFPS pour fonctionner correctement.\r\n\r\nAVANT d'activer Audio Diaries,
+              utilisez l'extension Script Editor, cette extension apportera des modifications
+              automatiques aux scripts utilis\xE9s par Audio Diaries.\r\n\r\nLes
+              \xE9tapes de configuration sont les suivantes\_:\r\n\r\n1. \xC9diteur
+              de scripts\r\n2. Activer les journaux audio\r\n3. Importer des gadgets\r\n4.
+              Documentation > Modules compl\xE9mentaires > T\xE9l\xE9charger/Importer
+              les packs de ressources r\xE9pertori\xE9s\r\n5. C'est fait\_!\n"
+          buttons:
+          - name: Open Script Editor
+            local: "Ouvrir l'\xE9diteur de scripts"
+          - name: Open Version Detect
+            local: "D\xE9tection de version ouverte"
+          - name: Activate Audio Diaries
+            local: Activer les journaux audio
+          - name: Deactivate Audio Diaries
+            local: "D\xE9sactiver les journaux audio"
+          - name: Import Gizmos
+            local: Importer des gadgets
+          - name: Remove Gizmos
+            local: Supprimer les gadgets
+          toggles: []
+          prompts:
+          - name: Add Symbols
+            header: "Ajouter des symboles\_?"
+            message: "Vous \xEAtes sur le point d'ajouter de nouveaux symboles de
+              d\xE9finition \xE0 vos param\xE8tres, cela forcera vos scripts \xE0
+              se recompiler. Assurez-vous d'enregistrer avant d'ajouter de nouveaux
+              symboles D\xE9finir.\r\n\r\n\xCAtes-vous s\xFBr?"
+            buttons:
+            - name: Add
+              local: Ajouter
+            - name: Cancel
+              local: Annuler
+          - name: Remove Symbols
+            header: "Supprimer les symboles\_?"
+            message: "Vous \xEAtes sur le point de supprimer Define Symbols de vos
+              param\xE8tres, cela forcera vos scripts \xE0 se recompiler. Assurez-vous
+              d'enregistrer avant d'ajouter de nouveaux symboles D\xE9finir.\r\n\r\n\xCAtes-vous
+              s\xFBr?"
+            buttons:
+            - name: Remove
+              local: Retirer
+            - name: Cancel
+              local: Annuler
+          - name: Symbol Present
+            header: "Symboles pr\xE9sents"
+            message: "Les symboles de d\xE9finition que vous essayez d'ajouter sont
+              d\xE9j\xE0 pr\xE9sents."
+            buttons:
+            - name: Ok
+              local: D'accord
+          - name: Import Gizmos
+            header: "Importer des gadgets\_?"
+            message: "Vous \xEAtes sur le point de d\xE9placer les fichiers Gizmo
+              du dossier parent Dizzy Media vers le dossier Gizmos. Si vous l'avez
+              d\xE9j\xE0 fait, fermez cette fen\xEAtre."
+            buttons:
+            - name: Move
+              local: "D\xE9placer"
+            - name: Cancel
+              local: Annuler
+          - name: Remove Gizmos
+            header: "Supprimer les gadgets\_?"
+            message: "Vous \xEAtes sur le point de supprimer les fichiers Audio Diaries
+              Gizmos de votre projet.\r\n\r\n\xCAtes-vous s\xFBr?"
+            buttons:
+            - name: Remove
+              local: Retirer
+            - name: Cancel
+              local: Annuler
+          - name: HFPS Version Symbol
+            header: Symbole de la version HFPS
+            message: "Quelle version HFPS utilisez-vous\_?"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: Suite
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: Annuler
+          singleValues:
+          - name: Compiling
+            local: Compilation
+          - name: 'Adding Symbol - '
+            local: Ajouter un symbole -
+          - name: 'Removing Symbol - '
+            local: Suppression du symbole -
+          - name: Removing All Version Symbols
+            local: Suppression de tous les symboles de version
+          - name: Nothing to Add
+            local: "Rien \xE0 ajouter"
+          - name: Nothing to remove
+            local: "Rien \xE0 supprimer"
+        - name: Integrations
+          local: "Int\xE9grations"
+          texts:
+          - name: DM Setup
+            text: "\nAudio Diaries for HFPS prend actuellement en charge l'int\xE9gration
+              avec tous mes modules compl\xE9mentaires HFPS et ne n\xE9cessite aucune
+              configuration de votre part\_!\n"
+          - name: 3rd Party Setup
+            text: "\nUtilisez les bascules ci-dessous pour afficher les instructions
+              de configuration pour chaque int\xE9gration tierce.\n"
+          - name: HFPS Localization Not Active
+            text: "LOCALISATION HFPS NON ACTIVE\_!"
+          - name: HFPS Localization Active
+            text: "LOCALISATION HFPS ACTIVE\_!"
+          - name: DM Localization Not Active
+            text: "LOCALISATION DM NON ACTIVE\_!"
+          - name: DM Localization Active
+            text: "LOCALISATION DM ACTIVE\_!"
+          - name: Localization Instructions
+            text: "\nAudio Diaries prend en charge et fonctionne avec le syst\xE8me
+              de localisation HFPS\_!\r\n\r\nCependant, pour utiliser cette int\xE9gration,
+              vous devez proc\xE9der comme suit\_:\r\n\r\n1. Activer la localisation
+              HFPS\r\n2. Activez la localisation DM\r\n3. Importer la carte de localisation
+              de Dizzy Media\r\n4. Importer le pack de localisation AD\r\n\r\nDes
+              sc\xE8nes de d\xE9monstration pour les configurations de localisation
+              compl\xE8tes sont fournies dans le dossier des sc\xE8nes de chaque
+              ressource.\r\nLes cartes de localisation de d\xE9monstration et les
+              tableaux de texte sont fournis globalement sur tous les \xE9l\xE9ments
+              compl\xE9mentaires HFPS.\n"
+          buttons:
+          - name: Dizzy Media
+            local: "M\xE9dias \xE9tourdis"
+          - name: Third Party
+            local: Tierce personne
+          - name: HFPS Localization
+            local: Localisation HFPS
+          - name: Activate DM Localization
+            local: Activer la localisation DM
+          - name: Deactivate DM Localization
+            local: "D\xE9sactiver la localisation DM"
+          - name: Import Localization Map
+            local: Importer une carte de localisation
+          - name: Import AD Localization
+            local: Importer la localisation AD
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "Ajouter un symbole\_?"
+            message: "Vous \xEAtes sur le point d'ajouter un nouveau symbole D\xE9finir
+              \xE0 vos param\xE8tres, cela forcera vos scripts \xE0 se recompiler.
+              Assurez-vous d'enregistrer avant d'ajouter de nouveaux symboles D\xE9finir.\r\n\r\n\xCAtes-vous
+              s\xFBr?"
+            buttons:
+            - name: Add
+              local: Ajouter
+            - name: Cancel
+              local: Annuler
+          singleValues: []
+    - name: Korean
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: "\uBC84\uC804 \uB204\uB77D"
+          texts:
+          - name: Version Info
+            text: "\n\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC \uBC84\uC804 \uD30C\uC77C\uC774
+              \uD504\uB85C\uC81D\uD2B8\uC5D0 \uC5C6\uC2B5\uB2C8\uB2E4. \uC624\uB514\uC624
+              \uB2E4\uC774\uC5B4\uB9AC \uC5C6\uC774\uB294 \uC2E4\uD589\uD560 \uC218
+              \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC
+              \uC5D0\uC14B \uD329\uC5D0\uC11C \uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC
+              \uBC84\uC804 \uD30C\uC77C\uC744 \uB2E4\uC2DC \uAC00\uC838\uC62C \uC218
+              \uC788\uC2B5\uB2C8\uB2E4.\r\n\uC790\uC0B0 \uC800\uC7A5\uC18C/\uD328\uD0A4\uC9C0
+              \uAD00\uB9AC\uC790.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: "\uC5B4\uC11C \uC624\uC2ED\uC2DC\uC624"
+          texts:
+          - name: Audio Diaries Not Active
+            text: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uAC00 \uD65C\uC131\uD654\uB418\uC9C0
+              \uC54A\uC558\uC2B5\uB2C8\uB2E4! \uC9C0\uCE68\uC740 SETUP \uD0ED\uC744
+              \uD655\uC778\uD558\uC2ED\uC2DC\uC624."
+          - name: Audio Diaries Active
+            text: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC \uD65C\uC131\uD654!"
+          - name: Instructions
+            text: "\n\uC548\uB155\uD558\uC138\uC694 \uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uC5D0
+              \uC624\uC2E0 \uAC83\uC744 \uD658\uC601\uD569\uB2C8\uB2E4!\r\n\r\n\uC2DC\uC791\uD558\uAE30
+              \uC804\uC5D0 \uCD08\uAE30 \uC124\uC815 \uC9C0\uCE68\uC5D0 \uB300\uD55C
+              \uC124\uC815 \uD0ED\uC744 \uD655\uC778\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Support Info
+            text: "HFPS 1.6.3a+ \uC9C0\uC6D0 | \uC720\uB2C8\uD2F0 2020+"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Documentation
+            local: "\uC120\uC801 \uC11C\uB958 \uBE44\uCE58"
+          - name: Tutorials
+            local: "\uD29C\uD1A0\uB9AC\uC5BC"
+          - name: Review Asset
+            local: "\uC790\uC0B0 \uAC80\uD1A0"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: "\uC2DC\uC791 \uC2DC \uD45C\uC2DC"
+        - name: Setup
+          local: "\uC124\uC815"
+          texts:
+          - name: Audio Diaries Not Active
+            text: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uAC00 \uD65C\uC131\uD654\uB418\uC9C0
+              \uC54A\uC558\uC2B5\uB2C8\uB2E4! \uC544\uB798 \uC9C0\uCE68\uC744 \uB530\uB974\uC2ED\uC2DC\uC624."
+          - name: Audio Diaries Active
+            text: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC \uD65C\uC131\uD654!"
+          - name: Instructions
+            text: "\n\uB300\uBD80\uBD84\uC758 Audio Diaries \uAE30\uB2A5\uC740 \uBC14\uB85C
+              \uC0AC\uC6A9\uD560 \uC218 \uC788\uC9C0\uB9CC \uC77C\uBD80 \uAE30\uB2A5\uC740
+              \uC81C\uB300\uB85C \uC791\uB3D9\uD558\uAE30 \uC704\uD574 HFPS \uC2DC\uC2A4\uD15C
+              \uAD6C\uC131 \uC694\uC18C\uB97C \uC57D\uAC04 \uD3B8\uC9D1\uD574\uC57C
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uB97C
+              \uD65C\uC131\uD654\uD558\uAE30 \uC804\uC5D0 \uC2A4\uD06C\uB9BD\uD2B8
+              \uD3B8\uC9D1\uAE30 \uD655\uC7A5\uC744 \uC0AC\uC6A9\uD558\uBA74 \uC774
+              \uD655\uC7A5\uC774 \uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uAC00
+              \uC0AC\uC6A9\uD558\uB294 \uC2A4\uD06C\uB9BD\uD2B8\uB97C \uC790\uB3D9\uC73C\uB85C
+              \uD3B8\uC9D1\uD569\uB2C8\uB2E4.\r\n\r\n\uC124\uC815 \uB2E8\uACC4\uB294
+              \uB2E4\uC74C\uACFC \uAC19\uC2B5\uB2C8\uB2E4.\r\n\r\n1. \uC2A4\uD06C\uB9BD\uD2B8
+              \uD3B8\uC9D1\uAE30\r\n2. \uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC
+              \uD65C\uC131\uD654\r\n3. \uAE30\uC988\uBAA8 \uAC00\uC838\uC624\uAE30\r\n4.
+              \uBB38\uC11C > \uC560\uB4DC\uC628 > \uB098\uC5F4\uB41C \uC790\uC0B0
+              \uD329 \uB2E4\uC6B4\uB85C\uB4DC/\uAC00\uC838\uC624\uAE30\r\n5. \uC644\uB8CC!\n"
+          buttons:
+          - name: Open Script Editor
+            local: "\uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1\uAE30 \uC5F4\uAE30"
+          - name: Open Version Detect
+            local: "\uBC84\uC804 \uAC10\uC9C0 \uC5F4\uAE30"
+          - name: Activate Audio Diaries
+            local: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC \uD65C\uC131\uD654"
+          - name: Deactivate Audio Diaries
+            local: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC \uBE44\uD65C\uC131\uD654"
+          - name: Import Gizmos
+            local: "\uC7A5\uCE58 \uAC00\uC838\uC624\uAE30"
+          - name: Remove Gizmos
+            local: "\uC7A5\uCE58 \uC81C\uAC70"
+          toggles: []
+          prompts:
+          - name: Add Symbols
+            header: "\uAE30\uD638\uB97C \uCD94\uAC00\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8\uB85C\uC6B4 \uAE30\uD638 \uC815\uC758\uB97C \uC124\uC815\uC5D0
+              \uCD94\uAC00\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4. \uC774\uB807\uAC8C
+              \uD558\uBA74 \uC2A4\uD06C\uB9BD\uD2B8\uAC00 \uAC15\uC81C\uB85C \uB2E4\uC2DC
+              \uCEF4\uD30C\uC77C\uB429\uB2C8\uB2E4. \uC0C8 \uAE30\uD638 \uC815\uC758\uB97C
+              \uCD94\uAC00\uD558\uAE30 \uC804\uC5D0 \uC800\uC7A5\uD574\uC57C \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Add
+              local: "\uCD94\uAC00\uD558\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Remove Symbols
+            header: "\uAE30\uD638\uB97C \uC81C\uAC70\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC124\uC815\uC5D0\uC11C \uAE30\uD638 \uC815\uC758\uB97C \uC81C\uAC70\uD558\uB824\uACE0
+              \uD569\uB2C8\uB2E4. \uADF8\uB7EC\uBA74 \uC2A4\uD06C\uB9BD\uD2B8\uAC00
+              \uAC15\uC81C\uB85C \uB2E4\uC2DC \uCEF4\uD30C\uC77C\uB429\uB2C8\uB2E4.
+              \uC0C8 \uC815\uC758 \uAE30\uD638\uB97C \uCD94\uAC00\uD558\uAE30 \uC804\uC5D0
+              \uC800\uC7A5\uD574\uC57C \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Remove
+              local: "\uC81C\uAC70\uD558\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Symbols Present
+            header: "\uC874\uC7AC\uD558\uB294 \uC0C1\uC9D5"
+            message: "\uCD94\uAC00\uD558\uB824\uB294 \uAE30\uD638 \uC815\uC758\uAC00
+              \uC774\uBBF8 \uC788\uC2B5\uB2C8\uB2E4."
+            buttons:
+            - name: Ok
+              local: "\uD655\uC778"
+          - name: Import Gizmos
+            header: "\uAE30\uC988\uBAA8\uB97C \uAC00\uC838\uC624\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "Dizzy Media \uC0C1\uC704 \uD3F4\uB354\uC5D0\uC11C Gizmos \uD3F4\uB354\uB85C
+              Gizmo \uD30C\uC77C\uC744 \uC774\uB3D9\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.
+              \uC774\uBBF8 \uC644\uB8CC\uD588\uB2E4\uBA74 \uC774 \uCC3D\uC744 \uB2EB\uC73C\uC2ED\uC2DC\uC624."
+            buttons:
+            - name: Move
+              local: "\uC774\uB3D9\uD558\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Remove Gizmos
+            header: "\uAE30\uC988\uBAA8\uB97C \uC81C\uAC70\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C Audio Diaries Gizmos \uD30C\uC77C\uC744
+              \uC81C\uAC70\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Remove
+              local: "\uC81C\uAC70\uD558\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: HFPS Version Symbol
+            header: "HFPS \uBC84\uC804 \uAE30\uD638"
+            message: "\uC5B4\uB5A4 HFPS \uBC84\uC804\uC744 \uC0AC\uC6A9\uD558\uACE0
+              \uC788\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: "\uB354"
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          singleValues:
+          - name: Compiling
+            local: "\uCEF4\uD30C\uC77C"
+          - name: 'Adding Symbol - '
+            local: "\uAE30\uD638 \uCD94\uAC00 -"
+          - name: 'Removing Symbol - '
+            local: "\uAE30\uD638 \uC81C\uAC70 -"
+          - name: Removing All Version Symbols
+            local: "\uBAA8\uB4E0 \uBC84\uC804 \uAE30\uD638 \uC81C\uAC70"
+          - name: Nothing to Add
+            local: "\uCD94\uAC00\uD560 \uC0AC\uD56D \uC5C6\uC74C"
+          - name: Nothing to remove
+            local: "\uC81C\uAC70\uD560 \uD56D\uBAA9 \uC5C6\uC74C"
+        - name: Integrations
+          local: "\uD1B5\uD569"
+          texts:
+          - name: DM Setup
+            text: "\nHFPS\uC6A9 \uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uB294
+              \uD604\uC7AC \uBAA8\uB4E0 HFPS \uCD94\uAC00 \uAE30\uB2A5\uACFC\uC758
+              \uD1B5\uD569\uC744 \uC9C0\uC6D0\uD558\uBA70 \uC0AC\uC6A9\uC790 \uCE21\uC5D0\uC11C
+              \uC124\uC815\uD560 \uD544\uC694\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4!\n"
+          - name: 3rd Party Setup
+            text: "\n\uC544\uB798 \uD1A0\uAE00\uC744 \uC0AC\uC6A9\uD558\uC5EC \uAC01
+              \uD0C0\uC0AC \uD1B5\uD569\uC5D0 \uB300\uD55C \uC124\uC815 \uC9C0\uCE68\uC744
+              \uD45C\uC2DC\uD569\uB2C8\uB2E4.\n"
+          - name: HFPS Localization Not Active
+            text: "HFPS \uD604\uC9C0\uD654\uAC00 \uD65C\uC131\uD654\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4!"
+          - name: HFPS Localization Active
+            text: "HFPS \uD604\uC9C0\uD654 \uD65C\uC131\uD654!"
+          - name: DM Localization Not Active
+            text: "DM \uD604\uC9C0\uD654\uAC00 \uD65C\uC131\uD654\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4!"
+          - name: DM Localization Active
+            text: "DM \uD604\uC9C0\uD654 \uD65C\uC131\uD654!"
+          - name: Localization Instructions
+            text: "\n\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uB294 HFPS \uD604\uC9C0\uD654
+              \uC2DC\uC2A4\uD15C\uC744 \uC9C0\uC6D0\uD558\uACE0 \uC791\uB3D9\uD569\uB2C8\uB2E4!\r\n\r\n\uADF8\uB7EC\uB098
+              \uC774 \uD1B5\uD569\uC744 \uC0AC\uC6A9\uD558\uB824\uBA74 \uB2E4\uC74C\uC744
+              \uC218\uD589\uD574\uC57C \uD569\uB2C8\uB2E4.\r\n\r\n1. HFPS \uD604\uC9C0\uD654
+              \uD65C\uC131\uD654\r\n2. DM \uD604\uC9C0\uD654 \uD65C\uC131\uD654\r\n3.
+              Dizzy \uBBF8\uB514\uC5B4 \uD604\uC9C0\uD654 \uB9F5 \uAC00\uC838\uC624\uAE30\r\n4.
+              AD \uD604\uC9C0\uD654 \uD329 \uAC00\uC838\uC624\uAE30\r\n\r\n\uC804\uCCB4
+              \uD604\uC9C0\uD654 \uC124\uC815\uC744 \uC704\uD55C \uB370\uBAA8 \uC7A5\uBA74\uC740
+              \uAC01 \uC790\uC0B0\uC758 \uC7A5\uBA74 \uD3F4\uB354\uC5D0 \uC81C\uACF5\uB429\uB2C8\uB2E4.\r\n\uB370\uBAA8
+              \uD604\uC9C0\uD654 \uC9C0\uB3C4\uC640 \uD14D\uC2A4\uD2B8 \uD14C\uC774\uBE14\uC740
+              \uBAA8\uB4E0 HFPS \uCD94\uAC00 \uC790\uC0B0\uC5D0 \uAC78\uCCD0 \uC804
+              \uC138\uACC4\uC801\uC73C\uB85C \uC81C\uACF5\uB429\uB2C8\uB2E4.\n"
+          buttons:
+          - name: Dizzy Media
+            local: "\uB514\uC9C0 \uBBF8\uB514\uC5B4"
+          - name: Third Party
+            local: "\uC81C3\uC790"
+          - name: HFPS Localization
+            local: "HFPS \uD604\uC9C0\uD654"
+          - name: Activate DM Localization
+            local: "DM \uD604\uC9C0\uD654 \uD65C\uC131\uD654"
+          - name: Deactivate DM Localization
+            local: "DM \uD604\uC9C0\uD654 \uBE44\uD65C\uC131\uD654"
+          - name: Import Localization Map
+            local: "\uD604\uC9C0\uD654 \uB9F5 \uAC00\uC838\uC624\uAE30"
+          - name: Import AD Localization
+            local: "\uAD11\uACE0 \uD604\uC9C0\uD654 \uAC00\uC838\uC624\uAE30"
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "\uAE30\uD638\uB97C \uCD94\uAC00\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC124\uC815\uC5D0 \uC0C8\uB85C\uC6B4 \uAE30\uD638 \uC815\uC758\uB97C
+              \uCD94\uAC00\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4. \uADF8\uB7EC\uBA74
+              \uC2A4\uD06C\uB9BD\uD2B8\uAC00 \uAC15\uC81C\uB85C \uB2E4\uC2DC \uCEF4\uD30C\uC77C\uB429\uB2C8\uB2E4.
+              \uC0C8 \uC815\uC758 \uAE30\uD638\uB97C \uCD94\uAC00\uD558\uAE30 \uC804\uC5D0
+              \uC800\uC7A5\uD574\uC57C \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Add
+              local: "\uCD94\uAC00\uD558\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          singleValues: []
+    - name: Spanish
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Info
+            text: "\nFalta el archivo de la versi\xF3n de Audio Diaries en su proyecto,
+              \xA1Audio Diaries no puede ejecutarse sin \xE9l!\r\n\r\nPuede volver
+              a importar el archivo de la versi\xF3n de Audio Diaries desde el paquete
+              de recursos de Audio Diaries en el almac\xE9n de recursos/administrador
+              de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: Bienvenido
+          texts:
+          - name: Audio Diaries Not Active
+            text: "\xA1DIARIOS DE AUDIO NO ACTIVOS! Consulte la pesta\xF1a CONFIGURACI\xD3N
+              para obtener instrucciones."
+          - name: Audio Diaries Active
+            text: "\xA1DIARIOS DE AUDIO ACTIVOS!"
+          - name: Instructions
+            text: "\n\xA1Hola y bienvenidos a Audio Diaries!\r\n\r\nAntes de comenzar,
+              aseg\xFArese de consultar la pesta\xF1a Configuraci\xF3n para obtener
+              las instrucciones de configuraci\xF3n inicial.\n"
+          - name: Support Info
+            text: SOPORTA HFPS 1.6.3a+ | UNIDAD 2020+
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Documentation
+            local: "Documentaci\xF3n"
+          - name: Tutorials
+            local: Tutoriales
+          - name: Review Asset
+            local: Revisar activo
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: Mostrar al inicio
+        - name: Setup
+          local: "Configuraci\xF3n"
+          texts:
+          - name: Audio Diaries Not Active
+            text: "\xA1DIARIOS DE AUDIO NO ACTIVOS! Sigue las instrucciones de abajo."
+          - name: Audio Diaries Active
+            text: "\xA1DIARIOS DE AUDIO ACTIVOS!"
+          - name: Instructions
+            text: "\nLa mayor\xEDa de las funciones de Audio Diaries est\xE1n disponibles
+              para usar de inmediato, sin embargo, algunas funciones requieren modificaciones
+              menores en los componentes del sistema HFPS para que funcionen correctamente.\r\n\r\nANTES
+              de activar Audio Diaries, use la extensi\xF3n Script Editor, esta extensi\xF3n
+              realizar\xE1 ediciones autom\xE1ticas en los scripts que usa Audio
+              Diaries.\r\n\r\nLos pasos de configuraci\xF3n son los siguientes:\r\n\r\n1.
+              Editor de guiones\r\n2. Activar diarios de audio\r\n3. Importar artilugios\r\n4.
+              Documentaci\xF3n > Complementos > Descargar/Importar paquetes de activos
+              enumerados\r\n5. \xA1Listo!\n"
+          buttons:
+          - name: Open Script Editor
+            local: Abrir editor de secuencias de comandos
+          - name: Open Version Detect
+            local: "Detecci\xF3n de versi\xF3n abierta"
+          - name: Activate Audio Diaries
+            local: Activar diarios de audio
+          - name: Deactivate Audio Diaries
+            local: Desactivar diarios de audio
+          - name: Import Gizmos
+            local: Importar artilugios
+          - name: Remove Gizmos
+            local: Eliminar artilugios
+          toggles: []
+          prompts:
+          - name: Add Symbols
+            header: "\xBFAgregar s\xEDmbolos?"
+            message: "Est\xE1 a punto de agregar nuevos Definir s\xEDmbolos a su
+              configuraci\xF3n, esto forzar\xE1 que sus scripts se vuelvan a compilar.
+              Aseg\xFArese de guardar antes de agregar nuevos Definir s\xEDmbolos.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Add
+              local: Agregar
+            - name: Cancel
+              local: Cancelar
+          - name: Remove Symbols
+            header: "\xBFQuitar s\xEDmbolos?"
+            message: "Est\xE1 a punto de eliminar Definir s\xEDmbolos de su configuraci\xF3n,
+              esto forzar\xE1 que sus scripts se vuelvan a compilar. Aseg\xFArese
+              de guardar antes de agregar nuevos Definir s\xEDmbolos.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Remove
+              local: Remover
+            - name: Cancel
+              local: Cancelar
+          - name: Symbols Present
+            header: "S\xEDmbolos presentes"
+            message: "El Definir s\xEDmbolos que est\xE1 tratando de agregar ya est\xE1
+              presente."
+            buttons:
+            - name: Ok
+              local: OK
+          - name: Import Gizmos
+            header: "\xBFImportar artilugios?"
+            message: "Est\xE1 a punto de mover archivos Gizmo de la carpeta principal
+              de Dizzy Media a la carpeta Gizmos. Si ya lo ha hecho, cierre esta
+              ventana."
+            buttons:
+            - name: Move
+              local: Moverse
+            - name: Cancel
+              local: Cancelar
+          - name: Remove Gizmos
+            header: "\xBFEliminar artilugios?"
+            message: "Est\xE1 a punto de eliminar los archivos Audio Diaries Gizmos
+              de su proyecto.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Remove
+              local: Remover
+            - name: Cancel
+              local: Cancelar
+          - name: HFPS Version Symbol
+            header: "S\xEDmbolo de versi\xF3n HFPS"
+            message: "\xBFQu\xE9 versi\xF3n de HFPS est\xE1s usando?"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: "M\xE1s"
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: Cancelar
+          singleValues:
+          - name: Compiling
+            local: Compilando
+          - name: 'Adding Symbol - '
+            local: "Adici\xF3n de s\xEDmbolo -"
+          - name: 'Removing Symbol - '
+            local: "Eliminaci\xF3n de s\xEDmbolo -"
+          - name: Removing All Version Symbols
+            local: "Eliminaci\xF3n de todos los s\xEDmbolos de versi\xF3n"
+          - name: Nothing to Add
+            local: "Nada que a\xF1adir"
+          - name: Nothing to remove
+            local: nada que quitar
+        - name: Integrations
+          local: integraciones
+          texts:
+          - name: DM Setup
+            text: "\nAudio Diaries para HFPS actualmente admite la integraci\xF3n
+              con todos mis complementos de HFPS y no requiere configuraci\xF3n de
+              su parte.\n"
+          - name: 3rd Party Setup
+            text: "\nUtilice los botones a continuaci\xF3n para mostrar las instrucciones
+              de configuraci\xF3n para cada integraci\xF3n de terceros.\n"
+          - name: HFPS Localization Not Active
+            text: "LOCALIZACI\xD3N HFPS NO ACTIVO!"
+          - name: HFPS Localization Active
+            text: "LOCALIZACI\xD3N HFPS ACTIVO!"
+          - name: DM Localization Not Active
+            text: "DM LOCALIZACI\xD3N NO ACTIVO!"
+          - name: DM Localization Active
+            text: "DM LOCALIZACI\xD3N ACTIVO!"
+          - name: Localization Instructions
+            text: "\n\xA1Audio Diaries admite y funciona con el sistema de localizaci\xF3n
+              HFPS!\r\n\r\nSin embargo, para utilizar esta integraci\xF3n debes hacer
+              lo siguiente:\r\n\r\n1. Activar la localizaci\xF3n HFPS\r\n2. Activar
+              la localizaci\xF3n de DM\r\n3. Importar mapa de localizaci\xF3n de
+              Dizzy Media\r\n4. Importar paquete de localizaci\xF3n de AD\r\n\r\nLas
+              escenas de demostraci\xF3n para configuraciones de localizaci\xF3n
+              completas se proporcionan en la carpeta de escenas de cada activo.\r\nLos
+              mapas de localizaci\xF3n de demostraci\xF3n y las tablas de texto se
+              proporcionan globalmente en todos los recursos complementarios de HFPS.\n"
+          buttons:
+          - name: Dizzy Media
+            local: Medios mareados
+          - name: Third Party
+            local: Tercero
+          - name: HFPS Localization
+            local: "Localizaci\xF3n de HFPS"
+          - name: Activate DM Localization
+            local: "Activar localizaci\xF3n de DM"
+          - name: Deactivate DM Localization
+            local: "Desactivar localizaci\xF3n de DM"
+          - name: Import Localization Map
+            local: "Importar mapa de localizaci\xF3n"
+          - name: Import AD Localization
+            local: "Importar localizaci\xF3n de AD"
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "\xBFAgregar s\xEDmbolo?"
+            message: "Est\xE1 a punto de agregar un nuevo Definir s\xEDmbolo a su
+              configuraci\xF3n, esto forzar\xE1 que sus scripts se vuelvan a compilar.
+              Aseg\xFArese de guardar antes de agregar nuevos Definir s\xEDmbolos.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Add
+              local: Agregar
+            - name: Cancel
+              local: Cancelar
+          singleValues: []

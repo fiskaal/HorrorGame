@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (InteractiveItemEditor)
+  m_EditorClassIdentifier: 
+  content:
+  - name: Foldout number update
+    original: '        private readonly bool[] foldout = new bool[5];'
+    edit: '        private readonly bool[] foldout = new bool[6];'
+  - name: Serialize Events
+    original: '        private SerializedProperty m_examineVolume;'
+    edit: "        private SerializedProperty m_examineVolume;\r\n        \r\n       
+      private SerializedProperty onExamine;\r\n        private SerializedProperty
+      onPaperRead;"
+  - name: Catch Events
+    original: '            m_examineVolume = serializedObject.FindProperty("examineVolume");'
+    edit: "            m_examineVolume = serializedObject.FindProperty(\"examineVolume\");\r\n           
+      \r\n            onExamine = serializedObject.FindProperty(\"events.onExamine\");\r\n           
+      onPaperRead = serializedObject.FindProperty(\"events.onPaperRead\");"
+  - name: Events tab add
+    original: '            Repaint();'
+    edit: "            \r\n            bool soundFlag3 = examineType == InteractiveItem.ExamineType.Paper;\r\n           
+      \r\n            if (foldout[5] = DrawHeader(foldout[5], \"Events\"))\r\n           
+      {\r\n                EditorGUI.indentLevel++;\r\n\r\n                if(soundFlag2){\r\n                       
+      \r\n                    EditorGUILayout.PropertyField(onExamine);\r\n                   
+      \r\n                    if(soundFlag3){\r\n                    \r\n                       
+      EditorGUILayout.PropertyField(onPaperRead);\r\n                        \r\n                   
+      }//soundFlag3\r\n                    \r\n                //soundFlag2\r\n               
+      } else {\r\n                \r\n                    EditorGUILayout.HelpBox(\"No
+      Events for this type of item.\", MessageType.Warning);\r\n                \r\n               
+      }//soundFlag2\r\n                    \r\n                EditorGUI.indentLevel--;\r\n           
+      }\r\n\r\n            Repaint();"

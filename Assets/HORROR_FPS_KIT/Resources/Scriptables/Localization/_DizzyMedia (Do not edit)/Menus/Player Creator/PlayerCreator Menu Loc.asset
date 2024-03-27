@@ -1,0 +1,1711 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: PlayerCreator Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Player Creator Version file is missing from
+              your project, Player Creator cannot run without it!
+
+
+              You
+              can re-import the Player Creator Version file from the asset pack on
+              the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Create
+          local: 
+          texts:
+          - name: Instructions
+            text: '
+
+              This extension allows you create a new player
+              or update an existing player, use the options below to start the process.
+
+'
+          - name: Create Options Instructions
+            text: Use the options below to set how the player is created.
+          - name: Game Options Instructions
+            text: Use the options below to set how the player creation affects the
+              game scene.
+          - name: Player Options Instructions
+            text: Use the options below to set the format of the player layout /
+              setup.
+          - name: Ragdoll Options Instructions
+            text: Use the options below to adjust the ragdoll creation.
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Create Options
+            local: Create Options
+          - name: Game Options
+            local: Game Options
+          - name: Player Options
+            local: Player Options
+          - name: Ragdoll Options
+            local: Ragdoll Options
+          - name: Create Player
+            local: Create Player
+          - name: Set Defaults
+            local: Set Defaults
+          - name: Type Options
+            local: Type Options
+          - name: Position Options
+            local: Position Options
+          - name: Destroy Options
+            local: Destroy Options
+          - name: Game Manager
+            local: Game Manager
+          - name: Player References
+            local: Player References
+          - name: Body Animator
+            local: Body Animator
+          - name: Head Options
+            local: Head Options
+          - name: Open Ragdoll Creator
+            local: Open Ragdoll Creator
+          - name: Check for Ragdoll
+            local: Check for Ragdoll
+          toggles: []
+          prompts:
+          - name: Player Create
+            header: Player Create
+            message: 'You are about to create a new player with the settings applied
+              in the editor window.
+
+
+              Are you sure you want to do this?'
+            buttons:
+            - name: Create
+              local: Create
+            - name: Cancel
+              local: Cancel
+          - name: Set Defaults
+            header: Set Defaults
+            message: 'You are about to reset the player create settings to the default
+              values.
+
+
+              Are you sure you want to do this?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: NO CHARACTER ASSIGNED
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: ' ASSIGNED | ANIMATOR NOT PRESENT'
+          - name: Hero Body Found
+            local: Hero Body Found
+          - name: Hero Root Found
+            local: Hero Root Found
+          - name: Player Created
+            local: Player Created
+          - name: Player Create Defaults Set
+            local: Player Create Defaults Set
+        - name: Update
+          local: 
+          texts:
+          - name: Player Options Instructions
+            text: Activate the toggles for features you want to update on your existing
+              player.
+          - name: Features Options Instructions
+            text: Activate the toggles for features you want to add to your existing
+              player.
+          - name: Audio Fade Options Instructions
+            text: Use the options below to set the Audio Fader system values.
+          - name: Dual Wield Options Instructions
+            text: Use the options below to set each weapons dual wield options.
+          - name: FOV Options Instructions
+            text: Use the options below to set the FOV system values.
+          - name: Material Options Instructions
+            text: Assign the body parts below that you want to be able to hide /
+              show based on weapon usage, cutscene, etc.
+          - name: Player Manager Options Instructions
+            text: Use the options below to assign weapons and slow down use for the
+              Player Manager system.
+          - name: Prone Options Instructions
+            text: Use the options below to update the prone values on the player.
+          - name: Sub Actions Options Instructions
+            text: Use the options below to set Sub Actions system values.
+          - name: Zoom Options Instructions
+            text: Use the options below to set the zoom type used for the player.
+          buttons:
+          - name: Player Options
+            local: Player Options
+          - name: Features Options
+            local: Features Options
+          - name: Audio Fader Options
+            local: Audio Fader Options
+          - name: Dual Wield Options
+            local: Dual Wield Options
+          - name: FOV Options
+            local: FOV Options
+          - name: Material Controller Options
+            local: Material Controller Options
+          - name: Player Manager Options
+            local: Player Manager Options
+          - name: Prone Options
+            local: Prone Options
+          - name: Sub Actions Options
+            local: Sub Actions Options
+          - name: Zoom Options
+            local: Zoom Options
+          - name: Dual Wield
+            local: Dual Wield
+          - name: Camera Options
+            local: Camera Options
+          - name: General Options
+            local: General Options
+          - name: States Options
+            local: States Options
+          - name: Melee Options
+            local: Melee Options
+          - name: Weapon Options
+            local: Weapon Options
+          - name: Basic Settings
+            local: Basic Settings
+          - name: Controller Features
+            local: Controller Features
+          - name: Controller Adjustments
+            local: Controller Adjustments
+          - name: Actions Options
+            local: Actions Options
+          - name: Input Options
+            local: Input Options
+          - name: Update Player
+            local: Update Player
+          - name: Catch Player
+            local: Catch Player
+          - name: Save Template
+            local: Save Template
+          - name: Load Template
+            local: Load Template
+          - name: Set Defaults
+            local: Set Defaults
+          - name: Update Prone
+            local: Update Prone
+          - name: Update Zoom
+            local: Update Zoom
+          - name: Activate All Toggles
+            local: Activate All Toggles
+          - name: Deactivate All Toggles
+            local: Deactivate All Toggles
+          - name: Screen Events
+            local: Screen Events
+          - name: Dual Wield
+            local: Dual Wield
+          - name: Sub Actions
+            local: Sub Actions
+          - name: Audio Fader
+            local: Audio Fader
+          - name: FOV Manager
+            local: FOV Manager
+          - name: Material Controller
+            local: Material Controller
+          - name: Player Manager
+            local: Player Manager
+          - name: References
+            local: References
+          toggles: []
+          prompts:
+          - name: Player Update
+            header: Player Update
+            message: "You are about update the assigned player object based on the
+              settings applied in the editor window. \n\nAre you sure you want to
+              do this?"
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          - name: Template Save
+            header: Template Save
+            message: "You are about to overwrite the assigned templates settings.
+              \n\nAre you sure you want to do this?"
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          - name: Template Load
+            header: Template Load
+            message: 'You are about to load settings from the assigned template,
+              this will overwrite any existing values in the editor window.
+
+
+              Are
+              you sure you want to do this?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          - name: Reset Values
+            header: Reset Values
+            message: 'You are about to reset the player update settings to the default
+              values.
+
+
+              Are you sure you want to do this?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          singleValues:
+          - name: NOTHING ACTIVATED
+            local: NOTHING ACTIVATED
+          - name: Player Controller
+            local: Player Controller
+          - name: Player Functions
+            local: Player Functions
+          - name: Camera
+            local: Camera
+          - name: Items / Weapons
+            local: Items / Weapons
+          - name: Player
+            local: Player
+          - name: No Items Present! Assign / Catch a player object first.
+            local: No Items Present! Assign / Catch a player object first.
+          - name: Cameras will be automatically found.
+            local: Cameras will be automatically found.
+          - name: Player Found
+            local: Player Found
+          - name: Player Updated
+            local: Player Updated
+          - name: Template Saved
+            local: Template Saved
+          - name: Template Loaded
+            local: Template Loaded
+          - name: Player Update Defaults Set
+            local: Player Update Defaults Set
+          - name: COMPONENTS NOT ACTIVATED
+            local: COMPONENTS NOT ACTIVATED
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11 Player Creator \u7248\u672C\u6587\u4EF6\uFF0CPlayer
+              Creator \u6CA1\u6709\u5B83\u5C31\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8D44\u4EA7\u5305\u91CD\u65B0\u5BFC\u5165
+              Player Creator Version \u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Create
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u6269\u5C55\u5141\u8BB8\u60A8\u521B\u5EFA\u65B0\u64AD\u653E\u5668\u6216\u66F4\u65B0\u73B0\u6709\u64AD\u653E\u5668\uFF0C\u4F7F\u7528\u4E0B\u9762\u7684\u9009\u9879\u5F00\u59CB\u8BE5\u8FC7\u7A0B\u3002\n"
+          - name: Create Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u64AD\u653E\u5668\u7684\u521B\u5EFA\u65B9\u5F0F\u3002"
+          - name: Game Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u73A9\u5BB6\u521B\u5EFA\u5982\u4F55\u5F71\u54CD\u6E38\u620F\u573A\u666F\u3002"
+          - name: Player Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u64AD\u653E\u5668\u5E03\u5C40/\u8BBE\u7F6E\u7684\u683C\u5F0F\u3002"
+          - name: Ragdoll Options Instructions
+            text: "\u4F7F\u7528\u4E0B\u9762\u7684\u9009\u9879\u6765\u8C03\u6574\u5E03\u5A03\u5A03\u7684\u521B\u5EFA\u3002"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Create Options
+            local: "\u521B\u5EFA\u9009\u9879"
+          - name: Game Options
+            local: "\u6E38\u620F\u9009\u9879"
+          - name: Player Options
+            local: "\u64AD\u653E\u5668\u9009\u9879"
+          - name: Ragdoll Options
+            local: "\u5E03\u5A03\u5A03\u9009\u9879"
+          - name: Create Player
+            local: "\u521B\u5EFA\u64AD\u653E\u5668"
+          - name: Set Defaults
+            local: "\u8BBE\u7F6E\u9ED8\u8BA4\u503C"
+          - name: Type Options
+            local: "\u7C7B\u578B\u9009\u9879"
+          - name: Position Options
+            local: "\u804C\u4F4D\u9009\u9879"
+          - name: Destroy Options
+            local: "\u9500\u6BC1\u9009\u9879"
+          - name: Game Manager
+            local: "\u6E38\u620F\u7ECF\u7406"
+          - name: Player References
+            local: "\u7403\u5458\u53C2\u8003"
+          - name: Body Animator
+            local: "\u8EAB\u4F53\u52A8\u753B\u5E08"
+          - name: Head Options
+            local: "\u5934\u90E8\u9009\u9879"
+          - name: Open Ragdoll Creator
+            local: "\u6253\u5F00\u5E03\u5A03\u5A03\u9020\u7269\u4E3B"
+          - name: Check for Ragdoll
+            local: "\u68C0\u67E5\u5E03\u5A03\u5A03"
+          toggles: []
+          prompts:
+          - name: Player Create
+            header: "\u64AD\u653E\u5668\u521B\u5EFA"
+            message: "\u60A8\u5C06\u4F7F\u7528\u7F16\u8F91\u5668\u7A97\u53E3\u4E2D\u5E94\u7528\u7684\u8BBE\u7F6E\u521B\u5EFA\u4E00\u4E2A\u65B0\u64AD\u653E\u5668\u3002\r\n\r\n\u4F60\u786E\u5B9A\u8981\u8FD9\u4E48\u505A\u5417\uFF1F"
+            buttons:
+            - name: Create
+              local: "\u521B\u9020"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Set Defaults
+            header: "\u8BBE\u7F6E\u9ED8\u8BA4\u503C"
+            message: "\u60A8\u5C06\u8981\u5C06\u64AD\u653E\u5668\u521B\u5EFA\u8BBE\u7F6E\u91CD\u7F6E\u4E3A\u9ED8\u8BA4\u503C\u3002\r\n\r\n\u4F60\u786E\u5B9A\u8981\u8FD9\u4E48\u505A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "\u6CA1\u6709\u6307\u5B9A\u89D2\u8272"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52A8\u753B\u5E08\u51FA\u5E2D | \u5E03\u5A03\u5A03\u793C\u7269"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52A8\u753B\u5E08\u51FA\u5E2D | \u5E03\u5A03\u5A03\u4E0D\u5B58\u5728"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52A8\u753B\u5E08\u4E0D\u5728\u573A"
+          - name: Hero Body Found
+            local: "\u53D1\u73B0\u82F1\u96C4\u9057\u4F53"
+          - name: Hero Root Found
+            local: "\u627E\u5230\u82F1\u96C4\u6839"
+          - name: Player Created
+            local: "\u73A9\u5BB6\u521B\u5EFA"
+          - name: Player Create Defaults Set
+            local: "\u64AD\u653E\u5668\u521B\u5EFA\u9ED8\u8BA4\u8BBE\u7F6E"
+        - name: Update
+          local: 
+          texts:
+          - name: Player Options Instructions
+            text: "\u6FC0\u6D3B\u8981\u5728\u73B0\u6709\u64AD\u653E\u5668\u4E0A\u66F4\u65B0\u7684\u529F\u80FD\u7684\u5F00\u5173\u3002"
+          - name: Features Options Instructions
+            text: "\u6FC0\u6D3B\u8981\u6DFB\u52A0\u5230\u73B0\u6709\u64AD\u653E\u5668\u7684\u529F\u80FD\u7684\u5F00\u5173\u3002"
+          - name: Audio Fade Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u97F3\u9891\u63A8\u5B50\u7CFB\u7EDF\u503C\u3002"
+          - name: Dual Wield Options Instructions
+            text: "\u4F7F\u7528\u4E0B\u9762\u7684\u9009\u9879\u6765\u8BBE\u7F6E\u6BCF\u4E2A\u6B66\u5668\u7684\u53CC\u6301\u9009\u9879\u3002"
+          - name: FOV Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E FOV \u7CFB\u7EDF\u503C\u3002"
+          - name: Material Options Instructions
+            text: "\u6839\u636E\u6B66\u5668\u4F7F\u7528\u60C5\u51B5\u3001\u8FC7\u573A\u52A8\u753B\u7B49\uFF0C\u5206\u914D\u60A8\u5E0C\u671B\u80FD\u591F\u9690\u85CF/\u663E\u793A\u7684\u8EAB\u4F53\u90E8\u4F4D\u3002"
+          - name: Player Manager Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5206\u914D\u6B66\u5668\u5E76\u51CF\u6162\u73A9\u5BB6\u7BA1\u7406\u5668\u7CFB\u7EDF\u7684\u4F7F\u7528\u901F\u5EA6\u3002"
+          - name: Prone Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u66F4\u65B0\u73A9\u5BB6\u7684\u4FEF\u5367\u503C\u3002"
+          - name: Sub Actions Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u5B50\u64CD\u4F5C\u7CFB\u7EDF\u503C\u3002"
+          - name: Zoom Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u64AD\u653E\u5668\u4F7F\u7528\u7684\u7F29\u653E\u7C7B\u578B\u3002"
+          buttons:
+          - name: Player Options
+            local: "\u64AD\u653E\u5668\u9009\u9879"
+          - name: Features Options
+            local: "\u529F\u80FD\u9009\u9879"
+          - name: Audio Fader Options
+            local: "\u97F3\u9891\u63A8\u5B50\u9009\u9879"
+          - name: Dual Wield Options
+            local: "\u53CC\u6301\u9009\u9879"
+          - name: FOV Options
+            local: "\u89C6\u91CE\u9009\u9879"
+          - name: Material Controller Options
+            local: "\u6750\u6599\u63A7\u5236\u5668\u9009\u9879"
+          - name: Player Manager Options
+            local: "\u64AD\u653E\u5668\u7BA1\u7406\u5668\u9009\u9879"
+          - name: Prone Options
+            local: "\u503E\u5411\u4E8E\u9009\u62E9"
+          - name: Sub Actions Options
+            local: "\u5B50\u64CD\u4F5C\u9009\u9879"
+          - name: Zoom Options
+            local: "\u7F29\u653E\u9009\u9879"
+          - name: Dual Wield
+            local: "\u53CC\u6301"
+          - name: Camera Options
+            local: "\u76F8\u673A\u9009\u9879"
+          - name: General Options
+            local: "\u5E38\u89C4\u9009\u9879"
+          - name: States Options
+            local: "\u72B6\u6001\u9009\u9879"
+          - name: Melee Options
+            local: "\u8FD1\u6218\u9009\u9879"
+          - name: Weapon Options
+            local: "\u6B66\u5668\u9009\u9879"
+          - name: Basic Settings
+            local: "\u57FA\u672C\u8BBE\u7F6E"
+          - name: Controller Features
+            local: "\u63A7\u5236\u5668\u7279\u70B9"
+          - name: Controller Adjustments
+            local: "\u63A7\u5236\u5668\u8C03\u6574"
+          - name: Actions Options
+            local: "\u52A8\u4F5C\u9009\u9879"
+          - name: Input Options
+            local: "\u8F93\u5165\u9009\u9879"
+          - name: Update Player
+            local: "\u66F4\u65B0\u64AD\u653E\u5668"
+          - name: Catch Player
+            local: "\u63A5\u7403\u624B"
+          - name: Save Template
+            local: "\u4FDD\u5B58\u6A21\u677F"
+          - name: Load Template
+            local: "\u52A0\u8F7D\u6A21\u677F"
+          - name: Set Defaults
+            local: "\u8BBE\u7F6E\u9ED8\u8BA4\u503C"
+          - name: Update Prone
+            local: "\u66F4\u65B0\u503E\u5411"
+          - name: Update Zoom
+            local: "\u66F4\u65B0\u7F29\u653E"
+          - name: Activate All Toggles
+            local: "\u6FC0\u6D3B\u6240\u6709\u5207\u6362"
+          - name: Deactivate All Toggles
+            local: "\u505C\u7528\u6240\u6709\u5207\u6362"
+          - name: Screen Events
+            local: "\u5C4F\u5E55\u4E8B\u4EF6"
+          - name: Dual Wield
+            local: "\u53CC\u6301"
+          - name: Sub Actions
+            local: "\u5B50\u52A8\u4F5C"
+          - name: Audio Fader
+            local: "\u97F3\u9891\u63A8\u5B50"
+          - name: FOV Manager
+            local: "\u89C6\u91CE\u7BA1\u7406\u5668"
+          - name: Material Controller
+            local: "\u6750\u6599\u63A7\u5236\u5668"
+          - name: Player Manager
+            local: "\u7403\u5458\u7ECF\u7406"
+          - name: References
+            local: "\u53C2\u8003"
+          toggles: []
+          prompts:
+          - name: Player Update
+            header: "\u64AD\u653E\u5668\u66F4\u65B0"
+            message: "\u60A8\u5C06\u6839\u636E\u7F16\u8F91\u5668\u7A97\u53E3\u4E2D\u5E94\u7528\u7684\u8BBE\u7F6E\u66F4\u65B0\u5206\u914D\u7684\u73A9\u5BB6\u5BF9\u8C61\u3002\r\n\r\n\u4F60\u786E\u5B9A\u8981\u8FD9\u4E48\u505A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Template Save
+            header: "\u6A21\u677F\u4FDD\u5B58"
+            message: "\u60A8\u5C06\u8981\u8986\u76D6\u5206\u914D\u7684\u6A21\u677F\u8BBE\u7F6E\u3002\r\n\r\n\u4F60\u786E\u5B9A\u8981\u8FD9\u4E48\u505A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Template Load
+            header: "\u6A21\u677F\u52A0\u8F7D"
+            message: "\u60A8\u5373\u5C06\u4ECE\u5206\u914D\u7684\u6A21\u677F\u52A0\u8F7D\u8BBE\u7F6E\uFF0C\u8FD9\u5C06\u8986\u76D6\u7F16\u8F91\u5668\u7A97\u53E3\u4E2D\u7684\u4EFB\u4F55\u73B0\u6709\u503C\u3002\r\n\r\n\u4F60\u786E\u5B9A\u8981\u8FD9\u4E48\u505A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Reset Values
+            header: "\u91CD\u7F6E\u503C"
+            message: "\u60A8\u5373\u5C06\u5C06\u64AD\u653E\u5668\u66F4\u65B0\u8BBE\u7F6E\u91CD\u7F6E\u4E3A\u9ED8\u8BA4\u503C\u3002\r\n\r\n\u4F60\u786E\u5B9A\u8981\u8FD9\u4E48\u505A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: NOTHING ACTIVATED
+            local: "\u6CA1\u6709\u6FC0\u6D3B"
+          - name: Player Controller
+            local: "\u73A9\u5BB6\u63A7\u5236\u5668"
+          - name: Player Functions
+            local: "\u64AD\u653E\u5668\u529F\u80FD"
+          - name: Camera
+            local: "\u76F8\u673A"
+          - name: Items / Weapons
+            local: "\u7269\u54C1/\u6B66\u5668"
+          - name: Player
+            local: "\u64AD\u653E\u5668"
+          - name: No Items Present! Assign / Catch a player object first.
+            local: "\u6CA1\u6709\u7269\u54C1\u5B58\u5728\uFF01\u9996\u5148\u5206\u914D/\u6355\u83B7\u73A9\u5BB6\u5BF9\u8C61\u3002"
+          - name: Cameras will be automatically found.
+            local: "\u5C06\u81EA\u52A8\u627E\u5230\u76F8\u673A\u3002"
+          - name: Player Found
+            local: "\u627E\u5230\u73A9\u5BB6"
+          - name: Player Updated
+            local: "\u64AD\u653E\u5668\u66F4\u65B0"
+          - name: Template Saved
+            local: "\u6A21\u677F\u5DF2\u4FDD\u5B58"
+          - name: Template Loaded
+            local: "\u6A21\u677F\u5DF2\u52A0\u8F7D"
+          - name: Player Update Defaults Set
+            local: "\u64AD\u653E\u5668\u66F4\u65B0\u9ED8\u8BA4\u8BBE\u7F6E"
+          - name: COMPONENTS NOT ACTIVATED
+            local: "\u672A\u6FC0\u6D3B\u7684\u7EC4\u4EF6"
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11 Player Creator \u7248\u672C\u6587\u4EF6\uFF0CPlayer
+              Creator \u6C92\u6709\u5B83\u5C31\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8CC7\u7522\u5305\u91CD\u65B0\u5C0E\u5165
+              Player Creator Version \u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Create
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u64F4\u5C55\u5141\u8A31\u60A8\u5275\u5EFA\u65B0\u64AD\u653E\u5668\u6216\u66F4\u65B0\u73FE\u6709\u64AD\u653E\u5668\uFF0C\u4F7F\u7528\u4E0B\u9762\u7684\u9078\u9805\u958B\u59CB\u8A72\u904E\u7A0B\u3002\n"
+          - name: Create Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u64AD\u653E\u5668\u7684\u5275\u5EFA\u65B9\u5F0F\u3002"
+          - name: Game Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u73A9\u5BB6\u5275\u5EFA\u5982\u4F55\u5F71\u97FF\u904A\u6232\u5834\u666F\u3002"
+          - name: Player Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u64AD\u653E\u5668\u4F48\u5C40/\u8A2D\u7F6E\u7684\u683C\u5F0F\u3002"
+          - name: Ragdoll Options Instructions
+            text: "\u4F7F\u7528\u4E0B\u9762\u7684\u9078\u9805\u4F86\u8ABF\u6574\u5E03\u5A03\u5A03\u7684\u5275\u5EFA\u3002"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Create Options
+            local: "\u5275\u5EFA\u9078\u9805"
+          - name: Game Options
+            local: "\u904A\u6232\u9078\u9805"
+          - name: Player Options
+            local: "\u64AD\u653E\u5668\u9078\u9805"
+          - name: Ragdoll Options
+            local: "\u5E03\u5A03\u5A03\u9078\u9805"
+          - name: Create Player
+            local: "\u5275\u5EFA\u64AD\u653E\u5668"
+          - name: Set Defaults
+            local: "\u8A2D\u7F6E\u9ED8\u8A8D\u503C"
+          - name: Type Options
+            local: "\u985E\u578B\u9078\u9805"
+          - name: Position Options
+            local: "\u8077\u4F4D\u9078\u9805"
+          - name: Destroy Options
+            local: "\u92B7\u6BC0\u9078\u9805"
+          - name: Game Manager
+            local: "\u904A\u6232\u7D93\u7406"
+          - name: Player References
+            local: "\u7403\u54E1\u53C3\u8003"
+          - name: Body Animator
+            local: "\u8EAB\u9AD4\u52D5\u756B\u5E2B"
+          - name: Head Options
+            local: "\u982D\u90E8\u9078\u9805"
+          - name: Open Ragdoll Creator
+            local: "\u6253\u958B\u5E03\u5A03\u5A03\u9020\u7269\u4E3B"
+          - name: Check for Ragdoll
+            local: "\u6AA2\u67E5\u5E03\u5A03\u5A03"
+          toggles: []
+          prompts:
+          - name: Player Create
+            header: "\u64AD\u653E\u5668\u5275\u5EFA"
+            message: "\u60A8\u5C07\u4F7F\u7528\u7DE8\u8F2F\u5668\u7A97\u53E3\u4E2D\u61C9\u7528\u7684\u8A2D\u7F6E\u5275\u5EFA\u4E00\u500B\u65B0\u64AD\u653E\u5668\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u8981\u9019\u9EBC\u505A\u55CE\uFF1F"
+            buttons:
+            - name: Create
+              local: "\u5275\u9020"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Set Defaults
+            header: "\u8A2D\u7F6E\u9ED8\u8A8D\u503C"
+            message: "\u60A8\u5C07\u8981\u5C07\u64AD\u653E\u5668\u5275\u5EFA\u8A2D\u7F6E\u91CD\u7F6E\u70BA\u9ED8\u8A8D\u503C\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u8981\u9019\u9EBC\u505A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "\u6C92\u6709\u6307\u5B9A\u89D2\u8272"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52D5\u756B\u5E2B\u51FA\u5E2D | \u5E03\u5A03\u5A03\u79AE\u7269"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52D5\u756B\u5E2B\u51FA\u5E2D | \u5E03\u5A03\u5A03\u4E0D\u5B58\u5728"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52D5\u756B\u5E2B\u4E0D\u5728\u5834"
+          - name: Hero Body Found
+            local: "\u767C\u73FE\u82F1\u96C4\u907A\u9AD4"
+          - name: Hero Root Found
+            local: "\u627E\u5230\u82F1\u96C4\u6839"
+          - name: Player Created
+            local: "\u73A9\u5BB6\u5275\u5EFA"
+          - name: Player Create Defaults Set
+            local: "\u64AD\u653E\u5668\u5275\u5EFA\u9ED8\u8A8D\u8A2D\u7F6E"
+        - name: Update
+          local: 
+          texts:
+          - name: Player Options Instructions
+            text: "\u6FC0\u6D3B\u8981\u5728\u73FE\u6709\u64AD\u653E\u5668\u4E0A\u66F4\u65B0\u7684\u529F\u80FD\u7684\u958B\u95DC\u3002"
+          - name: Features Options Instructions
+            text: "\u6FC0\u6D3B\u8981\u6DFB\u52A0\u5230\u73FE\u6709\u64AD\u653E\u5668\u7684\u529F\u80FD\u7684\u958B\u95DC\u3002"
+          - name: Audio Fade Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u97F3\u983B\u63A8\u5B50\u7CFB\u7D71\u503C\u3002"
+          - name: Dual Wield Options Instructions
+            text: "\u4F7F\u7528\u4E0B\u9762\u7684\u9078\u9805\u4F86\u8A2D\u7F6E\u6BCF\u500B\u6B66\u5668\u7684\u96D9\u6301\u9078\u9805\u3002"
+          - name: FOV Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E FOV \u7CFB\u7D71\u503C\u3002"
+          - name: Material Options Instructions
+            text: "\u6839\u64DA\u6B66\u5668\u4F7F\u7528\u60C5\u6CC1\u3001\u904E\u5834\u52D5\u756B\u7B49\uFF0C\u5206\u914D\u60A8\u5E0C\u671B\u80FD\u5920\u96B1\u85CF/\u986F\u793A\u7684\u8EAB\u9AD4\u90E8\u4F4D\u3002"
+          - name: Player Manager Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5206\u914D\u6B66\u5668\u4E26\u6E1B\u6162\u73A9\u5BB6\u7BA1\u7406\u5668\u7CFB\u7D71\u7684\u4F7F\u7528\u901F\u5EA6\u3002"
+          - name: Prone Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u66F4\u65B0\u73A9\u5BB6\u7684\u4FEF\u81E5\u503C\u3002"
+          - name: Sub Actions Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u5B50\u64CD\u4F5C\u7CFB\u7D71\u503C\u3002"
+          - name: Zoom Options Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u64AD\u653E\u5668\u4F7F\u7528\u7684\u7E2E\u653E\u985E\u578B\u3002"
+          buttons:
+          - name: Player Options
+            local: "\u64AD\u653E\u5668\u9078\u9805"
+          - name: Features Options
+            local: "\u529F\u80FD\u9078\u9805"
+          - name: Audio Fader Options
+            local: "\u97F3\u983B\u63A8\u5B50\u9078\u9805"
+          - name: Dual Wield Options
+            local: "\u96D9\u6301\u9078\u9805"
+          - name: FOV Options
+            local: "\u8996\u91CE\u9078\u9805"
+          - name: Material Controller Options
+            local: "\u6750\u6599\u63A7\u5236\u5668\u9078\u9805"
+          - name: Player Manager Options
+            local: "\u64AD\u653E\u5668\u7BA1\u7406\u5668\u9078\u9805"
+          - name: Prone Options
+            local: "\u50BE\u5411\u65BC\u9078\u64C7"
+          - name: Sub Actions Options
+            local: "\u5B50\u64CD\u4F5C\u9078\u9805"
+          - name: Zoom Options
+            local: "\u7E2E\u653E\u9078\u9805"
+          - name: Dual Wield
+            local: "\u96D9\u6301"
+          - name: Camera Options
+            local: "\u76F8\u6A5F\u9078\u9805"
+          - name: General Options
+            local: "\u5E38\u898F\u9078\u9805"
+          - name: States Options
+            local: "\u72C0\u614B\u9078\u9805"
+          - name: Melee Options
+            local: "\u8FD1\u6230\u9078\u9805"
+          - name: Weapon Options
+            local: "\u6B66\u5668\u9078\u9805"
+          - name: Basic Settings
+            local: "\u57FA\u672C\u8A2D\u7F6E"
+          - name: Controller Features
+            local: "\u63A7\u5236\u5668\u7279\u9EDE"
+          - name: Controller Adjustments
+            local: "\u63A7\u5236\u5668\u8ABF\u6574"
+          - name: Actions Options
+            local: "\u52D5\u4F5C\u9078\u9805"
+          - name: Input Options
+            local: "\u8F38\u5165\u9078\u9805"
+          - name: Update Player
+            local: "\u66F4\u65B0\u64AD\u653E\u5668"
+          - name: Catch Player
+            local: "\u63A5\u7403\u624B"
+          - name: Save Template
+            local: "\u4FDD\u5B58\u6A21\u677F"
+          - name: Load Template
+            local: "\u52A0\u8F09\u6A21\u677F"
+          - name: Set Defaults
+            local: "\u8A2D\u7F6E\u9ED8\u8A8D\u503C"
+          - name: Update Prone
+            local: "\u66F4\u65B0\u50BE\u5411"
+          - name: Update Zoom
+            local: "\u66F4\u65B0\u7E2E\u653E"
+          - name: Activate All Toggles
+            local: "\u6FC0\u6D3B\u6240\u6709\u5207\u63DB"
+          - name: Deactivate All Toggles
+            local: "\u505C\u7528\u6240\u6709\u5207\u63DB"
+          - name: Screen Events
+            local: "\u5C4F\u5E55\u4E8B\u4EF6"
+          - name: Dual Wield
+            local: "\u96D9\u6301"
+          - name: Sub Actions
+            local: "\u5B50\u52D5\u4F5C"
+          - name: Audio Fader
+            local: "\u97F3\u983B\u63A8\u5B50"
+          - name: FOV Manager
+            local: "\u8996\u91CE\u7BA1\u7406\u5668"
+          - name: Material Controller
+            local: "\u6750\u6599\u63A7\u5236\u5668"
+          - name: Player Manager
+            local: "\u7403\u54E1\u7D93\u7406"
+          - name: References
+            local: "\u53C3\u8003"
+          toggles: []
+          prompts:
+          - name: Player Update
+            header: "\u64AD\u653E\u5668\u66F4\u65B0"
+            message: "\u60A8\u5C07\u6839\u64DA\u7DE8\u8F2F\u5668\u7A97\u53E3\u4E2D\u61C9\u7528\u7684\u8A2D\u7F6E\u66F4\u65B0\u5206\u914D\u7684\u73A9\u5BB6\u5C0D\u8C61\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u8981\u9019\u9EBC\u505A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Template Save
+            header: "\u6A21\u677F\u4FDD\u5B58"
+            message: "\u60A8\u5C07\u8981\u8986\u84CB\u5206\u914D\u7684\u6A21\u677F\u8A2D\u7F6E\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u8981\u9019\u9EBC\u505A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Template Load
+            header: "\u6A21\u677F\u52A0\u8F09"
+            message: "\u60A8\u5373\u5C07\u5F9E\u5206\u914D\u7684\u6A21\u677F\u52A0\u8F09\u8A2D\u7F6E\uFF0C\u9019\u5C07\u8986\u84CB\u7DE8\u8F2F\u5668\u7A97\u53E3\u4E2D\u7684\u4EFB\u4F55\u73FE\u6709\u503C\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u8981\u9019\u9EBC\u505A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Reset Values
+            header: "\u91CD\u7F6E\u503C"
+            message: "\u60A8\u5373\u5C07\u5C07\u64AD\u653E\u5668\u66F4\u65B0\u8A2D\u7F6E\u91CD\u7F6E\u70BA\u9ED8\u8A8D\u503C\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u8981\u9019\u9EBC\u505A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: NOTHING ACTIVATED
+            local: "\u6C92\u6709\u6FC0\u6D3B"
+          - name: Player Controller
+            local: "\u73A9\u5BB6\u63A7\u5236\u5668"
+          - name: Player Functions
+            local: "\u64AD\u653E\u5668\u529F\u80FD"
+          - name: Camera
+            local: "\u76F8\u6A5F"
+          - name: Items / Weapons
+            local: "\u7269\u54C1/\u6B66\u5668"
+          - name: Player
+            local: "\u64AD\u653E\u5668"
+          - name: No Items Present! Assign / Catch a player object first.
+            local: "\u6C92\u6709\u7269\u54C1\u5B58\u5728\uFF01\u9996\u5148\u5206\u914D/\u6355\u7372\u73A9\u5BB6\u5C0D\u8C61\u3002"
+          - name: Cameras will be automatically found.
+            local: "\u5C07\u81EA\u52D5\u627E\u5230\u76F8\u6A5F\u3002"
+          - name: Player Found
+            local: "\u627E\u5230\u73A9\u5BB6"
+          - name: Player Updated
+            local: "\u64AD\u653E\u5668\u66F4\u65B0"
+          - name: Template Saved
+            local: "\u6A21\u677F\u5DF2\u4FDD\u5B58"
+          - name: Template Loaded
+            local: "\u6A21\u677F\u5DF2\u52A0\u8F09"
+          - name: Player Update Defaults Set
+            local: "\u64AD\u653E\u5668\u66F4\u65B0\u9ED8\u8A8D\u8A2D\u7F6E"
+          - name: COMPONENTS NOT ACTIVATED
+            local: "\u672A\u6FC0\u6D3B\u7684\u7D44\u4EF6"
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Player Creator Version est absent de votre projet,
+              Player Creator ne peut pas fonctionner sans lui\_!\r\n\r\nVous pouvez
+              r\xE9importer le fichier Player Creator Version \xE0 partir du pack
+              de ressources sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Create
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nCette extension vous permet de cr\xE9er un nouveau lecteur ou
+              de mettre \xE0 jour un lecteur existant, utilisez les options ci-dessous
+              pour d\xE9marrer le processus.\n"
+          - name: Create Options Instructions
+            text: "Utilisez les options ci-dessous pour d\xE9finir comment le lecteur
+              est cr\xE9\xE9."
+          - name: Game Options Instructions
+            text: "Utilisez les options ci-dessous pour d\xE9finir comment la cr\xE9ation
+              du joueur affecte la sc\xE8ne de jeu."
+          - name: Player Options Instructions
+            text: "Utilisez les options ci-dessous pour d\xE9finir le format de la
+              disposition/configuration du lecteur."
+          - name: Ragdoll Options Instructions
+            text: "Utilisez les options ci-dessous pour ajuster la cr\xE9ation de
+              ragdoll."
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Create Options
+            local: "Cr\xE9er des options"
+          - name: Game Options
+            local: Options de jeu
+          - name: Player Options
+            local: Options du lecteur
+          - name: Ragdoll Options
+            local: "Options de poup\xE9e de chiffon"
+          - name: Create Player
+            local: "Cr\xE9er un joueur"
+          - name: Set Defaults
+            local: "D\xE9finir les valeurs par d\xE9faut"
+          - name: Type Options
+            local: Options de saisie
+          - name: Position Options
+            local: Options de poste
+          - name: Destroy Options
+            local: Options de destruction
+          - name: Game Manager
+            local: Gestionnaire de jeu
+          - name: Player References
+            local: "R\xE9f\xE9rences des joueurs"
+          - name: Body Animator
+            local: Animateur corporel
+          - name: Head Options
+            local: "Options de t\xEAte"
+          - name: Open Ragdoll Creator
+            local: "Ouvrir le cr\xE9ateur de Ragdoll"
+          - name: Check for Ragdoll
+            local: "V\xE9rifiez Ragdoll"
+          toggles: []
+          prompts:
+          - name: Player Create
+            header: "Cr\xE9er un joueur"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau lecteur avec
+              les param\xE8tres appliqu\xE9s dans la fen\xEAtre de l'\xE9diteur.\r\n\r\nEs-tu
+              s\xFBr de vouloir faire \xE7a?"
+            buttons:
+            - name: Create
+              local: "Cr\xE9er"
+            - name: Cancel
+              local: Annuler
+          - name: Set Defaults
+            header: "D\xE9finir les valeurs par d\xE9faut"
+            message: "Vous \xEAtes sur le point de r\xE9initialiser les param\xE8tres
+              de cr\xE9ation du lecteur aux valeurs par d\xE9faut.\r\n\r\nEs-tu s\xFBr
+              de vouloir faire \xE7a?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "AUCUN CARACT\xC8RE ASSIGN\xC9"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: " ASSIGN\xC9 | ANIMATEUR PR\xC9SENT | RAGDOLL PR\xC9SENTE"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: " ASSIGN\xC9 | ANIMATEUR PR\xC9SENT | RAGDOLL ABSENT"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: " ASSIGN\xC9 | ANIMATEUR ABSENT"
+          - name: Hero Body Found
+            local: "Corps du h\xE9ros retrouv\xE9"
+          - name: Hero Root Found
+            local: "Racine de h\xE9ros trouv\xE9e"
+          - name: Player Created
+            local: "Joueur cr\xE9\xE9"
+          - name: Player Create Defaults Set
+            local: "Joueur Cr\xE9er un ensemble de param\xE8tres par d\xE9faut"
+        - name: Update
+          local: 
+          texts:
+          - name: Player Options Instructions
+            text: "Activez les bascules pour les fonctionnalit\xE9s que vous souhaitez
+              mettre \xE0 jour sur votre lecteur existant."
+          - name: Features Options Instructions
+            text: "Activez les bascules pour les fonctionnalit\xE9s que vous souhaitez
+              ajouter \xE0 votre lecteur existant."
+          - name: Audio Fade Options Instructions
+            text: "Utilisez les options ci-dessous pour d\xE9finir les valeurs du
+              syst\xE8me Audio Fader."
+          - name: Dual Wield Options Instructions
+            text: "Utilisez les options ci-dessous pour d\xE9finir les options de
+              double maniement de chaque arme."
+          - name: FOV Options Instructions
+            text: "Utilisez les options ci-dessous pour d\xE9finir les valeurs du
+              syst\xE8me FOV."
+          - name: Material Options Instructions
+            text: "Attribuez ci-dessous les parties du corps que vous souhaitez pouvoir
+              masquer / afficher en fonction de l'utilisation de l'arme, de la cin\xE9matique,
+              etc."
+          - name: Player Manager Options Instructions
+            text: "Utilisez les options ci-dessous pour attribuer des armes et ralentir
+              l'utilisation du syst\xE8me Player Manager."
+          - name: Prone Options Instructions
+            text: "Utilisez les options ci-dessous pour mettre \xE0 jour les valeurs
+              sujettes sur le lecteur."
+          - name: Sub Actions Options Instructions
+            text: "Utilisez les options ci-dessous pour d\xE9finir les valeurs syst\xE8me
+              des sous-actions."
+          - name: Zoom Options Instructions
+            text: "Utilisez les options ci-dessous pour d\xE9finir le type de zoom
+              utilis\xE9 pour le lecteur."
+          buttons:
+          - name: Player Options
+            local: Options du lecteur
+          - name: Features Options
+            local: "Options de fonctionnalit\xE9s"
+          - name: Audio Fader Options
+            local: Options de fondu audio
+          - name: Dual Wield Options
+            local: "Options \xE0 double usage"
+          - name: FOV Options
+            local: Options de champ de vision
+          - name: Material Controller Options
+            local: "Options du contr\xF4leur de mat\xE9riau"
+          - name: Player Manager Options
+            local: Options du gestionnaire de joueurs
+          - name: Prone Options
+            local: Options enclines
+          - name: Sub Actions Options
+            local: Options des sous-actions
+          - name: Zoom Options
+            local: Options de zoom
+          - name: Dual Wield
+            local: Double arme
+          - name: Camera Options
+            local: "Options de cam\xE9ra"
+          - name: General Options
+            local: "Options g\xE9n\xE9rales"
+          - name: States Options
+            local: "Options d'\xE9tats"
+          - name: Melee Options
+            local: "Options de m\xEAl\xE9e"
+          - name: Weapon Options
+            local: Options d'armes
+          - name: Basic Settings
+            local: "Param\xE8tres de base"
+          - name: Controller Features
+            local: "Caract\xE9ristiques du contr\xF4leur"
+          - name: Controller Adjustments
+            local: "R\xE9glages du contr\xF4leur"
+          - name: Actions Options
+            local: Options d'actions
+          - name: Input Options
+            local: "Options d'entr\xE9e"
+          - name: Update Player
+            local: "Mettre \xE0 jour le lecteur"
+          - name: Catch Player
+            local: Attraper le joueur
+          - name: Save Template
+            local: "Enregistrer le mod\xE8le"
+          - name: Load Template
+            local: "Charger le mod\xE8le"
+          - name: Set Defaults
+            local: "D\xE9finir les valeurs par d\xE9faut"
+          - name: Update Prone
+            local: "Sujet \xE0 la mise \xE0 jour"
+          - name: Update Zoom
+            local: "Mettre \xE0 jour le zoom"
+          - name: Activate All Toggles
+            local: Activer toutes les bascules
+          - name: Deactivate All Toggles
+            local: "D\xE9sactiver toutes les bascules"
+          - name: Screen Events
+            local: "\xC9v\xE9nements d'\xE9cran"
+          - name: Dual Wield
+            local: Double arme
+          - name: Sub Actions
+            local: Sous-actions
+          - name: Audio Fader
+            local: Fondu audio
+          - name: FOV Manager
+            local: Gestionnaire de champ de vision
+          - name: Material Controller
+            local: "Contr\xF4leur de mat\xE9riel"
+          - name: Player Manager
+            local: Gestionnaire de joueur
+          - name: References
+            local: "R\xE9f\xE9rences"
+          toggles: []
+          prompts:
+          - name: Player Update
+            header: "Mise \xE0 jour du joueur"
+            message: "Vous \xEAtes sur le point de mettre \xE0 jour l'objet joueur
+              attribu\xE9 en fonction des param\xE8tres appliqu\xE9s dans la fen\xEAtre
+              de l'\xE9diteur.\r\n\r\nEs-tu s\xFBr de vouloir faire \xE7a?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          - name: Template Save
+            header: "Enregistrer le mod\xE8le"
+            message: "Vous \xEAtes sur le point d'\xE9craser les param\xE8tres des
+              mod\xE8les attribu\xE9s.\r\n\r\nEs-tu s\xFBr de vouloir faire \xE7a?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          - name: Template Load
+            header: "Chargement du mod\xE8le"
+            message: "Vous \xEAtes sur le point de charger les param\xE8tres du mod\xE8le
+              attribu\xE9, cela \xE9crasera toutes les valeurs existantes dans la
+              fen\xEAtre de l'\xE9diteur.\r\n\r\nEs-tu s\xFBr de vouloir faire \xE7a?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          - name: Reset Values
+            header: "R\xE9initialiser les valeurs"
+            message: "Vous \xEAtes sur le point de r\xE9initialiser les param\xE8tres
+              de mise \xE0 jour du lecteur aux valeurs par d\xE9faut.\r\n\r\nEs-tu
+              s\xFBr de vouloir faire \xE7a?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          singleValues:
+          - name: NOTHING ACTIVATED
+            local: "RIEN D'ACTIV\xC9"
+          - name: Player Controller
+            local: "Contr\xF4leur de joueur"
+          - name: Player Functions
+            local: Fonctions du lecteur
+          - name: Camera
+            local: "Cam\xE9ra"
+          - name: Items / Weapons
+            local: Objets / Armes
+          - name: Player
+            local: Joueur
+          - name: No Items Present! Assign / Catch a player object first.
+            local: "Aucun \xE9l\xE9ment pr\xE9sent\_! Attribuez / Attrapez un objet
+              joueur en premier."
+          - name: Cameras will be automatically found.
+            local: "Les cam\xE9ras seront automatiquement trouv\xE9es."
+          - name: Player Found
+            local: "Joueur trouv\xE9"
+          - name: Player Updated
+            local: "Joueur mis \xE0 jour"
+          - name: Template Saved
+            local: "Mod\xE8le enregistr\xE9"
+          - name: Template Loaded
+            local: "Mod\xE8le charg\xE9"
+          - name: Player Update Defaults Set
+            local: "Param\xE8tres par d\xE9faut de la mise \xE0 jour du lecteur"
+          - name: COMPONENTS NOT ACTIVATED
+            local: "COMPOSANTS NON ACTIV\xC9S"
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\n\uD50C\uB808\uC774\uC5B4 \uD06C\uB9AC\uC5D0\uC774\uD130 \uBC84\uC804
+              \uD30C\uC77C\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0 \uC5C6\uC2B5\uB2C8\uB2E4.
+              \uD50C\uB808\uC774\uC5B4 \uD06C\uB9AC\uC5D0\uC774\uD130 \uBC84\uC804
+              \uD30C\uC77C\uC774 \uC5C6\uC73C\uBA74 \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC5D0\uC14B
+              \uC2A4\uD1A0\uC5B4/\uD328\uD0A4\uC9C0 \uAD00\uB9AC\uC790\uC758 \uC5D0\uC14B
+              \uD329\uC5D0\uC11C Player Creator \uBC84\uC804 \uD30C\uC77C\uC744 \uB2E4\uC2DC
+              \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Create
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\uC774 \uD655\uC7A5 \uD504\uB85C\uADF8\uB7A8\uC744 \uC0AC\uC6A9\uD558\uBA74
+              \uC0C8 \uD50C\uB808\uC774\uC5B4\uB97C \uB9CC\uB4E4\uAC70\uB098 \uAE30\uC874
+              \uD50C\uB808\uC774\uC5B4\uB97C \uC5C5\uB370\uC774\uD2B8\uD560 \uC218
+              \uC788\uC2B5\uB2C8\uB2E4. \uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC
+              \uD504\uB85C\uC138\uC2A4\uB97C \uC2DC\uC791\uD558\uC138\uC694.\n"
+          - name: Create Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uD50C\uB808\uC774\uC5B4
+              \uC0DD\uC131 \uBC29\uBC95\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624."
+          - name: Game Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uD50C\uB808\uC774\uC5B4
+              \uC0DD\uC131\uC774 \uAC8C\uC784 \uC7A5\uBA74\uC5D0 \uBBF8\uCE58\uB294
+              \uC601\uD5A5\uC744 \uC124\uC815\uD569\uB2C8\uB2E4."
+          - name: Player Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uD50C\uB808\uC774\uC5B4
+              \uB808\uC774\uC544\uC6C3/\uC124\uC815\uC758 \uD615\uC2DD\uC744 \uC124\uC815\uD569\uB2C8\uB2E4."
+          - name: Ragdoll Options Instructions
+            text: "\uB798\uADF8\uB3CC \uC0DD\uC131\uC744 \uC870\uC815\uD558\uB824\uBA74
+              \uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC2ED\uC2DC\uC624."
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Create Options
+            local: "\uC635\uC158 \uB9CC\uB4E4\uAE30"
+          - name: Game Options
+            local: "\uAC8C\uC784 \uC635\uC158"
+          - name: Player Options
+            local: "\uD50C\uB808\uC774\uC5B4 \uC635\uC158"
+          - name: Ragdoll Options
+            local: "\uBD09\uC81C \uC778\uD615 \uC635\uC158"
+          - name: Create Player
+            local: "\uD50C\uB808\uC774\uC5B4 \uB9CC\uB4E4\uAE30"
+          - name: Set Defaults
+            local: "\uAE30\uBCF8\uAC12 \uC124\uC815"
+          - name: Type Options
+            local: "\uC720\uD615 \uC635\uC158"
+          - name: Position Options
+            local: "\uC704\uCE58 \uC635\uC158"
+          - name: Destroy Options
+            local: "\uD30C\uAD34 \uC635\uC158"
+          - name: Game Manager
+            local: "\uAC8C\uC784 \uB9E4\uB2C8\uC800"
+          - name: Player References
+            local: "\uD50C\uB808\uC774\uC5B4 \uCC38\uC870"
+          - name: Body Animator
+            local: "\uBC14\uB514 \uC560\uB2C8\uBA54\uC774\uD130"
+          - name: Head Options
+            local: "\uD5E4\uB4DC \uC635\uC158"
+          - name: Open Ragdoll Creator
+            local: "\uBD09\uC81C \uC778\uD615 \uC0DD\uC131\uAE30 \uC5F4\uAE30"
+          - name: Check for Ragdoll
+            local: "\uB799\uB3CC \uD655\uC778"
+          toggles: []
+          prompts:
+          - name: Player Create
+            header: "\uD50C\uB808\uC774\uC5B4 \uB9CC\uB4E4\uAE30"
+            message: "\uD3B8\uC9D1\uAE30 \uCC3D\uC5D0 \uC801\uC6A9\uB41C \uC124\uC815\uC73C\uB85C
+              \uC0C8 \uD50C\uB808\uC774\uC5B4\uB97C \uB9CC\uB4E4\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uC774
+              \uC791\uC5C5\uC744 \uC218\uD589\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: Create
+              local: "\uB9CC\uB4E4\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Set Defaults
+            header: "\uAE30\uBCF8\uAC12 \uC124\uC815"
+            message: "\uD50C\uB808\uC774\uC5B4 \uB9CC\uB4E4\uAE30 \uC124\uC815\uC744
+              \uAE30\uBCF8\uAC12\uC73C\uB85C \uC7AC\uC124\uC815\uD558\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uC774 \uC791\uC5C5\uC744 \uC218\uD589\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "\uD560\uB2F9\uB41C \uBB38\uC790 \uC5C6\uC74C"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: " \uD560\uB2F9\uB428 | \uC560\uB2C8\uBA54\uC774\uD130 \uCC38\uC11D
+              | \uB798\uADF8\uB3CC \uC120\uBB3C"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: " \uD560\uB2F9\uB428 | \uC560\uB2C8\uBA54\uC774\uD130 \uCC38\uC11D
+              | \uB798\uADF8\uB3CC \uC5C6\uC74C"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: " \uD560\uB2F9\uB428 | \uC560\uB2C8\uBA54\uC774\uD130 \uC5C6\uC74C"
+          - name: Hero Body Found
+            local: "\uC601\uC6C5 \uC2DC\uCCB4 \uBC1C\uACAC"
+          - name: Hero Root Found
+            local: "\uC601\uC6C5 \uBFCC\uB9AC \uBC1C\uACAC"
+          - name: Player Created
+            local: "\uD50C\uB808\uC774\uC5B4 \uC0DD\uC131\uB428"
+          - name: Player Create Defaults Set
+            local: "\uD50C\uB808\uC774\uC5B4 \uC0DD\uC131 \uAE30\uBCF8\uAC12 \uC124\uC815"
+        - name: Update
+          local: 
+          texts:
+          - name: Player Options Instructions
+            text: "\uAE30\uC874 \uD50C\uB808\uC774\uC5B4\uC5D0\uC11C \uC5C5\uB370\uC774\uD2B8\uD558\uB824\uB294
+              \uAE30\uB2A5\uC758 \uD1A0\uAE00\uC744 \uD65C\uC131\uD654\uD569\uB2C8\uB2E4."
+          - name: Features Options Instructions
+            text: "\uAE30\uC874 \uD50C\uB808\uC774\uC5B4\uC5D0 \uCD94\uAC00\uD558\uB824\uB294
+              \uAE30\uB2A5\uC758 \uD1A0\uAE00\uC744 \uD65C\uC131\uD654\uD569\uB2C8\uB2E4."
+          - name: Audio Fade Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC624\uB514\uC624
+              \uD398\uC774\uB354 \uC2DC\uC2A4\uD15C \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624."
+          - name: Dual Wield Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uAC01
+              \uBB34\uAE30 \uC30D\uC218 \uBB34\uAE30 \uC635\uC158\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624."
+          - name: FOV Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC FOV \uC2DC\uC2A4\uD15C
+              \uAC12\uC744 \uC124\uC815\uD569\uB2C8\uB2E4."
+          - name: Material Options Instructions
+            text: "\uBB34\uAE30 \uC0AC\uC6A9, \uCEF7\uC2E0 \uB4F1\uC5D0 \uB530\uB77C
+              \uC228\uAE30\uAC70\uB098 \uD45C\uC2DC\uD560 \uC2E0\uCCB4 \uBD80\uC704\uB97C
+              \uC544\uB798\uC5D0 \uC9C0\uC815\uD558\uC2ED\uC2DC\uC624."
+          - name: Player Manager Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uBB34\uAE30\uB97C
+              \uD560\uB2F9\uD558\uACE0 \uD50C\uB808\uC774\uC5B4 \uAD00\uB9AC\uC790
+              \uC2DC\uC2A4\uD15C\uC758 \uC0AC\uC6A9 \uC18D\uB3C4\uB97C \uB2A6\uCDA5\uB2C8\uB2E4."
+          - name: Prone Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uD50C\uB808\uC774\uC5B4\uC5D0\uC11C
+              \uBC1C\uC0DD\uD558\uAE30 \uC26C\uC6B4 \uAC12\uC744 \uC5C5\uB370\uC774\uD2B8\uD558\uC2ED\uC2DC\uC624."
+          - name: Sub Actions Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC Sub Actions
+              \uC2DC\uC2A4\uD15C \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624."
+          - name: Zoom Options Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uD50C\uB808\uC774\uC5B4\uC5D0
+              \uC0AC\uC6A9\uB418\uB294 \uD655\uB300/\uCD95\uC18C \uC720\uD615\uC744
+              \uC124\uC815\uD569\uB2C8\uB2E4."
+          buttons:
+          - name: Player Options
+            local: "\uD50C\uB808\uC774\uC5B4 \uC635\uC158"
+          - name: Features Options
+            local: "\uAE30\uB2A5 \uC635\uC158"
+          - name: Audio Fader Options
+            local: "\uC624\uB514\uC624 \uD398\uC774\uB354 \uC635\uC158"
+          - name: Dual Wield Options
+            local: "\uC774\uC911 \uD718\uB450\uB974\uAE30 \uC635\uC158"
+          - name: FOV Options
+            local: "FOV \uC635\uC158"
+          - name: Material Controller Options
+            local: "\uC7AC\uB8CC \uCEE8\uD2B8\uB864\uB7EC \uC635\uC158"
+          - name: Player Manager Options
+            local: "\uD50C\uB808\uC774\uC5B4 \uAD00\uB9AC\uC790 \uC635\uC158"
+          - name: Prone Options
+            local: "\uACBD\uD5A5\uC774 \uC788\uB294 \uC635\uC158"
+          - name: Sub Actions Options
+            local: "\uD558\uC704 \uC791\uC5C5 \uC635\uC158"
+          - name: Zoom Options
+            local: "\uC90C \uC635\uC158"
+          - name: Dual Wield
+            local: "\uC591\uC190 \uD718\uB450\uB974\uAE30"
+          - name: Camera Options
+            local: "\uCE74\uBA54\uB77C \uC635\uC158"
+          - name: General Options
+            local: "\uC77C\uBC18 \uC635\uC158"
+          - name: States Options
+            local: "\uC0C1\uD0DC \uC635\uC158"
+          - name: Melee Options
+            local: "\uADFC\uC811 \uC635\uC158"
+          - name: Weapon Options
+            local: "\uBB34\uAE30 \uC635\uC158"
+          - name: Basic Settings
+            local: "\uAE30\uBCF8 \uC124\uC815"
+          - name: Controller Features
+            local: "\uCEE8\uD2B8\uB864\uB7EC \uAE30\uB2A5"
+          - name: Controller Adjustments
+            local: "\uCEE8\uD2B8\uB864\uB7EC \uC870\uC815"
+          - name: Actions Options
+            local: "\uC791\uC5C5 \uC635\uC158"
+          - name: Input Options
+            local: "\uC785\uB825 \uC635\uC158"
+          - name: Update Player
+            local: "\uD50C\uB808\uC774\uC5B4 \uC5C5\uB370\uC774\uD2B8"
+          - name: Catch Player
+            local: "\uCE90\uCE58 \uD50C\uB808\uC774\uC5B4"
+          - name: Save Template
+            local: "\uD15C\uD50C\uB9BF \uC800\uC7A5"
+          - name: Load Template
+            local: "\uD15C\uD50C\uB9BF \uB85C\uB4DC"
+          - name: Set Defaults
+            local: "\uAE30\uBCF8\uAC12 \uC124\uC815"
+          - name: Update Prone
+            local: "\uC5CE\uB4DC\uB9B0 \uC5C5\uB370\uC774\uD2B8"
+          - name: Update Zoom
+            local: "\uC90C \uC5C5\uB370\uC774\uD2B8"
+          - name: Activate All Toggles
+            local: "\uBAA8\uB4E0 \uD1A0\uAE00 \uD65C\uC131\uD654"
+          - name: Deactivate All Toggles
+            local: "\uBAA8\uB4E0 \uD1A0\uAE00 \uBE44\uD65C\uC131\uD654"
+          - name: Screen Events
+            local: "\uD654\uBA74 \uC774\uBCA4\uD2B8"
+          - name: Dual Wield
+            local: "\uC591\uC190 \uD718\uB450\uB974\uAE30"
+          - name: Sub Actions
+            local: "\uD558\uC704 \uC791\uC5C5"
+          - name: Audio Fader
+            local: "\uC624\uB514\uC624 \uD398\uC774\uB354"
+          - name: FOV Manager
+            local: "FOV \uAD00\uB9AC\uC790"
+          - name: Material Controller
+            local: "\uC7AC\uB8CC \uCEE8\uD2B8\uB864\uB7EC"
+          - name: Player Manager
+            local: "\uD50C\uB808\uC774\uC5B4 \uB9E4\uB2C8\uC800"
+          - name: References
+            local: "\uCC38\uC870"
+          toggles: []
+          prompts:
+          - name: Player Update
+            header: "\uD50C\uB808\uC774\uC5B4 \uC5C5\uB370\uC774\uD2B8"
+            message: "\uD3B8\uC9D1\uAE30 \uCC3D\uC5D0 \uC801\uC6A9\uB41C \uC124\uC815\uC5D0
+              \uB530\uB77C \uD560\uB2F9\uB41C \uD50C\uB808\uC774\uC5B4 \uAC1C\uCCB4\uB97C
+              \uC5C5\uB370\uC774\uD2B8\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uC774
+              \uC791\uC5C5\uC744 \uC218\uD589\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Template Save
+            header: "\uD15C\uD50C\uB9BF \uC800\uC7A5"
+            message: "\uD560\uB2F9\uB41C \uD15C\uD50C\uB9BF \uC124\uC815\uC744 \uB36E\uC5B4\uC4F0\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uC774 \uC791\uC5C5\uC744 \uC218\uD589\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Template Load
+            header: "\uD15C\uD50C\uB9BF \uB85C\uB4DC"
+            message: "\uD560\uB2F9\uB41C \uD15C\uD50C\uB9BF\uC5D0\uC11C \uC124\uC815\uC744
+              \uB85C\uB4DC\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4. \uC774\uB807\uAC8C
+              \uD558\uBA74 \uD3B8\uC9D1\uAE30 \uCC3D\uC758 \uAE30\uC874 \uAC12\uC744
+              \uB36E\uC5B4\uC501\uB2C8\uB2E4.\r\n\r\n\uC774 \uC791\uC5C5\uC744 \uC218\uD589\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Reset Values
+            header: "\uC7AC\uC124\uC815 \uAC12"
+            message: "\uD50C\uB808\uC774\uC5B4 \uC5C5\uB370\uC774\uD2B8 \uC124\uC815\uC744
+              \uAE30\uBCF8\uAC12\uC73C\uB85C \uC7AC\uC124\uC815\uD558\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uC774 \uC791\uC5C5\uC744 \uC218\uD589\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          singleValues:
+          - name: NOTHING ACTIVATED
+            local: "\uC544\uBB34\uAC83\uB3C4 \uD65C\uC131\uD654\uB418\uC9C0 \uC54A\uC74C"
+          - name: Player Controller
+            local: "\uD50C\uB808\uC774\uC5B4 \uCEE8\uD2B8\uB864\uB7EC"
+          - name: Player Functions
+            local: "\uD50C\uB808\uC774\uC5B4 \uAE30\uB2A5"
+          - name: Camera
+            local: "\uCE74\uBA54\uB77C"
+          - name: Items / Weapons
+            local: "\uC544\uC774\uD15C/\uBB34\uAE30"
+          - name: Player
+            local: "\uD50C\uB808\uC774\uC5B4"
+          - name: No Items Present! Assign / Catch a player object first.
+            local: "\uD56D\uBAA9 \uC5C6\uC74C! \uBA3C\uC800 \uD50C\uB808\uC774\uC5B4
+              \uAC1C\uCCB4\uB97C \uD560\uB2F9/\uC7A1\uC2B5\uB2C8\uB2E4."
+          - name: Cameras will be automatically found.
+            local: "\uCE74\uBA54\uB77C\uAC00 \uC790\uB3D9\uC73C\uB85C \uAC80\uC0C9\uB429\uB2C8\uB2E4."
+          - name: Player Found
+            local: "\uD50C\uB808\uC774\uC5B4 \uBC1C\uACAC"
+          - name: Player Updated
+            local: "\uD50C\uB808\uC774\uC5B4 \uC5C5\uB370\uC774\uD2B8\uB428"
+          - name: Template Saved
+            local: "\uD15C\uD50C\uB9BF \uC800\uC7A5\uB428"
+          - name: Template Loaded
+            local: "\uD15C\uD50C\uB9BF \uB85C\uB4DC\uB428"
+          - name: Player Update Defaults Set
+            local: "\uD50C\uB808\uC774\uC5B4 \uC5C5\uB370\uC774\uD2B8 \uAE30\uBCF8\uAC12
+              \uC124\uC815"
+          - name: COMPONENTS NOT ACTIVATED
+            local: "\uD65C\uC131\uD654\uB418\uC9C0 \uC54A\uC740 \uAD6C\uC131 \uC694\uC18C"
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo Player Creator Version en su proyecto, \xA1Player
+              Creator no puede ejecutarse sin \xE9l!\r\n\r\nPuede volver a importar
+              el archivo de la versi\xF3n Player Creator desde el paquete de activos
+              en la tienda de activos/administrador de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Create
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nEsta extensi\xF3n le permite crear un nuevo jugador o actualizar
+              un jugador existente, utilice las siguientes opciones para iniciar
+              el proceso.\n"
+          - name: Create Options Instructions
+            text: "Use las opciones a continuaci\xF3n para establecer c\xF3mo se
+              crea el reproductor."
+          - name: Game Options Instructions
+            text: "Use las opciones a continuaci\xF3n para establecer c\xF3mo la
+              creaci\xF3n del jugador afecta la escena del juego."
+          - name: Player Options Instructions
+            text: "Use las opciones a continuaci\xF3n para establecer el formato
+              del dise\xF1o/configuraci\xF3n del reproductor."
+          - name: Ragdoll Options Instructions
+            text: "Use las opciones a continuaci\xF3n para ajustar la creaci\xF3n
+              del mu\xF1eco de trapo."
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Create Options
+            local: Crear opciones
+          - name: Game Options
+            local: Opciones de juego
+          - name: Player Options
+            local: Opciones del jugador
+          - name: Ragdoll Options
+            local: "Opciones de mu\xF1eco de trapo"
+          - name: Create Player
+            local: Crear jugador
+          - name: Set Defaults
+            local: Configurar valores predeterminados
+          - name: Type Options
+            local: Opciones de tipo
+          - name: Position Options
+            local: "Opciones de posici\xF3n"
+          - name: Destroy Options
+            local: "Opciones de destrucci\xF3n"
+          - name: Game Manager
+            local: administrador del juego
+          - name: Player References
+            local: Referencias de jugadores
+          - name: Body Animator
+            local: Animador Corporal
+          - name: Head Options
+            local: Opciones de cabeza
+          - name: Open Ragdoll Creator
+            local: Creador de Ragdoll abierto
+          - name: Check for Ragdoll
+            local: Comprobar Ragdoll
+          toggles: []
+          prompts:
+          - name: Player Create
+            header: Jugador Crear
+            message: "Est\xE1 a punto de crear un nuevo jugador con la configuraci\xF3n
+              aplicada en la ventana del editor.\r\n\r\n\xBFSeguro que quieres hacer
+              esto?"
+            buttons:
+            - name: Create
+              local: Crear
+            - name: Cancel
+              local: Cancelar
+          - name: Set Defaults
+            header: Configurar valores predeterminados
+            message: "Est\xE1 a punto de restablecer la configuraci\xF3n de creaci\xF3n
+              del reproductor a los valores predeterminados.\r\n\r\n\xBFSeguro que
+              quieres hacer esto?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "NING\xDAN CAR\xC1CTER ASIGNADO"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: ' ASIGNADO | PRESENTE ANIMADOR | REGALO RAGDOLL'
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: ' ASIGNADO | PRESENTE ANIMADOR | RAGDOLL NO PRESENTE'
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: ' ASIGNADO | ANIMADOR NO PRESENTE'
+          - name: Hero Body Found
+            local: "Cuerpo de h\xE9roe encontrado"
+          - name: Hero Root Found
+            local: "Ra\xEDz de h\xE9roe encontrada"
+          - name: Player Created
+            local: Jugador creado
+          - name: Player Create Defaults Set
+            local: "Conjunto de valores predeterminados de creaci\xF3n de jugadores"
+        - name: Update
+          local: 
+          texts:
+          - name: Player Options Instructions
+            text: Active los conmutadores para las funciones que desea actualizar
+              en su reproductor existente.
+          - name: Features Options Instructions
+            text: Active los conmutadores para las funciones que desea agregar a
+              su reproductor existente.
+          - name: Audio Fade Options Instructions
+            text: "Use las opciones a continuaci\xF3n para establecer los valores
+              del sistema Audio Fader."
+          - name: Dual Wield Options Instructions
+            text: "Use las opciones a continuaci\xF3n para configurar las opciones
+              de doble empu\xF1adura de cada arma."
+          - name: FOV Options Instructions
+            text: Utilice las siguientes opciones para establecer los valores del
+              sistema FOV.
+          - name: Material Options Instructions
+            text: "Asigne las partes del cuerpo a continuaci\xF3n que desea poder
+              ocultar/mostrar en funci\xF3n del uso de armas, la escena, etc."
+          - name: Player Manager Options Instructions
+            text: "Use las opciones a continuaci\xF3n para asignar armas y ralentizar
+              el uso del sistema Player Manager."
+          - name: Prone Options Instructions
+            text: "Use las opciones a continuaci\xF3n para actualizar los valores
+              propensos en el reproductor."
+          - name: Sub Actions Options Instructions
+            text: Utilice las siguientes opciones para establecer los valores del
+              sistema de acciones secundarias.
+          - name: Zoom Options Instructions
+            text: Utilice las siguientes opciones para configurar el tipo de zoom
+              utilizado para el reproductor.
+          buttons:
+          - name: Player Options
+            local: Opciones del jugador
+          - name: Features Options
+            local: "Caracter\xEDsticas Opciones"
+          - name: Audio Fader Options
+            local: Opciones de atenuador de audio
+          - name: Dual Wield Options
+            local: "Opciones de doble empu\xF1adura"
+          - name: FOV Options
+            local: "Opciones de campo de visi\xF3n"
+          - name: Material Controller Options
+            local: Opciones de controlador de materiales
+          - name: Player Manager Options
+            local: Opciones del administrador de jugadores
+          - name: Prone Options
+            local: Opciones propensas
+          - name: Sub Actions Options
+            local: Opciones de acciones secundarias
+          - name: Zoom Options
+            local: Opciones de zoom
+          - name: Dual Wield
+            local: "Doble empu\xF1adura"
+          - name: Camera Options
+            local: "Opciones de c\xE1mara"
+          - name: General Options
+            local: Opciones generales
+          - name: States Options
+            local: Opciones de estados
+          - name: Melee Options
+            local: Opciones cuerpo a cuerpo
+          - name: Weapon Options
+            local: Opciones de armas
+          - name: Basic Settings
+            local: "Ajustes b\xE1sicos"
+          - name: Controller Features
+            local: "Caracter\xEDsticas del controlador"
+          - name: Controller Adjustments
+            local: Ajustes del controlador
+          - name: Actions Options
+            local: Opciones de acciones
+          - name: Input Options
+            local: Opciones de entrada
+          - name: Update Player
+            local: Actualizar jugador
+          - name: Catch Player
+            local: Atrapar jugador
+          - name: Save Template
+            local: Guardar plantilla
+          - name: Load Template
+            local: Cargar plantilla
+          - name: Set Defaults
+            local: Configurar valores predeterminados
+          - name: Update Prone
+            local: Actualizar propenso
+          - name: Update Zoom
+            local: Actualizar zoom
+          - name: Activate All Toggles
+            local: Activar todos los conmutadores
+          - name: Deactivate All Toggles
+            local: Desactivar todos los conmutadores
+          - name: Screen Events
+            local: Eventos de pantalla
+          - name: Dual Wield
+            local: "Doble empu\xF1adura"
+          - name: Sub Actions
+            local: Subacciones
+          - name: Audio Fader
+            local: Atenuador de audio
+          - name: FOV Manager
+            local: "Gerente de campo de visi\xF3n"
+          - name: Material Controller
+            local: Controlador de materiales
+          - name: Player Manager
+            local: Administrador de jugadores
+          - name: References
+            local: Referencias
+          toggles: []
+          prompts:
+          - name: Player Update
+            header: "Actualizaci\xF3n del jugador"
+            message: "Est\xE1 a punto de actualizar el objeto de jugador asignado
+              en funci\xF3n de la configuraci\xF3n aplicada en la ventana del editor.\r\n\r\n\xBFSeguro
+              que quieres hacer esto?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          - name: Template Save
+            header: Guardar plantilla
+            message: "Est\xE1 a punto de sobrescribir la configuraci\xF3n de las
+              plantillas asignadas.\r\n\r\n\xBFSeguro que quieres hacer esto?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          - name: Template Load
+            header: Carga de plantilla
+            message: "Est\xE1 a punto de cargar la configuraci\xF3n de la plantilla
+              asignada, esto sobrescribir\xE1 cualquier valor existente en la ventana
+              del editor.\r\n\r\n\xBFSeguro que quieres hacer esto?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          - name: Reset Values
+            header: Restablecer valores
+            message: "Est\xE1 a punto de restablecer la configuraci\xF3n de actualizaci\xF3n
+              del reproductor a los valores predeterminados.\r\n\r\n\xBFSeguro que
+              quieres hacer esto?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          singleValues:
+          - name: NOTHING ACTIVATED
+            local: NADA ACTIVADO
+          - name: Player Controller
+            local: Controlador de jugador
+          - name: Player Functions
+            local: Funciones del reproductor
+          - name: Camera
+            local: "C\xE1mara"
+          - name: Items / Weapons
+            local: Objetos / Armas
+          - name: Player
+            local: Jugador
+          - name: No Items Present! Assign / Catch a player object first.
+            local: "\xA1No hay art\xEDculos presentes! Asigne / Atrape un objeto
+              de jugador primero."
+          - name: Cameras will be automatically found.
+            local: "Las c\xE1maras se encontrar\xE1n autom\xE1ticamente."
+          - name: Player Found
+            local: Jugador encontrado
+          - name: Player Updated
+            local: Jugador actualizado
+          - name: Template Saved
+            local: Plantilla guardada
+          - name: Template Loaded
+            local: Plantilla cargada
+          - name: Player Update Defaults Set
+            local: "Configuraci\xF3n predeterminada de actualizaci\xF3n del reproductor"
+          - name: COMPONENTS NOT ACTIVATED
+            local: COMPONENTES NO ACTIVADOS

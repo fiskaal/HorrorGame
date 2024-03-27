@@ -1,0 +1,1032 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: Extensions Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Extensions Version file is missing from your
+              project, Extensions cannot run without it!
+
+
+              You can
+              re-import the Extensions Version file from the Extensions asset pack
+              on the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: Welcome
+          texts:
+          - name: Instructions
+            text: '
+
+              Hello and welcome to Extensions for HFPS!
+
+
+              Before
+              getting started make sure to check the Setup tab for the initial setup
+              instructions.
+
+'
+          - name: Support Info
+            text: SUPPORTS HFPS 1.6.3a+ | UNITY 2020+
+          - name: No Version Active
+            text: NO HFPS VERSION ACTIVE! Check the SETUP tab for instructions.
+          - name: Version 1.6.3a Active
+            text: HFPS 1.6.3a ACTIVE!
+          - name: Version 1.6.3b Active
+            text: HFPS 1.6.3b ACTIVE!
+          - name: Version 1.6.3c Active
+            text: HFPS 1.6.3c ACTIVE!
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Documentation
+            local: Documentation
+          - name: Tutorials
+            local: Tutorials
+          - name: Review Asset
+            local: Review Asset
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: Show On Start
+        - name: Setup
+          local: Setup
+          texts:
+          - name: Instructions
+            text: '
+
+              Most of Extensions features are available to use
+              right away however a few features use different script class names
+              per HFPS version, which requires specific Define Symbols to be present.
+
+
+              If
+              you are unsure of what version of HFPS you are using, you can use the
+              Version Detect button below to open the Version Detect extension.
+
+
+              Setup
+              steps are as follows:
+
+
+              1. Version Detect
+
+              2.
+              Add Version Symbol
+
+              3. Done!
+
+'
+          - name: No Version Active
+            text: NO HFPS VERSION ACTIVE! Follow the instructions below.
+          - name: Version 1.6.3a Active
+            text: HFPS 1.6.3a ACTIVE!
+          - name: Version 1.6.3b Active
+            text: HFPS 1.6.3b ACTIVE!
+          - name: Version 1.6.3c Active
+            text: HFPS 1.6.3c ACTIVE!
+          buttons:
+          - name: Open Version Detect
+            local: Open Version Detect
+          - name: Add Version Symbol
+            local: Add Version Symbol
+          - name: Remove Version Symbols
+            local: Remove Version Symbols
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: Add Symbol?
+            message: "You are about to add a new Define Symbol to your settings,
+              this will force your scripts to re-compile. Make sure to save before
+              adding new Define Symbols. \n\nAre you sure?"
+            buttons:
+            - name: Add
+              local: Add
+            - name: Cancel
+              local: Cancel
+          - name: Remove Symbols
+            header: Remove Symbols?
+            message: "You are about to remove Define Symbols from your settings,
+              this will force your scripts to re-compile. Make sure to save before
+              adding new Define Symbols. \n\nAre you sure?"
+            buttons:
+            - name: Remove
+              local: Remove
+            - name: Cancel
+              local: Cancel
+          - name: Import Gizmos
+            header: Import Gizmos?
+            message: You are about to move Gizmo files from the Dizzy Media parent
+              folder to the Gizmos folder. If you've already done this, close this
+              window.
+            buttons:
+            - name: Move
+              local: Move
+            - name: Cancel
+              local: Cancel
+          - name: Symbol Present
+            header: Symbol Present
+            message: 'The Define Symbol you are trying to add is already present. '
+            buttons:
+            - name: Ok
+              local: Ok
+          - name: HFPS Version Symbol
+            header: HFPS Version Symbol
+            message: Which HFPS version are you using?
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: More
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: Cancel
+          singleValues:
+          - name: Compiling
+            local: Compiling
+          - name: 'Adding Symbol - '
+            local: 'Adding Symbol - '
+          - name: 'Removing Symbol - '
+            local: 'Removing Symbol - '
+          - name: Removing All Version Symbols
+            local: Removing All Version Symbols
+          - name: Nothing to remove
+            local: Nothing to remove
+        - name: Integrations
+          local: Integrations
+          texts:
+          - name: DM Setup
+            text: '
+
+              Extensions for HFPS currently supports integration
+              with all of my HFPS add ons and requires no integration setup on your
+              part.
+
+
+              If you already own Components for HFPS, this
+              asset is included in Components and does not need to be imported or
+              included separately.
+
+
+              If you have yet to import Components
+              but plan to use it, remove Extensions first before importing Components.
+
+'
+          - name: 3rd Party Setup
+            text: '
+
+              There are currently no third party integrations
+              support available.
+
+'
+          - name: Toggles Info
+            text: '
+
+              Use the toggles below to display setup instructions
+              for each third party integration.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Dizzy Media
+            local: Dizzy Media
+          - name: Third Party
+            local: Third Party
+    - name: Chinese Simplified
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11\u7EC4\u4EF6\u7248\u672C\u6587\u4EF6\uFF0C\u6CA1\u6709\u5B83\uFF0C\u7EC4\u4EF6\u5C06\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u7EC4\u4EF6\u8D44\u4EA7\u5305\u4E2D\u91CD\u65B0\u5BFC\u5165\u7EC4\u4EF6\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: "\u6B22\u8FCE"
+          texts:
+          - name: Instructions
+            text: "\n\u60A8\u597D\uFF0C\u6B22\u8FCE\u6765\u5230 HFPS \u6269\u5C55\uFF01\r\n\r\n\u5728\u5F00\u59CB\u4E4B\u524D\uFF0C\u8BF7\u786E\u4FDD\u68C0\u67E5\u201C\u8BBE\u7F6E\u201D\u9009\u9879\u5361\u4EE5\u83B7\u53D6\u521D\u59CB\u8BBE\u7F6E\u8BF4\u660E\u3002\n"
+          - name: Support Info
+            text: "\u652F\u6301 HFPS 1.6.3a+ | \u56E2\u7ED3 2020+"
+          - name: No Version Active
+            text: "\u6CA1\u6709 HFPS \u7248\u672C\u6FC0\u6D3B\uFF01\u67E5\u770B\u201C\u8BBE\u7F6E\u201D\u9009\u9879\u5361\u4EE5\u83B7\u53D6\u8BF4\u660E\u3002"
+          - name: Version 1.6.3a Active
+            text: "HFPS 1.6.3a \u6D3B\u8DC3\uFF01"
+          - name: Version 1.6.3b Active
+            text: "HFPS 1.6.3b \u6FC0\u6D3B\uFF01"
+          - name: Version 1.6.3c Active
+            text: "HFPS 1.6.3c \u6FC0\u6D3B\uFF01"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Documentation
+            local: "\u6587\u6863"
+          - name: Tutorials
+            local: "\u6559\u7A0B"
+          - name: Review Asset
+            local: "\u5BA1\u67E5\u8D44\u4EA7"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: "\u5F00\u59CB\u65F6\u663E\u793A"
+        - name: Setup
+          local: "\u8BBE\u7F6E"
+          texts:
+          - name: Instructions
+            text: "\n\u5927\u591A\u6570\u6269\u5C55\u529F\u80FD\u90FD\u53EF\u4EE5\u7ACB\u5373\u4F7F\u7528\uFF0C\u4F46\u662F\u4E00\u4E9B\u529F\u80FD\u5728\u6BCF\u4E2A
+              HFPS \u7248\u672C\u4E2D\u4F7F\u7528\u4E0D\u540C\u7684\u811A\u672C\u7C7B\u540D\u79F0\uFF0C\u8FD9\u9700\u8981\u5B58\u5728\u7279\u5B9A\u7684\u5B9A\u4E49\u7B26\u53F7\u3002\r\n\r\n\u5982\u679C\u60A8\u4E0D\u786E\u5B9A\u60A8\u4F7F\u7528\u7684\u662F\u54EA\u4E2A\u7248\u672C\u7684
+              HFPS\uFF0C\u60A8\u53EF\u4EE5\u4F7F\u7528\u4E0B\u9762\u7684\u7248\u672C\u68C0\u6D4B\u6309\u94AE\u6253\u5F00\u7248\u672C\u68C0\u6D4B\u6269\u5C55\u3002\r\n\r\n\u8BBE\u7F6E\u6B65\u9AA4\u5982\u4E0B\uFF1A\r\n\r\n1.\u7248\u672C\u68C0\u6D4B\r\n2.\u6DFB\u52A0\u7248\u672C\u7B26\u53F7\r\n3.
+              \u5B8C\u6210\uFF01\n"
+          - name: No Version Active
+            text: "\u6CA1\u6709 HFPS \u7248\u672C\u6FC0\u6D3B\uFF01\u6309\u7167\u4EE5\u4E0B\u8BF4\u660E\u8FDB\u884C\u64CD\u4F5C\u3002"
+          - name: Version 1.6.3a Active
+            text: "HFPS 1.6.3a \u6D3B\u8DC3\uFF01"
+          - name: Version 1.6.3b Active
+            text: "HFPS 1.6.3b \u6FC0\u6D3B\uFF01"
+          - name: Version 1.6.3c Active
+            text: "HFPS 1.6.3c \u6FC0\u6D3B\uFF01"
+          buttons:
+          - name: Open Version Detect
+            local: "\u6253\u5F00\u7248\u672C\u68C0\u6D4B"
+          - name: Add Version Symbol
+            local: "\u6DFB\u52A0\u7248\u672C\u7B26\u53F7"
+          - name: Remove Version Symbols
+            local: "\u5220\u9664\u7248\u672C\u7B26\u53F7"
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "\u6DFB\u52A0\u7B26\u53F7\uFF1F"
+            message: "\u60A8\u5373\u5C06\u5728\u8BBE\u7F6E\u4E2D\u6DFB\u52A0\u4E00\u4E2A\u65B0\u7684\u5B9A\u4E49\u7B26\u53F7\uFF0C\u8FD9\u5C06\u5F3A\u5236\u60A8\u7684\u811A\u672C\u91CD\u65B0\u7F16\u8BD1\u3002\u786E\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u4E49\u7B26\u53F7\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Add
+              local: "\u6DFB\u52A0"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Remove Symbols
+            header: "\u5220\u9664\u7B26\u53F7\uFF1F"
+            message: "\u60A8\u5373\u5C06\u4ECE\u8BBE\u7F6E\u4E2D\u5220\u9664\u5B9A\u4E49\u7B26\u53F7\uFF0C\u8FD9\u5C06\u5F3A\u5236\u60A8\u7684\u811A\u672C\u91CD\u65B0\u7F16\u8BD1\u3002\u786E\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u4E49\u7B26\u53F7\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Remove
+              local: "\u6D88\u9664"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Import Gizmos
+            header: "\u5BFC\u5165\u5C0F\u73A9\u610F\u513F\uFF1F"
+            message: "\u60A8\u5373\u5C06\u5C06 Gizmo \u6587\u4EF6\u4ECE Dizzy Media
+              \u7236\u6587\u4EF6\u5939\u79FB\u52A8\u5230 Gizmos \u6587\u4EF6\u5939\u3002\u5982\u679C\u60A8\u5DF2\u7ECF\u8FD9\u6837\u505A\u4E86\uFF0C\u8BF7\u5173\u95ED\u6B64\u7A97\u53E3\u3002"
+            buttons:
+            - name: Move
+              local: "\u79FB\u52A8"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Symbol Present
+            header: "\u5B58\u5728\u7B26\u53F7"
+            message: "\u60A8\u5C1D\u8BD5\u6DFB\u52A0\u7684\u5B9A\u4E49\u7B26\u53F7\u5DF2\u7ECF\u5B58\u5728\u3002 "
+            buttons:
+            - name: Ok
+              local: "\u597D\u7684"
+          - name: HFPS Version Symbol
+            header: "HFPS \u7248\u672C\u7B26\u53F7"
+            message: "\u60A8\u4F7F\u7528\u7684\u662F\u54EA\u4E2A HFPS \u7248\u672C\uFF1F"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: "\u66F4\u591A\u7684"
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: Compiling
+            local: "\u7F16\u8BD1"
+          - name: 'Adding Symbol - '
+            local: "\u6DFB\u52A0\u7B26\u53F7 -"
+          - name: 'Removing Symbol - '
+            local: "\u5220\u9664\u7B26\u53F7 -"
+          - name: Removing All Version Symbols
+            local: "\u5220\u9664\u6240\u6709\u7248\u672C\u7B26\u53F7"
+          - name: Nothing to remove
+            local: "\u6CA1\u6709\u4EC0\u4E48\u53EF\u5220\u9664\u7684"
+        - name: Integrations
+          local: "\u96C6\u6210"
+          texts:
+          - name: DM Setup
+            text: "\nHFPS \u7684\u6269\u5C55\u76EE\u524D\u652F\u6301\u4E0E\u6211\u7684\u6240\u6709
+              HFPS \u9644\u52A0\u7EC4\u4EF6\u96C6\u6210\uFF0C\u5E76\u4E14\u4E0D\u9700\u8981\u60A8\u8FDB\u884C\u96C6\u6210\u8BBE\u7F6E\u3002\r\n\r\n\u5982\u679C\u60A8\u5DF2\u7ECF\u62E5\u6709
+              HFPS \u7EC4\u4EF6\uFF0C\u5219\u6B64\u8D44\u4EA7\u5305\u542B\u5728\u7EC4\u4EF6\u4E2D\uFF0C\u4E0D\u9700\u8981\u5355\u72EC\u5BFC\u5165\u6216\u5305\u542B\u3002\r\n\r\n\u5982\u679C\u60A8\u5C1A\u672A\u5BFC\u5165\u7EC4\u4EF6\u4F46\u6253\u7B97\u4F7F\u7528\u5B83\uFF0C\u8BF7\u5728\u5BFC\u5165\u7EC4\u4EF6\u4E4B\u524D\u5148\u5220\u9664\u6269\u5C55\u3002\n"
+          - name: 3rd Party Setup
+            text: "\n\u76EE\u524D\u6CA1\u6709\u53EF\u7528\u7684\u7B2C\u4E09\u65B9\u96C6\u6210\u652F\u6301\u3002\n"
+          - name: Toggles Info
+            text: "\n\u4F7F\u7528\u4E0B\u9762\u7684\u5207\u6362\u663E\u793A\u6BCF\u4E2A\u7B2C\u4E09\u65B9\u96C6\u6210\u7684\u8BBE\u7F6E\u8BF4\u660E\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Dizzy Media
+            local: "\u5934\u6655\u5A92\u4F53"
+          - name: Third Party
+            local: "\u7B2C\u4E09\u8005"
+    - name: Chinese Traditional
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11\u7D44\u4EF6\u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83\uFF0C\u7D44\u4EF6\u5C07\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u7D44\u4EF6\u8CC7\u7522\u5305\u4E2D\u91CD\u65B0\u5C0E\u5165\u7D44\u4EF6\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: "\u6B61\u8FCE"
+          texts:
+          - name: Instructions
+            text: "\n\u60A8\u597D\uFF0C\u6B61\u8FCE\u4F86\u5230 HFPS \u64F4\u5C55\uFF01\r\n\r\n\u5728\u958B\u59CB\u4E4B\u524D\uFF0C\u8ACB\u78BA\u4FDD\u6AA2\u67E5\u201C\u8A2D\u7F6E\u201D\u9078\u9805\u5361\u4EE5\u7372\u53D6\u521D\u59CB\u8A2D\u7F6E\u8AAA\u660E\u3002\n"
+          - name: Support Info
+            text: "\u652F\u6301 HFPS 1.6.3a+ | \u5718\u7D50 2020+"
+          - name: No Version Active
+            text: "\u6C92\u6709 HFPS \u7248\u672C\u6FC0\u6D3B\uFF01\u67E5\u770B\u201C\u8A2D\u7F6E\u201D\u9078\u9805\u5361\u4EE5\u7372\u53D6\u8AAA\u660E\u3002"
+          - name: Version 1.6.3a Active
+            text: "HFPS 1.6.3a \u6D3B\u8E8D\uFF01"
+          - name: Version 1.6.3b Active
+            text: "HFPS 1.6.3b \u6FC0\u6D3B\uFF01"
+          - name: Version 1.6.3c Active
+            text: "HFPS 1.6.3c \u6FC0\u6D3B\uFF01"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Documentation
+            local: "\u6587\u6A94"
+          - name: Tutorials
+            local: "\u6559\u7A0B"
+          - name: Review Asset
+            local: "\u5BE9\u67E5\u8CC7\u7522"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: "\u958B\u59CB\u6642\u986F\u793A"
+        - name: Setup
+          local: "\u8A2D\u7F6E"
+          texts:
+          - name: Instructions
+            text: "\n\u5927\u591A\u6578\u64F4\u5C55\u529F\u80FD\u90FD\u53EF\u4EE5\u7ACB\u5373\u4F7F\u7528\uFF0C\u4F46\u662F\u4E00\u4E9B\u529F\u80FD\u5728\u6BCF\u500B
+              HFPS \u7248\u672C\u4E2D\u4F7F\u7528\u4E0D\u540C\u7684\u8173\u672C\u985E\u540D\u7A31\uFF0C\u9019\u9700\u8981\u5B58\u5728\u7279\u5B9A\u7684\u5B9A\u7FA9\u7B26\u865F\u3002\r\n\r\n\u5982\u679C\u60A8\u4E0D\u78BA\u5B9A\u60A8\u4F7F\u7528\u7684\u662F\u54EA\u500B\u7248\u672C\u7684
+              HFPS\uFF0C\u60A8\u53EF\u4EE5\u4F7F\u7528\u4E0B\u9762\u7684\u7248\u672C\u6AA2\u6E2C\u6309\u9215\u6253\u958B\u7248\u672C\u6AA2\u6E2C\u64F4\u5C55\u3002\r\n\r\n\u8A2D\u7F6E\u6B65\u9A5F\u5982\u4E0B\uFF1A\r\n\r\n1.\u7248\u672C\u6AA2\u6E2C\r\n2.\u6DFB\u52A0\u7248\u672C\u7B26\u865F\r\n3.
+              \u5B8C\u6210\uFF01\n"
+          - name: No Version Active
+            text: "\u6C92\u6709 HFPS \u7248\u672C\u6FC0\u6D3B\uFF01\u6309\u7167\u4EE5\u4E0B\u8AAA\u660E\u9032\u884C\u64CD\u4F5C\u3002"
+          - name: Version 1.6.3a Active
+            text: "HFPS 1.6.3a \u6D3B\u8E8D\uFF01"
+          - name: Version 1.6.3b Active
+            text: "HFPS 1.6.3b \u6D3B\u8E8D\uFF01"
+          - name: Version 1.6.3c Active
+            text: "HFPS 1.6.3c \u6D3B\u8E8D\uFF01"
+          buttons:
+          - name: Open Version Detect
+            local: "\u6253\u958B\u7248\u672C\u6AA2\u6E2C"
+          - name: Add Version Symbol
+            local: "\u6DFB\u52A0\u7248\u672C\u7B26\u865F"
+          - name: Remove Version Symbols
+            local: "\u522A\u9664\u7248\u672C\u7B26\u865F"
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "\u6DFB\u52A0\u7B26\u865F\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5728\u8A2D\u7F6E\u4E2D\u6DFB\u52A0\u4E00\u500B\u65B0\u7684\u5B9A\u7FA9\u7B26\u865F\uFF0C\u9019\u5C07\u5F37\u5236\u60A8\u7684\u8173\u672C\u91CD\u65B0\u7DE8\u8B6F\u3002\u78BA\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u7FA9\u7B26\u865F\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Add
+              local: "\u6DFB\u52A0"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Remove Symbols
+            header: "\u522A\u9664\u7B26\u865F\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5F9E\u8A2D\u7F6E\u4E2D\u522A\u9664\u5B9A\u7FA9\u7B26\u865F\uFF0C\u9019\u5C07\u5F37\u5236\u60A8\u7684\u8173\u672C\u91CD\u65B0\u7DE8\u8B6F\u3002\u78BA\u4FDD\u5728\u6DFB\u52A0\u65B0\u7684\u5B9A\u7FA9\u7B26\u865F\u4E4B\u524D\u4FDD\u5B58\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Remove
+              local: "\u6D88\u9664"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Import Gizmos
+            header: "\u5C0E\u5165\u5C0F\u73A9\u610F\u5152\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5C07 Gizmo \u6587\u4EF6\u5F9E Dizzy Media
+              \u7236\u6587\u4EF6\u593E\u79FB\u52D5\u5230 Gizmos \u6587\u4EF6\u593E\u3002\u5982\u679C\u60A8\u5DF2\u7D93\u9019\u6A23\u505A\u4E86\uFF0C\u8ACB\u95DC\u9589\u6B64\u7A97\u53E3\u3002"
+            buttons:
+            - name: Move
+              local: "\u79FB\u52D5"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Symbol Present
+            header: "\u5B58\u5728\u7B26\u865F"
+            message: "\u60A8\u5617\u8A66\u6DFB\u52A0\u7684\u5B9A\u7FA9\u7B26\u865F\u5DF2\u7D93\u5B58\u5728\u3002 "
+            buttons:
+            - name: Ok
+              local: "\u597D\u7684"
+          - name: HFPS Version Symbol
+            header: "HFPS \u7248\u672C\u7B26\u865F"
+            message: "\u60A8\u4F7F\u7528\u7684\u662F\u54EA\u500B HFPS \u7248\u672C\uFF1F"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: "\u66F4\u591A\u7684"
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: Compiling
+            local: "\u7DE8\u8B6F"
+          - name: 'Adding Symbol - '
+            local: "\u6DFB\u52A0\u7B26\u865F -"
+          - name: 'Removing Symbol - '
+            local: "\u522A\u9664\u7B26\u865F -"
+          - name: Removing All Version Symbols
+            local: "\u522A\u9664\u6240\u6709\u7248\u672C\u7B26\u865F"
+          - name: Nothing to remove
+            local: "\u6C92\u6709\u4EC0\u9EBC\u53EF\u522A\u9664\u7684"
+        - name: Integrations
+          local: "\u96C6\u6210"
+          texts:
+          - name: DM Setup
+            text: "\nHFPS \u7684\u64F4\u5C55\u76EE\u524D\u652F\u6301\u8207\u6211\u7684\u6240\u6709
+              HFPS \u9644\u52A0\u7D44\u4EF6\u96C6\u6210\uFF0C\u4E26\u4E14\u4E0D\u9700\u8981\u60A8\u9032\u884C\u96C6\u6210\u8A2D\u7F6E\u3002\r\n\r\n\u5982\u679C\u60A8\u5DF2\u7D93\u64C1\u6709
+              HFPS \u7D44\u4EF6\uFF0C\u5247\u6B64\u8CC7\u7522\u5305\u542B\u5728\u7D44\u4EF6\u4E2D\uFF0C\u4E0D\u9700\u8981\u55AE\u7368\u5C0E\u5165\u6216\u5305\u542B\u3002\r\n\r\n\u5982\u679C\u60A8\u5C1A\u672A\u5C0E\u5165\u7D44\u4EF6\u4F46\u6253\u7B97\u4F7F\u7528\u5B83\uFF0C\u8ACB\u5728\u5C0E\u5165\u7D44\u4EF6\u4E4B\u524D\u5148\u522A\u9664\u64F4\u5C55\u3002\n"
+          - name: 3rd Party Setup
+            text: "\n\u76EE\u524D\u6C92\u6709\u53EF\u7528\u7684\u7B2C\u4E09\u65B9\u96C6\u6210\u652F\u6301\u3002\n"
+          - name: Toggles Info
+            text: "\n\u4F7F\u7528\u4E0B\u9762\u7684\u5207\u63DB\u986F\u793A\u6BCF\u500B\u7B2C\u4E09\u65B9\u96C6\u6210\u7684\u8A2D\u7F6E\u8AAA\u660E\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Dizzy Media
+            local: "\u982D\u6688\u5A92\u9AD4"
+          - name: Third Party
+            local: "\u7B2C\u4E09\u8005"
+    - name: French
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier de version des composants est absent de votre projet,
+              les composants ne peuvent pas fonctionner sans lui\_!\r\n\r\nVous pouvez
+              r\xE9importer le fichier de version des composants \xE0 partir du pack
+              d'actifs des composants sur le magasin d'actifs/le gestionnaire de
+              packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: Bienvenu
+          texts:
+          - name: Instructions
+            text: "\nBonjour et bienvenue sur Extensions pour HFPS\_!\r\n\r\nAvant
+              de commencer, assurez-vous de v\xE9rifier l'onglet Configuration pour
+              les instructions de configuration initiales.\n"
+          - name: Support Info
+            text: "PREND EN CHARGE HFPS 1.6.3a+ | UNIT\xC9 2020+"
+          - name: No Version Active
+            text: "PAS DE VERSION HFPS ACTIVE\_! Consultez l'onglet CONFIGURATION
+              pour obtenir des instructions."
+          - name: Version 1.6.3a Active
+            text: "HFPS 1.6.3a ACTIF\_!"
+          - name: Version 1.6.3b Active
+            text: "HFPS 1.6.3b ACTIF\_!"
+          - name: Version 1.6.3c Active
+            text: "HFPS 1.6.3c ACTIF\_!"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Documentation
+            local: Documentation
+          - name: Tutorials
+            local: Tutoriels
+          - name: Review Asset
+            local: Examiner l'actif
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: "Afficher au d\xE9marrage"
+        - name: Setup
+          local: Installer
+          texts:
+          - name: Instructions
+            text: "\nLa plupart des fonctionnalit\xE9s des extensions peuvent \xEAtre
+              utilis\xE9es imm\xE9diatement, mais certaines fonctionnalit\xE9s utilisent
+              des noms de classe de script diff\xE9rents par version HFPS, ce qui
+              n\xE9cessite la pr\xE9sence de symboles de d\xE9finition sp\xE9cifiques.\r\n\r\nSi
+              vous n'\xEAtes pas s\xFBr de la version de HFPS que vous utilisez,
+              vous pouvez utiliser le bouton Version Detect ci-dessous pour ouvrir
+              l'extension Version Detect.\r\n\r\nLes \xE9tapes de configuration sont
+              les suivantes\_:\r\n\r\n1. D\xE9tection de version\r\n2. Ajouter un
+              symbole de version\r\n3. C'est fait\_!\n"
+          - name: No Version Active
+            text: "PAS DE VERSION HFPS ACTIVE\_! Suivez les instructions ci-dessous."
+          - name: Version 1.6.3a Active
+            text: "HFPS 1.6.3a ACTIF\_!"
+          - name: Version 1.6.3b Active
+            text: "HFPS 1.6.3b ACTIF\_!"
+          - name: Version 1.6.3c Active
+            text: "HFPS 1.6.3c ACTIF\_!"
+          buttons:
+          - name: Open Version Detect
+            local: "D\xE9tection de version ouverte"
+          - name: Add Version Symbol
+            local: Ajouter un symbole de version
+          - name: Remove Version Symbols
+            local: Supprimer les symboles de version
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "Ajouter un symbole\_?"
+            message: "Vous \xEAtes sur le point d'ajouter un nouveau symbole D\xE9finir
+              \xE0 vos param\xE8tres, cela forcera vos scripts \xE0 se recompiler.
+              Assurez-vous d'enregistrer avant d'ajouter de nouveaux symboles D\xE9finir.\r\n\r\nEs-tu
+              s\xFBr?"
+            buttons:
+            - name: Add
+              local: Ajouter
+            - name: Cancel
+              local: Annuler
+          - name: Remove Symbols
+            header: "Supprimer les symboles\_?"
+            message: "Vous \xEAtes sur le point de supprimer Define Symbols de vos
+              param\xE8tres, cela forcera vos scripts \xE0 se recompiler. Assurez-vous
+              d'enregistrer avant d'ajouter de nouveaux symboles D\xE9finir.\r\n\r\n\xCAtes-vous
+              s\xFBr?"
+            buttons:
+            - name: Remove
+              local: Retirer
+            - name: Cancel
+              local: Annuler
+          - name: Import Gizmos
+            header: "Importer des gadgets\_?"
+            message: "Vous \xEAtes sur le point de d\xE9placer les fichiers Gizmo
+              du dossier parent Dizzy Media vers le dossier Gizmos. Si vous l'avez
+              d\xE9j\xE0 fait, fermez cette fen\xEAtre."
+            buttons:
+            - name: Move
+              local: "D\xE9placer"
+            - name: Cancel
+              local: Annuler
+          - name: Symbol Present
+            header: "Symbole pr\xE9sent"
+            message: "Le symbole D\xE9finir que vous essayez d'ajouter est d\xE9j\xE0
+              pr\xE9sent. "
+            buttons:
+            - name: Ok
+              local: D'accord
+          - name: HFPS Version Symbol
+            header: Symbole de la version HFPS
+            message: "Quelle version HFPS utilisez-vous\_?"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: Suite
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: Annuler
+          singleValues:
+          - name: Compiling
+            local: Compilation
+          - name: 'Adding Symbol - '
+            local: Ajouter un symbole -
+          - name: 'Removing Symbol - '
+            local: Suppression du symbole -
+          - name: Removing All Version Symbols
+            local: Suppression de tous les symboles de version
+          - name: Nothing to remove
+            local: "Rien \xE0 supprimer"
+        - name: Integrations
+          local: "Int\xE9grations"
+          texts:
+          - name: DM Setup
+            text: "\nLes extensions pour HFPS prennent actuellement en charge l'int\xE9gration
+              avec tous mes modules compl\xE9mentaires HFPS et ne n\xE9cessitent
+              aucune configuration d'int\xE9gration de votre part.\r\n\r\nSi vous
+              poss\xE9dez d\xE9j\xE0 des composants pour HFPS, cet actif est inclus
+              dans les composants et n'a pas besoin d'\xEAtre import\xE9 ou inclus
+              s\xE9par\xE9ment.\r\n\r\nSi vous n'avez pas encore import\xE9 de composants
+              mais que vous pr\xE9voyez de l'utiliser, supprimez d'abord les extensions
+              avant d'importer des composants.\n"
+          - name: 3rd Party Setup
+            text: "\nIl n'y a actuellement aucune prise en charge d'int\xE9grations
+              tierces disponible.\n"
+          - name: Toggles Info
+            text: "\nUtilisez les bascules ci-dessous pour afficher les instructions
+              de configuration pour chaque int\xE9gration tierce."
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Dizzy Media
+            local: "M\xE9dias \xE9tourdis"
+          - name: Third Party
+            local: Tierce personne
+    - name: Korean
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: "\uBC84\uC804 \uB204\uB77D"
+          texts:
+          - name: Version Missing
+            text: "\n\uAD6C\uC131 \uC694\uC18C \uBC84\uC804 \uD30C\uC77C\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C
+              \uB204\uB77D\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uAD6C\uC131 \uC694\uC18C\uAC00
+              \uC5C6\uC73C\uBA74 \uAD6C\uC131 \uC694\uC18C\uB97C \uC2E4\uD589\uD560
+              \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC790\uC0B0 \uC800\uC7A5\uC18C/\uD328\uD0A4\uC9C0
+              \uAD00\uB9AC\uC790\uC758 \uAD6C\uC131 \uC694\uC18C \uC790\uC0B0 \uD329\uC5D0\uC11C
+              \uAD6C\uC131 \uC694\uC18C \uBC84\uC804 \uD30C\uC77C\uC744 \uB2E4\uC2DC
+              \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: "\uC5B4\uC11C \uC624\uC2ED\uC2DC\uC624"
+          texts:
+          - name: Instructions
+            text: "\nHFPS\uC6A9 Extensions\uC5D0 \uC624\uC2E0 \uAC83\uC744 \uD658\uC601\uD569\uB2C8\uB2E4!\r\n\r\n\uC2DC\uC791\uD558\uAE30
+              \uC804\uC5D0 \uC124\uC815 \uD0ED\uC5D0\uC11C \uCD08\uAE30 \uC124\uC815
+              \uC9C0\uCE68\uC744 \uD655\uC778\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Support Info
+            text: "HFPS 1.6.3a+ \uC9C0\uC6D0 | \uC720\uB2C8\uD2F0 2020+"
+          - name: No Version Active
+            text: "HFPS \uBC84\uC804\uC774 \uD65C\uC131\uD654\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4!
+              \uC9C0\uCE68\uC740 SETUP \uD0ED\uC744 \uD655\uC778\uD558\uC2ED\uC2DC\uC624."
+          - name: Version 1.6.3a Active
+            text: "HFPS 1.6.3a \uD65C\uC131\uD654!"
+          - name: Version 1.6.3b Active
+            text: "HFPS 1.6.3b \uD65C\uC131\uD654!"
+          - name: Version 1.6.3c Active
+            text: "HFPS 1.6.3c \uD65C\uC131\uD654!"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Documentation
+            local: "\uC120\uC801 \uC11C\uB958 \uBE44\uCE58"
+          - name: Tutorials
+            local: "\uD29C\uD1A0\uB9AC\uC5BC"
+          - name: Review Asset
+            local: "\uC790\uC0B0 \uAC80\uD1A0"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: "\uC2DC\uC791 \uC2DC \uD45C\uC2DC"
+        - name: Setup
+          local: "\uC124\uC815"
+          texts:
+          - name: Instructions
+            text: "\n\uB300\uBD80\uBD84\uC758 \uD655\uC7A5 \uAE30\uB2A5\uC740 \uC989\uC2DC
+              \uC0AC\uC6A9\uD560 \uC218 \uC788\uC9C0\uB9CC \uC77C\uBD80 \uAE30\uB2A5\uC740
+              HFPS \uBC84\uC804\uB9C8\uB2E4 \uB2E4\uB978 \uC2A4\uD06C\uB9BD\uD2B8
+              \uD074\uB798\uC2A4 \uC774\uB984\uC744 \uC0AC\uC6A9\uD558\uBBC0\uB85C
+              \uD2B9\uC815 \uAE30\uD638 \uC815\uC758\uAC00 \uC788\uC5B4\uC57C \uD569\uB2C8\uB2E4.\r\n\r\n\uC0AC\uC6A9
+              \uC911\uC778 HFPS \uBC84\uC804\uC774 \uD655\uC2E4\uD558\uC9C0 \uC54A\uC740
+              \uACBD\uC6B0 \uC544\uB798\uC758 \uBC84\uC804 \uAC10\uC9C0 \uBC84\uD2BC\uC744
+              \uC0AC\uC6A9\uD558\uC5EC \uBC84\uC804 \uAC10\uC9C0 \uD655\uC7A5 \uD504\uB85C\uADF8\uB7A8\uC744
+              \uC5F4 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\r\n\uC124\uC815 \uB2E8\uACC4\uB294
+              \uB2E4\uC74C\uACFC \uAC19\uC2B5\uB2C8\uB2E4.\r\n\r\n1. \uBC84\uC804
+              \uAC10\uC9C0\r\n2. \uBC84\uC804 \uAE30\uD638 \uCD94\uAC00\r\n3. \uC644\uB8CC!\n"
+          - name: No Version Active
+            text: "HFPS \uBC84\uC804\uC774 \uD65C\uC131\uD654\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4!
+              \uC544\uB798 \uC9C0\uCE68\uC744 \uB530\uB974\uC2ED\uC2DC\uC624."
+          - name: Version 1.6.3a Active
+            text: "HFPS 1.6.3a \uD65C\uC131\uD654!"
+          - name: Version 1.6.3b Active
+            text: "HFPS 1.6.3b \uD65C\uC131\uD654!"
+          - name: Version 1.6.3c Active
+            text: "HFPS 1.6.3c \uD65C\uC131\uD654!"
+          buttons:
+          - name: Open Version Detect
+            local: "\uBC84\uC804 \uAC10\uC9C0 \uC5F4\uAE30"
+          - name: Add Version Symbol
+            local: "\uBC84\uC804 \uAE30\uD638 \uCD94\uAC00"
+          - name: Remove Version Symbols
+            local: "\uBC84\uC804 \uAE30\uD638 \uC81C\uAC70"
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "\uAE30\uD638\uB97C \uCD94\uAC00\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC124\uC815\uC5D0 \uC0C8\uB85C\uC6B4 \uAE30\uD638 \uC815\uC758\uB97C
+              \uCD94\uAC00\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4. \uADF8\uB7EC\uBA74
+              \uC2A4\uD06C\uB9BD\uD2B8\uAC00 \uAC15\uC81C\uB85C \uB2E4\uC2DC \uCEF4\uD30C\uC77C\uB429\uB2C8\uB2E4.
+              \uC0C8 \uC815\uC758 \uAE30\uD638\uB97C \uCD94\uAC00\uD558\uAE30 \uC804\uC5D0
+              \uC800\uC7A5\uD574\uC57C \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Add
+              local: "\uCD94\uAC00\uD558\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Remove Symbols
+            header: "\uAE30\uD638\uB97C \uC81C\uAC70\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC124\uC815\uC5D0\uC11C \uAE30\uD638 \uC815\uC758\uB97C \uC81C\uAC70\uD558\uB824\uACE0
+              \uD569\uB2C8\uB2E4. \uADF8\uB7EC\uBA74 \uC2A4\uD06C\uB9BD\uD2B8\uAC00
+              \uAC15\uC81C\uB85C \uB2E4\uC2DC \uCEF4\uD30C\uC77C\uB429\uB2C8\uB2E4.
+              \uC0C8 \uC815\uC758 \uAE30\uD638\uB97C \uCD94\uAC00\uD558\uAE30 \uC804\uC5D0
+              \uC800\uC7A5\uD574\uC57C \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Remove
+              local: "\uC81C\uAC70\uD558\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Import Gizmos
+            header: "\uAE30\uC988\uBAA8\uB97C \uAC00\uC838\uC624\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "Dizzy Media \uC0C1\uC704 \uD3F4\uB354\uC5D0\uC11C Gizmos \uD3F4\uB354\uB85C
+              Gizmo \uD30C\uC77C\uC744 \uC774\uB3D9\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.
+              \uC774\uBBF8 \uC644\uB8CC\uD588\uB2E4\uBA74 \uC774 \uCC3D\uC744 \uB2EB\uC73C\uC2ED\uC2DC\uC624."
+            buttons:
+            - name: Move
+              local: "\uC774\uB3D9\uD558\uB2E4"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Symbol Present
+            header: "\uAE30\uD638 \uD604\uC7AC"
+            message: "\uCD94\uAC00\uD558\uB824\uB294 \uC815\uC758 \uAE30\uD638\uAC00
+              \uC774\uBBF8 \uC788\uC2B5\uB2C8\uB2E4."
+            buttons:
+            - name: Ok
+              local: "\uD655\uC778"
+          - name: HFPS Version Symbol
+            header: "HFPS \uBC84\uC804 \uAE30\uD638"
+            message: "\uC5B4\uB5A4 HFPS \uBC84\uC804\uC744 \uC0AC\uC6A9\uD558\uACE0
+              \uC788\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: "\uB354"
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          singleValues:
+          - name: Compiling
+            local: "\uCEF4\uD30C\uC77C"
+          - name: 'Adding Symbol - '
+            local: "\uAE30\uD638 \uCD94\uAC00 -"
+          - name: 'Removing Symbol - '
+            local: "\uAE30\uD638 \uC81C\uAC70 -"
+          - name: Removing All Version Symbols
+            local: "\uBAA8\uB4E0 \uBC84\uC804 \uAE30\uD638 \uC81C\uAC70"
+          - name: Nothing to remove
+            local: "\uC81C\uAC70\uD560 \uD56D\uBAA9 \uC5C6\uC74C"
+        - name: Integrations
+          local: "\uD1B5\uD569"
+          texts:
+          - name: DM Setup
+            text: "\nExtensions for HFPS\uB294 \uD604\uC7AC \uB0B4 \uBAA8\uB4E0 HFPS
+              \uCD94\uAC00 \uAE30\uB2A5\uACFC\uC758 \uD1B5\uD569\uC744 \uC9C0\uC6D0\uD558\uBA70
+              \uADC0\uD558\uC758 \uD1B5\uD569 \uC124\uC815\uC774 \uD544\uC694\uD558\uC9C0
+              \uC54A\uC2B5\uB2C8\uB2E4.\r\n\r\nHFPS\uC6A9 \uAD6C\uC131 \uC694\uC18C\uB97C
+              \uC774\uBBF8 \uC18C\uC720\uD558\uACE0 \uC788\uB294 \uACBD\uC6B0 \uC774
+              \uC790\uC0B0\uC740 \uAD6C\uC131 \uC694\uC18C\uC5D0 \uD3EC\uD568\uB418\uBA70
+              \uBCC4\uB3C4\uB85C \uAC00\uC838\uC624\uAC70\uB098 \uD3EC\uD568\uD560
+              \uD544\uC694\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4.\r\n\r\n\uC544\uC9C1 \uAD6C\uC131
+              \uC694\uC18C\uB97C \uAC00\uC838\uC624\uC9C0 \uC54A\uC558\uC9C0\uB9CC
+              \uC0AC\uC6A9\uD560 \uACC4\uD68D\uC774\uB77C\uBA74 \uAD6C\uC131 \uC694\uC18C\uB97C
+              \uAC00\uC838\uC624\uAE30 \uC804\uC5D0 \uBA3C\uC800 \uD655\uC7A5\uC744
+              \uC81C\uAC70\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: 3rd Party Setup
+            text: "\n\uD604\uC7AC \uC0AC\uC6A9\uD560 \uC218 \uC788\uB294 \uD0C0\uC0AC
+              \uD1B5\uD569 \uC9C0\uC6D0\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.\n"
+          - name: Toggles Info
+            text: "\n\uC544\uB798 \uD1A0\uAE00\uC744 \uC0AC\uC6A9\uD558\uC5EC \uAC01
+              \uD0C0\uC0AC \uD1B5\uD569\uC5D0 \uB300\uD55C \uC124\uC815 \uC9C0\uCE68\uC744
+              \uD45C\uC2DC\uD569\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Dizzy Media
+            local: "\uB514\uC9C0 \uBBF8\uB514\uC5B4"
+          - name: Third Party
+            local: "\uC81C3\uC790"
+    - name: Spanish
+      windows:
+      - name: Welcome
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo de versi\xF3n de componentes de su proyecto,
+              \xA1los componentes no pueden ejecutarse sin \xE9l!\r\n\r\nPuede volver
+              a importar el archivo de versi\xF3n de componentes del paquete de activos
+              de componentes en el almac\xE9n de activos/administrador de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Welcome
+          local: Bienvenidos
+          texts:
+          - name: Instructions
+            text: "\n\xA1Hola y bienvenido a Extensiones para HFPS!\r\n\r\nAntes
+              de comenzar, aseg\xFArese de consultar la pesta\xF1a Configuraci\xF3n
+              para obtener las instrucciones de configuraci\xF3n inicial.\n"
+          - name: Support Info
+            text: SOPORTA HFPS 1.6.3a+ | UNIDAD 2020+
+          - name: No Version Active
+            text: "\xA1NINGUNA VERSI\xD3N HFPS ACTIVA! Consulte la pesta\xF1a CONFIGURACI\xD3N
+              para obtener instrucciones."
+          - name: Version 1.6.3a Active
+            text: HFPS 1.6.3a ACTIVO!
+          - name: Version 1.6.3b Active
+            text: HFPS 1.6.3b ACTIVO!
+          - name: Version 1.6.3c Active
+            text: HFPS 1.6.3c ACTIVO!
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Documentation
+            local: "Documentaci\xF3n"
+          - name: Tutorials
+            local: Tutoriales
+          - name: Review Asset
+            local: Revisar activo
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Show On Start
+            local: Mostrar al inicio
+        - name: Setup
+          local: "Configuraci\xF3n"
+          texts:
+          - name: Instructions
+            text: "\nLa mayor\xEDa de las funciones de Extensiones est\xE1n disponibles
+              para usar de inmediato, sin embargo, algunas funciones usan diferentes
+              nombres de clase de script por versi\xF3n de HFPS, lo que requiere
+              que est\xE9n presentes Definir s\xEDmbolos espec\xEDficos.\r\n\r\nSi
+              no est\xE1 seguro de qu\xE9 versi\xF3n de HFPS est\xE1 usando, puede
+              usar el bot\xF3n Detectar versi\xF3n a continuaci\xF3n para abrir la
+              extensi\xF3n Detectar versi\xF3n.\r\n\r\nLos pasos de configuraci\xF3n
+              son los siguientes:\r\n\r\n1. Detecci\xF3n de versi\xF3n\r\n2. Agregar
+              s\xEDmbolo de versi\xF3n\r\n3. \xA1Listo!\n"
+          - name: No Version Active
+            text: "\xA1NINGUNA VERSI\xD3N HFPS ACTIVA! Sigue las instrucciones de
+              abajo."
+          - name: Version 1.6.3a Active
+            text: HFPS 1.6.3a ACTIVO!
+          - name: Version 1.6.3b Active
+            text: HFPS 1.6.3b ACTIVO!
+          - name: Version 1.6.3c Active
+            text: HFPS 1.6.3c ACTIVO!
+          buttons:
+          - name: Open Version Detect
+            local: "Detecci\xF3n de versi\xF3n abierta"
+          - name: Add Version Symbol
+            local: "Agregar s\xEDmbolo de versi\xF3n"
+          - name: Remove Version Symbols
+            local: "Eliminar s\xEDmbolos de versi\xF3n"
+          toggles: []
+          prompts:
+          - name: Add Symbol
+            header: "\xBFAgregar s\xEDmbolo?"
+            message: "Est\xE1 a punto de agregar un nuevo s\xEDmbolo de definici\xF3n
+              a su configuraci\xF3n, esto forzar\xE1 que sus scripts se vuelvan a
+              compilar. Aseg\xFArese de guardar antes de agregar nuevos Definir s\xEDmbolos.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Add
+              local: Agregar
+            - name: Cancel
+              local: Cancelar
+          - name: Remove Symbols
+            header: "\xBFQuitar s\xEDmbolos?"
+            message: "Est\xE1 a punto de eliminar Definir s\xEDmbolos de su configuraci\xF3n,
+              esto forzar\xE1 que sus scripts se vuelvan a compilar. Aseg\xFArese
+              de guardar antes de agregar nuevos Definir s\xEDmbolos.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Remove
+              local: Remover
+            - name: Cancel
+              local: Cancelar
+          - name: Import Gizmos
+            header: "\xBFImportar artilugios?"
+            message: "Est\xE1 a punto de mover archivos Gizmo de la carpeta principal
+              de Dizzy Media a la carpeta Gizmos. Si ya lo ha hecho, cierre esta
+              ventana."
+            buttons:
+            - name: Move
+              local: Moverse
+            - name: Cancel
+              local: Cancelar
+          - name: Symbol Present
+            header: "S\xEDmbolo Presente"
+            message: "El s\xEDmbolo de definici\xF3n que est\xE1 tratando de agregar
+              ya est\xE1 presente. "
+            buttons:
+            - name: Ok
+              local: OK
+          - name: HFPS Version Symbol
+            header: "S\xEDmbolo de versi\xF3n HFPS"
+            message: "\xBFQu\xE9 versi\xF3n de HFPS est\xE1s usando?"
+            buttons:
+            - name: HFPS 1.6.3a
+              local: HFPS 1.6.3a
+            - name: More
+              local: "M\xE1s"
+            - name: HFPS 1.6.3b
+              local: HFPS 1.6.3b
+            - name: HFPS 1.6.3c
+              local: HFPS 1.6.3c
+            - name: Cancel
+              local: Cancelar
+          singleValues:
+          - name: Compiling
+            local: Compilando
+          - name: 'Adding Symbol - '
+            local: "Adici\xF3n de s\xEDmbolo -"
+          - name: 'Removing Symbol - '
+            local: "Eliminaci\xF3n de s\xEDmbolo -"
+          - name: Removing All Version Symbols
+            local: "Eliminaci\xF3n de todos los s\xEDmbolos de versi\xF3n"
+          - name: Nothing to remove
+            local: nada que quitar
+        - name: Integrations
+          local: integraciones
+          texts:
+          - name: DM Setup
+            text: "\nLas extensiones para HFPS actualmente admiten la integraci\xF3n
+              con todos mis complementos de HFPS y no requieren configuraci\xF3n
+              de integraci\xF3n de su parte.\r\n\r\nSi ya posee Componentes para
+              HFPS, este recurso se incluye en Componentes y no es necesario importarlo
+              ni incluirlo por separado.\r\n\r\nSi a\xFAn tiene que importar componentes
+              pero planea usarlos, primero elimine las extensiones antes de importar
+              los componentes.\n"
+          - name: 3rd Party Setup
+            text: '
+
+              Actualmente no hay soporte de integraciones de
+              terceros disponible.
+
+'
+          - name: Toggles Info
+            text: "\nUtilice los botones a continuaci\xF3n para mostrar las instrucciones
+              de configuraci\xF3n para cada integraci\xF3n de terceros."
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Dizzy Media
+            local: Medios mareados
+          - name: Third Party
+            local: Tercero

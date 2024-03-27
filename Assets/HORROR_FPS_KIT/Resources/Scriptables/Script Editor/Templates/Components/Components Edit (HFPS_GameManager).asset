@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (HFPS_GameManager)
+  m_EditorClassIdentifier: 
+  content:
+  - name: Change Scene Loader
+    original: "        public void ChangeScene(string SceneName)\r\n        {\r\n           
+      SceneManager.LoadScene(SceneName);\r\n        }"
+    edit: "        public void ChangeScene(string SceneName)\r\n        {\r\n           
+      SceneManager.LoadScene(SceneName);\r\n        }\r\n        \r\n        public
+      void ChangeScene_Loader(string scene, int loadState){\r\n        \r\n           
+      StartCoroutine(LoadScene(scene, loadState));\r\n        \r\n        }//ChangeScene_Loader"
+  - name: Pause & Inventory Lock Values
+    original: '        private int oldBlurLevel;'
+    edit: "        private int oldBlurLevel;\r\n        private bool pauseLocked;\r\n       
+      private bool inventoryLocked;"
+  - name: Pause & Inventory Lock States
+    original: "            SceneManager.LoadScene(sceneLoaderName);\r\n        }"
+    edit: "            SceneManager.LoadScene(sceneLoaderName);\r\n        }\r\n       
+      \r\n        public void PauseLock_State(bool state){\r\n        \r\n           
+      pauseLocked = state;\r\n        \r\n        }//PauseLock_State\r\n        \r\n       
+      public void InventoryLock_State(bool state){\r\n        \r\n            inventoryLocked
+      = state;\r\n        \r\n        }//InventoryLock_State"
+  - name: OnInventory Update
+    original: "        private void OnInventory(UnityEngine.InputSystem.InputAction.CallbackContext
+      ctx)\r\n        {"
+    edit: "        private void OnInventory(UnityEngine.InputSystem.InputAction.CallbackContext
+      ctx)\r\n        {\r\n            if(!inventoryLocked){\r\n            "
+  - name: OnPause Update
+    original: "        }\r\n\r\n        private void OnPause(UnityEngine.InputSystem.InputAction.CallbackContext
+      ctx)\r\n        {"
+    edit: "            \r\n            }//!inventoryLocked\r\n        }\r\n\r\n       
+      private void OnPause(UnityEngine.InputSystem.InputAction.CallbackContext ctx)\r\n       
+      {\r\n            if(!pauseLocked){\r\n        "
+  - name: OnPause Update End
+    original: "        }\r\n\r\n        void FixedUpdate()\r\n        {"
+    edit: "            \r\n            }//!pauseLocked\r\n        }\r\n\r\n       
+      void FixedUpdate()\r\n        {"

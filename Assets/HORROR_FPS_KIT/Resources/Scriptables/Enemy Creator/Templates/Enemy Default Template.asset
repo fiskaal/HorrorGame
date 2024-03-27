@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64635c6635b3044c9b084164f48da0f, type: 3}
+  m_Name: Enemy Default Template
+  m_EditorClassIdentifier: 
+  general:
+    enemyLayer: 8
+    bodyLayer: 10
+    enemyAnim: {fileID: 9100000, guid: 101aa8d048e900c478c6784011af9e40, type: 2}
+    waypoints: {fileID: 1148916943029733630, guid: 2718290d81bd1f5449dce5fe83dc8e72,
+      type: 3}
+  capsule:
+    center: {x: 0, y: 1.05, z: 0}
+    radius: 0.3
+    height: 2
+    direction: 1
+  navMesh:
+    baseOffset: 0.01
+    speed: 0
+    angularSpeed: 270
+    acceleration: 50
+    stoppingDistance: 1.5
+    autoBraking: 1
+    navRadius: 0.5
+    navHeight: 2
+    quality: 4
+    priority: 50
+    autoTraverseOffMeshLink: 1
+    autoRepath: 1
+    areaMask: 3
+  health:
+    fleshTag: Flesh
+    health: 100
+    maxHealth: 200
+    hitAudio: {fileID: 8300000, guid: d7e5f9411e4e8394997a8ce69f17f48f, type: 3}
+    disableHealth: 0
+    allowHeadshot: 1
+    headshotDamage: 35
+    corpseRemoveType: 2
+    corpseTime: 10
+  footsteps:
+    footsteps: {fileID: 9007647264219998818, guid: 936ad51cee9cbe24da9d3e83495392fb,
+      type: 3}
+    footstepsMask:
+      serializedVersion: 2
+      m_Bits: 2049
+    npcFootsteps: []
+    defaultFootsteps:
+    - {fileID: 8300000, guid: e82084bcbbadd85459d60ea4333fca45, type: 3}
+    - {fileID: 8300000, guid: e15729172a8ce974c9976192fdac09a2, type: 3}
+    - {fileID: 8300000, guid: 2ccf33967938f79459b1a570b7e7256e, type: 3}
+    - {fileID: 8300000, guid: 46ffcfc4d67f16841abd5810a6b99d3d, type: 3}
+    - {fileID: 8300000, guid: bff620e77d49cfc4089a421b0dfe161a, type: 3}
+    - {fileID: 8300000, guid: 229c7a74858fe5442b7f326afc048a1f, type: 3}
+    - {fileID: 8300000, guid: 57e117b2d9b94a744865e4d74810fe33, type: 3}
+    groundRay: 0.4
+    allowDefaultFootsteps: 1
+    eventBasedFootsteps: 1
+    walkVelocity: 1.2
+    volumeWalk: 1
+    volumeRun: 1.5
+    walkNextWait: 2
+    runNextWait: 0.3
+  zombieAI:
+    sleepBehaviour: 2
+    zombieBehaviour: 1
+    sightMask:
+      serializedVersion: 2
+      m_Bits: 1
+    threatMask:
+      serializedVersion: 2
+      m_Bits: 526336
+    behaviourSettings:
+      enableScream: 1
+      enableAgony: 0
+      enableHunger: 0
+      soundReaction: 1
+      runToThreat: 1
+      attackOthers: 0
+      hungerRecoverHealth: 0
+      randomWaypoint: 1
+      waypointsReassign: 0
+      lowHPIgnorePlayer: 0
+      playerInvisible: 0
+      damageThreat: 1
+      wakeByThreat: 1
+      patrolTime: {x: 3, y: 6}
+      screamNext: {x: 30, y: 60}
+      agonyNext: {x: 30, y: 60}
+      playerLostPatrol: 3
+      hungerTime: 80
+    aiSettings:
+      walkSpeed: 0.4
+      runSpeed: 5.5
+      eatingStoppingDist: 3
+      agentRotationSpeed: 5
+      speedChangeSpeed: 1
+      rotateManually: 1
+      accelerateManually: 1
+      walkRootMotion: 0
+    damageSettings:
+      damageValue: {x: 10, y: 20}
+      damageKickback: {x: 4, y: -3}
+      kickbackTime: 0.075
+    sensorSettings:
+      headOffset: {x: 0, y: 0, z: 0}
+      reactionAngleTurn: 40
+      soundReactRange: 20
+      sightsFOV: 110
+      attackFOV: 30
+      sightsDistance: 15
+      attackDistance: 5
+      idleHearRange: 10
+      veryCloseRange: 4
+      chaseTimeHide: 2
+      threatRadius: 10
+      lowHP: 30
+    npcSounds:
+      ScreamSound: {fileID: 8300000, guid: 88b2cc3e81af7334aa25e5732c39d136, type: 3}
+      EatingSound: {fileID: 8300000, guid: 442f32712ac1bb24ebebdde638a5995b, type: 3}
+      AgonizeSound: {fileID: 8300000, guid: 8fd75b9827ffb1d46aa1fc4668bdb042, type: 3}
+      TakeDamageSound: {fileID: 8300000, guid: 1d7afd9aecc47c94785c6c327740dd93, type: 3}
+      DieSound: {fileID: 8300000, guid: ff5fe489497396f44883f5c7ea3ad53b, type: 3}
+      IdleSounds:
+      - {fileID: 8300000, guid: 9f04046bf71b91f4fa4b39793840157b, type: 3}
+      - {fileID: 8300000, guid: 8d63482cbf56b2242836e586882e8218, type: 3}
+      - {fileID: 8300000, guid: 1f58348542078644b9354a167a8651d2, type: 3}
+      ReactionSounds:
+      - {fileID: 8300000, guid: fb08949f0f26c5549aee96864a74f957, type: 3}
+      - {fileID: 8300000, guid: 0c1661fc7952c664bbc97c532a191a68, type: 3}
+      - {fileID: 8300000, guid: 46ccaa9cd25e37c4794412fba69e124e, type: 3}
+      AttackSounds:
+      - {fileID: 8300000, guid: a27674ebdc3e3354ba5324a908c5edf4, type: 3}
+      - {fileID: 8300000, guid: ac8dc17f2e870f74ab7d96ef0994358f, type: 3}
+      - {fileID: 8300000, guid: 82e8b1cad800ddd4ababfd220a7ccf45, type: 3}
+      - {fileID: 8300000, guid: ae84c3c6f25780b4fa357f3842cf8bf8, type: 3}
+      - {fileID: 8300000, guid: 4afc820c7d8f49e4095cf26b8a768f7f, type: 3}
+      - {fileID: 8300000, guid: fb7153e8db870b742aecf0db96c8f88a, type: 3}
+      - {fileID: 8300000, guid: 9e489066965942b4e8c57c3965dc5566, type: 3}
+      - {fileID: 8300000, guid: 935b57b668e883d4f80c11cc66689ea4, type: 3}
+      - {fileID: 8300000, guid: 8754aeecfa771bc4386da0f99a3b942a, type: 3}
+      - {fileID: 8300000, guid: d602a978c444aa14d93ac97f6db483b2, type: 3}
+    npcSoundsVolume:
+      ScreamVolume: 1
+      EatingVolume: 1
+      AgonizeVolume: 1
+      TakeDamageVolume: 1
+      DieVolume: 1
+      IdleVolume: 1
+      ReactionVolume: 1
+      AttackVolume: 1
+    playAttractedSounds: 1
+    eventPlayAttackSound: 1
+    eventPlayScreamSound: 0
+    eventPlayAgonySound: 0
+    eventPlayEatSound: 0

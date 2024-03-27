@@ -1,0 +1,666 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: ScriptEditor Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Script Editor Version file is missing from
+              your project, Script Editor cannot run without it!
+
+
+              You
+              can re-import the Script Editor Version file from the asset pack on
+              the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: '
+
+              This extension allows you to make quick edits
+              to existing scripts by using pre-defined templates / libraries.
+
+
+              Assign
+              a library below for the edits you want to make and use the update button
+              to start the editing process.
+
+'
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Update Scripts
+            local: Update Scripts
+          - name: Remove Script Edits
+            local: Remove Script Edits
+          - name: Check Scripts
+            local: Check Scripts
+          - name: Clear Notification
+            local: Clear Notification
+          - name: Library
+            local: Library
+          - name: Status
+            local: Status
+          - name: General
+            local: General
+          - name: Debug
+            local: Debug
+          toggles: []
+          prompts:
+          - name: Update
+            header: Update Scripts
+            message: 'You are about to make automatic edits to scripts in your project,
+              make sure to make a backup before continuing.
+
+
+              Are you
+              sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Remove
+            header: Remove Edits
+            message: 'You are about to remove script edits made by the Script Editor,
+              make sure to make a backup before continuing.
+
+
+              Are you
+              sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: NO LIBRARY ASSIGNED
+          - name: NO EDITS MADE YET
+            local: NO EDITS MADE YET
+          - name: ' EDITS ASSIGNED!'
+            local: ' EDITS ASSIGNED!'
+          - name: ' EDIT DONE'
+            local: ' EDIT DONE'
+          - name: ' ALREADY PRESENT'
+            local: ' ALREADY PRESENT'
+          - name: ' NOT PRESENT'
+            local: ' NOT PRESENT'
+          - name: ' PRESENT'
+            local: ' PRESENT'
+          - name: ' EDIT REMOVED'
+            local: ' EDIT REMOVED'
+          - name: Compiling
+            local: Compiling
+          - name: Updating Scripts...
+            local: Updating Scripts...
+          - name: ASSET
+            local: 'ASSET: '
+          - name: VERSION
+            local: 'VERSION: '
+          - name: SCRIPTS EDIT COUNT
+            local: 'SCRIPTS EDIT COUNT: '
+          - name: SCRIPTS TO EDIT
+            local: 'SCRIPTS TO EDIT: '
+          - name: SCRIPT EDITS
+            local: 'SCRIPT EDITS:'
+          - name: Edit
+            local: ' Edit'
+          - name: Edits
+            local: ' Edits'
+          - name: Out of
+            local: ' out of '
+          - name: Language Saved
+            local: Language Saved
+          - name: Not Found!
+            local: ' Not Found!'
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11 Puzzler \u7248\u672C\u6587\u4EF6\uFF0C\u5982\u679C\u6CA1\u6709\u5B83\uFF0CPuzzler
+              \u5C06\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684
+              Puzzler \u8D44\u4EA7\u5305\u91CD\u65B0\u5BFC\u5165 Puzzler \u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u6269\u5C55\u5141\u8BB8\u60A8\u4F7F\u7528\u9884\u5B9A\u4E49\u7684\u6A21\u677F/\u5E93\u5BF9\u73B0\u6709\u811A\u672C\u8FDB\u884C\u5FEB\u901F\u7F16\u8F91\u3002\r\n\r\n\u5728\u4E0B\u9762\u4E3A\u60A8\u8981\u8FDB\u884C\u7684\u7F16\u8F91\u5206\u914D\u4E00\u4E2A\u5E93\uFF0C\u7136\u540E\u4F7F\u7528\u66F4\u65B0\u6309\u94AE\u5F00\u59CB\u7F16\u8F91\u8FC7\u7A0B\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Update Scripts
+            local: "\u66F4\u65B0\u811A\u672C"
+          - name: Remove Script Edits
+            local: "\u5220\u9664\u811A\u672C\u7F16\u8F91"
+          - name: Check Scripts
+            local: "\u68C0\u67E5\u811A\u672C"
+          - name: Clear Notification
+            local: "\u6E05\u9664\u901A\u77E5"
+          - name: Library
+            local: "\u56FE\u4E66\u9986"
+          - name: Status
+            local: "\u5730\u4F4D"
+          - name: General
+            local: "\u4E00\u822C\u7684"
+          - name: Debug
+            local: "\u8C03\u8BD5"
+          toggles: []
+          prompts:
+          - name: Update
+            header: "\u66F4\u65B0\u811A\u672C"
+            message: "\u60A8\u5373\u5C06\u5BF9\u9879\u76EE\u4E2D\u7684\u811A\u672C\u8FDB\u884C\u81EA\u52A8\u7F16\u8F91\uFF0C\u8BF7\u786E\u4FDD\u5728\u7EE7\u7EED\u4E4B\u524D\u8FDB\u884C\u5907\u4EFD\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Remove
+            header: "\u5220\u9664\u7F16\u8F91"
+            message: "\u60A8\u5373\u5C06\u5220\u9664\u811A\u672C\u7F16\u8F91\u5668\u6240\u505A\u7684\u811A\u672C\u7F16\u8F91\uFF0C\u8BF7\u786E\u4FDD\u5728\u7EE7\u7EED\u4E4B\u524D\u8FDB\u884C\u5907\u4EFD\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: "\u672A\u5206\u914D\u5E93"
+          - name: NO EDITS MADE YET
+            local: "\u5C1A\u672A\u8FDB\u884C\u4EFB\u4F55\u7F16\u8F91"
+          - name: ' EDITS ASSIGNED!'
+            local: " \u5DF2\u5206\u914D\u7F16\u8F91\uFF01"
+          - name: ' EDIT DONE'
+            local: " \u7F16\u8F91\u5B8C\u6210"
+          - name: ' ALREADY PRESENT'
+            local: " \u5DF2\u7ECF\u5B58\u5728"
+          - name: ' NOT PRESENT'
+            local: " \u4E0D\u5B58\u5728"
+          - name: ' PRESENT'
+            local: " \u5C55\u793A"
+          - name: ' EDIT REMOVED'
+            local: " \u7F16\u8F91\u5DF2\u5220\u9664"
+          - name: Compiling
+            local: "\u7F16\u8BD1"
+          - name: Updating Scripts...
+            local: "\u6B63\u5728\u66F4\u65B0\u811A\u672C..."
+          - name: ASSET
+            local: "\u8D44\u4EA7\uFF1A"
+          - name: VERSION
+            local: "\u7248\u672C\uFF1A"
+          - name: SCRIPTS EDIT COUNT
+            local: "\u811A\u672C\u7F16\u8F91\u8BA1\u6570\uFF1A"
+          - name: SCRIPTS TO EDIT
+            local: "\u8981\u7F16\u8F91\u7684\u811A\u672C\uFF1A"
+          - name: SCRIPT EDITS
+            local: "\u811A\u672C\u7F16\u8F91\uFF1A"
+          - name: Edit
+            local: " \u7F16\u8F91"
+          - name: Edits
+            local: " \u7F16\u8F91"
+          - name: Out of
+            local: " \u5728......\u4E4B\u5916 "
+          - name: Language Saved
+            local: "\u5DF2\u4FDD\u5B58\u8BED\u8A00"
+          - name: Not Found!
+            local: " \u672A\u627E\u5230\uFF01"
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11 Puzzler \u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83\uFF0CPuzzler
+              \u5C07\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684
+              Puzzler \u8CC7\u7522\u5305\u91CD\u65B0\u5C0E\u5165 Puzzler \u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u64F4\u5C55\u5141\u8A31\u60A8\u4F7F\u7528\u9810\u5B9A\u7FA9\u7684\u6A21\u677F/\u5EAB\u5C0D\u73FE\u6709\u8173\u672C\u9032\u884C\u5FEB\u901F\u7DE8\u8F2F\u3002\r\n\r\n\u5728\u4E0B\u9762\u70BA\u60A8\u8981\u9032\u884C\u7684\u7DE8\u8F2F\u5206\u914D\u4E00\u500B\u5EAB\uFF0C\u7136\u5F8C\u4F7F\u7528\u66F4\u65B0\u6309\u9215\u958B\u59CB\u7DE8\u8F2F\u904E\u7A0B\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Update Scripts
+            local: "\u66F4\u65B0\u8173\u672C"
+          - name: Remove Script Edits
+            local: "\u522A\u9664\u8173\u672C\u7DE8\u8F2F"
+          - name: Check Scripts
+            local: "\u6AA2\u67E5\u8173\u672C"
+          - name: Clear Notification
+            local: "\u6E05\u9664\u901A\u77E5"
+          - name: Library
+            local: "\u5716\u66F8\u9928"
+          - name: Status
+            local: "\u5730\u4F4D"
+          - name: General
+            local: "\u4E00\u822C\u7684"
+          - name: Debug
+            local: "\u8ABF\u8A66"
+          toggles: []
+          prompts:
+          - name: Update
+            header: "\u66F4\u65B0\u8173\u672C"
+            message: "\u60A8\u5373\u5C07\u5C0D\u9805\u76EE\u4E2D\u7684\u8173\u672C\u9032\u884C\u81EA\u52D5\u7DE8\u8F2F\uFF0C\u8ACB\u78BA\u4FDD\u5728\u7E7C\u7E8C\u4E4B\u524D\u9032\u884C\u5099\u4EFD\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Remove
+            header: "\u522A\u9664\u7DE8\u8F2F"
+            message: "\u60A8\u5373\u5C07\u522A\u9664\u8173\u672C\u7DE8\u8F2F\u5668\u6240\u505A\u7684\u8173\u672C\u7DE8\u8F2F\uFF0C\u8ACB\u78BA\u4FDD\u5728\u7E7C\u7E8C\u4E4B\u524D\u9032\u884C\u5099\u4EFD\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: "\u672A\u5206\u914D\u5EAB"
+          - name: NO EDITS MADE YET
+            local: "\u5C1A\u672A\u9032\u884C\u4EFB\u4F55\u7DE8\u8F2F"
+          - name: ' EDITS ASSIGNED!'
+            local: " \u5DF2\u5206\u914D\u7DE8\u8F2F\uFF01"
+          - name: ' EDIT DONE'
+            local: " \u7DE8\u8F2F\u5B8C\u6210"
+          - name: ' ALREADY PRESENT'
+            local: " \u5DF2\u7D93\u5B58\u5728"
+          - name: ' NOT PRESENT'
+            local: " \u4E0D\u5B58\u5728"
+          - name: ' PRESENT'
+            local: " \u5C55\u793A"
+          - name: ' EDIT REMOVED'
+            local: " \u7DE8\u8F2F\u5DF2\u522A\u9664"
+          - name: Compiling
+            local: "\u7DE8\u8B6F"
+          - name: Updating Scripts...
+            local: "\u6B63\u5728\u66F4\u65B0\u8173\u672C..."
+          - name: ASSET
+            local: "\u8CC7\u7522\uFF1A"
+          - name: VERSION
+            local: "\u7248\u672C\uFF1A"
+          - name: SCRIPTS EDIT COUNT
+            local: "\u8173\u672C\u7DE8\u8F2F\u8A08\u6578\uFF1A"
+          - name: SCRIPTS TO EDIT
+            local: "\u8981\u7DE8\u8F2F\u7684\u8173\u672C\uFF1A"
+          - name: SCRIPT EDITS
+            local: "\u8173\u672C\u7DE8\u8F2F\uFF1A"
+          - name: Edit
+            local: " \u7DE8\u8F2F"
+          - name: Edits
+            local: " \u7DE8\u8F2F"
+          - name: Out of
+            local: " \u5728......\u4E4B\u5916 "
+          - name: Language Saved
+            local: "\u5DF2\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Not Found!
+            local: " \u672A\u627E\u5230\uFF01"
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Puzzler Version est absent de votre projet, Puzzler
+              ne peut pas fonctionner sans lui\_!\r\n\r\nVous pouvez r\xE9importer
+              le fichier de version de Puzzler \xE0 partir du pack de ressources
+              Puzzler sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nCette extension vous permet d'apporter des modifications rapides
+              aux scripts existants en utilisant des mod\xE8les/biblioth\xE8ques
+              pr\xE9d\xE9finis.\r\n\r\nAttribuez une biblioth\xE8que ci-dessous pour
+              les modifications que vous souhaitez effectuer et utilisez le bouton
+              de mise \xE0 jour pour d\xE9marrer le processus d'\xE9dition.\n"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Update Scripts
+            local: "Mettre \xE0 jour les scripts"
+          - name: Remove Script Edits
+            local: Supprimer les modifications de script
+          - name: Check Scripts
+            local: "V\xE9rifier les scripts"
+          - name: Clear Notification
+            local: Effacer la notification
+          - name: Library
+            local: "Biblioth\xE8que"
+          - name: Status
+            local: Statut
+          - name: General
+            local: "G\xE9n\xE9ral"
+          - name: Debug
+            local: "D\xE9boguer"
+          toggles: []
+          prompts:
+          - name: Update
+            header: "Mettre \xE0 jour les scripts"
+            message: "Vous \xEAtes sur le point d'apporter des modifications automatiques
+              aux scripts de votre projet, assurez-vous de faire une sauvegarde avant
+              de continuer.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Remove
+            header: Supprimer les modifications
+            message: "Vous \xEAtes sur le point de supprimer les modifications de
+              script effectu\xE9es par l'\xE9diteur de script, assurez-vous de faire
+              une sauvegarde avant de continuer.\r\n\r\n\xCAtes-vous s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: "AUCUNE BIBLIOTH\xC8QUE ASSIGN\xC9E"
+          - name: NO EDITS MADE YET
+            local: "AUCUNE MODIFICATION EFFECTU\xC9E ENCORE"
+          - name: ' EDITS ASSIGNED!'
+            local: " MODIFICATIONS ASSIGN\xC9ES\_!"
+          - name: ' EDIT DONE'
+            local: " MODIFICATION EFFECTU\xC9E"
+          - name: ' ALREADY PRESENT'
+            local: ' DEJA PRESENT'
+          - name: ' NOT PRESENT'
+            local: " PAS PR\xC9SENT"
+          - name: ' PRESENT'
+            local: ' CADEAU'
+          - name: ' EDIT REMOVED'
+            local: " MODIFICATION SUPPRIM\xC9E"
+          - name: Compiling
+            local: Compilation
+          - name: Updating Scripts...
+            local: "Mise \xE0 jour des scripts..."
+          - name: ASSET
+            local: 'ACTIF: '
+          - name: VERSION
+            local: 'VERSION: '
+          - name: SCRIPTS EDIT COUNT
+            local: "NOMBRE D'\xC9DITIONS DE SCRIPTS\_: "
+          - name: SCRIPTS TO EDIT
+            local: "SCRIPTS \xC0 MODIFIER\_: "
+          - name: SCRIPT EDITS
+            local: "\xC9DITIONS DE SCRIPTS\_: "
+          - name: Edit
+            local: ' Modifier'
+          - name: Edits
+            local: ' Modifications'
+          - name: Out of
+            local: ' Hors de '
+          - name: Language Saved
+            local: "Langue enregistr\xE9e"
+          - name: Not Found!
+            local: " Pas trouv\xE9!"
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\uBC84\uC804 \uB204\uB77D"
+          texts:
+          - name: Version Missing
+            text: "\n\uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1\uAE30 \uBC84\uC804 \uD30C\uC77C\uC774
+              \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C \uB204\uB77D\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+              \uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1\uAE30\uAC00 \uC5C6\uC73C\uBA74
+              \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC790\uC0B0
+              \uC800\uC7A5\uC18C/\uD328\uD0A4\uC9C0 \uAD00\uB9AC\uC790\uC758 \uC790\uC0B0
+              \uD329\uC5D0\uC11C \uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1\uAE30 \uBC84\uC804
+              \uD30C\uC77C\uC744 \uB2E4\uC2DC \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\uC774 \uD655\uC7A5\uC744 \uC0AC\uC6A9\uD558\uBA74 \uBBF8\uB9AC
+              \uC815\uC758\uB41C \uD15C\uD50C\uB9BF/\uB77C\uC774\uBE0C\uB7EC\uB9AC\uB97C
+              \uC0AC\uC6A9\uD558\uC5EC \uAE30\uC874 \uC2A4\uD06C\uB9BD\uD2B8\uB97C
+              \uBE60\uB974\uAC8C \uD3B8\uC9D1\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\r\n\uD3B8\uC9D1\uD558\uB824\uB294
+              \uD3B8\uC9D1\uC744 \uC704\uD574 \uC544\uB798\uC5D0 \uB77C\uC774\uBE0C\uB7EC\uB9AC\uB97C
+              \uD560\uB2F9\uD558\uACE0 \uC5C5\uB370\uC774\uD2B8 \uBC84\uD2BC\uC744
+              \uC0AC\uC6A9\uD558\uC5EC \uD3B8\uC9D1 \uD504\uB85C\uC138\uC2A4\uB97C
+              \uC2DC\uC791\uD558\uC2ED\uC2DC\uC624.\n"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Update Scripts
+            local: "\uC2A4\uD06C\uB9BD\uD2B8 \uC5C5\uB370\uC774\uD2B8"
+          - name: Remove Script Edits
+            local: "\uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1 \uC81C\uAC70"
+          - name: Check Scripts
+            local: "\uC2A4\uD06C\uB9BD\uD2B8 \uD655\uC778"
+          - name: Clear Notification
+            local: "\uC54C\uB9BC \uC9C0\uC6B0\uAE30"
+          - name: Library
+            local: "\uB3C4\uC11C\uAD00"
+          - name: Status
+            local: "\uC0C1\uD0DC"
+          - name: General
+            local: "\uC77C\uBC18\uC801\uC778"
+          - name: Debug
+            local: "\uB514\uBC84\uADF8"
+          toggles: []
+          prompts:
+          - name: Update
+            header: "\uC2A4\uD06C\uB9BD\uD2B8 \uC5C5\uB370\uC774\uD2B8"
+            message: "\uD504\uB85C\uC81D\uD2B8\uC758 \uC2A4\uD06C\uB9BD\uD2B8\uB97C
+              \uC790\uB3D9\uC73C\uB85C \uD3B8\uC9D1\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.
+              \uACC4\uC18D\uD558\uAE30 \uC804\uC5D0 \uBC31\uC5C5\uC744 \uB9CC\uB4DC\uC2ED\uC2DC\uC624.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8"
+          - name: Remove
+            header: "\uC218\uC815\uC0AC\uD56D \uC81C\uAC70"
+            message: "\uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1\uAE30\uC5D0\uC11C \uC218\uD589\uD55C
+              \uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1\uC744 \uC81C\uAC70\uD558\uB824\uACE0
+              \uD569\uB2C8\uB2E4. \uACC4\uC18D\uD558\uAE30 \uC804\uC5D0 \uBC31\uC5C5\uC744
+              \uB9CC\uB4DC\uC2ED\uC2DC\uC624.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8"
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: "\uD560\uB2F9\uB41C \uB77C\uC774\uBE0C\uB7EC\uB9AC \uC5C6\uC74C"
+          - name: NO EDITS MADE YET
+            local: "\uC544\uC9C1 \uC218\uC815\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4."
+          - name: ' EDITS ASSIGNED!'
+            local: " \uC218\uC815\uC774 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: ' EDIT DONE'
+            local: " \uC218\uC815 \uC644\uB8CC"
+          - name: ' ALREADY PRESENT'
+            local: " \uC774\uBBF8 \uC874\uC7AC"
+          - name: ' NOT PRESENT'
+            local: " \uC874\uC7AC\uD558\uC9C0 \uC54A\uC74C"
+          - name: ' PRESENT'
+            local: " \uD604\uC7AC"
+          - name: ' EDIT REMOVED'
+            local: " \uC218\uC815 \uC0AD\uC81C\uB428"
+          - name: Compiling
+            local: "\uCEF4\uD30C\uC77C"
+          - name: Updating Scripts...
+            local: "\uC2A4\uD06C\uB9BD\uD2B8 \uC5C5\uB370\uC774\uD2B8 \uC911..."
+          - name: ASSET
+            local: "\uC720\uC0B0: "
+          - name: VERSION
+            local: "\uBC84\uC804: "
+          - name: SCRIPTS EDIT COUNT
+            local: "\uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1 \uD69F\uC218: "
+          - name: SCRIPTS TO EDIT
+            local: "\uD3B8\uC9D1\uD560 \uC2A4\uD06C\uB9BD\uD2B8: "
+          - name: SCRIPT EDITS
+            local: "\uC2A4\uD06C\uB9BD\uD2B8 \uD3B8\uC9D1: "
+          - name: Edit
+            local: " \uD3B8\uC9D1\uD558\uB2E4"
+          - name: Edits
+            local: " \uD3B8\uC9D1"
+          - name: Out of
+            local: " \uBC16 "
+          - name: Language Saved
+            local: "\uC5B8\uC5B4 \uC800\uC7A5\uB428"
+          - name: Not Found!
+            local: " \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!"
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo de la versi\xF3n de Puzzler en su proyecto,
+              \xA1Puzzler no puede ejecutarse sin \xE9l!\r\n\r\nPuede volver a importar
+              el archivo de la versi\xF3n de Puzzler desde el paquete de activos
+              de Puzzler en la tienda de activos/administrador de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nEsta extensi\xF3n le permite realizar ediciones r\xE1pidas en
+              scripts existentes mediante el uso de plantillas/bibliotecas predefinidas.\r\n\r\nAsigne
+              una biblioteca a continuaci\xF3n para las ediciones que desea realizar
+              y use el bot\xF3n Actualizar para iniciar el proceso de edici\xF3n.\n"
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Update Scripts
+            local: Actualizar secuencias de comandos
+          - name: Remove Script Edits
+            local: Eliminar ediciones de guiones
+          - name: Check Scripts
+            local: Comprobar guiones
+          - name: Clear Notification
+            local: "Borrar Notificaci\xF3n"
+          - name: Library
+            local: Biblioteca
+          - name: Status
+            local: Estado
+          - name: General
+            local: General
+          - name: Debug
+            local: Depurar
+          toggles: []
+          prompts:
+          - name: Update
+            header: Actualizar secuencias de comandos
+            message: "Est\xE1 a punto de realizar ediciones autom\xE1ticas en los
+              scripts de su proyecto, aseg\xFArese de hacer una copia de seguridad
+              antes de continuar.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Remove
+            header: Quitar ediciones
+            message: "Est\xE1 a punto de eliminar las ediciones de secuencias de
+              comandos realizadas por el Editor de secuencias de comandos, aseg\xFArese
+              de hacer una copia de seguridad antes de continuar.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: NO HAY BIBLIOTECA ASIGNADA
+          - name: NO EDITS MADE YET
+            local: "NO HAY EDICIONES REALIZADAS TODAV\xCDA"
+          - name: ' EDITS ASSIGNED!'
+            local: " \xA1EDICIONES ASIGNADAS!"
+          - name: ' EDIT DONE'
+            local: ' EDITAR HECHO'
+          - name: ' ALREADY PRESENT'
+            local: ' YA PRESENTE'
+          - name: ' NOT PRESENT'
+            local: ' NO PRESENTE'
+          - name: ' PRESENT'
+            local: ' PRESENTE'
+          - name: ' EDIT REMOVED'
+            local: ' EDITAR ELIMINADO'
+          - name: Compiling
+            local: Compilando
+          - name: Updating Scripts...
+            local: Actualizando secuencias de comandos...
+          - name: ASSET
+            local: 'ACTIVO: '
+          - name: VERSION
+            local: "VERSI\xD3N: "
+          - name: SCRIPTS EDIT COUNT
+            local: "N\xDAMERO DE EDICIONES DE GUIONES: "
+          - name: SCRIPTS TO EDIT
+            local: 'GUIONES PARA EDITAR: '
+          - name: SCRIPT EDITS
+            local: "EDICIONES DE GUI\xD3N: "
+          - name: Edit
+            local: ' Editar'
+          - name: Edits
+            local: ' Ediciones'
+          - name: Out of
+            local: ' Fuera de '
+          - name: Language Saved
+            local: Idioma guardado
+          - name: Not Found!
+            local: " \xA1Extraviado!"

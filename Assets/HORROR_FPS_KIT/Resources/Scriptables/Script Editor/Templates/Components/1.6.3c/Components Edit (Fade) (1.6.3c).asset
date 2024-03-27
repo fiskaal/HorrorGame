@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (Fade) (1.6.3c)
+  m_EditorClassIdentifier: 
+  removable: 1
+  content:
+  - name: Fade delta time update #1
+    original: '                    FadingColor = FadingColor.MoveTowards(fadeSettings.endColor,
+      Time.deltaTime * fadeSettings.fadeInSpeed);'
+    edit: '                    FadingColor = FadingColor.MoveTowards(fadeSettings.endColor,
+      Time.unscaledDeltaTime * fadeSettings.fadeInSpeed);'
+  - name: Fade delta time update #2
+    original: '                        FadingColor = FadingColor.MoveTowards(fadeSettings.startColor,
+      Time.deltaTime * fadeSettings.fadeInSpeed);'
+    edit: '                        FadingColor = FadingColor.MoveTowards(fadeSettings.startColor,
+      Time.unscaledDeltaTime * fadeSettings.fadeInSpeed);'
+  - name: Fade delta time update #3
+    original: '                    FadingValue = Mathf.MoveTowards(FadingValue, fadeSettings.endValue,
+      Time.deltaTime * fadeSettings.fadeInSpeed);'
+    edit: '                    FadingValue = Mathf.MoveTowards(FadingValue, fadeSettings.endValue,
+      Time.unscaledDeltaTime * fadeSettings.fadeInSpeed);'
+  - name: Fade delta time update #4
+    original: '                        FadingValue = Mathf.MoveTowards(FadingValue,
+      fadeSettings.startValue, Time.deltaTime * fadeSettings.fadeOutSpeed);'
+    edit: '                        FadingValue = Mathf.MoveTowards(FadingValue, fadeSettings.startValue,
+      Time.unscaledDeltaTime * fadeSettings.fadeOutSpeed);'
+  - name: WaitForSeconds Update
+    original: '                        yield return new WaitForSeconds(fadeSettings.fadeOutWait);'
+    edit: '                        yield return new WaitForSecondsRealtime(fadeSettings.fadeOutWait);'

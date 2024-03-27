@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (SceneLoader)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: New References Add
+    original: '            public Sprite Background;'
+    edit: "            public Sprite Background;\r\n            public AudioClip
+      music;\r\n            public GameObject backHolder;"
+  - name: New Options Add
+    original: '        public Image LevelBackground;'
+    edit: "        public Image LevelBackground;\r\n        \r\n        [Space]\r\n       
+      \r\n        public bool useCustomBackground;\r\n        public bool useLevelMusic;\r\n       
+      public AudioSource musicSource;"
+  - name: Level Music Check
+    original: '                            CurrentInfo = info;'
+    edit: "                            if(!useCustomBackground){\r\n                           
+      \r\n                                if(info.backHolder != null){\r\n                               
+      \r\n                                    info.backHolder.SetActive(false);\r\n                               
+      \r\n                                }//backHolder != null\r\n                               
+      \r\n                                LevelBackground.sprite = info.Background;\r\n                               
+      LevelBackground.enabled = true;\r\n                            \r\n                           
+      //!useCustomBackground\r\n                            } else {\r\n                           
+      \r\n                                if(info.backHolder != null){\r\n                           
+      \r\n                                    if(LevelBackground != null){\r\n\r\n                                       
+      LevelBackground.enabled = false;\r\n\r\n                                   
+      }//LevelBackground != null\r\n\r\n                                    info.backHolder.SetActive(true);\r\n                               
+      \r\n                                //backHolder != null\r\n                               
+      } else {\r\n                                \r\n                                   
+      if(LevelBackground != null){\r\n                                        \r\n                                       
+      LevelBackground.sprite = info.Background;\r\n                                       
+      LevelBackground.enabled = true;\r\n\r\n                                   
+      }//LevelBackground != null\r\n                                \r\n                               
+      }//backHolder != null\r\n                                \r\n                           
+      }//!useCustomBackground\r\n                            \r\n                           
+      if(useLevelMusic){\r\n                            \r\n                               
+      musicSource.Stop();\r\n                                musicSource.clip = info.music;\r\n                               
+      musicSource.Play();\r\n                                \r\n                           
+      }//useLevelMusic\r\n                            \r\n                           
+      CurrentInfo = info;"

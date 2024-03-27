@@ -1,0 +1,665 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: ScenesUpdater Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Scenes Updater Version file is missing from
+              your project, Scenes Updater cannot run without it!
+
+
+              You
+              can re-import the Scenes Updater Version file from the asset pack on
+              the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Editor
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nThis extension allows you to quickly edit the Build Settings
+              Scenes. \nCatch scenes, save / load templates and apply to the Build
+              Settings.\n"
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Save Template
+            local: Save Template
+          - name: Load Template
+            local: Load Template
+          - name: Catch Scenes
+            local: Catch Scenes
+          - name: Apply To Build Settings
+            local: Apply To Build Settings
+          - name: Clear Build Settings Scenes
+            local: Clear Build Settings Scenes
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: Template Save
+            message: 'You are about to overwrite your templates scenes.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          - name: Template Load
+            header: Template Load
+            message: 'You are about to load scenes from the assigned template.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          - name: Template Load 2
+            header: Template Load
+            message: How would you like to load the template scenes to the scenes
+              list?
+            buttons:
+            - name: Add to List
+              local: Add to List
+            - name: Clear List
+              local: Clear List
+            - name: Cancel
+              local: Cancel
+          - name: Catch Scenes
+            header: Catch Scenes
+            message: 'You are about to catch scenes from the build settings.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          - name: Scenes Update
+            header: Scenes Update
+            message: 'You are about to update the scenes in the build settings.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          - name: Scenes Clear
+            header: Scenes Clear
+            message: 'You are about to clear all scenes from the build settings.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: Cancel
+              local: Cancel
+          singleValues:
+          - name: 'Scenes to include in build:'
+            local: 'Scenes to include in build:'
+          - name: Scenes Caught
+            local: Scenes Caught
+          - name: No Scenes to Catch
+            local: No Scenes to Catch
+          - name: Template Saved
+            local: Template Saved
+          - name: Template Loaded
+            local: Template Loaded
+          - name: No Template Assigned
+            local: No Template Assigned
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7F3A\u5C11\u7248\u672C"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11 Scenes Updater \u7248\u672C\u6587\u4EF6\uFF0C\u6CA1\u6709\u5B83
+              Scenes Updater \u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8D44\u4EA7\u5305\u91CD\u65B0\u5BFC\u5165\u573A\u666F\u66F4\u65B0\u7A0B\u5E8F\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Editor
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u6269\u5C55\u5141\u8BB8\u60A8\u5FEB\u901F\u7F16\u8F91\u6784\u5EFA\u8BBE\u7F6E\u573A\u666F\u3002\r\n\u6355\u6349\u573A\u666F\u3001\u4FDD\u5B58/\u52A0\u8F7D\u6A21\u677F\u5E76\u5E94\u7528\u4E8E\u6784\u5EFA\u8BBE\u7F6E\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Save Template
+            local: "\u4FDD\u5B58\u6A21\u677F"
+          - name: Load Template
+            local: "\u52A0\u8F7D\u6A21\u677F"
+          - name: Catch Scenes
+            local: "\u6355\u6349\u573A\u666F"
+          - name: Apply To Build Settings
+            local: "\u5E94\u7528\u4E8E\u6784\u5EFA\u8BBE\u7F6E"
+          - name: Clear Build Settings Scenes
+            local: "\u6E05\u9664\u6784\u5EFA\u8BBE\u7F6E\u573A\u666F"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "\u6A21\u677F\u4FDD\u5B58"
+            message: "\u60A8\u5C06\u8981\u8986\u76D6\u60A8\u7684\u6A21\u677F\u573A\u666F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Template Load
+            header: "\u6A21\u677F\u52A0\u8F7D"
+            message: "\u60A8\u5373\u5C06\u4ECE\u5206\u914D\u7684\u6A21\u677F\u52A0\u8F7D\u573A\u666F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Template Load 2
+            header: "\u6A21\u677F\u52A0\u8F7D"
+            message: "\u60A8\u60F3\u5982\u4F55\u5C06\u6A21\u677F\u573A\u666F\u52A0\u8F7D\u5230\u573A\u666F\u5217\u8868\u4E2D\uFF1F"
+            buttons:
+            - name: Add to List
+              local: "\u6DFB\u52A0\u5230\u5217\u8868\u4E2D"
+            - name: Clear List
+              local: "\u6E05\u6670\u7684\u5217\u8868"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Catch Scenes
+            header: "\u6355\u6349\u573A\u666F"
+            message: "\u60A8\u5373\u5C06\u4ECE\u6784\u5EFA\u8BBE\u7F6E\u4E2D\u6355\u6349\u573A\u666F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Scenes Update
+            header: "\u573A\u666F\u66F4\u65B0"
+            message: "\u60A8\u5C06\u8981\u66F4\u65B0\u6784\u5EFA\u8BBE\u7F6E\u4E2D\u7684\u573A\u666F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Scenes Clear
+            header: "\u573A\u666F\u6E05\u6670"
+            message: "\u60A8\u5373\u5C06\u6E05\u9664\u6784\u5EFA\u8BBE\u7F6E\u4E2D\u7684\u6240\u6709\u573A\u666F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: 'Scenes to include in build:'
+            local: "\u8981\u5305\u542B\u5728\u6784\u5EFA\u4E2D\u7684\u573A\u666F\uFF1A"
+          - name: Scenes Caught
+            local: "\u6355\u6349\u5230\u7684\u573A\u666F"
+          - name: No Scenes to Catch
+            local: "\u6CA1\u6709\u573A\u666F\u53EF\u4EE5\u6355\u6349"
+          - name: Template Saved
+            local: "\u6A21\u677F\u5DF2\u4FDD\u5B58"
+          - name: Template Loaded
+            local: "\u6A21\u677F\u5DF2\u52A0\u8F7D"
+          - name: No Template Assigned
+            local: "\u672A\u5206\u914D\u6A21\u677F"
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7F3A\u5C11\u7248\u672C"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11 Scenes Updater \u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83
+              Scenes Updater \u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8CC7\u7522\u5305\u91CD\u65B0\u5C0E\u5165\u5834\u666F\u66F4\u65B0\u7A0B\u5E8F\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Editor
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u64F4\u5C55\u5141\u8A31\u60A8\u5FEB\u901F\u7DE8\u8F2F\u69CB\u5EFA\u8A2D\u7F6E\u5834\u666F\u3002\r\n\u6355\u6349\u5834\u666F\u3001\u4FDD\u5B58/\u52A0\u8F09\u6A21\u677F\u4E26\u61C9\u7528\u65BC\u69CB\u5EFA\u8A2D\u7F6E\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Save Template
+            local: "\u4FDD\u5B58\u6A21\u677F"
+          - name: Load Template
+            local: "\u52A0\u8F09\u6A21\u677F"
+          - name: Catch Scenes
+            local: "\u6355\u6349\u5834\u666F"
+          - name: Apply To Build Settings
+            local: "\u61C9\u7528\u65BC\u69CB\u5EFA\u8A2D\u7F6E"
+          - name: Clear Build Settings Scenes
+            local: "\u6E05\u9664\u69CB\u5EFA\u8A2D\u7F6E\u5834\u666F"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "\u6A21\u677F\u4FDD\u5B58"
+            message: "\u60A8\u5C07\u8981\u8986\u84CB\u60A8\u7684\u6A21\u677F\u5834\u666F\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Template Load
+            header: "\u6A21\u677F\u52A0\u8F09"
+            message: "\u60A8\u5373\u5C07\u5F9E\u5206\u914D\u7684\u6A21\u677F\u52A0\u8F09\u5834\u666F\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Template Load 2
+            header: "\u6A21\u677F\u52A0\u8F09"
+            message: "\u60A8\u60F3\u5982\u4F55\u5C07\u6A21\u677F\u5834\u666F\u52A0\u8F09\u5230\u5834\u666F\u5217\u8868\u4E2D\uFF1F"
+            buttons:
+            - name: Add to List
+              local: "\u6DFB\u52A0\u5230\u5217\u8868\u4E2D"
+            - name: Clear List
+              local: "\u6E05\u6670\u7684\u5217\u8868"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Catch Scenes
+            header: "\u6355\u6349\u5834\u666F"
+            message: "\u60A8\u5373\u5C07\u5F9E\u69CB\u5EFA\u8A2D\u7F6E\u4E2D\u6355\u6349\u5834\u666F\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Scenes Update
+            header: "\u5834\u666F\u66F4\u65B0"
+            message: "\u60A8\u5C07\u8981\u66F4\u65B0\u69CB\u5EFA\u8A2D\u7F6E\u4E2D\u7684\u5834\u666F\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          - name: Scenes Clear
+            header: "\u5834\u666F\u6E05\u6670"
+            message: "\u60A8\u5373\u5C07\u6E05\u9664\u69CB\u5EFA\u8A2D\u7F6E\u4E2D\u7684\u6240\u6709\u5834\u666F\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: Cancel
+              local: "\u53D6\u6D88"
+          singleValues:
+          - name: 'Scenes to include in build:'
+            local: "\u8981\u5305\u542B\u5728\u69CB\u5EFA\u4E2D\u7684\u5834\u666F\uFF1A"
+          - name: Scenes Caught
+            local: "\u6355\u6349\u5230\u7684\u5834\u666F"
+          - name: No Scenes to Catch
+            local: "\u6C92\u6709\u5834\u666F\u53EF\u4EE5\u6355\u6349"
+          - name: Template Saved
+            local: "\u6A21\u677F\u5DF2\u4FDD\u5B58"
+          - name: Template Loaded
+            local: "\u6A21\u677F\u5DF2\u52A0\u8F09"
+          - name: No Template Assigned
+            local: "\u672A\u5206\u914D\u6A21\u677F"
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Scenes Updater Version est absent de votre projet,
+              Scenes Updater ne peut pas fonctionner sans lui\_!\r\n\r\nVous pouvez
+              r\xE9importer le fichier Scenes Updater Version du pack de ressources
+              sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Editor
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nCette extension vous permet de modifier rapidement les sc\xE8nes
+              de param\xE8tres de construction.\r\n\nAttrapez des sc\xE8nes, enregistrez
+              / chargez des mod\xE8les et appliquez-les aux param\xE8tres de construction.\n"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Save Template
+            local: "Enregistrer le mod\xE8le"
+          - name: Load Template
+            local: "Charger le mod\xE8le"
+          - name: Catch Scenes
+            local: "Capturer des sc\xE8nes"
+          - name: Apply To Build Settings
+            local: "Appliquer aux param\xE8tres de construction"
+          - name: Clear Build Settings Scenes
+            local: "Effacer les sc\xE8nes de param\xE8tres de construction"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "Enregistrer le mod\xE8le"
+            message: "Vous \xEAtes sur le point d'\xE9craser vos mod\xE8les de sc\xE8nes.\r\n\r\n\xCAtes-vous
+              s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          - name: Template Load
+            header: "Chargement du mod\xE8le"
+            message: "Vous \xEAtes sur le point de charger des sc\xE8nes \xE0 partir
+              du mod\xE8le attribu\xE9.\r\n\r\n\xCAtes-vous s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          - name: Template Load 2
+            header: "Chargement du mod\xE8le"
+            message: "Comment souhaitez-vous charger les mod\xE8les de sc\xE8nes
+              dans la liste des sc\xE8nes\_?"
+            buttons:
+            - name: Add to List
+              local: "Ajouter \xE0 la liste"
+            - name: Clear List
+              local: Effacer la liste
+            - name: Cancel
+              local: Annuler
+          - name: Catch Scenes
+            header: "Capturer des sc\xE8nes"
+            message: "Vous \xEAtes sur le point d'attraper des sc\xE8nes \xE0 partir
+              des param\xE8tres de construction.\r\n\r\n\xCAtes-vous s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          - name: Scenes Update
+            header: "Mise \xE0 jour des sc\xE8nes"
+            message: "Vous \xEAtes sur le point de mettre \xE0 jour les sc\xE8nes
+              dans les param\xE8tres de construction.\r\n\r\n\xCAtes-vous s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          - name: Scenes Clear
+            header: "Sc\xE8nes Effacer"
+            message: "Vous \xEAtes sur le point d'effacer toutes les sc\xE8nes des
+              param\xE8tres de construction.\r\n\r\n\xCAtes-vous s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: Cancel
+              local: Annuler
+          singleValues:
+          - name: 'Scenes to include in build:'
+            local: "Sc\xE8nes \xE0 inclure dans la construction\_:"
+          - name: Scenes Caught
+            local: "Sc\xE8nes captur\xE9es"
+          - name: No Scenes to Catch
+            local: "Aucune sc\xE8ne \xE0 capturer"
+          - name: Template Saved
+            local: "Mod\xE8le enregistr\xE9"
+          - name: Template Loaded
+            local: "Mod\xE8le charg\xE9"
+          - name: No Template Assigned
+            local: "Aucun mod\xE8le attribu\xE9"
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\uBC84\uC804 \uB204\uB77D"
+          texts:
+          - name: Version Missing
+            text: "\nScenes Updater \uBC84\uC804 \uD30C\uC77C\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C
+              \uB204\uB77D\uB418\uC5C8\uC2B5\uB2C8\uB2E4. Scenes Updater\uAC00 \uC5C6\uC73C\uBA74
+              \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC5D0\uC14B
+              \uC2A4\uD1A0\uC5B4/\uD328\uD0A4\uC9C0 \uAD00\uB9AC\uC790\uC758 \uC5D0\uC14B
+              \uD329\uC5D0\uC11C Scenes Updater \uBC84\uC804 \uD30C\uC77C\uC744 \uB2E4\uC2DC
+              \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Editor
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\uC774 \uD655\uC7A5\uC744 \uC0AC\uC6A9\uD558\uBA74 \uBE4C\uB4DC
+              \uC124\uC815 \uC7A5\uBA74\uC744 \uBE60\uB974\uAC8C \uD3B8\uC9D1\uD560
+              \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\uC7A5\uBA74\uC744 \uD3EC\uCC29\uD558\uACE0
+              \uD15C\uD50C\uB9BF\uC744 \uC800\uC7A5/\uB85C\uB4DC\uD558\uACE0 \uBE4C\uB4DC
+              \uC124\uC815\uC5D0 \uC801\uC6A9\uD569\uB2C8\uB2E4.\n"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Save Template
+            local: "\uD15C\uD50C\uB9BF \uC800\uC7A5"
+          - name: Load Template
+            local: "\uD15C\uD50C\uB9BF \uB85C\uB4DC"
+          - name: Catch Scenes
+            local: "\uCE90\uCE58 \uC7A5\uBA74"
+          - name: Apply To Build Settings
+            local: "\uBE4C\uB4DC \uC124\uC815\uC5D0 \uC801\uC6A9"
+          - name: Clear Build Settings Scenes
+            local: "\uBE4C\uB4DC \uC124\uC815 \uC7A5\uBA74 \uC9C0\uC6B0\uAE30"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "\uD15C\uD50C\uB9BF \uC800\uC7A5"
+            message: "\uD15C\uD50C\uB9BF \uC7A5\uBA74\uC744 \uB36E\uC5B4\uC4F0\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Template Load
+            header: "\uD15C\uD50C\uB9BF \uB85C\uB4DC"
+            message: "\uD560\uB2F9\uB41C \uD15C\uD50C\uB9BF\uC5D0\uC11C \uC7A5\uBA74\uC744
+              \uB85C\uB4DC\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Template Load 2
+            header: "\uD15C\uD50C\uB9BF \uB85C\uB4DC"
+            message: "\uC7A5\uBA74 \uBAA9\uB85D\uC5D0 \uD15C\uD50C\uB9BF \uC7A5\uBA74\uC744
+              \uC5B4\uB5BB\uAC8C \uB85C\uB4DC\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            buttons:
+            - name: Add to List
+              local: "\uBAA9\uB85D\uC5D0 \uCD94\uAC00"
+            - name: Clear List
+              local: "\uBAA9\uB85D \uC9C0\uC6B0\uAE30"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Catch Scenes
+            header: "\uCE90\uCE58 \uC7A5\uBA74"
+            message: "\uBE4C\uB4DC \uC124\uC815\uC5D0\uC11C \uC7A5\uBA74\uC744 \uCEA1\uCC98\uD558\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Scenes Update
+            header: "\uC7A5\uBA74 \uC5C5\uB370\uC774\uD2B8"
+            message: "\uBE4C\uB4DC \uC124\uC815\uC5D0\uC11C \uC7A5\uBA74\uC744 \uC5C5\uB370\uC774\uD2B8\uD558\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          - name: Scenes Clear
+            header: "\uC7A5\uBA74 \uC9C0\uC6B0\uAE30"
+            message: "\uBE4C\uB4DC \uC124\uC815\uC5D0\uC11C \uBAA8\uB4E0 \uC7A5\uBA74\uC744
+              \uC9C0\uC6B0\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: Cancel
+              local: "\uCDE8\uC18C"
+          singleValues:
+          - name: 'Scenes to include in build:'
+            local: "\uBE4C\uB4DC\uC5D0 \uD3EC\uD568\uD560 \uC7A5\uBA74:"
+          - name: Scenes Caught
+            local: "\uC7A1\uD78C \uC7A5\uBA74"
+          - name: No Scenes to Catch
+            local: "\uD3EC\uCC29\uD560 \uC7A5\uBA74 \uC5C6\uC74C"
+          - name: Template Saved
+            local: "\uD15C\uD50C\uB9BF \uC800\uC7A5\uB428"
+          - name: Template Loaded
+            local: "\uD15C\uD50C\uB9BF \uB85C\uB4DC\uB428"
+          - name: No Template Assigned
+            local: "\uD15C\uD50C\uB9BF\uC774 \uD560\uB2F9\uB418\uC9C0 \uC54A\uC74C"
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo de la versi\xF3n de Scenes Updater en su proyecto,
+              \xA1Scenes Updater no puede ejecutarse sin \xE9l!\r\n\r\nPuede volver
+              a importar el archivo de la versi\xF3n del actualizador de escenas
+              desde el paquete de activos en el almac\xE9n de activos/administrador
+              de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Editor
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nEsta extensi\xF3n le permite editar r\xE1pidamente las escenas
+              de configuraci\xF3n de compilaci\xF3n.\r\n\nCapture escenas, guarde/cargue
+              plantillas y apl\xEDquelas a la configuraci\xF3n de compilaci\xF3n.\n"
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Save Template
+            local: Guardar plantilla
+          - name: Load Template
+            local: Cargar plantilla
+          - name: Catch Scenes
+            local: Captura escenas
+          - name: Apply To Build Settings
+            local: "Aplicar a la configuraci\xF3n de compilaci\xF3n"
+          - name: Clear Build Settings Scenes
+            local: "Borrar escenarios de configuraci\xF3n de compilaci\xF3n"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: Guardar plantilla
+            message: "Est\xE1 a punto de sobrescribir las escenas de sus plantillas.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          - name: Template Load
+            header: Carga de plantilla
+            message: "Est\xE1 a punto de cargar escenas desde la plantilla asignada.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          - name: Template Load 2
+            header: Carga de plantilla
+            message: "\xBFC\xF3mo le gustar\xEDa cargar las escenas de la plantilla
+              en la lista de escenas?"
+            buttons:
+            - name: Add to List
+              local: Agregar a la lista
+            - name: Clear List
+              local: Limpiar lista
+            - name: Cancel
+              local: Cancelar
+          - name: Catch Scenes
+            header: Captura escenas
+            message: "Est\xE1 a punto de capturar escenas de la configuraci\xF3n
+              de compilaci\xF3n.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          - name: Scenes Update
+            header: "Actualizaci\xF3n de escenas"
+            message: "Est\xE1 a punto de actualizar las escenas en la configuraci\xF3n
+              de compilaci\xF3n.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          - name: Scenes Clear
+            header: Escenas claras
+            message: "Est\xE1 a punto de borrar todas las escenas de la configuraci\xF3n
+              de compilaci\xF3n.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: Cancel
+              local: Cancelar
+          singleValues:
+          - name: 'Scenes to include in build:'
+            local: "Escenas para incluir en la compilaci\xF3n:"
+          - name: Scenes Caught
+            local: escenas captadas
+          - name: No Scenes to Catch
+            local: No hay escenas para atrapar
+          - name: Template Saved
+            local: Plantilla guardada
+          - name: Template Loaded
+            local: Plantilla cargada
+          - name: No Template Assigned
+            local: Sin plantilla asignada

@@ -1,0 +1,282 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3102692799636666672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3102692799636666675}
+  m_Layer: 9
+  m_Name: LookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3102692799636666675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102692799636666672}
+  m_LocalRotation: {x: 0.12278779, y: 0.6963643, z: 0.12278779, w: 0.6963643}
+  m_LocalPosition: {x: 0.008998871, y: 1.035, z: -1.5570028}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3102692800058741839}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 20}
+--- !u!1 &3102692800058741836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3102692800058741839}
+  - component: {fileID: 3102692800058741832}
+  - component: {fileID: 3102692800058741833}
+  - component: {fileID: 3102692800058741835}
+  - component: {fileID: 3102692800058741838}
+  m_Layer: 2
+  m_Name: PlayerAttention_Trigger (Input)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3102692800058741839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102692800058741836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3102692799636666675}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3102692800058741832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102692800058741836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5eeb3414291594c82d3fc92b133947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 2
+  healUse: 0
+  useType: 2
+  useTriggerDelay: 0
+  triggerDelay: 0
+  detectTag: Player
+  unlockType: 1
+  unlockDelay: 1
+  category: 0
+  eventSlot: 0
+  trigger: {fileID: 3102692800058741838}
+  hfpsPlayerAttention: {fileID: 3102692800058741833}
+  hfpsPossessed: {fileID: 0}
+  hfpsDestroyable: {fileID: 0}
+  damageAmount: 0
+  hideType: 0
+  timeCheckType: 0
+  activeTime: 0
+  countDownMulti: 0
+  autoReset: 0
+  resetWait: 0
+  preLoadScene: 0
+  pauseStateEnter: 0
+  pauseStateExit: 0
+  inventoryStateEnter: 0
+  inventoryStateExit: 0
+  saveStateEnter: 0
+  saveStateExit: 0
+  loadStateEnter: 0
+  loadStateExit: 0
+  onManualTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  onReset:
+    m_PersistentCalls:
+      m_Calls: []
+  refsCatch:
+    m_PersistentCalls:
+      m_Calls: []
+    refsCatch: {fileID: 0}
+  timedEvents:
+    onTimeStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onTimeFinish:
+      m_PersistentCalls:
+        m_Calls: []
+    onReset:
+      m_PersistentCalls:
+        m_Calls: []
+    onCancel:
+      m_PersistentCalls:
+        m_Calls: []
+  refs: {fileID: 0}
+  healing: 0
+  countDownActive: 0
+  currentTime: 0
+  isInside: 0
+  locked: 0
+  tabs: 0
+  genOpts: 0
+  uiOpts: 0
+--- !u!114 &3102692800058741833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102692800058741836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866f84ba68f28784ab33996d55d1ffca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useType: 1
+  attentionType: 1
+  attentionStopType: 1
+  attentionTime: 3
+  showMouse: 0
+  jumpInput: 1
+  stateInput: 1
+  leanInput: 1
+  sprintInput: 1
+  zoomInput: 1
+  itemInputLock: 1
+  itemUseLock: 1
+  itemZoomLock: 1
+  itemDispStart: 1
+  itemDispEnd: 2
+  actions:
+  - name: Look Painting
+    moveType: 0
+    stateChange: 1
+    speed: 3
+    transform: {fileID: 3102692799636666675}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0}
+    nextWait: 0
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  playerUnlock: 1
+  unlockWait: 0.5
+  useDisplaySet: 0
+  displaySet: 
+  gameUIStateStart: 0
+  gameUIStateEnd: 0
+  pauseStateStart: 0
+  pauseStateEnd: 0
+  inventoryStateStart: 2
+  inventoryStateEnd: 1
+  saveStateStart: 2
+  saveStateEnd: 1
+  loadStateStart: 0
+  loadStateEnd: 0
+  useSceneAction: 0
+  sceneAction: {fileID: 0}
+  actionBarSettings:
+    useActionBar: 1
+    useCustomActionBar: 1
+    actionBar: {fileID: 0}
+    actions:
+    - name: Look At
+      text: Look
+      actionInputs: []
+      actionInit:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 3102692800058741833}
+            m_TargetAssemblyTypeName: HFPS_PlayerAttention, Assembly-CSharp
+            m_MethodName: Attention_Init
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      textDisplay: 
+  events:
+    onAttentionStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onAttentionEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    onAttentionEndLate:
+      m_PersistentCalls:
+        m_Calls: []
+  inputType: 0
+  refs: {fileID: 0}
+  actionBar: {fileID: 0}
+  actBarShowing: 0
+  currentItem: 0
+  locked: 0
+  tabs: 0
+  genOpts: 0
+  playOpts: 0
+  itemOpts: 0
+  uiOpts: 0
+  moveOpts: 0
+  extOpts: 0
+--- !u!114 &3102692800058741835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102692800058741836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 032e83f82f6c1d1488393504e9351e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGizmos: 1
+  icon: {fileID: 2800000, guid: 430e518ff4d0e6941bfbd3885d2896cb, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!65 &3102692800058741838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102692800058741836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 3, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}

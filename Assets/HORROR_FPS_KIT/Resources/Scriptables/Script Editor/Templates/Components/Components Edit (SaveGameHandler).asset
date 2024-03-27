@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (SaveGameHandler)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Namespace Add
+    original: namespace HFPS.Systems
+    edit: 'using DizzyMedia.HFPS_Components;
+
+      
+
+      namespace HFPS.Systems'
+  - name: Save Options
+    original: '        public bool forceSaveLoad;'
+    edit: "        public bool forceSaveLoad;\r\n        \r\n        public bool
+      useSaveLimit;\r\n        public int maxSaves;\r\n        public Save_Type saveType;\r\n       
+      private bool preLoadSave;\r\n        \r\n        public enum Save_Type {\r\n       
+      \r\n            Regular = 0,\r\n            Components = 1,\r\n        \r\n       
+      }//Save_Type"
+  - name: CheckLoadState Add
+    original: "        private bool CheckLoadState(int loadState)\r\n        {\r\n           
+      bool flag = false;\r\n\r\n            if (loadState > 0 && Prefs.Exist(Prefs.LOAD_SAVE_NAME))\r\n           
+      {\r\n                if (loadState == 1)\r\n                {\r\n                   
+      string filename = Prefs.Game_SaveName();\r\n                    bool flag1
+      = File.Exists(Path.Combine(SerializationPath, filename));\r\n                   
+      bool flag2 = SceneManager.GetActiveScene().name == Prefs.Game_LevelName();\r\n                   
+      return flag1 && flag2;\r\n                }\r\n                else if (loadState
+      == 2)\r\n                {\r\n                    flag = crossSceneSaving;\r\n               
+      }\r\n            }\r\n\r\n            return flag;\r\n        }"
+    edit: "        private bool CheckLoadState(int loadState)\r\n        {\r\n           
+      bool flag = false;\r\n\r\n            if (loadState > 0 && Prefs.Exist(Prefs.LOAD_SAVE_NAME))\r\n           
+      {\r\n                if (loadState == 1)\r\n                {\r\n                   
+      string filename = Prefs.Game_SaveName();\r\n                    bool flag1
+      = File.Exists(Path.Combine(SerializationPath, filename));\r\n                   
+      bool flag2 = SceneManager.GetActiveScene().name == Prefs.Game_LevelName();\r\n                   
+      return flag1 && flag2;\r\n                }\r\n                else if (loadState
+      == 2)\r\n                {\r\n                    flag = crossSceneSaving;\r\n               
+      }\r\n            }\r\n\r\n            return flag;\r\n        }\r\n       
+      \r\n        private bool CheckLoadState(int loadState, string filename)\r\n       
+      {\r\n            bool flag = false;\r\n\r\n            if (loadState > 0 &&
+      Prefs.Exist(Prefs.LOAD_SAVE_NAME))\r\n            {\r\n                if (loadState
+      == 1)\r\n                {\r\n                    //string filename = Prefs.Game_SaveName();\r\n                   
+      bool flag1 = File.Exists(Path.Combine(SerializationPath, filename));\r\n                   
+      bool flag2 = SceneManager.GetActiveScene().name == Prefs.Game_LevelName();\r\n                   
+      return flag1 && flag2;\r\n                }\r\n                else if (loadState
+      == 2)\r\n                {\r\n                    flag = crossSceneSaving;\r\n               
+      }\r\n            }\r\n\r\n            return flag;\r\n        }\r\n"
+  - name: Awake Update
+    original: "                    string filename = Prefs.Game_SaveName();\r\n                   
+      if (CheckLoadState(loadstate))\r\n                    {\r\n                       
+      await Task.Run(() => jsonManager.DeserializeDataAsync(filename));\r\n                       
+      lastSave = filename;\r\n                        LoadSerializedData(null);\r\n                   
+      }\r\n                    else\r\n                    {\r\n                       
+      Debug.Log(\"<color=yellow>[SaveGameHandler]</color> Could not load file: \"
+      + filename);\r\n                        Prefs.Game_LoadState(0);\r\n                   
+      }"
+    edit: "                    if(saveType == Save_Type.Components){\r\n               
+      \r\n                        bool customSave = false;\r\n                       
+      string tempSave = \"\";\r\n\r\n                        if(HFPS_CompSave.instance
+      != null){\r\n\r\n                            if(HFPS_CompSave.instance.Level_Check(SceneManager.GetActiveScene().name)){\r\n\r\n                               
+      tempSave = HFPS_CompSave.instance.Get_SaveName(SceneManager.GetActiveScene().name);\r\n\r\n                               
+      if(tempSave != \"\"){\r\n\r\n                                    customSave
+      = true;\r\n\r\n                                }//tempSave != \"\"\r\n\r\n                           
+      }//level data present\r\n\r\n                        //instance != null\r\n                       
+      } else {\r\n\r\n                            customSave = false;\r\n\r\n                       
+      }//instance != null\r\n\r\n                        if(!customSave){\r\n\r\n                           
+      string filename = Prefs.Game_SaveName();\r\n                            if
+      (CheckLoadState(loadstate))\r\n                            {\r\n                               
+      //Debug.Log(\"Loading \" + filename);\r\n\r\n                               
+      await Task.Run(() => jsonManager.DeserializeDataAsync(filename));\r\n                               
+      lastSave = filename;\r\n                                LoadSerializedData(null);\r\n                           
+      }\r\n                            else\r\n                            {\r\n                               
+      Debug.Log(\"<color=yellow>[SaveGameHandler]</color> Could not load file: \"
+      + filename);\r\n                                Prefs.Game_LoadState(0);\r\n                           
+      }\r\n\r\n                        //!customSave\r\n                        }
+      else {\r\n                            \r\n                            if (CheckLoadState(loadstate,
+      tempSave))\r\n                            {\r\n                               
+      //Debug.Log(\"Loading \" + tempSave);\r\n\r\n                               
+      await Task.Run(() => jsonManager.DeserializeDataAsync(tempSave));\r\n                               
+      lastSave = tempSave;\r\n                                LoadSerializedData(null);\r\n                           
+      }\r\n                            else\r\n                            {\r\n                               
+      Debug.Log(\"<color=yellow>[SaveGameHandler]</color> Could not load file: \"
+      + tempSave);\r\n                                Prefs.Game_LoadState(0);\r\n                           
+      }\r\n                            \r\n\r\n                        }//!customSave\r\n                   
+      \r\n                    //saveType = components\r\n                    } else
+      {\r\n                    \r\n                        string filename = Prefs.Game_SaveName();\r\n                       
+      if (CheckLoadState(loadstate))\r\n                        {\r\n                           
+      await Task.Run(() => jsonManager.DeserializeDataAsync(filename));\r\n                           
+      lastSave = filename;\r\n                            LoadSerializedData(null);\r\n                       
+      }\r\n                        else\r\n                        {\r\n                           
+      Debug.Log(\"<color=yellow>[SaveGameHandler]</color> Could not load file: \"
+      + filename);\r\n                            Prefs.Game_LoadState(0);\r\n                       
+      }\r\n                    \r\n                    }//saveType = components"
+  - name: SerializeSaveData Update
+    original: "                if (Directory.Exists(path))\r\n                {\r\n                   
+      DirectoryInfo di = new DirectoryInfo(path);\r\n                    int count
+      = di.GetFiles(\"*.sav\").Length;\r\n                    lastSave = \"Save\"
+      + count + \".sav\";\r\n\r\n                    using (FileStream file = new
+      FileStream(Path.Combine(path, lastSave), FileMode.OpenOrCreate))\r\n                   
+      {\r\n                        await Task.Run(() => jsonManager.SerializeJsonDataAsync(file));\r\n                   
+      }\r\n                }\r\n                else\r\n                {\r\n                   
+      Directory.CreateDirectory(jsonManager.GetCurrentPath());\r\n                   
+      lastSave = \"Save0.sav\";\r\n\r\n                    using (FileStream file
+      = new FileStream(Path.Combine(path, \"Save0.sav\"), FileMode.OpenOrCreate))\r\n                   
+      {\r\n                        await Task.Run(() => jsonManager.SerializeJsonDataAsync(file));\r\n                   
+      }\r\n                }"
+    edit: "                if (Directory.Exists(path))\r\n                {\r\n                   
+      DirectoryInfo di = new DirectoryInfo(path);\r\n                    int count
+      = di.GetFiles(\"*.sav\").Length;\r\n                    \r\n                   
+      string newSave = \"Save_\" + SceneManager.GetActiveScene().name + \".sav\";\r\n                   
+      List<string> tempSaves = new List<string>();\r\n\r\n                    if(saveType
+      == Save_Type.Components){\r\n\r\n                        foreach(FileInfo fi
+      in di.GetFiles()) {\r\n\r\n                            for(int i = 0; i < HFPS_CompSave.instance.saveData.levelData.levels.Length;
+      ++i ) {\r\n\r\n                                if(fi.Name == HFPS_CompSave.instance.saveData.levelData.levels[i].save){\r\n\r\n                                   
+      count -= 1;\r\n                                    \r\n                                   
+      tempSaves.Add(fi.Name);\r\n                                    \r\n                                   
+      //Debug.Log(\"Reduced Count = \" + count);\r\n\r\n                               
+      }//name = save\r\n\r\n                            }//for i levels\r\n\r\n                       
+      }//foreach file\r\n\r\n                        if(HFPS_CompSave.instance !=
+      null){\r\n\r\n                            HFPS_CompSave.instance.Level_Add(SceneManager.GetActiveScene().name,
+      newSave);\r\n\r\n                        }//instance != null\r\n                   
+      \r\n                    }//saveType = components\r\n                    \r\n                   
+      if(!useSaveLimit){\r\n                    \r\n                        lastSave
+      = \"Save\" + count + \".sav\";\r\n\r\n                    //!useSaveLimit\r\n                   
+      } else {\r\n                    \r\n                        if(count < maxSaves){\r\n                       
+      \r\n                            lastSave = \"Save\" + count + \".sav\";\r\n                           
+      Prefs.Save(\"LastSave\", count);\r\n                        \r\n                       
+      //count < maxSaves\r\n                        } else {\r\n                           
+      \r\n                            if(Prefs.Exist(\"LastSave\")){\r\n                           
+      \r\n                                int tempSave = Prefs.Load<int>(\"LastSave\");\r\n                               
+      \r\n                                if(tempSave == maxSaves - 1){\r\n                               
+      \r\n                                    tempSave = 0;\r\n                               
+      \r\n                                //tempSave = maxSaves - 1\r\n                               
+      } else {\r\n                                \r\n                                   
+      tempSave += 1;\r\n                                \r\n                               
+      }//tempSave = maxSaves - 1\r\n                                \r\n                               
+      lastSave = \"Save\" + tempSave + \".sav\";\r\n                               
+      Prefs.Save(\"LastSave\", tempSave);\r\n                                File.Delete(Path.Combine(path,
+      lastSave));\r\n                            \r\n                           
+      //Exist\r\n                            } else {\r\n                           
+      \r\n                                Prefs.Save(\"LastSave\", 0);\r\n                               
+      lastSave = \"Save0.sav\";\r\n                                //File.Delete(Path.Combine(path,
+      lastSave));\r\n                            \r\n                           
+      }//Exist\r\n                     \r\n                        }//count < maxSaves\r\n                   
+      \r\n                    }//!useSaveLimit\r\n                    \r\n                   
+      if(!preLoadSave){\r\n                    \r\n                        using
+      (FileStream file = new FileStream(Path.Combine(path, lastSave), FileMode.OpenOrCreate))\r\n                       
+      {\r\n                            await Task.Run(() => jsonManager.SerializeJsonDataAsync(file));\r\n                       
+      }\r\n                    \r\n                    //!preLoadSave\r\n                   
+      } else {\r\n                    \r\n                        PreLoad_State(false);\r\n                       
+      lastSave = newSave;\r\n                    \r\n                    }//!preLoadSave\r\n                   
+      \r\n                    if(saveType == Save_Type.Components){\r\n                   
+      \r\n                        if(tempSaves.Count > 0){\r\n                       
+      \r\n                            for(int i = 0; i < tempSaves.Count; ++i ) {\r\n\r\n                               
+      if(tempSaves[i] == newSave){\r\n\r\n                                    File.Delete(Path.Combine(path,
+      newSave));\r\n\r\n                                    //Debug.Log(\"Save File
+      Deleted For New Save = \" + newSave);\r\n\r\n                               
+      }//newSave\r\n\r\n                            }//for i tempSaves\r\n                       
+      \r\n                        }//tempSaves.Count > 0\r\n                    \r\n                       
+      using (FileStream file = new FileStream(Path.Combine(path, newSave), FileMode.OpenOrCreate))\r\n                       
+      {\r\n                            await Task.Run(() => jsonManager.SerializeJsonDataAsync(file));\r\n                       
+      }\r\n                    \r\n                    }//saveType = components\r\n                   
+      \r\n                    //Debug.Log(\"Count = \" + count);\r\n                   
+      \r\n                }\r\n                else\r\n                {\r\n                   
+      Directory.CreateDirectory(jsonManager.GetCurrentPath());\r\n                   
+      \r\n                    if(!preLoadSave){\r\n                    \r\n                       
+      lastSave = \"Save0.sav\";\r\n\r\n                        using (FileStream
+      file = new FileStream(Path.Combine(path, \"Save0.sav\"), FileMode.OpenOrCreate))\r\n                       
+      {\r\n                            await Task.Run(() => jsonManager.SerializeJsonDataAsync(file));\r\n                       
+      }\r\n                    \r\n                    }//!preLoadSave\r\n                   
+      \r\n                    if(saveType == Save_Type.Components){\r\n                   
+      \r\n                        string newSave = \"Save_\" + SceneManager.GetActiveScene().name
+      + \".sav\";\r\n            \r\n                        if(preLoadSave){\r\n                       
+      \r\n                            PreLoad_State(false);\r\n                           
+      lastSave = newSave;\r\n                        \r\n                       
+      }//preLoadSave\r\n                \r\n                        using (FileStream
+      file = new FileStream(Path.Combine(path, newSave), FileMode.OpenOrCreate))\r\n                       
+      {\r\n                            await Task.Run(() => jsonManager.SerializeJsonDataAsync(file));\r\n                       
+      }\r\n                    \r\n                    }//saveType = components\r\n                   
+      \r\n                }"
+  - name: LoadSerializedData Update
+    original: "        void LoadSerializedData(JObject json = null)\r\n        {"
+    edit: "        void LoadSerializedData(JObject json = null)\r\n        {\r\n           
+      if(saveType == Save_Type.Components){\r\n            \r\n                if(HFPS_CompSave.instance
+      != null){\r\n                \r\n                    HFPS_CompSave.instance.Loading_State(true);\r\n                   
+      \r\n                }//instance != null\r\n            \r\n            }//saveType
+      = components"
+  - name: PreLoad State Add
+    original: "            OnGameSaved?.Invoke();\r\n        }"
+    edit: "            OnGameSaved?.Invoke();\r\n        }\r\n        \r\n       
+      public void PreLoad_State(bool state){\r\n        \r\n            preLoadSave
+      = state;\r\n            \r\n        }//PreLoad_State"

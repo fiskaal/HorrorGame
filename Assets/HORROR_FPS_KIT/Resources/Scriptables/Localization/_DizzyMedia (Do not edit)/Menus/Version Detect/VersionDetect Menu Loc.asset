@@ -1,0 +1,292 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: VersionDetect Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Version Detect Version file is missing from
+              your project, Version Detect cannot run without it!
+
+
+              You
+              can re-import the Version Detect Version file from the asset pack on
+              the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: '
+
+              This extension allows you to detect what version
+              of an asset your project is using by checking script content.
+
+
+              Assign
+              a library below for the asset you want to check and use the Check Version
+              button to start the process.
+
+'
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Check Version
+            local: Check Version
+          - name: Clear Notifications
+            local: Clear Notifications
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: NO LIBRARY ASSIGNED
+          - name: VERSION NOT DETECTED
+            local: VERSION NOT DETECTED
+          - name: ' LIBRARY ASSIGNED'
+            local: ' LIBRARY ASSIGNED'
+          - name: 'ASSET = '
+            local: 'ASSET = '
+          - name: 'VERSION = '
+            local: 'VERSION = '
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11 Version Detect \u7248\u672C\u6587\u4EF6\uFF0C\u6CA1\u6709\u5B83\uFF0CVersion
+              Detect \u5C06\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8D44\u4EA7\u5305\u91CD\u65B0\u5BFC\u5165\u7248\u672C\u68C0\u6D4B\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u6269\u5C55\u5141\u8BB8\u60A8\u901A\u8FC7\u68C0\u67E5\u811A\u672C\u5185\u5BB9\u6765\u68C0\u6D4B\u9879\u76EE\u6B63\u5728\u4F7F\u7528\u7684\u8D44\u4EA7\u7248\u672C\u3002\r\n\r\n\u5728\u4E0B\u65B9\u4E3A\u60A8\u8981\u68C0\u67E5\u7684\u8D44\u4EA7\u5206\u914D\u4E00\u4E2A\u5E93\uFF0C\u7136\u540E\u4F7F\u7528\u68C0\u67E5\u7248\u672C\u6309\u94AE\u5F00\u59CB\u8BE5\u8FC7\u7A0B\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Check Version
+            local: "\u68C0\u67E5\u7248\u672C"
+          - name: Clear Notifications
+            local: "\u6E05\u9664\u901A\u77E5"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: "\u672A\u5206\u914D\u5E93"
+          - name: VERSION NOT DETECTED
+            local: "\u672A\u68C0\u6D4B\u5230\u7248\u672C"
+          - name: ' LIBRARY ASSIGNED'
+            local: " \u5206\u914D\u7684\u56FE\u4E66\u9986"
+          - name: 'ASSET = '
+            local: "\u8D44\u4EA7 = "
+          - name: 'VERSION = '
+            local: "\u7248\u672C = "
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11 Version Detect \u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83\uFF0CVersion
+              Detect \u5C07\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8CC7\u7522\u5305\u91CD\u65B0\u5C0E\u5165\u7248\u672C\u6AA2\u6E2C\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u64F4\u5C55\u5141\u8A31\u60A8\u901A\u904E\u6AA2\u67E5\u8173\u672C\u5167\u5BB9\u4F86\u6AA2\u6E2C\u9805\u76EE\u6B63\u5728\u4F7F\u7528\u7684\u8CC7\u7522\u7248\u672C\u3002\r\n\r\n\u5728\u4E0B\u65B9\u70BA\u60A8\u8981\u6AA2\u67E5\u7684\u8CC7\u7522\u5206\u914D\u4E00\u500B\u5EAB\uFF0C\u7136\u5F8C\u4F7F\u7528\u6AA2\u67E5\u7248\u672C\u6309\u9215\u958B\u59CB\u8A72\u904E\u7A0B\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Check Version
+            local: "\u6AA2\u67E5\u7248\u672C"
+          - name: Clear Notifications
+            local: "\u6E05\u9664\u901A\u77E5"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: "\u672A\u5206\u914D\u5716\u66F8\u9928"
+          - name: VERSION NOT DETECTED
+            local: "\u672A\u6AA2\u6E2C\u5230\u7248\u672C"
+          - name: ' LIBRARY ASSIGNED'
+            local: " \u5206\u914D\u7684\u5716\u66F8\u9928"
+          - name: 'ASSET = '
+            local: "\u8CC7\u7522 = "
+          - name: 'VERSION = '
+            local: "\u7248\u672C = "
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Version Detect Version est absent de votre projet,
+              Version Detect ne peut pas fonctionner sans lui !\r\n\r\nVous pouvez
+              r\xE9importer le fichier Version Detect Version du pack de ressources
+              sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nCette extension vous permet de d\xE9tecter la version d'une
+              ressource utilis\xE9e par votre projet en v\xE9rifiant le contenu du
+              script.\r\n\r\nAttribuez une biblioth\xE8que ci-dessous pour l'actif
+              que vous souhaitez v\xE9rifier et utilisez le bouton V\xE9rifier la
+              version pour d\xE9marrer le processus.\n"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Check Version
+            local: "V\xE9rifier la version"
+          - name: Clear Notifications
+            local: Effacer les notifications
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: "AUCUNE BIBLIOTH\xC8QUE ASSIGN\xC9E"
+          - name: VERSION NOT DETECTED
+            local: VERSION NON DETECTEE
+          - name: ' LIBRARY ASSIGNED'
+            local: " BIBLIOTH\xC8QUE ASSIGN\xC9E"
+          - name: 'ASSET = '
+            local: 'ATOUT = '
+          - name: 'VERSION = '
+            local: "VERSION\_= "
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\uBC84\uC804 \uB204\uB77D"
+          texts:
+          - name: Version Missing
+            text: "\n\uBC84\uC804 \uAC10\uC9C0 \uBC84\uC804 \uD30C\uC77C\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C
+              \uB204\uB77D\uB418\uC5C8\uC2B5\uB2C8\uB2E4. \uBC84\uC804 \uAC10\uC9C0\uAC00
+              \uC5C6\uC73C\uBA74 \uBC84\uC804 \uAC10\uC9C0\uB97C \uC2E4\uD589\uD560
+              \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC790\uC0B0 \uC800\uC7A5\uC18C/\uD328\uD0A4\uC9C0
+              \uAD00\uB9AC\uC790\uC758 \uC790\uC0B0 \uD329\uC5D0\uC11C \uBC84\uC804
+              \uAC10\uC9C0 \uBC84\uC804 \uD30C\uC77C\uC744 \uB2E4\uC2DC \uAC00\uC838\uC62C
+              \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\uC774 \uD655\uC7A5\uC744 \uC0AC\uC6A9\uD558\uBA74 \uC2A4\uD06C\uB9BD\uD2B8
+              \uCF58\uD150\uCE20\uB97C \uD655\uC778\uD558\uC5EC \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C
+              \uC0AC\uC6A9 \uC911\uC778 \uC790\uC0B0 \uBC84\uC804\uC744 \uAC10\uC9C0\uD560
+              \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\r\n\uD655\uC778\uD558\uB824\uB294
+              \uC790\uC0B0\uC5D0 \uB300\uD574 \uC544\uB798\uC5D0 \uB77C\uC774\uBE0C\uB7EC\uB9AC\uB97C
+              \uD560\uB2F9\uD558\uACE0 \uBC84\uC804 \uD655\uC778 \uBC84\uD2BC\uC744
+              \uC0AC\uC6A9\uD558\uC5EC \uD504\uB85C\uC138\uC2A4\uB97C \uC2DC\uC791\uD569\uB2C8\uB2E4.\n"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Check Version
+            local: "\uBC84\uC804 \uD655\uC778"
+          - name: Clear Notifications
+            local: "\uC54C\uB9BC \uC9C0\uC6B0\uAE30"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: "\uD560\uB2F9\uB41C \uB77C\uC774\uBE0C\uB7EC\uB9AC \uC5C6\uC74C"
+          - name: VERSION NOT DETECTED
+            local: "\uBC84\uC804\uC774 \uAC10\uC9C0\uB418\uC9C0 \uC54A\uC74C"
+          - name: ' LIBRARY ASSIGNED'
+            local: " \uD560\uB2F9\uB41C \uB77C\uC774\uBE0C\uB7EC\uB9AC"
+          - name: 'ASSET = '
+            local: "\uC790\uC0B0 = "
+          - name: 'VERSION = '
+            local: "\uBC84\uC804 = "
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo Version Detect Version de su proyecto, \xA1Version
+              Detect no puede ejecutarse sin \xE9l!\r\n\r\nPuede volver a importar
+              el archivo Version Detect Version desde el paquete de activos en el
+              almac\xE9n de activos/administrador de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nEsta extensi\xF3n le permite detectar qu\xE9 versi\xF3n de un
+              activo est\xE1 utilizando su proyecto al verificar el contenido del
+              script.\r\n\r\nAsigne una biblioteca a continuaci\xF3n para el activo
+              que desea verificar y use el bot\xF3n Verificar versi\xF3n para iniciar
+              el proceso.\n"
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Check Version
+            local: "Verificar versi\xF3n"
+          - name: Clear Notifications
+            local: Borrar notificaciones
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO LIBRARY ASSIGNED
+            local: NO HAY BIBLIOTECA ASIGNADA
+          - name: VERSION NOT DETECTED
+            local: "VERSI\xD3N NO DETECTADA"
+          - name: ' LIBRARY ASSIGNED'
+            local: ' BIBLIOTECA ASIGNADA'
+          - name: 'ASSET = '
+            local: 'ACTIVO = '
+          - name: 'VERSION = '
+            local: "VERSI\xD3N = "

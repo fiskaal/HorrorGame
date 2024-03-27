@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9de9e24370cd9041b348027f19b6140, type: 3}
+  m_Name: (Comp) Objectives
+  m_EditorClassIdentifier: 
+  Objectives:
+  - shortName: Escape
+    eventID: 
+    objectiveText: Escape the house
+    completeCount: 0
+    objectiveID: 0
+    localeKey: Obj.TheHouse.Investigate
+  - shortName: Burn Body Parts
+    eventID: 
+    objectiveText: Burn Body Parts {0}/{1}
+    completeCount: 3
+    objectiveID: 1
+    localeKey: 
+  - shortName: Find Head
+    eventID: 
+    objectiveText: Find Head
+    completeCount: 1
+    objectiveID: 2
+    localeKey: 
+  - shortName: Find Left Arm
+    eventID: 
+    objectiveText: Find Left Arm
+    completeCount: 1
+    objectiveID: 3
+    localeKey: 
+  - shortName: Find Right Arm
+    eventID: 
+    objectiveText: Find Right Arm
+    completeCount: 1
+    objectiveID: 4
+    localeKey: 
+  enableLocalization: 0

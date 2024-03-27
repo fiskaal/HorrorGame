@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (WeaponController)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Can Zoom option
+    original: '        public LayerMask soundReactionMask;'
+    edit: "        public LayerMask soundReactionMask;\r\n        public bool canZoom;"
+  - name: Lock Values
+    original: "        private float waitTime;\r\n        #endregion"
+    edit: "        private float waitTime;\r\n        #endregion\r\n        \r\n       
+      private bool fireLock;\r\n        private bool zoomLock;"
+  - name: Inputs update
+    original: "            if (InputHandler.InputIsInitialized && !inputWait)\r\n           
+      {\r\n                fireControl = InputHandler.ReadButton(\"Fire\");\r\n               
+      zoomControl = InputHandler.ReadButton(\"Zoom\");\r\n\r\n                if
+      (InputHandler.IsCompositesSame(\"Reload\", \"Examine\"))\r\n               
+      {\r\n                    if (!scriptManager.IsExamineRaycast && !scriptManager.IsGrabRaycast)\r\n                   
+      {\r\n                        if (conflictTime <= 0)\r\n                       
+      {\r\n                            reloadControl = InputHandler.ReadButton(\"Reload\");\r\n                       
+      }\r\n                        else\r\n                        {\r\n                           
+      conflictTime -= Time.deltaTime;\r\n                        }\r\n                   
+      }\r\n                    else\r\n                    {\r\n                       
+      conflictTime = 0.3f;\r\n                    }\r\n                }\r\n               
+      else\r\n                {\r\n                    reloadControl = InputHandler.ReadButton(\"Reload\");\r\n               
+      }\r\n            }"
+    edit: "            if (InputHandler.InputIsInitialized && !inputWait)\r\n           
+      {\r\n                if(!fireLock){\r\n                \r\n                   
+      fireControl = InputHandler.ReadButton(\"Fire\");\r\n                \r\n               
+      }//!fireLock\r\n                \r\n                if(!zoomLock){\r\n               
+      \r\n                    zoomControl = InputHandler.ReadButton(\"Zoom\");\r\n\r\n               
+      }//!zoomLock\r\n                \r\n                if (InputHandler.IsCompositesSame(\"Reload\",
+      \"Examine\"))\r\n                {\r\n                    if (!scriptManager.IsExamineRaycast
+      && !scriptManager.IsGrabRaycast)\r\n                    {\r\n                       
+      if (conflictTime <= 0)\r\n                        {\r\n                           
+      if(!fireLock){\r\n                            \r\n                               
+      reloadControl = InputHandler.ReadButton(\"Reload\");\r\n                       
+      \r\n                            }//!fireLock\r\n                        }\r\n                       
+      else\r\n                        {\r\n                            conflictTime
+      -= Time.deltaTime;\r\n                        }\r\n                    }\r\n                   
+      else\r\n                    {\r\n                        conflictTime = 0.3f;\r\n                   
+      }\r\n                }\r\n                else\r\n                {\r\n                   
+      if(!fireLock){\r\n                    \r\n                        reloadControl
+      = InputHandler.ReadButton(\"Reload\");\r\n                    \r\n                   
+      }//!fireLock\r\n                }\r\n            }"
+  - name: Select Event Update
+    original: "        IEnumerator SelectEvent()\r\n        {\r\n            weaponRoot.gameObject.SetActive(true);\r\n\r\n           
+      yield return new WaitUntil(() => stateName.Equals(\"Draw\"));\r\n\r\n           
+      SetZoomFOV(false);\r\n\r\n            if (gameManager)\r\n            {\r\n               
+      gameManager.gamePanels.AmmoPanel.SetActive(true);\r\n                uiShown
+      = true;\r\n            }\r\n\r\n            if (audioSettings.soundDraw)\r\n           
+      {\r\n                PlaySound(audioSettings.soundDraw, audioSettings.volumeDraw);\r\n           
+      }\r\n\r\n            yield return new WaitForSeconds(stateTime - 0.1f);\r\n\r\n           
+      interruptReload = false;\r\n            isReloading = false;\r\n           
+      isSelected = true;\r\n            canFire = true;\r\n            fireOnce =
+      false;\r\n            fireTime = 0;\r\n\r\n            stateName = string.Empty;\r\n           
+      stateTime = 0;\r\n        }"
+    edit: "        IEnumerator SelectEvent()\r\n        {\r\n            weaponRoot.gameObject.SetActive(true);\r\n\r\n           
+      yield return new WaitUntil(() => stateName.Equals(\"Draw\"));\r\n\r\n           
+      SetZoomFOV(false);\r\n\r\n            if (gameManager)\r\n            {\r\n               
+      gameManager.gamePanels.AmmoPanel.SetActive(true);\r\n                uiShown
+      = true;\r\n            }\r\n\r\n            if (audioSettings.soundDraw)\r\n           
+      {\r\n                PlaySound(audioSettings.soundDraw, audioSettings.volumeDraw);\r\n           
+      }\r\n\r\n            yield return new WaitForSeconds(stateTime - 0.1f);\r\n\r\n           
+      interruptReload = false;\r\n            isReloading = false;\r\n           
+      isSelected = true;\r\n            canFire = true;\r\n            fireOnce =
+      false;\r\n            fireTime = 0;\r\n\r\n            stateName = string.Empty;\r\n           
+      stateTime = 0;\r\n            \r\n            if(canZoom){\r\n            \r\n               
+      playerFunctions.WeaponZoom_State(true);\r\n        \r\n            }//canZoom\r\n       
+      }"
+  - name: DeSelect Event Update
+    original: "        IEnumerator DeselectEvent()\r\n        {\r\n            if
+      (gameManager)\r\n            {\r\n                gameManager.gamePanels.AmmoPanel.SetActive(false);\r\n               
+      uiShown = false;\r\n            }\r\n\r\n            weaponRoot.localPosition
+      = hipPosition;\r\n\r\n            weaponAnim.SetTrigger(animationSettings.hideAnim);\r\n\r\n           
+      yield return new WaitUntil(() => stateName.Equals(\"Hide\"));\r\n           
+      yield return new WaitForSeconds(stateTime);\r\n\r\n            isHideAnim =
+      false;\r\n            isSelected = false;\r\n            stateName = string.Empty;\r\n           
+      stateTime = 0;\r\n\r\n            weaponRoot.gameObject.SetActive(false);\r\n       
+      }"
+    edit: "        IEnumerator DeselectEvent()\r\n        {\r\n            if (gameManager)\r\n           
+      {\r\n                gameManager.gamePanels.AmmoPanel.SetActive(false);\r\n               
+      uiShown = false;\r\n            }\r\n\r\n            weaponRoot.localPosition
+      = hipPosition;\r\n\r\n            weaponAnim.SetTrigger(animationSettings.hideAnim);\r\n           
+      \r\n            if(canZoom){\r\n            \r\n                playerFunctions.WeaponZoom_State(false);\r\n\r\n           
+      }//canZoom\r\n            \r\n            yield return new WaitUntil(() =>
+      stateName.Equals(\"Hide\"));\r\n            yield return new WaitForSeconds(stateTime);\r\n\r\n           
+      isHideAnim = false;\r\n            isSelected = false;\r\n            stateName
+      = string.Empty;\r\n            stateTime = 0;\r\n\r\n            weaponRoot.gameObject.SetActive(false);\r\n       
+      }"
+  - name: Switcher Deselect Forced Add
+    original: '        public override void OnSwitcherActivate()'
+    edit: "        \r\n        #if (COMPONENTS_PRESENT || HFPS_DURABILITY_PRESENT)\r\n       
+      \r\n            public override void OnSwitcherDeselect_Forced() {\r\n\r\n               
+      isHideAnim = true;\r\n\r\n                StartCoroutine(DeselectEvent());\r\n               
+      SetZoomFOV(true);\r\n\r\n            }//OnSwitcherDeselect_Forced\r\n       
+      \r\n        #endif\r\n\r\n        public override void OnSwitcherActivate()"
+  - name: States Add
+    original: "        void OnDrawGizmosSelected()\r\n        {"
+    edit: "        \r\n        public void FireLock_State(bool state){\r\n       
+      \r\n            fireLock = state;\r\n            \r\n            if(state){\r\n           
+      \r\n                fireControl = false;\r\n                \r\n           
+      }//state\r\n            \r\n        }//FireLock_State\r\n        \r\n       
+      public void ZoomLock_State(bool state){\r\n        \r\n            zoomLock
+      = state;\r\n            \r\n            if(state){\r\n            \r\n               
+      zoomControl = false;\r\n                \r\n            }//state\r\n       
+      \r\n        }//ZoomLock_State\r\n\r\n        void OnDrawGizmosSelected()\r\n       
+      {"

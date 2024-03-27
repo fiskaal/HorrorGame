@@ -1,0 +1,758 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: RagdollCreator Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Ragdoll Creator Version file is missing from
+              your project, Ragdoll Creator cannot run without it!
+
+
+              You
+              can re-import the Ragdoll Creator Version file from the asset pack
+              on the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Ragdoll
+          local: Ragdoll
+          texts:
+          - name: Instructions
+            text: Use the options below to create a ragdoll on a HUMANOID object.
+          buttons:
+          - name: Save Language
+            local: Save Language
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Create Mode
+            local: Create Mode
+        - name: Manual
+          local: Manual
+          texts:
+          - name: Instructions
+            text: In MANUAL mode, you need to setup/fill in the values below before
+              using the buttons.
+          - name: Assign Body Parts
+            text: Assign the body parts and use the Upload Body Parts button below.
+          - name: No Body Parts
+            text: No Body Parts Uploaded.
+          - name: Not All Body Parts Uploaded
+            text: Not All Body Parts Uploaded. Check the debug log for missing body
+              parts.
+          - name: All Body Parts Found
+            text: All Body Parts Found! Setup Ragdoll Settings below and then use
+              the Create Ragdoll button.
+          - name: Created
+            text: Ragdoll Created!
+          buttons:
+          - name: Create Ragdoll
+            local: Create Ragdoll
+          - name: Reset Ragdoll Settings
+            local: Reset Ragdoll Settings
+          - name: Clear Body Parts
+            local: Clear Body Parts
+          - name: Clear Ragdoll
+            local: Clear Ragdoll
+          - name: Upload Body Parts
+            local: Upload Body Parts
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: System Notifications
+          - name: Body Parts
+            local: Body Parts
+          - name: Ragdoll Settings
+            local: Ragdoll Settings
+        - name: Auto
+          local: Auto
+          texts:
+          - name: Instructions
+            text: In AUTO mode, the system will automatically grab and assign the
+              proper body part transforms.
+          - name: Select Humanoid
+            text: Select a HUMANOID object and use the Grab Body Parts button below.
+          - name: Humanoid Found
+            text: HUMANOID Found! Use the Grab Body Parts button below.
+          - name: Multiple Objects
+            text: Multiple Objects Selected, You Must Select/Setup One At A Time.
+          - name: No Body Parts
+            text: No Body Parts Grabbed.
+          - name: Not All Body Parts
+            text: Not All Body Parts Found. Check your HUMANOID's avatar setup.
+          - name: All Body Parts Found
+            text: All Body Parts Found! Setup Ragdoll Settings below and then use
+              the Create Ragdoll button.
+          - name: Created
+            text: Ragdoll Created!
+          buttons:
+          - name: Create Ragdoll
+            local: Create Ragdoll
+          - name: Reset Ragdoll Settings
+            local: Reset Ragdoll Settings
+          - name: Grab Body Parts
+            local: Grab Body Parts
+          - name: Clear Body Parts
+            local: Clear Body Parts
+          - name: Clear Ragdoll
+            local: Clear Ragdoll
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: System Notifications
+          - name: Ragdoll Settings
+            local: Ragdoll Settings
+        - name: Debug
+          local: Debug
+          texts:
+          - name: Instructions
+            text: Use the options below to utilize debug.
+          buttons: []
+          toggles:
+          - name: Debug Notifications
+            header: Debug Notifications
+            valTrue: ON
+            valFalse: OFF
+          prompts: []
+          singleValues: []
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11 Ragdoll Creator \u7248\u672C\u6587\u4EF6\uFF0C\u6CA1\u6709\u5B83\uFF0CRagdoll
+              Creator \u5C06\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8D44\u4EA7\u5305\u91CD\u65B0\u5BFC\u5165
+              Ragdoll Creator \u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Ragdoll
+          local: "\u5E03\u5A03\u5A03"
+          texts:
+          - name: Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5728 HUMANOID \u5BF9\u8C61\u4E0A\u521B\u5EFA\u5E03\u5A03\u5A03\u3002"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Create Mode
+            local: "\u521B\u5EFA\u6A21\u5F0F"
+        - name: Manual
+          local: "\u624B\u52A8\u7684"
+          texts:
+          - name: Instructions
+            text: "\u5728\u624B\u52A8\u6A21\u5F0F\u4E0B\uFF0C\u60A8\u9700\u8981\u5728\u4F7F\u7528\u6309\u94AE\u4E4B\u524D\u8BBE\u7F6E/\u586B\u5199\u4EE5\u4E0B\u503C\u3002"
+          - name: Assign Body Parts
+            text: "\u5206\u914D\u8EAB\u4F53\u90E8\u4F4D\u5E76\u4F7F\u7528\u4E0B\u9762\u7684\u4E0A\u4F20\u8EAB\u4F53\u90E8\u4F4D\u6309\u94AE\u3002"
+          - name: No Body Parts
+            text: "\u6CA1\u6709\u4E0A\u4F20\u8EAB\u4F53\u90E8\u4F4D\u3002"
+          - name: Not All Body Parts Uploaded
+            text: "\u5E76\u975E\u6240\u6709\u8EAB\u4F53\u90E8\u4F4D\u90FD\u5DF2\u4E0A\u4F20\u3002\u68C0\u67E5\u8C03\u8BD5\u65E5\u5FD7\u4EE5\u67E5\u627E\u7F3A\u5C11\u7684\u6B63\u6587\u90E8\u5206\u3002"
+          - name: All Body Parts Found
+            text: "\u627E\u5230\u6240\u6709\u8EAB\u4F53\u90E8\u4F4D\uFF01\u5728\u4E0B\u65B9\u8BBE\u7F6E
+              Ragdoll \u8BBE\u7F6E\uFF0C\u7136\u540E\u4F7F\u7528 Create Ragdoll \u6309\u94AE\u3002"
+          - name: Created
+            text: "\u5E03\u5076\u521B\u5EFA\uFF01"
+          buttons:
+          - name: Create Ragdoll
+            local: "\u521B\u5EFA\u5E03\u5A03\u5A03"
+          - name: Reset Ragdoll Settings
+            local: "\u91CD\u7F6E\u5E03\u5A03\u5A03\u8BBE\u7F6E"
+          - name: Clear Body Parts
+            local: "\u6E05\u9664\u8EAB\u4F53\u90E8\u4F4D"
+          - name: Clear Ragdoll
+            local: "\u6E05\u9664\u5E03\u5A03\u5A03"
+          - name: Upload Body Parts
+            local: "\u4E0A\u4F20\u8EAB\u4F53\u90E8\u4F4D"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: "\u7CFB\u7EDF\u901A\u77E5"
+          - name: Body Parts
+            local: "\u8EAB\u4F53\u90E8\u4F4D"
+          - name: Ragdoll Settings
+            local: "\u5E03\u5A03\u5A03\u8BBE\u7F6E"
+        - name: Auto
+          local: "\u6C7D\u8F66"
+          texts:
+          - name: Instructions
+            text: "\u5728\u81EA\u52A8\u6A21\u5F0F\u4E0B\uFF0C\u7CFB\u7EDF\u5C06\u81EA\u52A8\u6293\u53D6\u5E76\u5206\u914D\u9002\u5F53\u7684\u8EAB\u4F53\u90E8\u4F4D\u53D8\u6362\u3002"
+          - name: Select Humanoid
+            text: "\u9009\u62E9\u4E00\u4E2A HUMANOID \u5BF9\u8C61\u5E76\u4F7F\u7528\u4E0B\u9762\u7684\u201C\u6293\u53D6\u8EAB\u4F53\u90E8\u4F4D\u201D\u6309\u94AE\u3002"
+          - name: Humanoid Found
+            text: "\u53D1\u73B0\u4EBA\u5F62\uFF01\u4F7F\u7528\u4E0B\u65B9\u7684\u6293\u53D6\u8EAB\u4F53\u90E8\u4F4D\u6309\u94AE\u3002"
+          - name: Multiple Objects
+            text: "\u9009\u62E9\u4E86\u591A\u4E2A\u5BF9\u8C61\uFF0C\u60A8\u5FC5\u987B\u4E00\u6B21\u9009\u62E9/\u8BBE\u7F6E\u4E00\u4E2A\u3002"
+          - name: No Body Parts
+            text: "\u6CA1\u6709\u6293\u4F4F\u8EAB\u4F53\u90E8\u4F4D\u3002"
+          - name: Not All Body Parts
+            text: "\u672A\u627E\u5230\u6240\u6709\u8EAB\u4F53\u90E8\u4F4D\u3002\u68C0\u67E5\u60A8\u7684
+              HUMANOID \u7684\u5934\u50CF\u8BBE\u7F6E\u3002"
+          - name: All Body Parts Found
+            text: "\u627E\u5230\u6240\u6709\u8EAB\u4F53\u90E8\u4F4D\uFF01\u5728\u4E0B\u65B9\u8BBE\u7F6E
+              Ragdoll \u8BBE\u7F6E\uFF0C\u7136\u540E\u4F7F\u7528 Create Ragdoll \u6309\u94AE\u3002"
+          - name: Created
+            text: "\u5E03\u5076\u521B\u5EFA\uFF01"
+          buttons:
+          - name: Create Ragdoll
+            local: "\u521B\u5EFA\u5E03\u5A03\u5A03"
+          - name: Reset Ragdoll Settings
+            local: "\u91CD\u7F6E\u5E03\u5A03\u5A03\u8BBE\u7F6E"
+          - name: Grab Body Parts
+            local: "\u6293\u53D6\u8EAB\u4F53\u90E8\u4F4D"
+          - name: Clear Body Parts
+            local: "\u6E05\u9664\u8EAB\u4F53\u90E8\u4F4D"
+          - name: Clear Ragdoll
+            local: "\u6E05\u9664\u5E03\u5A03\u5A03"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: "\u7CFB\u7EDF\u901A\u77E5"
+          - name: Ragdoll Settings
+            local: "\u5E03\u5A03\u5A03\u8BBE\u7F6E"
+        - name: Debug
+          local: "\u8C03\u8BD5"
+          texts:
+          - name: Instructions
+            text: "\u4F7F\u7528\u4E0B\u9762\u7684\u9009\u9879\u6765\u4F7F\u7528\u8C03\u8BD5\u3002"
+          buttons: []
+          toggles:
+          - name: Debug Notifications
+            header: "\u8C03\u8BD5\u901A\u77E5"
+            valTrue: "\u4E0A"
+            valFalse: "\u79BB\u5F00"
+          prompts: []
+          singleValues: []
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11 Ragdoll Creator \u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83\uFF0CRagdoll
+              Creator \u5C07\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8CC7\u7522\u5305\u91CD\u65B0\u5C0E\u5165
+              Ragdoll Creator \u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Ragdoll
+          local: "\u5E03\u5A03\u5A03"
+          texts:
+          - name: Instructions
+            text: "\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5728 HUMANOID \u5C0D\u50CF\u4E0A\u5275\u5EFA\u5E03\u5A03\u5A03\u3002"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Create Mode
+            local: "\u5275\u5EFA\u6A21\u5F0F"
+        - name: Manual
+          local: "\u624B\u52D5\u7684"
+          texts:
+          - name: Instructions
+            text: "\u5728\u624B\u52D5\u6A21\u5F0F\u4E0B\uFF0C\u60A8\u9700\u8981\u5728\u4F7F\u7528\u6309\u9215\u4E4B\u524D\u8A2D\u7F6E/\u586B\u5BEB\u4EE5\u4E0B\u503C\u3002"
+          - name: Assign Body Parts
+            text: "\u5206\u914D\u8EAB\u9AD4\u90E8\u4F4D\u4E26\u4F7F\u7528\u4E0B\u9762\u7684\u4E0A\u50B3\u8EAB\u9AD4\u90E8\u4F4D\u6309\u9215\u3002"
+          - name: No Body Parts
+            text: "\u6C92\u6709\u4E0A\u50B3\u8EAB\u9AD4\u90E8\u4F4D\u3002"
+          - name: Not All Body Parts Uploaded
+            text: "\u4E26\u975E\u6240\u6709\u8EAB\u9AD4\u90E8\u4F4D\u90FD\u5DF2\u4E0A\u50B3\u3002\u6AA2\u67E5\u8ABF\u8A66\u65E5\u8A8C\u4EE5\u67E5\u627E\u7F3A\u5C11\u7684\u6B63\u6587\u90E8\u5206\u3002"
+          - name: All Body Parts Found
+            text: "\u627E\u5230\u6240\u6709\u8EAB\u9AD4\u90E8\u4F4D\uFF01\u5728\u4E0B\u65B9\u8A2D\u7F6E
+              Ragdoll \u8A2D\u7F6E\uFF0C\u7136\u5F8C\u4F7F\u7528 Create Ragdoll \u6309\u9215\u3002"
+          - name: Created
+            text: "\u5E03\u5076\u5275\u5EFA\uFF01"
+          buttons:
+          - name: Create Ragdoll
+            local: "\u5275\u5EFA\u5E03\u5A03\u5A03"
+          - name: Reset Ragdoll Settings
+            local: "\u91CD\u7F6E\u5E03\u5A03\u5A03\u8A2D\u7F6E"
+          - name: Clear Body Parts
+            local: "\u6E05\u9664\u8EAB\u9AD4\u90E8\u4F4D"
+          - name: Clear Ragdoll
+            local: "\u6E05\u9664\u5E03\u5A03\u5A03"
+          - name: Upload Body Parts
+            local: "\u4E0A\u50B3\u8EAB\u9AD4\u90E8\u4F4D"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: "\u7CFB\u7D71\u901A\u77E5"
+          - name: Body Parts
+            local: "\u8EAB\u9AD4\u90E8\u4F4D"
+          - name: Ragdoll Settings
+            local: "\u5E03\u5A03\u5A03\u8A2D\u7F6E"
+        - name: Auto
+          local: "\u6C7D\u8ECA"
+          texts:
+          - name: Instructions
+            text: "\u5728\u81EA\u52D5\u6A21\u5F0F\u4E0B\uFF0C\u7CFB\u7D71\u5C07\u81EA\u52D5\u6293\u53D6\u4E26\u5206\u914D\u9069\u7576\u7684\u8EAB\u9AD4\u90E8\u4F4D\u8B8A\u63DB\u3002"
+          - name: Select Humanoid
+            text: "\u9078\u64C7\u4E00\u500B HUMANOID \u5C0D\u8C61\u4E26\u4F7F\u7528\u4E0B\u9762\u7684\u201C\u6293\u53D6\u8EAB\u9AD4\u90E8\u4F4D\u201D\u6309\u9215\u3002"
+          - name: Humanoid Found
+            text: "\u767C\u73FE\u4EBA\u5F62\uFF01\u4F7F\u7528\u4E0B\u65B9\u7684\u6293\u53D6\u8EAB\u9AD4\u90E8\u4F4D\u6309\u9215\u3002"
+          - name: Multiple Objects
+            text: "\u9078\u64C7\u4E86\u591A\u500B\u5C0D\u8C61\uFF0C\u60A8\u5FC5\u9808\u4E00\u6B21\u9078\u64C7/\u8A2D\u7F6E\u4E00\u500B\u3002"
+          - name: No Body Parts
+            text: "\u6C92\u6709\u6293\u4F4F\u8EAB\u9AD4\u90E8\u4F4D\u3002"
+          - name: Not All Body Parts
+            text: "\u672A\u627E\u5230\u6240\u6709\u8EAB\u9AD4\u90E8\u4F4D\u3002\u6AA2\u67E5\u60A8\u7684
+              HUMANOID \u7684\u982D\u50CF\u8A2D\u7F6E\u3002"
+          - name: All Body Parts Found
+            text: "\u627E\u5230\u6240\u6709\u8EAB\u9AD4\u90E8\u4F4D\uFF01\u5728\u4E0B\u65B9\u8A2D\u7F6E
+              Ragdoll \u8A2D\u7F6E\uFF0C\u7136\u5F8C\u4F7F\u7528 Create Ragdoll \u6309\u9215\u3002"
+          - name: Created
+            text: "\u5E03\u5076\u5275\u5EFA\uFF01"
+          buttons:
+          - name: Create Ragdoll
+            local: "\u5275\u5EFA\u5E03\u5A03\u5A03"
+          - name: Reset Ragdoll Settings
+            local: "\u91CD\u7F6E\u5E03\u5A03\u5A03\u8A2D\u7F6E"
+          - name: Grab Body Parts
+            local: "\u6293\u53D6\u8EAB\u9AD4\u90E8\u4F4D"
+          - name: Clear Body Parts
+            local: "\u6E05\u9664\u8EAB\u9AD4\u90E8\u4F4D"
+          - name: Clear Ragdoll
+            local: "\u6E05\u9664\u5E03\u5A03\u5A03"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: "\u7CFB\u7D71\u901A\u77E5"
+          - name: Ragdoll Settings
+            local: "\u5E03\u5A03\u5A03\u8A2D\u7F6E"
+        - name: Debug
+          local: "\u8ABF\u8A66"
+          texts:
+          - name: Instructions
+            text: "\u4F7F\u7528\u4E0B\u9762\u7684\u9078\u9805\u4F86\u4F7F\u7528\u8ABF\u8A66\u3002"
+          buttons: []
+          toggles:
+          - name: Debug Notifications
+            header: "\u8ABF\u8A66\u901A\u77E5"
+            valTrue: "\u4E0A"
+            valFalse: "\u96E2\u958B"
+          prompts: []
+          singleValues: []
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Ragdoll Creator Version est absent de votre projet,
+              Ragdoll Creator ne peut pas fonctionner sans lui !\r\n\r\nVous pouvez
+              r\xE9importer le fichier Ragdoll Creator Version \xE0 partir du pack
+              de ressources sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Ragdoll
+          local: "Poup\xE9e de chiffon"
+          texts:
+          - name: Instructions
+            text: "Utilisez les options ci-dessous pour cr\xE9er un ragdoll sur un
+              objet HUMANOID."
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Create Mode
+            local: "Cr\xE9er un mode"
+        - name: Manual
+          local: Manuel
+          texts:
+          - name: Instructions
+            text: En mode MANUEL, vous devez configurer/renseigner les valeurs ci-dessous
+              avant d'utiliser les boutons.
+          - name: Assign Body Parts
+            text: "Attribuez les parties du corps et utilisez le bouton T\xE9l\xE9charger
+              les parties du corps ci-dessous."
+          - name: No Body Parts
+            text: "Aucune partie du corps t\xE9l\xE9charg\xE9e."
+          - name: Not All Body Parts Uploaded
+            text: "Toutes les parties du corps ne sont pas t\xE9l\xE9charg\xE9es.
+              V\xE9rifiez le journal de d\xE9bogage pour les parties du corps manquantes."
+          - name: All Body Parts Found
+            text: "Toutes les parties du corps retrouv\xE9es\_! Configurez les param\xE8tres
+              de Ragdoll ci-dessous, puis utilisez le bouton Cr\xE9er un Ragdoll."
+          - name: Created
+            text: "Ragdoll cr\xE9\xE9\_!"
+          buttons:
+          - name: Create Ragdoll
+            local: "Cr\xE9er une poup\xE9e de chiffon"
+          - name: Reset Ragdoll Settings
+            local: "R\xE9initialiser les param\xE8tres de Ragdoll"
+          - name: Clear Body Parts
+            local: Effacer les parties du corps
+          - name: Clear Ragdoll
+            local: Effacer Ragdoll
+          - name: Upload Body Parts
+            local: "T\xE9l\xE9charger des parties du corps"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: "Avis syst\xE8me"
+          - name: Body Parts
+            local: Parties du corps
+          - name: Ragdoll Settings
+            local: "Param\xE8tres de Ragdoll"
+        - name: Auto
+          local: Auto
+          texts:
+          - name: Instructions
+            text: "En mode AUTO, le syst\xE8me saisira et attribuera automatiquement
+              les transformations appropri\xE9es de la partie du corps."
+          - name: Select Humanoid
+            text: "S\xE9lectionnez un objet HUMANOID et utilisez le bouton Saisir
+              les parties du corps ci-dessous."
+          - name: Humanoid Found
+            text: "HUMANO\xCFDE Trouv\xE9\_! Utilisez le bouton Saisir les parties
+              du corps ci-dessous."
+          - name: Multiple Objects
+            text: "Plusieurs objets s\xE9lectionn\xE9s, vous devez s\xE9lectionner/configurer
+              un \xE0 la fois."
+          - name: No Body Parts
+            text: Aucune partie du corps saisie.
+          - name: Not All Body Parts
+            text: "Toutes les parties du corps n'ont pas \xE9t\xE9 trouv\xE9es. V\xE9rifiez
+              la configuration de l'avatar de votre HUMANOID."
+          - name: All Body Parts Found
+            text: "Toutes les parties du corps retrouv\xE9es\_! Configurez les param\xE8tres
+              de Ragdoll ci-dessous, puis utilisez le bouton Cr\xE9er un Ragdoll."
+          - name: Created
+            text: "Ragdoll cr\xE9\xE9\_!"
+          buttons:
+          - name: Create Ragdoll
+            local: "Cr\xE9er une poup\xE9e de chiffon"
+          - name: Reset Ragdoll Settings
+            local: "R\xE9initialiser les param\xE8tres de Ragdoll"
+          - name: Grab Body Parts
+            local: Saisir les parties du corps
+          - name: Clear Body Parts
+            local: Effacer les parties du corps
+          - name: Clear Ragdoll
+            local: Effacer Ragdoll
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: "Avis syst\xE8me"
+          - name: Ragdoll Settings
+            local: "Param\xE8tres de Ragdoll"
+        - name: Debug
+          local: "D\xE9boguer"
+          texts:
+          - name: Instructions
+            text: "Utilisez les options ci-dessous pour utiliser le d\xE9bogage."
+          buttons: []
+          toggles:
+          - name: Debug Notifications
+            header: "Notifications de d\xE9bogage"
+            valTrue: SUR
+            valFalse: "\xC0 L'ARR\xCAT"
+          prompts: []
+          singleValues: []
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\uBC84\uC804 \uB204\uB77D"
+          texts:
+          - name: Version Missing
+            text: "\nRagdoll Creator \uBC84\uC804 \uD30C\uC77C\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0
+              \uC5C6\uC2B5\uB2C8\uB2E4. Ragdoll Creator\uB294 \uC774 \uD30C\uC77C
+              \uC5C6\uC774\uB294 \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC790\uC0B0
+              \uC800\uC7A5\uC18C/\uD328\uD0A4\uC9C0 \uAD00\uB9AC\uC790\uC758 \uC790\uC0B0
+              \uD329\uC5D0\uC11C Ragdoll Creator \uBC84\uC804 \uD30C\uC77C\uC744
+              \uB2E4\uC2DC \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Ragdoll
+          local: "\uB799\uB3CC"
+          texts:
+          - name: Instructions
+            text: "\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC HUMANOID
+              \uAC1C\uCCB4\uC5D0 \uBD09\uC81C \uC778\uD615\uC744 \uB9CC\uB4ED\uB2C8\uB2E4."
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Create Mode
+            local: "\uC0DD\uC131 \uBAA8\uB4DC"
+        - name: Manual
+          local: "\uC218\uB3D9"
+          texts:
+          - name: Instructions
+            text: "MANUAL \uBAA8\uB4DC\uC5D0\uC11C\uB294 \uBC84\uD2BC\uC744 \uC0AC\uC6A9\uD558\uAE30
+              \uC804\uC5D0 \uC544\uB798 \uAC12\uC744 \uC124\uC815/\uCC44\uC6CC\uC57C
+              \uD569\uB2C8\uB2E4."
+          - name: Assign Body Parts
+            text: "\uC2E0\uCCB4 \uBD80\uC704\uB97C \uD560\uB2F9\uD558\uACE0 \uC544\uB798\uC758
+              \uC2E0\uCCB4 \uBD80\uC704 \uC5C5\uB85C\uB4DC \uBC84\uD2BC\uC744 \uC0AC\uC6A9\uD558\uC2ED\uC2DC\uC624."
+          - name: No Body Parts
+            text: "\uC5C5\uB85C\uB4DC\uB41C \uC2E0\uCCB4 \uBD80\uC704\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4."
+          - name: Not All Body Parts Uploaded
+            text: "\uC77C\uBD80 \uC2E0\uCCB4 \uBD80\uC704\uAC00 \uC5C5\uB85C\uB4DC\uB418\uC9C0
+              \uC54A\uC558\uC2B5\uB2C8\uB2E4. \uB204\uB77D\uB41C \uC2E0\uCCB4 \uBD80\uBD84\uC5D0
+              \uB300\uD55C \uB514\uBC84\uADF8 \uB85C\uADF8\uB97C \uD655\uC778\uD558\uC2ED\uC2DC\uC624."
+          - name: All Body Parts Found
+            text: "\uBAA8\uB4E0 \uC2E0\uCCB4 \uBD80\uC704 \uBC1C\uACAC! \uC544\uB798\uC5D0\uC11C
+              \uBD09\uC81C\uC778\uD615 \uC124\uC815\uC744 \uC124\uC815\uD55C \uB2E4\uC74C
+              \uBD09\uC81C\uC778\uD615 \uB9CC\uB4E4\uAE30 \uBC84\uD2BC\uC744 \uC0AC\uC6A9\uD569\uB2C8\uB2E4."
+          - name: Created
+            text: "\uB799\uB3CC \uC0DD\uC131!"
+          buttons:
+          - name: Create Ragdoll
+            local: "\uBD09\uC81C \uC778\uD615 \uB9CC\uB4E4\uAE30"
+          - name: Reset Ragdoll Settings
+            local: "\uB799\uB3CC \uC124\uC815 \uC7AC\uC124\uC815"
+          - name: Clear Body Parts
+            local: "\uD22C\uBA85 \uBC14\uB514 \uBD80\uD488"
+          - name: Clear Ragdoll
+            local: "\uB799\uB3CC \uC9C0\uC6B0\uAE30"
+          - name: Upload Body Parts
+            local: "\uC2E0\uCCB4 \uBD80\uC704 \uC5C5\uB85C\uB4DC"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: "\uC2DC\uC2A4\uD15C \uC54C\uB9BC"
+          - name: Body Parts
+            local: "\uC2E0\uCCB4 \uBD80\uC704"
+          - name: Ragdoll Settings
+            local: "\uB799\uB3CC \uC124\uC815"
+        - name: Auto
+          local: "\uC790\uB3D9"
+          texts:
+          - name: Instructions
+            text: "AUTO \uBAA8\uB4DC\uC5D0\uC11C \uC2DC\uC2A4\uD15C\uC740 \uC790\uB3D9\uC73C\uB85C
+              \uC801\uC808\uD55C \uC2E0\uCCB4 \uBD80\uC704 \uBCC0\uD658\uC744 \uC7A1\uACE0
+              \uD560\uB2F9\uD569\uB2C8\uB2E4."
+          - name: Select Humanoid
+            text: "HUMANOID \uC624\uBE0C\uC81D\uD2B8\uB97C \uC120\uD0DD\uD558\uACE0
+              \uC544\uB798\uC758 Grab Body Parts \uBC84\uD2BC\uC744 \uC0AC\uC6A9\uD558\uC138\uC694."
+          - name: Humanoid Found
+            text: "\uD734\uBA38\uB178\uC774\uB4DC \uBC1C\uACAC! \uC544\uB798\uC758
+              \uC2E0\uCCB4 \uBD80\uC704 \uC7A1\uAE30 \uBC84\uD2BC\uC744 \uC0AC\uC6A9\uD558\uC2ED\uC2DC\uC624."
+          - name: Multiple Objects
+            text: "\uC5EC\uB7EC \uAC1C\uCCB4\uAC00 \uC120\uD0DD\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+              \uD55C \uBC88\uC5D0 \uD558\uB098\uC529 \uC120\uD0DD/\uC124\uC815\uD574\uC57C
+              \uD569\uB2C8\uB2E4."
+          - name: No Body Parts
+            text: "\uC2E0\uCCB4 \uC77C\uBD80\uAC00 \uC7A1\uD788\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4."
+          - name: Not All Body Parts
+            text: "\uC2E0\uCCB4 \uC77C\uBD80\uAC00 \uBC1C\uACAC\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.
+              HUMANOID\uC758 \uC544\uBC14\uD0C0 \uC124\uC815\uC744 \uD655\uC778\uD558\uC138\uC694."
+          - name: All Body Parts Found
+            text: "\uBAA8\uB4E0 \uC2E0\uCCB4 \uBD80\uC704 \uBC1C\uACAC! \uC544\uB798\uC5D0\uC11C
+              \uBD09\uC81C\uC778\uD615 \uC124\uC815\uC744 \uC124\uC815\uD55C \uB2E4\uC74C
+              \uBD09\uC81C\uC778\uD615 \uB9CC\uB4E4\uAE30 \uBC84\uD2BC\uC744 \uC0AC\uC6A9\uD569\uB2C8\uB2E4."
+          - name: Created
+            text: "\uB799\uB3CC \uC0DD\uC131!"
+          buttons:
+          - name: Create Ragdoll
+            local: "\uBD09\uC81C \uC778\uD615 \uB9CC\uB4E4\uAE30"
+          - name: Reset Ragdoll Settings
+            local: "\uB799\uB3CC \uC124\uC815 \uC7AC\uC124\uC815"
+          - name: Grab Body Parts
+            local: "\uC2E0\uCCB4 \uBD80\uC704 \uC7A1\uAE30"
+          - name: Clear Body Parts
+            local: "\uD22C\uBA85 \uBC14\uB514 \uBD80\uD488"
+          - name: Clear Ragdoll
+            local: "\uB799\uB3CC \uC9C0\uC6B0\uAE30"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: "\uC2DC\uC2A4\uD15C \uC54C\uB9BC"
+          - name: Ragdoll Settings
+            local: "\uB799\uB3CC \uC124\uC815"
+        - name: Debug
+          local: "\uB514\uBC84\uADF8"
+          texts:
+          - name: Instructions
+            text: "\uB514\uBC84\uADF8\uB97C \uD65C\uC6A9\uD558\uB824\uBA74 \uC544\uB798
+              \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC2ED\uC2DC\uC624."
+          buttons: []
+          toggles:
+          - name: Debug Notifications
+            header: "\uB514\uBC84\uADF8 \uC54C\uB9BC"
+            valTrue: "\uCF1C\uC9D0"
+            valFalse: "\uB044\uB2E4"
+          prompts: []
+          singleValues: []
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo Ragdoll Creator Version en su proyecto, \xA1Ragdoll
+              Creator no puede ejecutarse sin \xE9l!\r\n\r\nPuede volver a importar
+              el archivo Ragdoll Creator Version desde el paquete de activos en la
+              tienda de activos/administrador de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Ragdoll
+          local: "Mu\xF1eca de trapo"
+          texts:
+          - name: Instructions
+            text: "Usa las siguientes opciones para crear un mu\xF1eco de trapo en
+              un objeto HUMANOID."
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Create Mode
+            local: Modo Crear
+        - name: Manual
+          local: Manual
+          texts:
+          - name: Instructions
+            text: "En el modo MANUAL, debe configurar/completar los valores a continuaci\xF3n
+              antes de usar los botones."
+          - name: Assign Body Parts
+            text: "Asigne las partes del cuerpo y use el bot\xF3n Cargar partes del
+              cuerpo a continuaci\xF3n."
+          - name: No Body Parts
+            text: No se han subido partes del cuerpo.
+          - name: Not All Body Parts Uploaded
+            text: "No todas las partes del cuerpo cargadas. Compruebe el registro
+              de depuraci\xF3n para ver si faltan partes del cuerpo."
+          - name: All Body Parts Found
+            text: "\xA1Todas las partes del cuerpo encontradas! Configure los ajustes
+              de Ragdoll a continuaci\xF3n y luego use el bot\xF3n Crear Ragdoll."
+          - name: Created
+            text: "\xA1Mu\xF1eco de trapo creado!"
+          buttons:
+          - name: Create Ragdoll
+            local: "Crear mu\xF1eco de trapo"
+          - name: Reset Ragdoll Settings
+            local: "Restablecer configuraci\xF3n de mu\xF1eco de trapo"
+          - name: Clear Body Parts
+            local: Partes del cuerpo claras
+          - name: Clear Ragdoll
+            local: "Mu\xF1eco de trapo claro"
+          - name: Upload Body Parts
+            local: Cargar partes del cuerpo
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: Notificaciones del sistema
+          - name: Body Parts
+            local: Partes del cuerpo
+          - name: Ragdoll Settings
+            local: "Ajustes de mu\xF1eco de trapo"
+        - name: Auto
+          local: Auto
+          texts:
+          - name: Instructions
+            text: "En el modo AUTO, el sistema capturar\xE1 y asignar\xE1 autom\xE1ticamente
+              las transformaciones de partes del cuerpo adecuadas."
+          - name: Select Humanoid
+            text: "Seleccione un objeto HUMANOID y use el bot\xF3n Agarrar partes
+              del cuerpo a continuaci\xF3n."
+          - name: Humanoid Found
+            text: "\xA1HUMANOIDE encontrado! Use el bot\xF3n Agarrar partes del cuerpo
+              a continuaci\xF3n."
+          - name: Multiple Objects
+            text: "M\xFAltiples objetos seleccionados, debe seleccionar/configurar
+              uno a la vez."
+          - name: No Body Parts
+            text: No se agarraron partes del cuerpo.
+          - name: Not All Body Parts
+            text: "No se encontraron todas las partes del cuerpo. Comprueba la configuraci\xF3n
+              del avatar de tu HUMANOID."
+          - name: All Body Parts Found
+            text: "\xA1Todas las partes del cuerpo encontradas! Configure los ajustes
+              de Ragdoll a continuaci\xF3n y luego use el bot\xF3n Crear Ragdoll."
+          - name: Created
+            text: "\xA1Mu\xF1eco de trapo creado!"
+          buttons:
+          - name: Create Ragdoll
+            local: "Crear mu\xF1eco de trapo"
+          - name: Reset Ragdoll Settings
+            local: "Restablecer configuraci\xF3n de mu\xF1eco de trapo"
+          - name: Grab Body Parts
+            local: Agarrar partes del cuerpo
+          - name: Clear Body Parts
+            local: Partes del cuerpo claras
+          - name: Clear Ragdoll
+            local: "Mu\xF1eco de trapo claro"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: System Notifications
+            local: Notificaciones del sistema
+          - name: Ragdoll Settings
+            local: "Ajustes de mu\xF1eco de trapo"
+        - name: Debug
+          local: Depurar
+          texts:
+          - name: Instructions
+            text: "Use las opciones a continuaci\xF3n para utilizar la depuraci\xF3n."
+          buttons: []
+          toggles:
+          - name: Debug Notifications
+            header: "Notificaciones de depuraci\xF3n"
+            valTrue: EN
+            valFalse: APAGADO
+          prompts: []
+          singleValues: []

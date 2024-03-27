@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c889acb6cf0d394092bbee9b6b846d8, type: 3}
+  m_Name: Components Edit Library (1.6.3a)
+  m_EditorClassIdentifier: 
+  content:
+    name: COMPONENTS
+    version: HFPS 1.6.3a
+    library:
+    - name: CameraShaker
+      template: {fileID: 11400000, guid: 0b380548af874944f95bea317c8ee5f9, type: 2}
+    - name: CandleItem
+      template: {fileID: 11400000, guid: 8c61969d02397e645a6de15a43b5e167, type: 2}
+    - name: DynamicObject
+      template: {fileID: 11400000, guid: fd7962ab4a4d7e1438852a8a1e1b9eb3, type: 2}
+    - name: DynamicObjectEditor
+      template: {fileID: 11400000, guid: 395d0abb97c1d2c41aedbf92312265a9, type: 2}
+    - name: ExamineManager
+      template: {fileID: 11400000, guid: 8f786499d00bd484db591448b2fa0e9e, type: 2}
+    - name: Fader
+      template: {fileID: 11400000, guid: 638b1739d34d2944190933c00132567a, type: 2}
+    - name: FlashlightItem
+      template: {fileID: 11400000, guid: 42b0ef04b508737469054db42571d1e6, type: 2}
+    - name: FlashlightItem_Old
+      template: {fileID: 11400000, guid: fdaad190f6d92f8419c575287143424e, type: 2}
+    - name: GameLoadManager
+      template: {fileID: 11400000, guid: 5b32e420cef429b4084964d16fa3ec64, type: 2}
+    - name: HealthManager
+      template: {fileID: 11400000, guid: cf1ceb2e2e110034290b9edb61ac0f63, type: 2}
+    - name: HFPS_GameManager
+      template: {fileID: 11400000, guid: a74f263d305641346b8deb5df5cade87, type: 2}
+    - name: Inventory
+      template: {fileID: 11400000, guid: 9c63046ee7697c846b267a653695119d, type: 2}
+    - name: InteractiveItem
+      template: {fileID: 11400000, guid: 2cbf09fba451bf94ca010d4c3b5dc7e4, type: 2}
+    - name: InteractiveItemEditor
+      template: {fileID: 11400000, guid: 4e971c1f9d1087348a16163319b1765f, type: 2}
+    - name: InteractManager
+      template: {fileID: 11400000, guid: cb66af41f2ede5e42b3521597e6ca7fe, type: 2}
+    - name: ItemSwitcher
+      template: {fileID: 11400000, guid: 36ef87f28b62e744e8668e4617fd2588, type: 2}
+    - name: LanternItem
+      template: {fileID: 11400000, guid: 5b4190f7eee4f6e4782a2f463f3ced93, type: 2}
+    - name: LanternItemNew
+      template: {fileID: 11400000, guid: 8a8221a21e52b524d98747d30dfcc1b7, type: 2}
+    - name: MouseLook
+      template: {fileID: 11400000, guid: 62dd5b3abc3169841a4e972dd899b349, type: 2}
+    - name: MeleeController
+      template: {fileID: 11400000, guid: bc3d35d6654834e4ab4b33896eb6e87a, type: 2}
+    - name: ObjectiveManager
+      template: {fileID: 11400000, guid: 8627e6fdd4a07834fb68e52e0fae5cff, type: 2}
+    - name: PlayerController
+      template: {fileID: 11400000, guid: 65b2a53a6e4bcbe4d8a282a4d53553fd, type: 2}
+    - name: PlayerFunctions
+      template: {fileID: 11400000, guid: 63cae32dcda1b54479c0f52abe9bf779, type: 2}
+    - name: SaveGameHandler
+      template: {fileID: 11400000, guid: 189d8f9e5b9557c4ebf2cf5a78af7d4b, type: 2}
+    - name: SaveGameHandlerEditor
+      template: {fileID: 11400000, guid: 07770e51e560f6248a2858b4e918b6f2, type: 2}
+    - name: SceneInfoDrawer
+      template: {fileID: 11400000, guid: b61ca6a1148f3a44f882c2b6356f3760, type: 2}
+    - name: SceneLoader
+      template: {fileID: 11400000, guid: c9c54a4650b3911459600598906aa85e, type: 2}
+    - name: SwitcherBehaviour
+      template: {fileID: 11400000, guid: c6abe9f345beeb34797c04c31bf81a15, type: 2}
+    - name: TriggerAnimation
+      template: {fileID: 11400000, guid: f065d334dbd8f654c86c0205770df540, type: 2}
+    - name: TriggerHint
+      template: {fileID: 11400000, guid: b1efdaa71148a1c40b44b92916f80855, type: 2}
+    - name: WeaponController
+      template: {fileID: 11400000, guid: 50d275f33062ef64cac90a88dda11259, type: 2}
+    - name: ZombieBehaviourAI
+      template: {fileID: 11400000, guid: d18909f3abffd774abb5d4b95f951263, type: 2}

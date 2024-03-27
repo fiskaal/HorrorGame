@@ -1,0 +1,620 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: SystemsCheck Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Systems Check Version file is missing from
+              your project, Systems Check cannot run without it!
+
+
+              You
+              can re-import the Systems Check Version file from the asset pack on
+              the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Intro
+          local: Intro
+          texts:
+          - name: Instructions
+            text: '
+
+              The system checker has been designed to ease the
+              burden of identifying issues across multiple Components systems.
+
+
+              Now
+              you can easily identify and fix issues with the click of a few buttons.
+
+              Checkout
+              the other tabs to use the systems checker features.
+
+              You
+              can also turn on/off debug notifications using the toggle below.
+
+
+              It
+              is HIGHLY RECOMMNEDED to save your scene BEFORE using the systems checker.
+
+'
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Reset Systems Checker
+            local: Reset Systems Checker
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: 'COMPONENTS VERSION: '
+            local: 'COMPONENTS VERSION: '
+          - name: Debug Notifications
+            local: Debug Notifications
+          - name: Advanced Debug Notifications
+            local: Advanced Debug Notifications
+          - name: OFF
+            local: OFF
+          - name: ON
+            local: ON
+        - name: Save
+          local: Save
+          texts:
+          - name: Instructions
+            text: '
+
+              Here you can check if save files match across
+              Components versions.
+
+'
+          - name: Systems
+            text: '
+
+              This area checks if certain Components systems
+              are present in your scene.
+
+'
+          - name: Catch Systems First
+            text: '
+
+              Catch the systems in the Systems tab first.
+
+'
+          - name: Save Files Check
+            text: '
+
+              Use the Check Save Files button to cross check
+              the Components save files.
+
+
+              If files do not match, use
+              the Clear Save Files button to reset save files.
+
+'
+          - name: All Data Names
+            text: '
+
+              All Data Name fields must be filled in on Components
+              Save.
+
+'
+          - name: Saves Not Checked
+            text: '
+
+              Save Files have not been checked.
+
+'
+          - name: Saves Valid
+            text: '
+
+              Save Files are valid!
+
+'
+          - name: Components Data Valid
+            text: '
+
+              Components Data valid!
+
+'
+          - name: Saves Not Valid
+            text: '
+
+              Save Files are NOT valid!
+
+'
+          - name: Components Data Not Valid
+            text: '
+
+              Components Data NOT valid!
+
+'
+          - name: No Saves
+            text: '
+
+              No Save Files, nothing to cross check.
+
+'
+          buttons:
+          - name: Systems
+            local: Systems
+          - name: Save Files Check
+            local: Save Files Check
+          - name: Save Files Clear
+            local: Save Files Clear
+          - name: Catch Systems
+            local: Catch Systems
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: ' Components Save'
+            local: ' Components Save'
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11\u7CFB\u7EDF\u68C0\u67E5\u7248\u672C\u6587\u4EF6\uFF0C\u6CA1\u6709\u5B83\uFF0C\u7CFB\u7EDF\u68C0\u67E5\u5C06\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8D44\u4EA7\u5305\u91CD\u65B0\u5BFC\u5165\u7CFB\u7EDF\u68C0\u67E5\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Intro
+          local: "\u4ECB\u7ECD"
+          texts:
+          - name: Instructions
+            text: "\n\u7CFB\u7EDF\u68C0\u67E5\u5668\u65E8\u5728\u51CF\u8F7B\u8DE8\u591A\u4E2A\u7EC4\u4EF6\u7CFB\u7EDF\u8BC6\u522B\u95EE\u9898\u7684\u8D1F\u62C5\u3002\r\n\r\n\u73B0\u5728\uFF0C\u60A8\u53EA\u9700\u5355\u51FB\u51E0\u4E2A\u6309\u94AE\u5373\u53EF\u8F7B\u677E\u8BC6\u522B\u548C\u4FEE\u590D\u95EE\u9898\u3002\r\n\u7B7E\u51FA\u5176\u4ED6\u9009\u9879\u5361\u4EE5\u4F7F\u7528\u7CFB\u7EDF\u68C0\u67E5\u5668\u529F\u80FD\u3002\r\n\u60A8\u8FD8\u53EF\u4EE5\u4F7F\u7528\u4E0B\u9762\u7684\u5207\u6362\u6253\u5F00/\u5173\u95ED\u8C03\u8BD5\u901A\u77E5\u3002\r\n\r\n\u5F3A\u70C8\u5EFA\u8BAE\u5728\u4F7F\u7528\u7CFB\u7EDF\u68C0\u67E5\u5668\u4E4B\u524D\u4FDD\u5B58\u60A8\u7684\u573A\u666F\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Reset Systems Checker
+            local: "\u91CD\u7F6E\u7CFB\u7EDF\u68C0\u67E5\u5668"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: 'COMPONENTS VERSION: '
+            local: "\u7EC4\u4EF6\u7248\u672C\uFF1A "
+          - name: Debug Notifications
+            local: "\u8C03\u8BD5\u901A\u77E5"
+          - name: Advanced Debug Notifications
+            local: "\u9AD8\u7EA7\u8C03\u8BD5\u901A\u77E5"
+          - name: OFF
+            local: "\u79BB\u5F00"
+          - name: ON
+            local: "\u4E0A"
+        - name: Save
+          local: "\u8282\u7701"
+          texts:
+          - name: Instructions
+            text: "\n\u60A8\u53EF\u4EE5\u5728\u6B64\u5904\u68C0\u67E5\u4FDD\u5B58\u6587\u4EF6\u662F\u5426\u8DE8\u7EC4\u4EF6\u7248\u672C\u5339\u914D\u3002\n"
+          - name: Systems
+            text: "\n\u6B64\u533A\u57DF\u68C0\u67E5\u60A8\u7684\u573A\u666F\u4E2D\u662F\u5426\u5B58\u5728\u67D0\u4E9B\u7EC4\u4EF6\u7CFB\u7EDF\u3002\n"
+          - name: Catch Systems First
+            text: "\n\u9996\u5148\u5728\u201C\u7CFB\u7EDF\u201D\u9009\u9879\u5361\u4E2D\u6355\u83B7\u7CFB\u7EDF\u3002\n"
+          - name: Save Files Check
+            text: "\n\u4F7F\u7528\u68C0\u67E5\u4FDD\u5B58\u6587\u4EF6\u6309\u94AE\u4EA4\u53C9\u68C0\u67E5\u7EC4\u4EF6\u4FDD\u5B58\u6587\u4EF6\u3002\r\n\r\n\u5982\u679C\u6587\u4EF6\u4E0D\u5339\u914D\uFF0C\u8BF7\u4F7F\u7528\u6E05\u9664\u4FDD\u5B58\u6587\u4EF6\u6309\u94AE\u91CD\u7F6E\u4FDD\u5B58\u6587\u4EF6\u3002\n"
+          - name: All Data Names
+            text: "\n\u5FC5\u987B\u5728\u7EC4\u4EF6\u4FDD\u5B58\u65F6\u586B\u5199\u6240\u6709\u6570\u636E\u540D\u79F0\u5B57\u6BB5\u3002\n"
+          - name: Saves Not Checked
+            text: "\n\u4FDD\u5B58\u6587\u4EF6\u5C1A\u672A\u68C0\u67E5\u3002\n"
+          - name: Saves Valid
+            text: "\n\u4FDD\u5B58\u6587\u4EF6\u6709\u6548\uFF01\n"
+          - name: Components Data Valid
+            text: "\n\u7EC4\u4EF6 \u6570\u636E\u6709\u6548\uFF01\n"
+          - name: Saves Not Valid
+            text: "\n\u4FDD\u5B58\u6587\u4EF6\u65E0\u6548\uFF01\n"
+          - name: Components Data Not Valid
+            text: "\n\u7EC4\u4EF6\u6570\u636E\u65E0\u6548\uFF01\n"
+          - name: No Saves
+            text: "\n\u6CA1\u6709\u4FDD\u5B58\u6587\u4EF6\uFF0C\u6CA1\u6709\u4EC0\u4E48\u53EF\u4EE5\u4EA4\u53C9\u68C0\u67E5\u7684\u3002\n"
+          buttons:
+          - name: Systems
+            local: "\u7CFB\u7EDF"
+          - name: Save Files Check
+            local: "\u4FDD\u5B58\u6587\u4EF6\u68C0\u67E5"
+          - name: Save Files Clear
+            local: "\u4FDD\u5B58\u6587\u4EF6\u6E05\u9664"
+          - name: Catch Systems
+            local: "\u6355\u83B7\u7CFB\u7EDF"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: ' Components Save'
+            local: " \u7EC4\u4EF6\u4FDD\u5B58"
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11\u7CFB\u7D71\u6AA2\u67E5\u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83\uFF0C\u7CFB\u7D71\u6AA2\u67E5\u5C07\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8CC7\u7522\u5305\u91CD\u65B0\u5C0E\u5165\u7CFB\u7D71\u6AA2\u67E5\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Intro
+          local: "\u4ECB\u7D39"
+          texts:
+          - name: Instructions
+            text: "\n\u7CFB\u7D71\u6AA2\u67E5\u5668\u65E8\u5728\u6E1B\u8F15\u8DE8\u591A\u500B\u7D44\u4EF6\u7CFB\u7D71\u8B58\u5225\u554F\u984C\u7684\u8CA0\u64D4\u3002\r\n\r\n\u73FE\u5728\uFF0C\u60A8\u53EA\u9700\u55AE\u64CA\u5E7E\u500B\u6309\u9215\u5373\u53EF\u8F15\u9B06\u8B58\u5225\u548C\u4FEE\u5FA9\u554F\u984C\u3002\r\n\u7C3D\u51FA\u5176\u4ED6\u9078\u9805\u5361\u4EE5\u4F7F\u7528\u7CFB\u7D71\u6AA2\u67E5\u5668\u529F\u80FD\u3002\r\n\u60A8\u9084\u53EF\u4EE5\u4F7F\u7528\u4E0B\u9762\u7684\u5207\u63DB\u6253\u958B/\u95DC\u9589\u8ABF\u8A66\u901A\u77E5\u3002\r\n\r\n\u5F37\u70C8\u5EFA\u8B70\u5728\u4F7F\u7528\u7CFB\u7D71\u6AA2\u67E5\u5668\u4E4B\u524D\u4FDD\u5B58\u60A8\u7684\u5834\u666F\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Reset Systems Checker
+            local: "\u91CD\u7F6E\u7CFB\u7D71\u6AA2\u67E5\u5668"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: 'COMPONENTS VERSION: '
+            local: "\u7D44\u4EF6\u7248\u672C\uFF1A "
+          - name: Debug Notifications
+            local: "\u8ABF\u8A66\u901A\u77E5"
+          - name: Advanced Debug Notifications
+            local: "\u9AD8\u7D1A\u8ABF\u8A66\u901A\u77E5"
+          - name: OFF
+            local: "\u96E2\u958B"
+          - name: ON
+            local: "\u4E0A"
+        - name: Save
+          local: "\u7BC0\u7701"
+          texts:
+          - name: Instructions
+            text: "\n\u5728\u9019\u88E1\uFF0C\u60A8\u53EF\u4EE5\u6AA2\u67E5\u4FDD\u5B58\u6587\u4EF6\u662F\u5426\u8DE8\u7D44\u4EF6\u7248\u672C\u5339\u914D\u3002\n"
+          - name: Systems
+            text: "\n\u6B64\u5340\u57DF\u6AA2\u67E5\u60A8\u7684\u5834\u666F\u4E2D\u662F\u5426\u5B58\u5728\u67D0\u4E9B\u7D44\u4EF6\u7CFB\u7D71\u3002\n"
+          - name: Catch Systems First
+            text: "\n\u9996\u5148\u5728\u201C\u7CFB\u7D71\u201D\u9078\u9805\u5361\u4E2D\u6355\u7372\u7CFB\u7D71\u3002\n"
+          - name: Save Files Check
+            text: "\n\u4F7F\u7528\u6AA2\u67E5\u4FDD\u5B58\u6587\u4EF6\u6309\u9215\u4EA4\u53C9\u6AA2\u67E5\u7D44\u4EF6\u4FDD\u5B58\u6587\u4EF6\u3002\r\n\r\n\u5982\u679C\u6587\u4EF6\u4E0D\u5339\u914D\uFF0C\u8ACB\u4F7F\u7528\u6E05\u9664\u4FDD\u5B58\u6587\u4EF6\u6309\u9215\u91CD\u7F6E\u4FDD\u5B58\u6587\u4EF6\u3002\n"
+          - name: All Data Names
+            text: "\n\u5FC5\u9808\u5728\u7D44\u4EF6\u4FDD\u5B58\u6642\u586B\u5BEB\u6240\u6709\u6578\u64DA\u540D\u7A31\u5B57\u6BB5\u3002\n"
+          - name: Saves Not Checked
+            text: "\n\u4FDD\u5B58\u6587\u4EF6\u5C1A\u672A\u6AA2\u67E5\u3002\n"
+          - name: Saves Valid
+            text: "\n\u4FDD\u5B58\u6587\u4EF6\u6709\u6548\uFF01\n"
+          - name: Components Data Valid
+            text: "\n\u7D44\u4EF6 \u6578\u64DA\u6709\u6548\uFF01\n"
+          - name: Saves Not Valid
+            text: "\n\u4FDD\u5B58\u6587\u4EF6\u7121\u6548\uFF01\n"
+          - name: Components Data Not Valid
+            text: "\n\u7D44\u4EF6\u6578\u64DA\u7121\u6548\uFF01\n"
+          - name: No Saves
+            text: "\n\u6C92\u6709\u4FDD\u5B58\u6587\u4EF6\uFF0C\u6C92\u6709\u4EC0\u9EBC\u53EF\u4EE5\u4EA4\u53C9\u6AA2\u67E5\u7684\u3002\n"
+          buttons:
+          - name: Systems
+            local: "\u7CFB\u7D71"
+          - name: Save Files Check
+            local: "\u4FDD\u5B58\u6587\u4EF6\u6AA2\u67E5"
+          - name: Save Files Clear
+            local: "\u4FDD\u5B58\u6587\u4EF6\u6E05\u9664"
+          - name: Catch Systems
+            local: "\u6355\u7372\u7CFB\u7D71"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: ' Components Save'
+            local: " \u7D44\u4EF6\u4FDD\u5B58"
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Systems Check Version est absent de votre projet,
+              Systems Check ne peut pas s'ex\xE9cuter sans lui\_!\r\n\r\nVous pouvez
+              r\xE9importer le fichier Systems Check Version \xE0 partir du pack
+              de ressources sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Intro
+          local: Introduction
+          texts:
+          - name: Instructions
+            text: "\nLe v\xE9rificateur de syst\xE8me a \xE9t\xE9 con\xE7u pour faciliter
+              l'identification des probl\xE8mes sur plusieurs syst\xE8mes de composants.\r\n\r\nD\xE9sormais,
+              vous pouvez facilement identifier et r\xE9soudre les probl\xE8mes en
+              cliquant sur quelques boutons.\r\nConsultez les autres onglets pour
+              utiliser les fonctionnalit\xE9s du v\xE9rificateur de syst\xE8mes.\r\nVous
+              pouvez \xE9galement activer/d\xE9sactiver les notifications de d\xE9bogage
+              \xE0 l'aide de la bascule ci-dessous.\r\n\r\nIl est FORTEMENT RECOMMAND\xC9
+              d'enregistrer votre sc\xE8ne AVANT d'utiliser le v\xE9rificateur de
+              syst\xE8mes.\n"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Reset Systems Checker
+            local: "R\xE9initialiser le v\xE9rificateur de syst\xE8mes"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: 'COMPONENTS VERSION: '
+            local: "VERSION COMPOSANTS\_: "
+          - name: Debug Notifications
+            local: "Notifications de d\xE9bogage"
+          - name: Advanced Debug Notifications
+            local: "Notifications de d\xE9bogage avanc\xE9es"
+          - name: OFF
+            local: "\xC0 L'ARR\xCAT"
+          - name: ON
+            local: SUR
+        - name: Save
+          local: sauvegarder
+          texts:
+          - name: Instructions
+            text: "\nIci, vous pouvez v\xE9rifier si les fichiers de sauvegarde correspondent
+              \xE0 toutes les versions des composants.\n"
+          - name: Systems
+            text: "\nCette zone v\xE9rifie si certains syst\xE8mes de composants
+              sont pr\xE9sents dans votre sc\xE8ne.\n"
+          - name: Catch Systems First
+            text: "\nAttrapez d'abord les syst\xE8mes dans l'onglet Syst\xE8mes.\n"
+          - name: Save Files Check
+            text: "\nUtilisez le bouton V\xE9rifier les fichiers de sauvegarde pour
+              v\xE9rifier les fichiers de sauvegarde des composants.\r\n\r\nSi les
+              fichiers ne correspondent pas, utilisez le bouton Effacer les fichiers
+              de sauvegarde pour r\xE9initialiser les fichiers de sauvegarde.\n"
+          - name: All Data Names
+            text: "\nTous les champs Nom de donn\xE9es doivent \xEAtre renseign\xE9s
+              lors de l'enregistrement des composants.\n"
+          - name: Saves Not Checked
+            text: "\nLes fichiers d'enregistrement n'ont pas \xE9t\xE9 coch\xE9s.\n"
+          - name: Saves Valid
+            text: "\nLes fichiers de sauvegarde sont valides\_!\n"
+          - name: Components Data Valid
+            text: "\nComposants Donn\xE9es valides\_!\n"
+          - name: Saves Not Valid
+            text: "\nLes fichiers de sauvegarde ne sont PAS valides\_!\n"
+          - name: Components Data Not Valid
+            text: "\nComposants Donn\xE9es NON valides\_!\n"
+          - name: No Saves
+            text: "\nPas de sauvegarde de fichiers, rien \xE0 v\xE9rifier.\n"
+          buttons:
+          - name: Systems
+            local: "Syst\xE8mes"
+          - name: Save Files Check
+            local: "Enregistrer la v\xE9rification des fichiers"
+          - name: Save Files Clear
+            local: Enregistrer les fichiers Effacer
+          - name: Catch Systems
+            local: "Syst\xE8mes de capture"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: ' Components Save'
+            local: ' Sauvegarde des composants'
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\uBC84\uC804 \uB204\uB77D"
+          texts:
+          - name: Version Missing
+            text: "\n\uC2DC\uC2A4\uD15C \uAC80\uC0AC \uBC84\uC804 \uD30C\uC77C\uC774
+              \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C \uB204\uB77D\uB418\uC5C8\uC2B5\uB2C8\uB2E4.
+              \uC2DC\uC2A4\uD15C \uAC80\uC0AC\uB294 \uC774 \uD30C\uC77C \uC5C6\uC774\uB294
+              \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC790\uC0B0
+              \uC800\uC7A5\uC18C/\uD328\uD0A4\uC9C0 \uAD00\uB9AC\uC790\uC758 \uC790\uC0B0
+              \uD329\uC5D0\uC11C \uC2DC\uC2A4\uD15C \uD655\uC778 \uBC84\uC804 \uD30C\uC77C\uC744
+              \uB2E4\uC2DC \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Intro
+          local: "\uC18C\uAC1C"
+          texts:
+          - name: Instructions
+            text: "\n\uC2DC\uC2A4\uD15C \uAC80\uC0AC\uAE30\uB294 \uC5EC\uB7EC \uAD6C\uC131
+              \uC694\uC18C \uC2DC\uC2A4\uD15C\uC5D0\uC11C \uBB38\uC81C\uB97C \uC2DD\uBCC4\uD558\uB294
+              \uBD80\uB2F4\uC744 \uB35C\uC5B4\uC8FC\uAE30 \uC704\uD574 \uC124\uACC4\uB418\uC5C8\uC2B5\uB2C8\uB2E4.\r\n\r\n\uC774\uC81C
+              \uBA87 \uBC88\uC758 \uBC84\uD2BC \uD074\uB9AD\uC73C\uB85C \uBB38\uC81C\uB97C
+              \uC27D\uAC8C \uC2DD\uBCC4\uD558\uACE0 \uC218\uC815\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\uC2DC\uC2A4\uD15C
+              \uAC80\uC0AC\uAE30 \uAE30\uB2A5\uC744 \uC0AC\uC6A9\uD558\uB824\uBA74
+              \uB2E4\uB978 \uD0ED\uC744 \uD655\uC778\uD558\uC2ED\uC2DC\uC624.\r\n\uC544\uB798
+              \uD1A0\uAE00\uC744 \uC0AC\uC6A9\uD558\uC5EC \uB514\uBC84\uADF8 \uC54C\uB9BC\uC744
+              \uCF1C\uAC70\uB098 \uB04C \uC218\uB3C4 \uC788\uC2B5\uB2C8\uB2E4.\r\n\r\n\uC2DC\uC2A4\uD15C
+              \uAC80\uC0AC\uAE30\uB97C \uC0AC\uC6A9\uD558\uAE30 \uC804\uC5D0 \uC7A5\uBA74\uC744
+              \uC800\uC7A5\uD558\uB294 \uAC83\uC774 \uC88B\uC2B5\uB2C8\uB2E4.\n"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Reset Systems Checker
+            local: "\uC2DC\uC2A4\uD15C \uAC80\uC0AC\uAE30 \uC7AC\uC124\uC815"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: 'COMPONENTS VERSION: '
+            local: "\uAD6C\uC131 \uC694\uC18C \uBC84\uC804: "
+          - name: Debug Notifications
+            local: "\uB514\uBC84\uADF8 \uC54C\uB9BC"
+          - name: Advanced Debug Notifications
+            local: "\uACE0\uAE09 \uB514\uBC84\uADF8 \uC54C\uB9BC"
+          - name: OFF
+            local: "\uB044\uB2E4"
+          - name: ON
+            local: "\uCF1C\uC9D0"
+        - name: Save
+          local: "\uAD6C\uD558\uB2E4"
+          texts:
+          - name: Instructions
+            text: "\n\uC5EC\uAE30\uC5D0\uC11C \uAD6C\uC131 \uC694\uC18C \uBC84\uC804
+              \uAC04\uC5D0 \uC800\uC7A5 \uD30C\uC77C\uC774 \uC77C\uCE58\uD558\uB294\uC9C0
+              \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          - name: Systems
+            text: "\n\uC774 \uC601\uC5ED\uC740 \uC7A5\uBA74\uC5D0 \uD2B9\uC815 \uAD6C\uC131
+              \uC694\uC18C \uC2DC\uC2A4\uD15C\uC774 \uC788\uB294\uC9C0 \uD655\uC778\uD569\uB2C8\uB2E4.\n"
+          - name: Catch Systems First
+            text: "\n\uC2DC\uC2A4\uD15C \uD0ED\uC5D0\uC11C \uC2DC\uC2A4\uD15C\uC744
+              \uBA3C\uC800 \uD30C\uC545\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Save Files Check
+            text: "\n\uC800\uC7A5 \uD30C\uC77C \uD655\uC778 \uBC84\uD2BC\uC744 \uC0AC\uC6A9\uD558\uC5EC
+              \uAD6C\uC131 \uC694\uC18C \uC800\uC7A5 \uD30C\uC77C\uC744 \uAD50\uCC28
+              \uD655\uC778\uD569\uB2C8\uB2E4.\r\n\r\n\uD30C\uC77C\uC774 \uC77C\uCE58\uD558\uC9C0
+              \uC54A\uC73C\uBA74 \uC800\uC7A5 \uD30C\uC77C \uC9C0\uC6B0\uAE30 \uBC84\uD2BC\uC744
+              \uC0AC\uC6A9\uD558\uC5EC \uC800\uC7A5 \uD30C\uC77C\uC744 \uC7AC\uC124\uC815\uD558\uC2ED\uC2DC\uC624."
+          - name: All Data Names
+            text: "\n\uAD6C\uC131 \uC694\uC18C \uC800\uC7A5 \uC2DC \uBAA8\uB4E0 \uB370\uC774\uD130
+              \uC774\uB984 \uD544\uB4DC\uB97C \uCC44\uC6CC\uC57C \uD569\uB2C8\uB2E4.\n"
+          - name: Saves Not Checked
+            text: "\n\uD30C\uC77C \uC800\uC7A5\uC774 \uC120\uD0DD\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.\n"
+          - name: Saves Valid
+            text: "\n\uD30C\uC77C \uC800\uC7A5\uC774 \uC720\uD6A8\uD569\uB2C8\uB2E4!\n"
+          - name: Components Data Valid
+            text: "\n\uAD6C\uC131 \uC694\uC18C \uB370\uC774\uD130\uAC00 \uC720\uD6A8\uD569\uB2C8\uB2E4!"
+          - name: Saves Not Valid
+            text: "\n\uC800\uC7A5 \uD30C\uC77C\uC774 \uC720\uD6A8\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4!"
+          - name: Components Data Not Valid
+            text: "\n\uAD6C\uC131 \uC694\uC18C \uB370\uC774\uD130\uAC00 \uC720\uD6A8\uD558\uC9C0
+              \uC54A\uC2B5\uB2C8\uB2E4!"
+          - name: No Saves
+            text: "\n\uC800\uC7A5 \uD30C\uC77C \uC5C6\uC74C, \uAD50\uCC28 \uC810\uAC80\uD560
+              \uD56D\uBAA9\uC774 \uC5C6\uC2B5\uB2C8\uB2E4."
+          buttons:
+          - name: Systems
+            local: "\uC2DC\uC2A4\uD15C"
+          - name: Save Files Check
+            local: "\uD30C\uC77C \uC800\uC7A5 \uD655\uC778"
+          - name: Save Files Clear
+            local: "\uD30C\uC77C \uC800\uC7A5 \uC9C0\uC6B0\uAE30"
+          - name: Catch Systems
+            local: "\uCE90\uCE58 \uC2DC\uC2A4\uD15C"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: ' Components Save'
+            local: " \uAD6C\uC131 \uC694\uC18C \uC800\uC7A5"
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo de versi\xF3n de Systems Check en su proyecto,
+              \xA1Systems Check no puede ejecutarse sin \xE9l!\r\n\r\nPuede volver
+              a importar el archivo de versi\xF3n de comprobaci\xF3n de sistemas
+              desde el paquete de activos en el almac\xE9n de activos/administrador
+              de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Intro
+          local: "Introducci\xF3n"
+          texts:
+          - name: Instructions
+            text: "\nEl verificador del sistema ha sido dise\xF1ado para aliviar
+              la carga de identificar problemas en m\xFAltiples sistemas de componentes.\r\n\r\nAhora
+              puede identificar y solucionar problemas f\xE1cilmente con solo hacer
+              clic en unos pocos botones.\r\nRevise las otras pesta\xF1as para usar
+              las funciones del verificador de sistemas.\r\nTambi\xE9n puede activar/desactivar
+              las notificaciones de depuraci\xF3n usando el interruptor a continuaci\xF3n.\r\n\r\nEs
+              ALTAMENTE RECOMENDADO guardar su escena ANTES de usar el verificador
+              de sistemas.\n"
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Reset Systems Checker
+            local: Restablecer Comprobador de sistemas
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: 'COMPONENTS VERSION: '
+            local: "VERSI\xD3N DE COMPONENTES: "
+          - name: Debug Notifications
+            local: "Notificaciones de depuraci\xF3n"
+          - name: Advanced Debug Notifications
+            local: "Notificaciones de depuraci\xF3n avanzadas"
+          - name: OFF
+            local: APAGADO
+          - name: ON
+            local: EN
+        - name: Save
+          local: Ahorrar
+          texts:
+          - name: Instructions
+            text: "\nAqu\xED puede verificar si los archivos guardados coinciden
+              en las versiones de los Componentes.\n"
+          - name: Systems
+            text: "\nEsta \xE1rea verifica si ciertos sistemas de Componentes est\xE1n
+              presentes en su escena.\n"
+          - name: Catch Systems First
+            text: "\nCaptura los sistemas en la pesta\xF1a Sistemas primero.\n"
+          - name: Save Files Check
+            text: "\nUtilice el bot\xF3n Comprobar archivos guardados para comprobar
+              los archivos guardados de los componentes.\r\n\r\nSi los archivos no
+              coinciden, utilice el bot\xF3n Borrar archivos guardados para restablecer
+              los archivos guardados.\n"
+          - name: All Data Names
+            text: '
+
+              Todos los campos de Nombre de datos deben completarse
+              en Guardar componentes.
+
+'
+          - name: Saves Not Checked
+            text: '
+
+              No se ha marcado Guardar archivos.
+
+'
+          - name: Saves Valid
+            text: "\n\xA1Los archivos guardados son v\xE1lidos!\n"
+          - name: Components Data Valid
+            text: "\nComponentes \xA1Datos v\xE1lidos!\n"
+          - name: Saves Not Valid
+            text: "\n\xA1Los archivos guardados NO son v\xE1lidos!\n"
+          - name: Components Data Not Valid
+            text: "\nComponentes \xA1Datos NO v\xE1lidos!\n"
+          - name: No Saves
+            text: '
+
+              No guardar archivos, nada que verificar.
+
+'
+          buttons:
+          - name: Systems
+            local: Sistemas
+          - name: Save Files Check
+            local: "Guardar verificaci\xF3n de archivos"
+          - name: Save Files Clear
+            local: Guardar archivos Borrar
+          - name: Catch Systems
+            local: Sistemas de captura
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: ' Components Save'
+            local: ' Componentes Guardar'

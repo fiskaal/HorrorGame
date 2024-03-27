@@ -1,0 +1,384 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: FloatingIcon Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Floating Icon Helper Version file is missing
+              from your project, Floating Icon Helper cannot run without it!
+
+
+              You
+              can re-import the Floating Icon Helper Version file from the asset
+              pack on the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: '
+
+              This extensions helps with adding objects to the
+              Floating Icon Manager, simply select the objects you want to add and
+              then use the buttons below to catch and add them to the Floating Icon
+              Manager.
+
+'
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Catch Objects
+            local: Catch Objects
+          - name: Clear Objects
+            local: Clear Objects
+          - name: Add To Floating Icons
+            local: Add To Floating Icons
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Objects Selected
+            local: Objects Selected
+          - name: Can Add
+            local: Can Add
+          - name: Cannot Add!
+            local: Cannot Add!
+          - name: Missing > Mesh Renderer
+            local: Missing > Mesh Renderer
+          - name: Nothing Selected
+            local: Nothing Selected
+          - name: Objects To Add
+            local: Objects To Add
+          - name: 'Slot '
+            local: 'Slot '
+          - name: 'Can Add = '
+            local: 'Can Add = '
+          - name: 'Added To Objects List = '
+            local: 'Added To Objects List = '
+          - name: Objects List Cleared
+            local: Objects List Cleared
+          - name: ' Added To Floating Icons'
+            local: ' Added To Floating Icons'
+          - name: ' Already Present'
+            local: ' Already Present'
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11\u6D6E\u52A8\u56FE\u6807\u52A9\u624B\u7248\u672C\u6587\u4EF6\uFF0C\u6CA1\u6709\u5B83\u6D6E\u52A8\u56FE\u6807\u52A9\u624B\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u6E90\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8D44\u6E90\u5305\u91CD\u65B0\u5BFC\u5165\u6D6E\u52A8\u56FE\u6807\u52A9\u624B\u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u6269\u5C55\u6709\u52A9\u4E8E\u5C06\u5BF9\u8C61\u6DFB\u52A0\u5230\u6D6E\u52A8\u56FE\u6807\u7BA1\u7406\u5668\uFF0C\u53EA\u9700\u9009\u62E9\u8981\u6DFB\u52A0\u7684\u5BF9\u8C61\uFF0C\u7136\u540E\u4F7F\u7528\u4E0B\u9762\u7684\u6309\u94AE\u6355\u83B7\u5B83\u4EEC\u5E76\u5C06\u5176\u6DFB\u52A0\u5230\u6D6E\u52A8\u56FE\u6807\u7BA1\u7406\u5668\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Catch Objects
+            local: "\u6355\u6349\u7269\u4F53"
+          - name: Clear Objects
+            local: "\u6E05\u9664\u7269\u4F53"
+          - name: Add To Floating Icons
+            local: "\u6DFB\u52A0\u5230\u6D6E\u52A8\u56FE\u6807"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Objects Selected
+            local: "\u9009\u5B9A\u7684\u5BF9\u8C61"
+          - name: Can Add
+            local: "\u53EF\u4EE5\u6DFB\u52A0"
+          - name: Cannot Add!
+            local: "\u65E0\u6CD5\u6DFB\u52A0\uFF01"
+          - name: Missing > Mesh Renderer
+            local: "\u7F3A\u5C11 > \u7F51\u683C\u6E32\u67D3\u5668"
+          - name: Nothing Selected
+            local: "\u672A\u9009\u62E9\u4EFB\u4F55\u5185\u5BB9"
+          - name: Objects To Add
+            local: "\u8981\u6DFB\u52A0\u7684\u5BF9\u8C61"
+          - name: 'Slot '
+            local: "\u6295\u5E01\u53E3 "
+          - name: 'Can Add = '
+            local: "\u53EF\u4EE5\u6DFB\u52A0 = "
+          - name: 'Added To Objects List = '
+            local: "\u6DFB\u52A0\u5230\u5BF9\u8C61\u5217\u8868 = "
+          - name: Objects List Cleared
+            local: "\u5BF9\u8C61\u5217\u8868\u5DF2\u6E05\u9664"
+          - name: ' Added To Floating Icons'
+            local: " \u6DFB\u52A0\u5230\u6D6E\u52A8\u56FE\u6807"
+          - name: ' Already Present'
+            local: " \u5DF2\u7ECF\u5B58\u5728"
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u5C08\u6848\u4E2D\u7F3A\u5C11\u6D6E\u52D5\u5716\u6A19\u52A9\u624B\u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83\u6D6E\u52D5\u5716\u6A19\u52A9\u624B\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u6E90\u5546\u5E97/\u5957\u4EF6\u7BA1\u7406\u5668\u4E0A\u7684\u8CC7\u6E90\u5305\u91CD\u65B0\u532F\u5165\u6D6E\u52D5\u5716\u793A\u52A9\u7406\u7248\u672C\u6A94\u6848\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u64F4\u5145\u529F\u80FD\u6709\u52A9\u65BC\u5C07\u7269\u4EF6\u65B0\u589E\u81F3\u6D6E\u52D5\u5716\u793A\u7BA1\u7406\u5668\uFF0C\u53EA\u9700\u9078\u64C7\u8981\u65B0\u589E\u7684\u5C0D\u8C61\uFF0C\u7136\u5F8C\u4F7F\u7528\u4E0B\u9762\u7684\u6309\u9215\u64F7\u53D6\u5B83\u5011\u4E26\u5C07\u5176\u65B0\u589E\u81F3\u6D6E\u52D5\u5716\u793A\u7BA1\u7406\u5668\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u5132\u5B58\u8A9E\u8A00"
+          - name: Catch Objects
+            local: "\u6355\u6349\u7269\u9AD4"
+          - name: Clear Objects
+            local: "\u6E05\u9664\u7269\u9AD4"
+          - name: Add To Floating Icons
+            local: "\u6DFB\u52A0\u5230\u6D6E\u52D5\u5716\u6A19"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Objects Selected
+            local: "\u9078\u5B9A\u7684\u5C0D\u8C61"
+          - name: Can Add
+            local: "\u53EF\u4EE5\u6DFB\u52A0"
+          - name: Cannot Add!
+            local: "\u7121\u6CD5\u6DFB\u52A0\uFF01"
+          - name: Missing > Mesh Renderer
+            local: "\u7F3A\u5C11 > \u7DB2\u683C\u6E32\u67D3\u5668"
+          - name: Nothing Selected
+            local: "\u672A\u9078\u64C7\u4EFB\u4F55\u5167\u5BB9"
+          - name: Objects To Add
+            local: "\u8981\u65B0\u589E\u7684\u5C0D\u8C61"
+          - name: 'Slot '
+            local: "\u6295\u5E63\u53E3 "
+          - name: 'Can Add = '
+            local: "\u53EF\u4EE5\u6DFB\u52A0 = "
+          - name: 'Added To Objects List = '
+            local: "\u65B0\u589E\u5230\u7269\u4EF6\u5217\u8868 = "
+          - name: Objects List Cleared
+            local: "\u7269\u4EF6\u6E05\u55AE\u5DF2\u6E05\u9664"
+          - name: ' Added To Floating Icons'
+            local: " \u6DFB\u52A0\u5230\u6D6E\u52D5\u5716\u6A19"
+          - name: ' Already Present'
+            local: " \u5DF2\u7D93\u5B58\u5728"
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Floating Icon Helper Version est absent de votre
+              projet, Floating Icon Helper ne peut pas fonctionner sans lui\_!\r\n\r\nVous
+              pouvez r\xE9importer le fichier Floating Icon Helper Version \xE0 partir
+              du pack d'actifs sur le magasin d'actifs/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nCette extension permet d'ajouter des objets au gestionnaire
+              d'ic\xF4nes flottantes, s\xE9lectionnez simplement les objets que vous
+              souhaitez ajouter, puis utilisez les boutons ci-dessous pour les capturer
+              et les ajouter au gestionnaire d'ic\xF4nes flottantes.\n"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Catch Objects
+            local: Attraper des objets
+          - name: Clear Objects
+            local: Effacer les objets
+          - name: Add To Floating Icons
+            local: "Ajouter aux ic\xF4nes flottantes"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Objects Selected
+            local: "Objets s\xE9lectionn\xE9s"
+          - name: Can Add
+            local: Peut ajouter
+          - name: Cannot Add!
+            local: "Impossible d'ajouter\_!"
+          - name: Missing > Mesh Renderer
+            local: Manquant > Rendu de maillage
+          - name: Nothing Selected
+            local: "Rien de s\xE9lectionn\xE9"
+          - name: Objects To Add
+            local: "Objets \xE0 ajouter"
+          - name: 'Slot '
+            local: 'Fente '
+          - name: 'Can Add = '
+            local: 'Peut ajouter = '
+          - name: 'Added To Objects List = '
+            local: "Ajout\xE9 \xE0 la liste d'objets = "
+          - name: Objects List Cleared
+            local: "Liste d'objets effac\xE9e"
+          - name: ' Added To Floating Icons'
+            local: " Ajout\xE9 aux ic\xF4nes flottantes"
+          - name: ' Already Present'
+            local: " D\xE9j\xE0 pr\xE9sent"
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\uBC84\uC804 \uB204\uB77D"
+          texts:
+          - name: Version Missing
+            text: "\n\uD50C\uB85C\uD305 \uC544\uC774\uCF58 \uB3C4\uC6B0\uBBF8 \uBC84\uC804
+              \uD30C\uC77C\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0 \uC5C6\uC2B5\uB2C8\uB2E4.
+              \uD50C\uB85C\uD305 \uC544\uC774\uCF58 \uB3C4\uC6B0\uBBF8 \uBC84\uC804
+              \uD30C\uC77C\uC774 \uC5C6\uC73C\uBA74 \uD50C\uB85C\uD305 \uC544\uC774\uCF58
+              \uB3C4\uC6B0\uBBF8\uB97C \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC5D0\uC14B
+              \uC2A4\uD1A0\uC5B4/\uD328\uD0A4\uC9C0 \uAD00\uB9AC\uC790\uC758 \uC5D0\uC14B
+              \uD329\uC5D0\uC11C \uBD80\uB3D9 \uC544\uC774\uCF58 \uB3C4\uC6B0\uBBF8
+              \uBC84\uC804 \uD30C\uC77C\uC744 \uB2E4\uC2DC \uAC00\uC838\uC62C \uC218
+              \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\uC774 \uD655\uC7A5 \uAE30\uB2A5\uC740 \uD50C\uB85C\uD305 \uC544\uC774\uCF58
+              \uAD00\uB9AC\uC790\uC5D0 \uAC1C\uCCB4\uB97C \uCD94\uAC00\uD558\uB294
+              \uB370 \uB3C4\uC6C0\uC774 \uB429\uB2C8\uB2E4. \uCD94\uAC00\uD558\uB824\uB294
+              \uAC1C\uCCB4\uB97C \uC120\uD0DD\uD55C \uB2E4\uC74C \uC544\uB798 \uBC84\uD2BC\uC744
+              \uC0AC\uC6A9\uD558\uC5EC \uD574\uB2F9 \uAC1C\uCCB4\uB97C \uD50C\uB85C\uD305
+              \uC544\uC774\uCF58 \uAD00\uB9AC\uC790\uC5D0 \uCD94\uAC00\uD558\uBA74
+              \uB429\uB2C8\uB2E4.\n"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Catch Objects
+            local: "\uBB3C\uAC74 \uC7A1\uAE30"
+          - name: Clear Objects
+            local: "\uBA85\uD655\uD55C \uAC1D\uCCB4"
+          - name: Add To Floating Icons
+            local: "\uBD80\uB3D9 \uC544\uC774\uCF58\uC5D0 \uCD94\uAC00"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Objects Selected
+            local: "\uC120\uD0DD\uD55C \uAC1C\uCCB4"
+          - name: Can Add
+            local: "\uCD94\uAC00 \uAC00\uB2A5"
+          - name: Cannot Add!
+            local: "\uCD94\uAC00\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!"
+          - name: Missing > Mesh Renderer
+            local: "\uB204\uB77D > \uBA54\uC2DC \uB80C\uB354\uB7EC"
+          - name: Nothing Selected
+            local: "\uC120\uD0DD\uB41C \uAC83\uC774 \uC5C6\uC2B5\uB2C8\uB2E4"
+          - name: Objects To Add
+            local: "\uCD94\uAC00\uD560 \uAC1D\uCCB4"
+          - name: 'Slot '
+            local: "\uC2AC\uB86F "
+          - name: 'Can Add = '
+            local: "\uCD94\uAC00 \uAC00\uB2A5 = "
+          - name: 'Added To Objects List = '
+            local: "\uAC1C\uCCB4 \uBAA9\uB85D\uC5D0 \uCD94\uAC00\uB428 = "
+          - name: Objects List Cleared
+            local: "\uAC1D\uCCB4 \uBAA9\uB85D\uC774 \uC9C0\uC6CC\uC84C\uC2B5\uB2C8\uB2E4."
+          - name: ' Added To Floating Icons'
+            local: " \uD50C\uB85C\uD305 \uC544\uC774\uCF58\uC5D0 \uCD94\uAC00\uB428"
+          - name: ' Already Present'
+            local: " \uC774\uBBF8 \uC874\uC7AC\uD568"
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Missing
+            text: "\nEl archivo de la versi\xF3n de Floating Icon Helper no est\xE1
+              en su proyecto. \xA1Floating Icon Helper no puede ejecutarse sin \xE9l!\r\n\r\nPuede
+              volver a importar el archivo de la versi\xF3n auxiliar de icono flotante
+              desde el paquete de activos en la tienda de activos/administrador de
+              paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nEsta extensi\xF3n ayuda a agregar objetos al Administrador de
+              iconos flotantes, simplemente seleccione los objetos que desea agregar
+              y luego use los botones a continuaci\xF3n para capturarlos y agregarlos
+              al Administrador de iconos flotantes.\n"
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Catch Objects
+            local: Atrapar objetos
+          - name: Clear Objects
+            local: Borrar objetos
+          - name: Add To Floating Icons
+            local: Agregar a iconos flotantes
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: Objects Selected
+            local: Objetos seleccionados
+          - name: Can Add
+            local: Puede agregar
+          - name: Cannot Add!
+            local: "\xA1No se puede agregar!"
+          - name: Missing > Mesh Renderer
+            local: Falta > Representador de malla
+          - name: Nothing Selected
+            local: Nada seleccionado
+          - name: Objects To Add
+            local: Objetos para agregar
+          - name: 'Slot '
+            local: 'Ranura '
+          - name: 'Can Add = '
+            local: 'Puede agregar = '
+          - name: 'Added To Objects List = '
+            local: 'Agregado a la lista de objetos = '
+          - name: Objects List Cleared
+            local: Lista de objetos borrada
+          - name: ' Added To Floating Icons'
+            local: " A\xF1adido a los iconos flotantes"
+          - name: ' Already Present'
+            local: ' Ya presente'

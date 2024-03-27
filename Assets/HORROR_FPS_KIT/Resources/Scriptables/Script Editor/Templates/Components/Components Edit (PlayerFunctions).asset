@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (PlayerFunctions)
+  m_EditorClassIdentifier: 
+  content:
+  - name: Options & Auto Values Add
+    original: '        public bool zoomEnabled = true;'
+    edit: "        public bool zoomEnabled = true;\r\n        \r\n        [Space]\r\n       
+      \r\n        public Zoom_Type zoomType;\r\n        public bool camZoomLock;\r\n       
+      public bool leanLock;\r\n        public bool zoomLock;\r\n        public bool
+      weapZoom;\r\n\r\n        public enum Zoom_Type {\r\n        \r\n           
+      NoZoom = 0,\r\n            Regular = 1,\r\n            OnlyWeapons = 2,\r\n           
+      \r\n        }//Zoom_Type"
+  - name: Cam Zoom Start Lock
+    original: "            if (zoomEnabled && !wallHit)\r\n            {"
+    edit: "            if(!camZoomLock){\r\n\r\n            if (zoomEnabled && !wallHit)\r\n           
+      {"
+  - name: Cam Zoom End Lock
+    original: "        }\r\n\r\n        void Lean(LeanDirections Direction)"
+    edit: "\n            }//!camZoomLock\r\n        }\r\n\r\n        void Lean(LeanDirections
+      Direction)"
+  - name: Inputs Update
+    original: "            if (InputHandler.InputIsInitialized)\r\n            {\r\n               
+      if (InputHandler.IsActionExist(\"LeanLeft\"))\r\n                {\r\n                   
+      LeanLeft = InputHandler.ReadButton(\"LeanLeft\");\r\n                }\r\n\r\n               
+      if (InputHandler.IsActionExist(\"LeanRight\"))\r\n                {\r\n                   
+      LeanRight = InputHandler.ReadButton(\"LeanRight\");\r\n                }\r\n\r\n               
+      ZoomKey = InputHandler.ReadButton(\"Zoom\");\r\n            }\r\n\r\n           
+      LeanUpdate();"
+    edit: "            if (InputHandler.InputIsInitialized)\r\n            {\r\n               
+      if (InputHandler.IsActionExist(\"LeanLeft\"))\r\n                {\r\n                   
+      LeanLeft = InputHandler.ReadButton(\"LeanLeft\");\r\n                }\r\n\r\n               
+      if (InputHandler.IsActionExist(\"LeanRight\"))\r\n                {\r\n                   
+      LeanRight = InputHandler.ReadButton(\"LeanRight\");\r\n                }\r\n\r\n               
+      if(!zoomLock){\r\n                \r\n                    if(zoomType == Zoom_Type.Regular){\r\n               
+      \r\n                        ZoomKey = InputHandler.ReadButton(\"Zoom\");\r\n               
+      \r\n                    }//zoomType = regular\r\n                    \r\n                   
+      if(zoomType == Zoom_Type.OnlyWeapons){\r\n                \r\n                       
+      if(weapZoom){\r\n                        \r\n                            ZoomKey
+      = InputHandler.ReadButton(\"Zoom\");\r\n                \r\n                       
+      }//weapZoom\r\n                        \r\n                    }//zoomType
+      = only weapons\r\n                    \r\n                }//!zoomLock\r\n               
+      \r\n            }\r\n\r\n            if(!leanLock){\r\n            \r\n               
+      LeanUpdate();\r\n\r\n            }//!leanLock"
+  - name: State Actions
+    original: "            UnzoomSmooth = defaultUnzoomSmooth;\r\n        }"
+    edit: "            UnzoomSmooth = defaultUnzoomSmooth;\r\n        }\r\n       
+      \r\n        public void CamZoomLock_State(bool state){\r\n        \r\n           
+      camZoomLock = state;\r\n        \r\n        }//CamZoomLock_State\r\n       
+      \r\n        public void LeanLock_State(bool state){\r\n        \r\n           
+      leanLock = state;\r\n            \r\n            if(state){\r\n           
+      \r\n                LeanLeft = false;\r\n                LeanRight = false;\r\n           
+      \r\n            }//state\r\n            \r\n        }//LeanLock_State\r\n       
+      \r\n        public void ZoomLock_State(bool state){\r\n        \r\n           
+      zoomLock = state;\r\n            \r\n            if(state){\r\n           
+      \r\n                ZoomKey = false;\r\n                \r\n            }//state\r\n       
+      \r\n        }//ZoomLock_State\r\n        \r\n        public void WeaponZoom_State(bool
+      state){\r\n        \r\n            weapZoom = state;\r\n            \r\n           
+      if(state){\r\n            \r\n                ZoomKey = false;\r\n               
+      \r\n            }//state\r\n        \r\n        }//WeaponZoom_State"

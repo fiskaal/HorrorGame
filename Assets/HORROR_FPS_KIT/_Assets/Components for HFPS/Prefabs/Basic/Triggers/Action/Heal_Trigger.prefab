@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2846721357004925791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2846721357004925784}
+  - component: {fileID: 2846721357004925786}
+  - component: {fileID: 2846721357004925787}
+  - component: {fileID: 2846721357004925785}
+  m_Layer: 2
+  m_Name: Heal_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2846721357004925784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846721357004925791}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2846721357004925786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846721357004925791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5eeb3414291594c82d3fc92b133947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 4
+  healUse: 0
+  useType: 1
+  detectTag: Player
+  useUnlockDelay: 0
+  unlockDelay: 0
+  category: 0
+  eventSlot: 0
+  trigger: {fileID: 2846721357004925785}
+  hfpsPlayerAttention: {fileID: 0}
+  hfpsPossessed: {fileID: 0}
+  hfpsDestroyable: {fileID: 0}
+  damageAmount: 0
+  hideType: 0
+  timeCheckType: 0
+  activeTime: 0
+  countDownMulti: 0
+  autoReset: 0
+  resetWait: 0
+  preLoadScene: 0
+  pauseStateEnter: 0
+  pauseStateExit: 0
+  inventoryStateEnter: 0
+  inventoryStateExit: 0
+  saveStateEnter: 0
+  saveStateExit: 0
+  loadStateEnter: 0
+  loadStateExit: 0
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  onReset:
+    m_PersistentCalls:
+      m_Calls: []
+  refsCatch:
+    m_PersistentCalls:
+      m_Calls: []
+    refsCatch: {fileID: 0}
+  timedEvents:
+    onTimeStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onTimeFinish:
+      m_PersistentCalls:
+        m_Calls: []
+    onReset:
+      m_PersistentCalls:
+        m_Calls: []
+    onCancel:
+      m_PersistentCalls:
+        m_Calls: []
+  refs: {fileID: 0}
+  healing: 0
+  countDownActive: 0
+  currentTime: 0
+  locked: 0
+  tabs: 0
+  genOpts: 0
+  uiOpts: 0
+--- !u!114 &2846721357004925787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846721357004925791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 032e83f82f6c1d1488393504e9351e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGizmos: 1
+  icon: {fileID: 2800000, guid: 430e518ff4d0e6941bfbd3885d2896cb, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!65 &2846721357004925785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846721357004925791}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 0.5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}

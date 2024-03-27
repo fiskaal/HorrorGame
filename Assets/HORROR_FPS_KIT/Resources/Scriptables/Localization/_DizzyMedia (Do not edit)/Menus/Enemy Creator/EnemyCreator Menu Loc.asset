@@ -1,0 +1,427 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: EnemyCreator Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Enemy Creator Version file is missing from
+              your project, Enemy Creator cannot run without it!
+
+
+              You
+              can re-import the Enemy Creator Version file from the asset pack on
+              the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: '
+
+              This extension allows you to quickly create enemies
+              for use with HFPS.
+
+
+              Assign a character object and template
+              below, then use the Create Enemy button to start the creation process.
+
+'
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Open Ragdoll Creator
+            local: Open Ragdoll Creator
+          - name: Check for Ragdoll
+            local: Check for Ragdoll
+          - name: Create Enemy
+            local: Create Enemy
+          - name: Clear Notification
+            local: Clear Notification
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: NO CHARACTER ASSIGNED
+          - name: NO ENEMY CREATED
+            local: NO ENEMY CREATED
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: ' ASSIGNED | ANIMATOR NOT PRESENT'
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+          - name: ANIMATOR UPDATED
+            local: ANIMATOR UPDATED
+          - name: CAPSULE ADDED
+            local: CAPSULE ADDED
+          - name: AUDIO SOURCE ADDED
+            local: AUDIO SOURCE ADDED
+          - name: NAV MESH AGENT ADDED
+            local: NAV MESH AGENT ADDED
+          - name: NPC HEALTH ADDED
+            local: NPC HEALTH ADDED
+          - name: NPC FOOTSTEPS ADDED
+            local: NPC FOOTSTEPS ADDED
+          - name: ZOMBIE AI ADDED
+            local: ZOMBIE AI ADDED
+          - name: PARENT UPDATED
+            local: PARENT UPDATED
+          - name: WAYPOINTS ADDED
+            local: WAYPOINTS ADDED
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11 Enemy Creator \u7248\u672C\u6587\u4EF6\uFF0C\u6CA1\u6709\u5B83\uFF0CEnemy
+              Creator \u5C06\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u7684\u8D44\u4EA7\u5305\u4E2D\u91CD\u65B0\u5BFC\u5165
+              Enemy Creator \u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u6269\u5C55\u5141\u8BB8\u60A8\u5FEB\u901F\u521B\u5EFA\u4E0E
+              HFPS \u4E00\u8D77\u4F7F\u7528\u7684\u654C\u4EBA\u3002\r\n\r\n\u5728\u4E0B\u65B9\u5206\u914D\u4E00\u4E2A\u89D2\u8272\u5BF9\u8C61\u548C\u6A21\u677F\uFF0C\u7136\u540E\u4F7F\u7528
+              Create Enemy \u6309\u94AE\u5F00\u59CB\u521B\u5EFA\u8FC7\u7A0B\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Open Ragdoll Creator
+            local: "\u6253\u5F00\u5E03\u5A03\u5A03\u521B\u9020\u8005"
+          - name: Check for Ragdoll
+            local: "\u68C0\u67E5\u5E03\u5A03\u5A03"
+          - name: Create Enemy
+            local: "\u521B\u5EFA\u654C\u4EBA"
+          - name: Clear Notification
+            local: "\u6E05\u9664\u901A\u77E5"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "\u6CA1\u6709\u6307\u5B9A\u5B57\u7B26"
+          - name: NO ENEMY CREATED
+            local: "\u6CA1\u6709\u5236\u9020\u654C\u4EBA"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52A8\u753B\u5E08\u4E0D\u5B58\u5728"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: "\u5DF2\u5206\u914D |\u52A8\u753B\u5E08\u793C\u7269 |\u5E03\u5A03\u5A03\u793C\u7269"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52A8\u753B\u5E08\u793C\u7269 | \u5E03\u5A03\u5A03\u4E0D\u5B58\u5728"
+          - name: ANIMATOR UPDATED
+            local: "\u52A8\u753B\u5E08\u66F4\u65B0"
+          - name: CAPSULE ADDED
+            local: "\u6DFB\u52A0\u80F6\u56CA"
+          - name: AUDIO SOURCE ADDED
+            local: "\u6DFB\u52A0\u4E86\u97F3\u9891\u6E90"
+          - name: NAV MESH AGENT ADDED
+            local: "\u6DFB\u52A0\u4E86 NAV \u7F51\u683C\u4EE3\u7406"
+          - name: NPC HEALTH ADDED
+            local: "NPC \u751F\u547D\u503C\u589E\u52A0"
+          - name: NPC FOOTSTEPS ADDED
+            local: "\u6DFB\u52A0\u4E86NPC\u8DB3\u8FF9"
+          - name: ZOMBIE AI ADDED
+            local: "\u50F5\u5C38 AI \u6DFB\u52A0"
+          - name: PARENT UPDATED
+            local: "\u5BB6\u957F\u66F4\u65B0"
+          - name: WAYPOINTS ADDED
+            local: "\u6DFB\u52A0\u7684\u822A\u70B9"
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "\u7248\u672C\u7F3A\u5931"
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11 Enemy Creator \u7248\u672C\u6587\u4EF6\uFF0C\u6C92\u6709\u5B83\uFF0CEnemy
+              Creator \u5C07\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u7684\u8CC7\u7522\u5305\u4E2D\u91CD\u65B0\u5C0E\u5165
+              Enemy Creator \u7248\u672C\u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u64F4\u5C55\u5141\u8A31\u60A8\u5FEB\u901F\u5275\u5EFA\u8207
+              HFPS \u4E00\u8D77\u4F7F\u7528\u7684\u6575\u4EBA\u3002\r\n\r\n\u5728\u4E0B\u65B9\u5206\u914D\u4E00\u500B\u89D2\u8272\u5C0D\u8C61\u548C\u6A21\u677F\uFF0C\u7136\u5F8C\u4F7F\u7528
+              Create Enemy \u6309\u9215\u958B\u59CB\u5275\u5EFA\u904E\u7A0B\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Open Ragdoll Creator
+            local: "\u6253\u958B\u5E03\u5A03\u5A03\u5275\u9020\u8005"
+          - name: Check for Ragdoll
+            local: "\u6AA2\u67E5\u5E03\u5A03\u5A03"
+          - name: Create Enemy
+            local: "\u5275\u5EFA\u6575\u4EBA"
+          - name: Clear Notification
+            local: "\u6E05\u9664\u901A\u77E5"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "\u6C92\u6709\u6307\u5B9A\u5B57\u7B26"
+          - name: NO ENEMY CREATED
+            local: "\u6C92\u6709\u88FD\u9020\u6575\u4EBA"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52D5\u756B\u5E2B\u4E0D\u5B58\u5728"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: " \u5DF2\u5206\u914D |\u52D5\u756B\u5E2B\u79AE\u7269 |\u5E03\u5A03\u5A03\u79AE\u7269"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: " \u5DF2\u5206\u914D | \u52D5\u756B\u5E2B\u79AE\u7269 | \u5E03\u5A03\u5A03\u4E0D\u5B58\u5728"
+          - name: ANIMATOR UPDATED
+            local: "\u52D5\u756B\u5E2B\u66F4\u65B0"
+          - name: CAPSULE ADDED
+            local: "\u6DFB\u52A0\u81A0\u56CA"
+          - name: AUDIO SOURCE ADDED
+            local: "\u6DFB\u52A0\u4E86\u97F3\u983B\u6E90"
+          - name: NAV MESH AGENT ADDED
+            local: "\u6DFB\u52A0\u4E86 NAV \u7DB2\u683C\u4EE3\u7406"
+          - name: NPC HEALTH ADDED
+            local: "NPC \u751F\u547D\u503C\u589E\u52A0"
+          - name: NPC FOOTSTEPS ADDED
+            local: "\u6DFB\u52A0\u4E86NPC\u8DB3\u8DE1"
+          - name: ZOMBIE AI ADDED
+            local: "\u6BAD\u5C4D AI \u6DFB\u52A0"
+          - name: PARENT UPDATED
+            local: "\u5BB6\u9577\u66F4\u65B0"
+          - name: WAYPOINTS ADDED
+            local: "\u6DFB\u52A0\u7684\u822A\u9EDE"
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version manquante
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Enemy Creator Version est absent de votre projet,
+              Enemy Creator ne peut pas fonctionner sans lui\_!\r\n\r\nVous pouvez
+              r\xE9importer le fichier Enemy Creator Version \xE0 partir du pack
+              de ressources sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nCette extension vous permet de cr\xE9er rapidement des ennemis
+              \xE0 utiliser avec HFPS.\r\n\r\nAttribuez un objet de personnage et
+              un mod\xE8le ci-dessous, puis utilisez le bouton Cr\xE9er un ennemi
+              pour d\xE9marrer le processus de cr\xE9ation.\n"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Open Ragdoll Creator
+            local: "Ouvrir le cr\xE9ateur de Ragdoll"
+          - name: Check for Ragdoll
+            local: "V\xE9rifiez Ragdoll"
+          - name: Create Enemy
+            local: "Cr\xE9er un ennemi"
+          - name: Clear Notification
+            local: Effacer la notification
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "AUCUN CARACT\xC8RE ASSIGN\xC9"
+          - name: NO ENEMY CREATED
+            local: "AUCUN ENNEMI CR\xC9\xC9"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: " ASSIGN\xC9 | ANIMATEUR ABSENT"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: " ASSIGN\xC9 | ANIMATEUR PR\xC9SENT | RAGDOLL PR\xC9SENTE"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: " ASSIGN\xC9 | ANIMATEUR PR\xC9SENT | RAGDOLL ABSENT"
+          - name: ANIMATOR UPDATED
+            local: "ANIMATEUR MIS \xC0 JOUR"
+          - name: CAPSULE ADDED
+            local: "CAPSULE AJOUT\xC9E"
+          - name: AUDIO SOURCE ADDED
+            local: "SOURCE AUDIO AJOUT\xC9E"
+          - name: NAV MESH AGENT ADDED
+            local: "AGENT NAV MESH AJOUT\xC9"
+          - name: NPC HEALTH ADDED
+            local: "SANT\xC9 DES PNJ AJOUT\xC9E"
+          - name: NPC FOOTSTEPS ADDED
+            local: AJOUT DE PAS DE PNJ
+          - name: ZOMBIE AI ADDED
+            local: AJOUT DE L'IA ZOMBIE
+          - name: PARENT UPDATED
+            local: "MISE \xC0 JOUR DES PARENTS"
+          - name: WAYPOINTS ADDED
+            local: "WAYPOINTS AJOUT\xC9S"
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\nEnemy Creator \uBC84\uC804 \uD30C\uC77C\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0
+              \uC5C6\uC2B5\uB2C8\uB2E4. Enemy Creator\uB294 \uC774 \uD30C\uC77C \uC5C6\uC774\uB294
+              \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC790\uC0B0
+              \uC800\uC7A5\uC18C/\uD328\uD0A4\uC9C0 \uAD00\uB9AC\uC790\uC758 \uC790\uC0B0
+              \uD329\uC5D0\uC11C Enemy Creator \uBC84\uC804 \uD30C\uC77C\uC744 \uB2E4\uC2DC
+              \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\uC774 \uD655\uC7A5\uC744 \uC0AC\uC6A9\uD558\uBA74 HFPS\uC640
+              \uD568\uAED8 \uC0AC\uC6A9\uD560 \uC801\uC744 \uBE60\uB974\uAC8C \uB9CC\uB4E4
+              \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\r\n\uC544\uB798\uC5D0\uC11C \uCE90\uB9AD\uD130
+              \uAC1C\uCCB4\uC640 \uD15C\uD50C\uB9BF\uC744 \uD560\uB2F9\uD55C \uB2E4\uC74C
+              Create Enemy \uBC84\uD2BC\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC0DD\uC131
+              \uD504\uB85C\uC138\uC2A4\uB97C \uC2DC\uC791\uD569\uB2C8\uB2E4.\n"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Open Ragdoll Creator
+            local: "\uB799\uB3CC \uC0DD\uC131\uAE30 \uC5F4\uAE30"
+          - name: Check for Ragdoll
+            local: "\uB799\uB3CC \uD655\uC778"
+          - name: Create Enemy
+            local: "\uC801\uC744 \uC0DD\uC131"
+          - name: Clear Notification
+            local: "\uC54C\uB9BC \uC9C0\uC6B0\uAE30"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "\uD560\uB2F9\uB41C \uBB38\uC790 \uC5C6\uC74C"
+          - name: NO ENEMY CREATED
+            local: "\uC801 \uC0DD\uC131 \uC5C6\uC74C"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: " \uD560\uB2F9\uB428 | \uC560\uB2C8\uBA54\uC774\uD130 \uC5C6\uC74C"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: " \uD560\uB2F9\uB428 | \uC560\uB2C8\uBA54\uC774\uD130 \uC120\uBB3C
+              | \uB799\uB3CC \uC120\uBB3C"
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: " \uD560\uB2F9\uB428 | \uC560\uB2C8\uBA54\uC774\uD130 \uC120\uBB3C
+              | \uB798\uADF8\uB3CC \uC5C6\uC74C"
+          - name: ANIMATOR UPDATED
+            local: "\uC560\uB2C8\uBA54\uC774\uD130 \uC5C5\uB370\uC774\uD2B8"
+          - name: CAPSULE ADDED
+            local: "\uCEA1\uC290 \uCD94\uAC00\uB428"
+          - name: AUDIO SOURCE ADDED
+            local: "\uC624\uB514\uC624 \uC18C\uC2A4 \uCD94\uAC00\uB428"
+          - name: NAV MESH AGENT ADDED
+            local: "NAV \uBA54\uC2DC \uC5D0\uC774\uC804\uD2B8 \uCD94\uAC00\uB428"
+          - name: NPC HEALTH ADDED
+            local: "NPC \uAC74\uAC15 \uCD94\uAC00"
+          - name: NPC FOOTSTEPS ADDED
+            local: "NPC \uBC1C\uC790\uAD6D \uCD94\uAC00"
+          - name: ZOMBIE AI ADDED
+            local: "\uC880\uBE44 AI \uCD94\uAC00"
+          - name: PARENT UPDATED
+            local: "\uC0C1\uC704 \uC5C5\uB370\uC774\uD2B8\uB428"
+          - name: WAYPOINTS ADDED
+            local: "\uC6E8\uC774\uD3EC\uC778\uD2B8\uAC00 \uCD94\uAC00\uB428"
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: "Falta la versi\xF3n"
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo de la versi\xF3n de Enemy Creator en su proyecto,
+              \xA1Enemy Creator no puede ejecutarse sin \xE9l!\r\n\r\nPuede volver
+              a importar el archivo de la versi\xF3n de Enemy Creator desde el paquete
+              de activos en la tienda de activos/administrador de paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nEsta extensi\xF3n te permite crear r\xE1pidamente enemigos para
+              usar con HFPS.\r\n\r\nAsigne un objeto de personaje y una plantilla
+              a continuaci\xF3n, luego use el bot\xF3n Crear enemigo para comenzar
+              el proceso de creaci\xF3n.\n"
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Open Ragdoll Creator
+            local: Creadora de Ragdoll abierta
+          - name: Check for Ragdoll
+            local: Comprobar Ragdoll
+          - name: Create Enemy
+            local: Crear enemigo
+          - name: Clear Notification
+            local: "Borrar Notificaci\xF3n"
+          toggles: []
+          prompts: []
+          singleValues:
+          - name: NO CHARACTER ASSIGNED
+            local: "NING\xDAN CAR\xC1CTER ASIGNADO"
+          - name: NO ENEMY CREATED
+            local: "NING\xDAN ENEMIGO CREADO"
+          - name: ' ASSIGNED | ANIMATOR NOT PRESENT'
+            local: ' ASIGNADO | ANIMADOR NO PRESENTE'
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL PRESENT'
+            local: ' ASIGNADO | PRESENTE ANIMADOR | REGALO RAGDOLL'
+          - name: ' ASSIGNED | ANIMATOR PRESENT | RAGDOLL NOT PRESENT'
+            local: ' ASIGNADO | PRESENTE ANIMADOR | RAGDOLL NO PRESENTE'
+          - name: ANIMATOR UPDATED
+            local: ANIMADOR ACTUALIZADO
+          - name: CAPSULE ADDED
+            local: "C\xC1PSULA A\xD1ADIDA"
+          - name: AUDIO SOURCE ADDED
+            local: "FUENTE DE AUDIO A\xD1ADIDA"
+          - name: NAV MESH AGENT ADDED
+            local: "AGENTE DE MALLA NAV A\xD1ADIDO"
+          - name: NPC HEALTH ADDED
+            local: "SALUD DE NPC A\xD1ADIDA"
+          - name: NPC FOOTSTEPS ADDED
+            local: "PASOS DE NPC A\xD1ADIDOS"
+          - name: ZOMBIE AI ADDED
+            local: ZOMBIE AI AGREGADA
+          - name: PARENT UPDATED
+            local: PADRE ACTUALIZADO
+          - name: WAYPOINTS ADDED
+            local: "PUNTOS DE RUTA A\xD1ADIDOS"

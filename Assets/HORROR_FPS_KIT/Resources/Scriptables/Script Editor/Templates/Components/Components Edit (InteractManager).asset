@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (InteractManager)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Namespace Add
+    original: namespace HFPS.Player
+    edit: 'using DizzyMedia.Utility;
+
+      
+
+      namespace HFPS.Player'
+  - name: Auto Values
+    original: "        private UIObjectInfo objectInfo;\r\n        private DraggableObject
+      dragRigidbody;"
+    edit: "        private UIObjectInfo objectInfo;\r\n        private DraggableObject
+      dragRigidbody;\r\n        private DM_ForwardDetect forwardDetect;\r\n       
+      private bool canDetect;"
+  - name: Forward Detect
+    original: "                    RaycastObject.HasComponent(out dynamicObj);\r\n                   
+      RaycastObject.HasComponent(out objectInfo);"
+    edit: "                    RaycastObject.HasComponent(out dynamicObj);\r\n                   
+      RaycastObject.HasComponent(out objectInfo);\r\n                    RaycastObject.HasComponent(out
+      forwardDetect);\r\n                    \r\n                    if(forwardDetect){\r\n                   
+      \r\n                        if(forwardDetect.CanDetect()){\r\n                           
+      \r\n                            if(forwardDetect.IsInForward(gameManager.m_PlayerObj.transform)){\r\n                           
+      \r\n                                canDetect = true;\r\n                           
+      \r\n                                //Debug.Log(RaycastObject.name + \" is
+      in forward\");\r\n                            \r\n                           
+      //isInForward\r\n                            } else {\r\n                           
+      \r\n                                canDetect = false;\r\n                               
+      isCorrectLayer = false;\r\n                            \r\n                           
+      }//isInForward\r\n                        \r\n                        //CanDetect\r\n                       
+      } else {\r\n                        \r\n                            canDetect
+      = false;\r\n                            isCorrectLayer = false;\r\n                       
+      \r\n                        }//CanDetect\r\n                    \r\n                   
+      //forwardDetect\r\n                    } else {\r\n                    \r\n                       
+      canDetect = true;\r\n                    \r\n                    }//forwardDetect\r\n                   
+      \r\n                    if(canDetect){"
+  - name: Forward Detect End
+    original: '                    CrosshairChange(true);'
+    edit: "                    CrosshairChange(true);\r\n                    \r\n                   
+      }//canDetect"

@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (ItemSwitcher)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Namespace Add
+    original: namespace HFPS.Player
+    edit: 'using DizzyMedia.HFPS_Components;
+
+
+
+      namespace HFPS.Player'
+  - name: Dual Wield List Add
+    original: '        public List<GameObject> ItemList = new List<GameObject>();'
+    edit: "        public List<GameObject> ItemList = new List<GameObject>();\r\n       
+      public List<HFPS_DualWield> dualWields = new List<HFPS_DualWield>();"
+  - name: Auto values
+    original: "        private bool antiSpam;\r\n        private bool spam;"
+    edit: "        private bool antiSpam;\r\n        private bool spam;\r\n       
+      \r\n        [Header(\"Auto\")]\r\n        public bool incomp;\r\n        public
+      int incompInt;\r\n        public int secondItem = -1;"
+  - name: Select Switcher - update 1
+    original: '            if (IsBusy()) return;'
+    edit: "            incomp = false;\r\n            incompInt = -1;\r\n       
+      \r\n            if (IsBusy()) return;"
+  - name: Deselect Wait
+    original: "        IEnumerator DeselectWait()\r\n        {\r\n            yield
+      return new WaitUntil(() => IsItemsDeactivated());\r\n            currentItem
+      = -1;\r\n        }"
+    edit: "        IEnumerator DeselectWait()\r\n        {\r\n        \r\n           
+      if(currentItem > 0 && secondItem < 0){\r\n            \r\n                yield
+      return new WaitUntil(() => IsItemsDeactivated());\r\n            \r\n           
+      //currentItem > 0 & secondItem < 0\r\n            } else {\r\n            \r\n               
+      if(secondItem > -1){\r\n            \r\n                    yield return new
+      WaitUntil(() => IsItemDeactivated(secondItem));\r\n                    \r\n                   
+      //Debug.Log(\"Deselect second item \" + secondItem);\r\n                \r\n               
+      }//secondItem > -1\r\n                \r\n            }//currentItem > 0 &
+      secondItem < 0\r\n            \r\n            if(secondItem < 0){\r\n           
+      \r\n                currentItem = -1;\r\n            \r\n            //secondItem
+      < 0\r\n            } else {\r\n            \r\n                currentItem
+      = secondItem;\r\n                secondItem = -1;\r\n                \r\n               
+      //Debug.Log(\"Deselect second Item \");\r\n            \r\n            }//secondItem
+      < 0\r\n            \r\n        }//DeselectWait"
+  - name: Disable Items
+    original: "        public void DisableItems()\r\n        {\r\n            if
+      (currentItem == -1) return;\r\n\r\n            ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeactivate();\r\n           
+      currentItem = -1;\r\n        }"
+    edit: "        public void DisableItems()\r\n        {\r\n            if (currentItem
+      == -1) return;\r\n\r\n            ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeactivate();\r\n\r\n           
+      if(secondItem < 0){\r\n            \r\n                currentItem = -1;\r\n           
+      \r\n            //secondItem < 0\r\n            } else {\r\n            \r\n               
+      currentItem = secondItem;\r\n                secondItem = -1;\r\n               
+      \r\n                //Debug.Log(\"Disable second Item \");\r\n            \r\n           
+      }//secondItem < 0\r\n            \r\n        }//DisableItems"
+  - name: Item Deactivated
+    original: "        bool IsItemsDeactivated()\r\n        {\r\n            return
+      ItemList.All(x => !x.transform.GetChild(0).gameObject.activeSelf);\r\n       
+      }"
+    edit: "        bool IsItemsDeactivated()\r\n        {\r\n            return ItemList.All(x
+      => !x.transform.GetChild(0).gameObject.activeSelf);\r\n        }\r\n       
+      \r\n        bool IsItemDeactivated(int slot)\r\n        {\r\n            return
+      ItemList[slot].transform.GetChild(0).gameObject.activeSelf;\r\n        }"
+  - name: Switch Item
+    original: "        IEnumerator SwitchItem()\r\n        {\r\n            if (currentItem
+      > -1 && newItem > -1)\r\n            {\r\n                ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n\r\n               
+      yield return new WaitUntil(() => !ItemList[currentItem].transform.GetChild(0).gameObject.activeSelf);\r\n\r\n               
+      if (ItemList[newItem].GetComponent<SwitcherBehaviour>() != null)\r\n               
+      {\r\n                    ItemList[newItem].GetComponent<SwitcherBehaviour>().OnSwitcherSelect();\r\n                   
+      currentItem = newItem;\r\n                }\r\n                else\r\n               
+      {\r\n                    Debug.LogError(\"[Item Switcher] Object does not contains
+      SwitcherBehaviour subcalss!\");\r\n                }\r\n\r\n               
+      yield return new WaitForSeconds(1f);\r\n            }\r\n        }"
+    edit: "        IEnumerator SwitchItem()\r\n        {\r\n            if (currentItem
+      > -1 && newItem > -1)\r\n            {\r\n            \r\n                if(dualWields.Count
+      > 0){\r\n                \r\n                    if(!dualWields[newItem].dualWield){\r\n\r\n                       
+      ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n\r\n                       
+      if(secondItem > -1){\r\n\r\n                            ItemList[secondItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n\r\n                       
+      }//secondItem > -1\r\n\r\n                        yield return new WaitUntil(()
+      => !ItemList[currentItem].transform.GetChild(0).gameObject.activeSelf);\r\n\r\n                       
+      if(secondItem > -1){\r\n\r\n                            secondItem = -1;\r\n\r\n                       
+      }//secondItem > -1\r\n\r\n                    //!dualWield\r\n                   
+      } else {\r\n\r\n                        if(incomp){\r\n\r\n                           
+      if(secondItem > -1){\r\n\r\n                                secondItem = currentItem;\r\n\r\n                           
+      }//secondItem > -1\r\n\r\n                            if(incompInt > -1){\r\n\r\n                               
+      ItemList[incompInt].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n\r\n                               
+      yield return new WaitUntil(() => !ItemList[incompInt].transform.GetChild(0).gameObject.activeSelf);\r\n\r\n                           
+      //incompInt > -1\r\n                            } else {\r\n\r\n                               
+      ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n\r\n                               
+      yield return new WaitUntil(() => !ItemList[currentItem].transform.GetChild(0).gameObject.activeSelf);\r\n\r\n                           
+      }//incompInt > -1\r\n\r\n                        }//incomp\r\n\r\n                   
+      }//!dualWield\r\n                \r\n                //dualWields.Count > 0\r\n               
+      } else {\r\n                \r\n                    ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n\r\n                   
+      yield return new WaitUntil(() => !ItemList[currentItem].transform.GetChild(0).gameObject.activeSelf);\r\n               
+      \r\n                }//dualWields.Count > 0\r\n\r\n                if (ItemList[newItem].GetComponent<SwitcherBehaviour>()
+      != null)\r\n                {\r\n                    ItemList[newItem].GetComponent<SwitcherBehaviour>().OnSwitcherSelect();\r\n                   
+      currentItem = newItem;\r\n                    \r\n                    //Debug.Log(\"SwitchItem
+      current Item \");\r\n                }\r\n                else\r\n               
+      {\r\n                    Debug.LogError(\"[Item Switcher] Object does not contains
+      SwitcherBehaviour subcalss!\");\r\n                }\r\n\r\n               
+      yield return new WaitForSeconds(1f);\r\n            }\r\n        }"
+  - name: Deselect Item
+    original: "        public void DeselectItems()\r\n        {\r\n            if
+      (currentItem == -1) return;\r\n\r\n            ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n           
+      StopAllCoroutines();\r\n            StartCoroutine(DeselectWait());\r\n       
+      }"
+    edit: "        public void DeselectItems()\r\n        {\r\n            if (currentItem
+      == -1) return;\r\n\r\n            ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n           
+      StopAllCoroutines();\r\n            StartCoroutine(DeselectWait());\r\n       
+      }\r\n\r\n        public void DeselectItem(int item)\r\n        {\r\n           
+      //if (currentItem == -1) return;\r\n\r\n            ItemList[item].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect();\r\n           
+      StopAllCoroutines();\r\n            StartCoroutine(DeselectWait());\r\n       
+      }\r\n"
+  - name: Deselect Item Forced Add
+    original: '        IEnumerator DeselectWait()'
+    edit: "        public void DeselectItems_Forced() {\r\n        \r\n           
+      if (currentItem == -1) return;\r\n\r\n            #if (COMPONENTS_PRESENT ||
+      HFPS_DURABILITY_PRESENT)\r\n\r\n                ItemList[currentItem].GetComponent<SwitcherBehaviour>().OnSwitcherDeselect_Forced();\r\n           
+      \r\n            #endif\r\n            \r\n            StopAllCoroutines();\r\n           
+      StartCoroutine(DeselectWait());\r\n        \r\n        }//DeselectItems_Forced\r\n\r\n       
+      IEnumerator DeselectWait()"
+  - name: Select Switcher - update 2
+    original: "            if (switchID != currentItem)\r\n            {"
+    edit: "            if (switchID != currentItem)\r\n            {\r\n\r\n               
+      if(dualWields.Count > 0){\r\n                \r\n                    if(dualWields[switchID].dualWield){\r\n\r\n                       
+      if(currentItem > -1){\r\n\r\n                            for(int i = 0; i <
+      dualWields[currentItem].incompIDs.Count; i++) {\r\n\r\n                               
+      if(!incomp){\r\n\r\n                                    if(switchID == dualWields[currentItem].incompIDs[i]){\r\n\r\n                                       
+      incomp = true;\r\n                                        incompInt = currentItem;\r\n\r\n                                       
+      //Debug.Log(\"Incompatible\");\r\n\r\n                                    }//switchID
+      = incompIDs[i]\r\n\r\n                                }//!incomp\r\n\r\n                           
+      }//for i incompIDs\r\n\r\n                        }//currentItem > -1\r\n\r\n                       
+      if(secondItem > -1){\r\n\r\n                            for(int i = 0; i <
+      dualWields[secondItem].incompIDs.Count; i++) {\r\n\r\n                               
+      if(!incomp){\r\n\r\n                                    if(switchID == dualWields[secondItem].incompIDs[i]){\r\n\r\n                                       
+      incomp = true;\r\n                                        incompInt = secondItem;\r\n\r\n                                       
+      //Debug.Log(\"Incompatible\");\r\n\r\n                                    }//switchID
+      = incompIDs[i]\r\n\r\n                                }//!incomp\r\n\r\n                           
+      }//for i incompIDs\r\n\r\n                        }//currentItem > -1\r\n\r\n                       
+      if(!incomp){\r\n\r\n                            if(currentItem > -1){\r\n\r\n                               
+      secondItem = currentItem;\r\n\r\n                                //Debug.Log(\"SelectSwitcher
+      second Item \");\r\n\r\n                            }//currentItem > -1\r\n\r\n                       
+      }//!incomp\r\n\r\n                    //dualWield\r\n                    }
+      else {\r\n\r\n                        if(secondItem > 0){\r\n\r\n                           
+      DeselectItem(secondItem);\r\n\r\n                        }//secondItem > 0\r\n\r\n                   
+      }//dualWield\r\n                \r\n                }//dualWields.Count > 0"

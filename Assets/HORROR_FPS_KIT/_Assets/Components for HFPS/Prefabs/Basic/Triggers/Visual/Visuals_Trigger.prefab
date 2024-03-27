@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4491656977876670142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4491656977876670143}
+  - component: {fileID: 4491656977876670131}
+  - component: {fileID: 4491656977876670129}
+  - component: {fileID: 4491656977876670130}
+  - component: {fileID: 4491656977876670128}
+  m_Layer: 2
+  m_Name: Visuals_Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4491656977876670143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491656977876670142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4491656977876670131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491656977876670142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5eeb3414291594c82d3fc92b133947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerType: 9
+  healUse: 0
+  useType: 1
+  detectTag: Player
+  useUnlockDelay: 0
+  unlockDelay: 0
+  category: 0
+  eventSlot: 0
+  trigger: {fileID: 4491656977876670128}
+  hfpsPlayerAttention: {fileID: 0}
+  hfpsPossessed: {fileID: 0}
+  hfpsDestroyable: {fileID: 0}
+  damageAmount: 0
+  hideType: 0
+  timeCheckType: 0
+  activeTime: 0
+  countDownMulti: 0
+  autoReset: 0
+  resetWait: 0
+  preLoadScene: 0
+  pauseStateEnter: 0
+  pauseStateExit: 0
+  inventoryStateEnter: 0
+  inventoryStateExit: 0
+  saveStateEnter: 0
+  saveStateExit: 0
+  loadStateEnter: 0
+  loadStateExit: 0
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4491656977876670129}
+        m_TargetAssemblyTypeName: ScareHand, Assembly-CSharp
+        m_MethodName: Scare_Init
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onHeal:
+    m_PersistentCalls:
+      m_Calls: []
+  onReset:
+    m_PersistentCalls:
+      m_Calls: []
+  refsCatch:
+    m_PersistentCalls:
+      m_Calls: []
+    refsCatch: {fileID: 0}
+  timedEvents:
+    onTimeStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onTimeFinish:
+      m_PersistentCalls:
+        m_Calls: []
+    onReset:
+      m_PersistentCalls:
+        m_Calls: []
+    onCancel:
+      m_PersistentCalls:
+        m_Calls: []
+  refs: {fileID: 0}
+  healing: 0
+  countDownActive: 0
+  currentTime: 0
+  locked: 0
+  tabs: 1
+  genOpts: 1
+  uiOpts: 0
+--- !u!114 &4491656977876670129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491656977876670142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c141d0abbf8e5464c90439c88927f95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useType: 0
+  disableArmsLock: 1
+  delayFxNshake: 0
+  delayFxWait: 0
+  jumpscareEffects: 1
+  chromaticAberrationAmount: 1
+  vignetteAmount: 0.25
+  effectsTime: 3
+  scaredBreathTime: 33
+  cameraShake: 1
+  shakeByPreset: 1
+  shakePreset: 0
+  magnitude: 7
+  roughness: 3
+  startTime: 0.1
+  durationTime: 3
+  PositionInfluence: {x: 0.15, y: 0.15, z: 0}
+  RotationInfluence: {x: 1, y: 1, z: 1}
+  useJumpscareSound: 1
+  JumpscareSound: {fileID: 8300000, guid: 174a528e346ce1c448389b101916bd84, type: 3}
+  ScaredBreath: {fileID: 0}
+  scareVolume: 0.5
+  isPlayed: 0
+  tabs: 0
+  genOpts: 0
+  effOpts: 0
+  shakeOpts: 0
+  audioOpts: 0
+--- !u!114 &4491656977876670130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491656977876670142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 032e83f82f6c1d1488393504e9351e16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showGizmos: 1
+  icon: {fileID: 2800000, guid: 430e518ff4d0e6941bfbd3885d2896cb, type: 3}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!65 &4491656977876670128
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491656977876670142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}

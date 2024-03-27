@@ -1,0 +1,1 @@
+Please make sure to add the scenes in these folders to your Build Settings or you can use the Scenes Updater extension from the top menu.

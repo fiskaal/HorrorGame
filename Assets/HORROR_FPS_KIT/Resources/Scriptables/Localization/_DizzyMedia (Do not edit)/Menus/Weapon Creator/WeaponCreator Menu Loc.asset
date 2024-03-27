@@ -1,0 +1,4245 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: WeaponCreator Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: '
+
+              The Weapon Creator Version file is missing from
+              your project, Weapon Creator cannot run without it!
+
+
+              You
+              can re-import the Weapon Creator Version file from the asset pack on
+              the asset store/package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nThis extension allows you create a new player weapon, \nuse
+              the options below to start the process.\n"
+          - name: Language
+            text: Language Saved
+          - name: Components
+            text: COMPONENTS IS NOT ACTIVE!
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Catch Item Switcher
+            local: Catch Item Switcher
+          - name: Save Template
+            local: Save Template
+          - name: Load Template
+            local: Load Template
+          - name: Create Arms
+            local: Create Arms
+          - name: Create Weapon
+            local: Create Weapon
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: Save Template?
+            message: "You are about to save editor values to the assigned template.
+              \nThis will overwrite any existing values.\n\nAre you sure?"
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Template Load
+            header: Load Template?
+            message: "You are about to load template data to the editor. \nThis will
+              overwrite any existing values.\n\nAre you sure?"
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Arms Create
+            header: Create Arms?
+            message: 'You are about to add new arms model(s) to your player character.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Weapon Create
+            header: Create Weapon?
+            message: 'You are about to create a new weapon using values set in the
+              editor.
+
+
+              Are you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues:
+          - name: WEAPON NAME NOT ASSIGNED!
+            local: WEAPON NAME NOT ASSIGNED!
+          - name: 'WEAPON NAME : '
+            local: 'WEAPON NAME : '
+          - name: ARMS NOT ASSIGNED!
+            local: ARMS NOT ASSIGNED!
+          - name: 'ARMS ASSIGNED : '
+            local: 'ARMS ASSIGNED : '
+          - name: ITEM SWITCHER NOT ASSIGNED!
+            local: ITEM SWITCHER NOT ASSIGNED!
+          - name: ITEM SWITCHER ASSIGNED
+            local: ITEM SWITCHER ASSIGNED
+          - name: ' Saved'
+            local: ' Saved'
+          - name: ' Loaded'
+            local: ' Loaded'
+          - name: ' Created!'
+            local: ' Created!'
+          - name: Item Switcher Found!
+            local: Item Switcher Found!
+          - name: Kickback Found!
+            local: Kickback Found!
+          - name: Arms Created!
+            local: Arms Created!
+          - name: Candle Created!
+            local: Candle Created!
+          - name: Candle Assigned!
+            local: Candle Assigned!
+          - name: Candle Flame Created!
+            local: Candle Flame Created!
+          - name: Candle Flame Assigned!
+            local: Candle Flame Assigned!
+          - name: Flame Position Assigned!
+            local: Flame Position Assigned!
+          - name: Candle Light Created!
+            local: Candle Light Created!
+          - name: Candle Light Assigned!
+            local: Candle Light Assigned!
+          - name: Flashlight Created!
+            local: Flashlight Created!
+          - name: Flashlight Light Created!
+            local: Flashlight Light Created!
+          - name: Flashlight Light Assigned!
+            local: Flashlight Light Assigned!
+          - name: Lantern Created!
+            local: Lantern Created!
+          - name: Flame Parent Changed to Lantern Light object (i.e required by Lantern
+              Item script)
+            local: Flame Parent Changed to Lantern Light object (i.e required by
+              Lantern Item script)
+          - name: Old Flame Parent Destroyed (i.e no longer required)
+            local: Old Flame Parent Destroyed (i.e no longer required)
+          - name: Lantern Flame Created!
+            local: Lantern Flame Created!
+          - name: Lantern Light Created!
+            local: Lantern Light Created!
+          - name: Lantern Light Assigned!
+            local: Lantern Light Assigned!
+          - name: Lantern Hinge Created!
+            local: Lantern Hinge Created!
+          - name: Lantern Hinge Connect Created!
+            local: Lantern Hinge Connect Created!
+          - name: Lantern Hinge Connect Assigned!
+            local: Lantern Hinge Connect Assigned!
+          - name: Lighter Model Created!
+            local: Lighter Model Created!
+          - name: Lighter Flame Created!
+            local: Lighter Flame Created!
+          - name: Lighter Light Created!
+            local: Lighter Light Created!
+          - name: Melee Weapon Created!
+            local: Melee Weapon Created!
+          - name: Gun Weapon Created!
+            local: Gun Weapon Created!
+          - name: Gun Muzzle Flash Created!
+            local: Gun Muzzle Flash Created!
+          - name: Gun Muzzle Light Created!
+            local: Gun Muzzle Light Created!
+          - name: 'Weapon Created : Candle'
+            local: 'Weapon Created : Candle'
+          - name: 'Weapon Created : Flashlight'
+            local: 'Weapon Created : Flashlight'
+          - name: 'Weapon Created : Lantern'
+            local: 'Weapon Created : Lantern'
+          - name: 'Weapon Created : Lighter'
+            local: 'Weapon Created : Lighter'
+          - name: 'Weapon Created : Melee'
+            local: 'Weapon Created : Melee'
+          - name: 'Weapon Created : Gun'
+            local: 'Weapon Created : Gun'
+          - name: Arms Animations Added!
+            local: Arms Animations Added!
+          - name: Arms Animation Sound Events Added!
+            local: Arms Animation Sound Events Added!
+          - name: Arms Audio Source Added!
+            local: Arms Audio Source Added!
+          - name: Arms Audio Source Assigned!
+            local: Arms Audio Source Assigned!
+          - name: 'Arms Animation Event Added : Blow Out'
+            local: 'Arms Animation Event Added : Blow Out'
+          - name: 'Arms Animation Event Added : Flashlight Click'
+            local: 'Arms Animation Event Added : Flashlight Click'
+          - name: 'Arms Animation Event Added : Lighter Open'
+            local: 'Arms Animation Event Added : Lighter Open'
+          - name: 'Arms Animation Event Added : Lighter Close'
+            local: 'Arms Animation Event Added : Lighter Close'
+          - name: 'Arms Animation Event Added : Lighter On'
+            local: 'Arms Animation Event Added : Lighter On'
+          - name: 'Arms Animation Event Added : Lighter Off'
+            local: 'Arms Animation Event Added : Lighter Off'
+          - name: Lantern Hinge Connect Assigned!
+            local: Lantern Hinge Connect Assigned!
+        - name: Candle
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Use the options below to assign audio values.
+
+'
+          - name: Animation Instructions
+            text: '
+
+              Use the options below to set the animation values.
+
+'
+          - name: Candle Instructions
+            text: '
+
+              Use the options below to create, assign or set
+              candle values.
+
+'
+          - name: Inventory Instructions
+            text: '
+
+              Use the options below to set inventory values.
+
+'
+          buttons:
+          - name: Audio Options
+            local: Audio Options
+          - name: Animation Options
+            local: Animation Options
+          - name: Candle Options
+            local: Candle Options
+          - name: Inventory Options
+            local: Inventory Options
+          - name: Model
+            local: Model
+          - name: Reduction
+            local: Reduction
+          - name: Candle
+            local: Candle
+          - name: Flame
+            local: Flame
+          - name: Light
+            local: Light
+          - name: Create Candle
+            local: Create Candle
+          - name: Create Flame
+            local: Create Flame
+          - name: Create Light
+            local: Create Light
+          toggles: []
+          prompts:
+          - name: Candle Create
+            header: Create Candle?
+            message: 'You are about to create a new candle model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Candle Flame Create
+            header: Create Flame?
+            message: 'You are about to create a new flame model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Candle Light Create
+            header: Create Light?
+            message: 'You are about to create a new light.
+
+
+              Are you
+              sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues:
+          - name: CANDLE ALREADY ASSIGNED!
+            local: CANDLE ALREADY ASSIGNED!
+          - name: CANDLE FLAME ALREADY ASSIGNED!
+            local: CANDLE FLAME ALREADY ASSIGNED!
+          - name: CANDLE LIGHT ALREADY ASSIGNED!
+            local: CANDLE LIGHT ALREADY ASSIGNED!
+        - name: Flashlight
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Use the options below to assign audio values.
+
+'
+          - name: Animation Instructions
+            text: '
+
+              Use the options below to set the animation values.
+
+'
+          - name: Flashlight Instructions
+            text: '
+
+              Use the options below to create, assign or set
+              flashlight values.
+
+'
+          - name: Inventory Instructions
+            text: '
+
+              Use the options below to set inventory values.
+
+'
+          - name: UI Instructions
+            text: '
+
+              Use the options below to set UI values.
+
+'
+          buttons:
+          - name: Audio Options
+            local: Audio Options
+          - name: Animation Options
+            local: Animation Options
+          - name: Flashlight Options
+            local: Flashlight Options
+          - name: Inventory Options
+            local: Inventory Options
+          - name: UI Options
+            local: UI Options
+          - name: General
+            local: General
+          - name: Extra
+            local: Extra
+          - name: Model
+            local: Model
+          - name: Battery
+            local: Battery
+          - name: Flashlight
+            local: Flashlight
+          - name: Light
+            local: Light
+          - name: Create Flashlight
+            local: Create Flashlight
+          - name: Create Light
+            local: Create Light
+          toggles: []
+          prompts:
+          - name: Flashlight Create
+            header: Create Flashlight?
+            message: 'You are about to create a new flashlight model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Flashlight Light Create
+            header: Create Light?
+            message: 'You are about to create a new light.
+
+
+              Are you
+              sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues:
+          - name: FLASHLIGHT LIGHT ALREADY ASSIGNED!
+            local: FLASHLIGHT LIGHT ALREADY ASSIGNED!
+        - name: Lantern
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Use the options below to assign audio values.
+
+'
+          - name: Animation Instructions
+            text: '
+
+              Use the options below to set the animation values.
+
+'
+          - name: Inventory Instructions
+            text: '
+
+              Use the options below to set inventory values.
+
+'
+          - name: Lantern Instructions
+            text: '
+
+              Use the options below to create, assign or set
+              lantern values.
+
+'
+          - name: UI Instructions
+            text: '
+
+              Use the options below to set UI values.
+
+'
+          buttons:
+          - name: Audio Options
+            local: Audio Options
+          - name: Animation Options
+            local: Animation Options
+          - name: Inventory Options
+            local: Inventory Options
+          - name: Lantern Options
+            local: Lantern Options
+          - name: UI Options
+            local: UI Options
+          - name: Model
+            local: Model
+          - name: Hinge
+            local: Hinge
+          - name: Hinge Connect
+            local: Hinge Connect
+          - name: Lantern
+            local: Lantern
+          - name: Flame
+            local: Flame
+          - name: Light
+            local: Light
+          - name: Create Lantern
+            local: Create Lantern
+          - name: Create Flame
+            local: Create Flame
+          - name: Create Light
+            local: Create Light
+          - name: Create Hinge Joint
+            local: Create Hinge Joint
+          - name: Create Hinge Connect
+            local: Create Hinge Connect
+          toggles: []
+          prompts:
+          - name: Lantern Create
+            header: Create Lantern?
+            message: 'You are about to create a new lantern model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Lantern Flame Create
+            header: Create Flame?
+            message: 'You are about to create a new flame model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Lantern Light Create
+            header: Create Light?
+            message: 'You are about to create a new light.
+
+
+              Are you
+              sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Lantern Hinge Create
+            header: Create Hinge Joint?
+            message: 'You are about to create a new hinge joint.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Lantern Hinge Connect Create
+            header: Create Hinge Connect?
+            message: 'You are about to create a new hinge connection.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues:
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN LIGHT FIRST!
+            local: YOU MUST CREATE OR ASSIGN THE LANTERN LIGHT FIRST!
+          - name: LANTERN FLAME ALREADY ASSIGNED!
+            local: LANTERN FLAME ALREADY ASSIGNED!
+          - name: LANTERN LIGHT ALREADY ASSIGNED!
+            local: LANTERN LIGHT ALREADY ASSIGNED!
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN HINGE JOINT FIRST!
+            local: YOU MUST CREATE OR ASSIGN THE LANTERN HINGE JOINT FIRST!
+          - name: LANTERN HINGE ALREADY ASSIGNED!
+            local: LANTERN HINGE ALREADY ASSIGNED!
+          - name: LANTERN HINGE CONNECT ALREADY ASSIGNED!
+            local: LANTERN HINGE CONNECT ALREADY ASSIGNED!
+        - name: Lighter
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Use the options below to assign audio values.
+
+'
+          - name: Animation Instructions
+            text: '
+
+              Use the options below to set the animation values.
+
+'
+          - name: Inventory Instructions
+            text: '
+
+              Use the options below to set inventory values.
+
+'
+          - name: Lighter Instructions
+            text: '
+
+              Use the options below to create, assign or set
+              lighter values.
+
+'
+          buttons:
+          - name: Audio Options
+            local: Audio Options
+          - name: Animation Options
+            local: Animation Options
+          - name: Inventory Options
+            local: Inventory Options
+          - name: Lighter Options
+            local: Lighter Options
+          - name: Arms
+            local: Arms
+          - name: Lighter
+            local: Lighter
+          - name: Model
+            local: Model
+          - name: Flame
+            local: Flame
+          - name: Light
+            local: Light
+          - name: Create Lighter
+            local: Create Lighter
+          - name: Create Flame
+            local: Create Flame
+          - name: Create Light
+            local: Create Light
+          toggles: []
+          prompts:
+          - name: Lighter Create
+            header: Create Lighter?
+            message: 'You are about to create a new lighter model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Lighter Flame Create
+            header: Create Flame?
+            message: 'You are about to create a new flame model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Lighter Light Create
+            header: Create Light?
+            message: 'You are about to create a new light.
+
+
+              Are you
+              sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues:
+          - name: LIGHTER FLAME ALREADY ASSIGNED!
+            local: LIGHTER FLAME ALREADY ASSIGNED!
+          - name: LIGHTER LIGHT ALREADY ASSIGNED!
+            local: LIGHTER LIGHT ALREADY ASSIGNED!
+        - name: Melee
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Use the options below to assign audio values.
+
+'
+          - name: Animation Instructions
+            text: '
+
+              Use the options below to set the animation values.
+
+'
+          - name: Inventory Instructions
+            text: '
+
+              Use the options below to set inventory values.
+
+'
+          - name: Melee Instructions
+            text: '
+
+              Use the options below to set melee values.
+
+'
+          - name: Weapon Instructions
+            text: '
+
+              Use the options below to create, assign or set
+              weapon values.
+
+'
+          buttons:
+          - name: Audio Options
+            local: Audio Options
+          - name: Animation Options
+            local: Animation Options
+          - name: Inventory Options
+            local: Inventory Options
+          - name: Melee Options
+            local: Melee Options
+          - name: Weapon Options
+            local: Weapon Options
+          - name: Hit
+            local: Hit
+          - name: Kickback
+            local: Kickback
+          - name: Surface
+            local: Surface
+          - name: Create Weapon
+            local: Create Weapon
+          toggles: []
+          prompts:
+          - name: Weapon Create
+            header: Create Weapon?
+            message: 'You are about to create a new weapon model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues: []
+        - name: Gun
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Use the options below to assign audio values.
+
+'
+          - name: Aim Instructions
+            text: '
+
+              Use the options below to set the aim values.
+
+'
+          - name: Animation Instructions
+            text: '
+
+              Use the options below to set the animation values.
+
+'
+          - name: Inventory Instructions
+            text: '
+
+              Use the options below to set inventory values.
+
+'
+          - name: Shoot Instructions
+            text: '
+
+              Use the options below to create, assign or set
+              gun shoot values.
+
+'
+          - name: Shotgun Instructions
+            text: '
+
+              Use the options below to set shotgun values.
+
+'
+          - name: Shell Eject Instructions
+            text: '
+
+              Use the options below to set shell eject values.
+
+'
+          - name: Weapon Instructions
+            text: '
+
+              Use the options below to create, assign or set
+              gun weapon values.
+
+'
+          buttons:
+          - name: Audio Options
+            local: Audio Options
+          - name: Aim Options
+            local: Aim Options
+          - name: Animation Options
+            local: Animation Options
+          - name: Inventory Options
+            local: Inventory Options
+          - name: Shoot Options
+            local: Shoot Options
+          - name: Shotgun Options
+            local: Shotgun Options
+          - name: Shell Eject Options
+            local: Shell Eject Options
+          - name: Weapon Options
+            local: Weapon Options
+          - name: Bullet
+            local: Bullet
+          - name: Kickback
+            local: Kickback
+          - name: Muzzle Flash
+            local: Muzzle Flash
+          - name: Shoot
+            local: Shoot
+          - name: Reaction
+            local: Reaction
+          - name: Model
+            local: Model
+          - name: Magazine
+            local: Magazine
+          - name: Surface
+            local: Surface
+          - name: Catch Kickback
+            local: Catch Kickback
+          - name: Flash
+            local: Flash
+          - name: Light
+            local: Light
+          - name: Create Muzzle Flash
+            local: Create Muzzle Flash
+          - name: Create Muzzle Light
+            local: Create Muzzle Light
+          - name: Type
+            local: Type
+          - name: Create Weapon
+            local: Create Weapon
+          toggles: []
+          prompts:
+          - name: Weapon Muzzle Flash Create
+            header: Create Muzzle Flash?
+            message: 'You are about to create a new muzzle flash model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Weapon Muzzle Flash Light Create
+            header: Create Muzzle Flash Light?
+            message: 'You are about to create a new light model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Weapon Create
+            header: Create Weapon?
+            message: 'You are about to create a new weapon model.
+
+
+              Are
+              you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues:
+          - name: MUZZLE FLASH ALREADY ASSIGNED!
+            local: MUZZLE FLASH ALREADY ASSIGNED!
+          - name: MUZZLE LIGHT ALREADY ASSIGNED!
+            local: MUZZLE LIGHT ALREADY ASSIGNED!
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9879\u76EE\u4E2D\u7F3A\u5C11 Weapon Creator \u7248\u672C\u6587\u4EF6\uFF0CWeapon
+              Creator \u6CA1\u6709\u5B83\u5C31\u65E0\u6CD5\u8FD0\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u4ECE\u8D44\u4EA7\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8D44\u4EA7\u5305\u91CD\u65B0\u5BFC\u5165
+              Weapon Creator Version \u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u8FD9\u4E2A\u6269\u5C55\u5141\u8BB8\u4F60\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u73A9\u5BB6\u6B66\u5668\uFF0C\r\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5F00\u59CB\u8BE5\u8FC7\u7A0B\u3002\n"
+          - name: Language
+            text: "\u5DF2\u4FDD\u5B58\u8BED\u8A00"
+          - name: Components
+            text: "\u7EC4\u4EF6\u672A\u6FC0\u6D3B\uFF01"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Catch Item Switcher
+            local: "\u6355\u83B7\u9879\u76EE\u5207\u6362\u5668"
+          - name: Save Template
+            local: "\u4FDD\u5B58\u6A21\u677F"
+          - name: Load Template
+            local: "\u52A0\u8F7D\u6A21\u677F"
+          - name: Create Arms
+            local: "\u521B\u5EFA\u6B66\u5668"
+          - name: Create Weapon
+            local: "\u5236\u9020\u6B66\u5668"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "\u4FDD\u5B58\u6A21\u677F\uFF1F"
+            message: "\u60A8\u5C06\u8981\u5C06\u7F16\u8F91\u5668\u503C\u4FDD\u5B58\u5230\u5206\u914D\u7684\u6A21\u677F\u3002\r\n\u8FD9\u5C06\u8986\u76D6\u4EFB\u4F55\u73B0\u6709\u503C\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Template Load
+            header: "\u52A0\u8F7D\u6A21\u677F\uFF1F"
+            message: "\u60A8\u5373\u5C06\u5411\u7F16\u8F91\u5668\u52A0\u8F7D\u6A21\u677F\u6570\u636E\u3002\r\n\u8FD9\u5C06\u8986\u76D6\u4EFB\u4F55\u73B0\u6709\u503C\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Arms Create
+            header: "\u521B\u9020\u6B66\u5668\uFF1F"
+            message: "\u60A8\u5373\u5C06\u4E3A\u60A8\u7684\u73A9\u5BB6\u89D2\u8272\u6DFB\u52A0\u65B0\u7684\u6B66\u5668\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Weapon Create
+            header: "\u521B\u9020\u6B66\u5668\uFF1F"
+            message: "\u60A8\u5C06\u4F7F\u7528\u7F16\u8F91\u5668\u4E2D\u8BBE\u7F6E\u7684\u503C\u521B\u5EFA\u65B0\u6B66\u5668\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: WEAPON NAME NOT ASSIGNED!
+            local: "\u672A\u6307\u5B9A\u6B66\u5668\u540D\u79F0\uFF01"
+          - name: 'WEAPON NAME : '
+            local: "\u6B66\u5668\u540D\u79F0\uFF1A"
+          - name: ARMS NOT ASSIGNED!
+            local: "\u6B66\u5668\u672A\u5206\u914D\uFF01"
+          - name: 'ARMS ASSIGNED : '
+            local: "\u6307\u5B9A\u6B66\u5668\uFF1A"
+          - name: ITEM SWITCHER NOT ASSIGNED!
+            local: "\u9879\u76EE\u5207\u6362\u5668\u672A\u5206\u914D\uFF01"
+          - name: ITEM SWITCHER ASSIGNED
+            local: "\u5DF2\u5206\u914D\u9879\u76EE\u5207\u6362\u5668"
+          - name: ' Saved'
+            local: " \u5DF2\u4FDD\u5B58"
+          - name: ' Loaded'
+            local: " \u5DF2\u52A0\u8F7D"
+          - name: ' Created!'
+            local: " \u5DF2\u521B\u5EFA\uFF01"
+          - name: Item Switcher Found!
+            local: "\u627E\u5230\u7269\u54C1\u5207\u6362\u5668\uFF01"
+          - name: Kickback Found!
+            local: "\u53D1\u73B0\u56DE\u6263\uFF01"
+          - name: Arms Created!
+            local: "\u6B66\u5668\u521B\u9020\uFF01"
+          - name: Candle Created!
+            local: "\u8721\u70DB\u521B\u5EFA\uFF01"
+          - name: Candle Assigned!
+            local: "\u8721\u70DB\u5206\u914D\uFF01"
+          - name: Candle Flame Created!
+            local: "\u8721\u70DB\u706B\u7130\u521B\u5EFA\uFF01"
+          - name: Candle Flame Assigned!
+            local: "\u8721\u70DB\u706B\u7130\u5206\u914D\uFF01"
+          - name: Flame Position Assigned!
+            local: "\u706B\u7130\u4F4D\u7F6E\u5DF2\u5206\u914D\uFF01"
+          - name: Candle Light Created!
+            local: "\u70DB\u5149\u521B\u9020\uFF01"
+          - name: Candle Light Assigned!
+            local: "\u70DB\u5149\u5206\u914D\uFF01"
+          - name: Flashlight Created!
+            local: "\u624B\u7535\u7B52\u5DF2\u521B\u5EFA\uFF01"
+          - name: Flashlight Light Created!
+            local: "\u624B\u7535\u7B52\u706F\u5DF2\u521B\u5EFA\uFF01"
+          - name: Flashlight Light Assigned!
+            local: "\u624B\u7535\u7B52\u706F\u5DF2\u5206\u914D\uFF01"
+          - name: Lantern Created!
+            local: "\u706F\u7B3C\u5236\u4F5C\u5B8C\u6210\uFF01"
+          - name: Flame Parent Changed to Lantern Light object (i.e required by Lantern
+              Item script)
+            local: "\u706B\u7130\u7236\u7EA7\u66F4\u6539\u4E3A\u706F\u7B3C\u706F\u5BF9\u8C61\uFF08\u5373\u706F\u7B3C\u9879\u76EE\u811A\u672C\u9700\u8981\uFF09"
+          - name: Old Flame Parent Destroyed (i.e no longer required)
+            local: "\u65E7\u7684\u706B\u7130\u7236\u6BCD\u88AB\u6467\u6BC1\uFF08\u5373\u4E0D\u518D\u9700\u8981\uFF09"
+          - name: Lantern Flame Created!
+            local: "\u706F\u7B3C\u706B\u7130\u5DF2\u521B\u5EFA\uFF01"
+          - name: Lantern Light Created!
+            local: "\u706F\u7B3C\u706F\u5DF2\u521B\u5EFA\uFF01"
+          - name: Lantern Light Assigned!
+            local: "\u706F\u7B3C\u706F\u5DF2\u5206\u914D\uFF01"
+          - name: Lantern Hinge Created!
+            local: "\u706F\u7B3C\u94F0\u94FE\u5DF2\u521B\u5EFA\uFF01"
+          - name: Lantern Hinge Connect Created!
+            local: "\u706F\u7B3C\u94F0\u94FE\u8FDE\u63A5\u5DF2\u521B\u5EFA\uFF01"
+          - name: Lantern Hinge Connect Assigned!
+            local: "\u706F\u7B3C\u94F0\u94FE\u8FDE\u63A5\u5DF2\u5206\u914D\uFF01"
+          - name: Lighter Model Created!
+            local: "\u6253\u706B\u673A\u6A21\u578B\u521B\u5EFA\uFF01"
+          - name: Lighter Flame Created!
+            local: "\u6253\u706B\u673A\u706B\u7130\u8BDE\u751F\uFF01"
+          - name: Lighter Light Created!
+            local: "\u6253\u706B\u673A\u4E4B\u5149\u8BDE\u751F\uFF01"
+          - name: Melee Weapon Created!
+            local: "\u8FD1\u6218\u6B66\u5668\u8BDE\u751F\uFF01"
+          - name: Gun Weapon Created!
+            local: "\u67AA\u652F\u6B66\u5668\u8BDE\u751F\uFF01"
+          - name: Gun Muzzle Flash Created!
+            local: "\u67AA\u53E3\u95EA\u5149\u5DF2\u521B\u5EFA\uFF01"
+          - name: Gun Muzzle Light Created!
+            local: "\u67AA\u53E3\u706F\u5DF2\u521B\u5EFA\uFF01"
+          - name: 'Weapon Created : Candle'
+            local: "\u521B\u9020\u7684\u6B66\u5668\uFF1A\u8721\u70DB"
+          - name: 'Weapon Created : Flashlight'
+            local: "\u521B\u9020\u7684\u6B66\u5668\uFF1A\u624B\u7535\u7B52"
+          - name: 'Weapon Created : Lantern'
+            local: "\u521B\u9020\u7684\u6B66\u5668\uFF1A\u706F\u7B3C"
+          - name: 'Weapon Created : Lighter'
+            local: "\u521B\u9020\u7684\u6B66\u5668\uFF1A\u6253\u706B\u673A"
+          - name: 'Weapon Created : Melee'
+            local: "\u521B\u9020\u7684\u6B66\u5668\uFF1A\u8FD1\u6218"
+          - name: 'Weapon Created : Gun'
+            local: "\u521B\u9020\u7684\u6B66\u5668\uFF1A\u67AA"
+          - name: Arms Animations Added!
+            local: "\u6DFB\u52A0\u4E86\u6B66\u5668\u52A8\u753B\uFF01"
+          - name: Arms Animation Sound Events Added!
+            local: "\u6DFB\u52A0\u4E86\u6B66\u5668\u52A8\u753B\u58F0\u97F3\u4E8B\u4EF6\uFF01"
+          - name: Arms Audio Source Added!
+            local: "\u6DFB\u52A0\u4E86\u6B66\u5668\u97F3\u9891\u6E90\uFF01"
+          - name: Arms Audio Source Assigned!
+            local: "\u6B66\u5668\u97F3\u9891\u6E90\u5DF2\u5206\u914D\uFF01"
+          - name: 'Arms Animation Event Added : Blow Out'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52A8\u753B\u4E8B\u4EF6\uFF1A\u5439\u706D"
+          - name: 'Arms Animation Event Added : Flashlight Click'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52A8\u753B\u4E8B\u4EF6\uFF1A\u624B\u7535\u7B52\u70B9\u51FB"
+          - name: 'Arms Animation Event Added : Lighter Open'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52A8\u753B\u4E8B\u4EF6\uFF1A\u6253\u706B\u673A\u6253\u5F00"
+          - name: 'Arms Animation Event Added : Lighter Close'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52A8\u753B\u4E8B\u4EF6\uFF1A\u6253\u706B\u673A\u5173\u95ED"
+          - name: 'Arms Animation Event Added : Lighter On'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52A8\u753B\u4E8B\u4EF6\uFF1A\u6253\u706B\u673A"
+          - name: 'Arms Animation Event Added : Lighter Off'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52A8\u753B\u4E8B\u4EF6\uFF1A\u6253\u706B\u673A\u5173\u95ED"
+          - name: Lantern Hinge Connect Assigned!
+            local: "\u706F\u7B3C\u94F0\u94FE\u8FDE\u63A5\u5DF2\u5206\u914D\uFF01"
+        - name: Candle
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5206\u914D\u97F3\u9891\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u52A8\u753B\u503C\u3002\n"
+          - name: Candle Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u521B\u5EFA\u3001\u5206\u914D\u6216\u8BBE\u7F6E\u8721\u70DB\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u5E93\u5B58\u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u9891\u9009\u9879"
+          - name: Animation Options
+            local: "\u52A8\u753B\u9009\u9879"
+          - name: Candle Options
+            local: "\u8721\u70DB\u9009\u9879"
+          - name: Inventory Options
+            local: "\u5E93\u5B58\u9009\u9879"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Reduction
+            local: "\u51CF\u5C11"
+          - name: Candle
+            local: "\u8721\u70DB"
+          - name: Flame
+            local: "\u706B\u7130"
+          - name: Light
+            local: "\u5149"
+          - name: Create Candle
+            local: "\u521B\u5EFA\u8721\u70DB"
+          - name: Create Flame
+            local: "\u521B\u9020\u706B\u7130"
+          - name: Create Light
+            local: "\u521B\u9020\u5149"
+          toggles: []
+          prompts:
+          - name: Candle Create
+            header: "\u521B\u9020\u8721\u70DB\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u8721\u70DB\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Candle Flame Create
+            header: "\u521B\u9020\u706B\u7130\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u706B\u7130\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Candle Light Create
+            header: "\u521B\u9020\u5149\uFF1F"
+            message: "\u60A8\u5373\u5C06\u521B\u5EFA\u4E00\u76CF\u65B0\u706F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: CANDLE ALREADY ASSIGNED!
+            local: "\u8721\u70DB\u5DF2\u5206\u914D\uFF01"
+          - name: CANDLE FLAME ALREADY ASSIGNED!
+            local: "\u8721\u70DB\u706B\u7130\u5DF2\u7ECF\u5206\u914D\uFF01"
+          - name: CANDLE LIGHT ALREADY ASSIGNED!
+            local: "\u70DB\u5149\u5DF2\u5206\u914D\uFF01"
+        - name: Flashlight
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5206\u914D\u97F3\u9891\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u52A8\u753B\u503C\u3002\n"
+          - name: Flashlight Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u521B\u5EFA\u3001\u5206\u914D\u6216\u8BBE\u7F6E\u624B\u7535\u7B52\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u5E93\u5B58\u503C\u3002\n"
+          - name: UI Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E UI \u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u9891\u9009\u9879"
+          - name: Animation Options
+            local: "\u52A8\u753B\u9009\u9879"
+          - name: Flashlight Options
+            local: "\u624B\u7535\u7B52\u9009\u9879"
+          - name: Inventory Options
+            local: "\u5E93\u5B58\u9009\u9879"
+          - name: UI Options
+            local: "\u7528\u6237\u754C\u9762\u9009\u9879"
+          - name: General
+            local: "\u4E00\u822C\u7684"
+          - name: Extra
+            local: "\u989D\u5916\u7684"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Battery
+            local: "\u7535\u6C60"
+          - name: Flashlight
+            local: "\u624B\u7535\u7B52"
+          - name: Light
+            local: "\u5149"
+          - name: Create Flashlight
+            local: "\u521B\u5EFA\u624B\u7535\u7B52"
+          - name: Create Light
+            local: "\u521B\u9020\u5149"
+          toggles: []
+          prompts:
+          - name: Flashlight Create
+            header: "\u521B\u5EFA\u624B\u7535\u7B52\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u624B\u7535\u7B52\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Flashlight Light Create
+            header: "\u521B\u9020\u5149\uFF1F"
+            message: "\u60A8\u5373\u5C06\u521B\u5EFA\u4E00\u76CF\u65B0\u706F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: FLASHLIGHT LIGHT ALREADY ASSIGNED!
+            local: "\u624B\u7535\u7B52\u706F\u5DF2\u5206\u914D\uFF01"
+        - name: Lantern
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5206\u914D\u97F3\u9891\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u52A8\u753B\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u5E93\u5B58\u503C\u3002\n"
+          - name: Lantern Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u521B\u5EFA\u3001\u5206\u914D\u6216\u8BBE\u7F6E\u706F\u7B3C\u503C\u3002\n"
+          - name: UI Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E UI \u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u9891\u9009\u9879"
+          - name: Animation Options
+            local: "\u52A8\u753B\u9009\u9879"
+          - name: Inventory Options
+            local: "\u5E93\u5B58\u9009\u9879"
+          - name: Lantern Options
+            local: "\u706F\u7B3C\u9009\u9879"
+          - name: UI Options
+            local: "\u7528\u6237\u754C\u9762\u9009\u9879"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Hinge
+            local: "\u5408\u9875"
+          - name: Hinge Connect
+            local: "\u94F0\u94FE\u8FDE\u63A5"
+          - name: Lantern
+            local: "\u706F\u7B3C"
+          - name: Flame
+            local: "\u706B\u7130"
+          - name: Light
+            local: "\u5149"
+          - name: Create Lantern
+            local: "\u5236\u4F5C\u706F\u7B3C"
+          - name: Create Flame
+            local: "\u521B\u9020\u706B\u7130"
+          - name: Create Light
+            local: "\u521B\u9020\u5149"
+          - name: Create Hinge Joint
+            local: "\u521B\u5EFA\u94F0\u94FE"
+          - name: Create Hinge Connect
+            local: "\u521B\u5EFA\u94F0\u94FE\u8FDE\u63A5"
+          toggles: []
+          prompts:
+          - name: Lantern Create
+            header: "\u521B\u9020\u706F\u7B3C\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u706F\u7B3C\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lantern Flame Create
+            header: "\u521B\u9020\u706B\u7130\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u706B\u7130\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lantern Light Create
+            header: "\u521B\u9020\u5149\uFF1F"
+            message: "\u60A8\u5373\u5C06\u521B\u5EFA\u4E00\u76CF\u65B0\u706F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lantern Hinge Create
+            header: "\u521B\u5EFA\u94F0\u94FE\u63A5\u5934\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u94F0\u94FE\u5173\u8282\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lantern Hinge Connect Create
+            header: "\u521B\u5EFA\u94F0\u94FE\u8FDE\u63A5\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u94F0\u94FE\u8FDE\u63A5\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN LIGHT FIRST!
+            local: "\u60A8\u5FC5\u987B\u5148\u521B\u5EFA\u6216\u5206\u914D\u706F\u7B3C\u706F\uFF01"
+          - name: LANTERN FLAME ALREADY ASSIGNED!
+            local: "\u706F\u7B3C\u706B\u7130\u5DF2\u7ECF\u5206\u914D\uFF01"
+          - name: LANTERN LIGHT ALREADY ASSIGNED!
+            local: "\u706F\u7B3C\u706F\u5DF2\u5206\u914D\uFF01"
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN HINGE JOINT FIRST!
+            local: "\u60A8\u5FC5\u987B\u9996\u5148\u521B\u5EFA\u6216\u5206\u914D\u706F\u7B3C\u94F0\u94FE\u5173\u8282\uFF01"
+          - name: LANTERN HINGE ALREADY ASSIGNED!
+            local: "\u706F\u7B3C\u94F0\u94FE\u5DF2\u5206\u914D\uFF01"
+          - name: LANTERN HINGE CONNECT ALREADY ASSIGNED!
+            local: "\u706F\u7B3C\u94F0\u94FE\u8FDE\u63A5\u5DF2\u5206\u914D\uFF01"
+        - name: Lighter
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5206\u914D\u97F3\u9891\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u52A8\u753B\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u5E93\u5B58\u503C\u3002\n"
+          - name: Lighter Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u521B\u5EFA\u3001\u5206\u914D\u6216\u8BBE\u7F6E\u66F4\u8F7B\u7684\u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u9891\u9009\u9879"
+          - name: Animation Options
+            local: "\u52A8\u753B\u9009\u9879"
+          - name: Inventory Options
+            local: "\u5E93\u5B58\u9009\u9879"
+          - name: Lighter Options
+            local: "\u6253\u706B\u673A\u9009\u9879"
+          - name: Arms
+            local: "\u6B66\u5668"
+          - name: Lighter
+            local: "\u6253\u706B\u673A"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Flame
+            local: "\u706B\u7130"
+          - name: Light
+            local: "\u5149"
+          - name: Create Lighter
+            local: "\u521B\u5EFA\u6253\u706B\u673A"
+          - name: Create Flame
+            local: "\u521B\u9020\u706B\u7130"
+          - name: Create Light
+            local: "\u521B\u9020\u5149"
+          toggles: []
+          prompts:
+          - name: Lighter Create
+            header: "\u521B\u9020\u6253\u706B\u673A\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u6253\u706B\u673A\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lighter Flame Create
+            header: "\u521B\u9020\u706B\u7130\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u706B\u7130\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lighter Light Create
+            header: "\u521B\u9020\u5149\uFF1F"
+            message: "\u60A8\u5373\u5C06\u521B\u5EFA\u4E00\u76CF\u65B0\u706F\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: LIGHTER FLAME ALREADY ASSIGNED!
+            local: "\u6253\u706B\u673A\u706B\u7130\u5DF2\u7ECF\u5206\u914D\uFF01"
+          - name: LIGHTER LIGHT ALREADY ASSIGNED!
+            local: "\u6253\u706B\u673A\u706F\u5DF2\u7ECF\u5206\u914D\uFF01"
+        - name: Melee
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5206\u914D\u97F3\u9891\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u52A8\u753B\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u5E93\u5B58\u503C\u3002\n"
+          - name: Melee Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u6DF7\u6218\u503C\u3002\n"
+          - name: Weapon Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u521B\u5EFA\u3001\u5206\u914D\u6216\u8BBE\u7F6E\u6B66\u5668\u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u9891\u9009\u9879"
+          - name: Animation Options
+            local: "\u52A8\u753B\u9009\u9879"
+          - name: Inventory Options
+            local: "\u5E93\u5B58\u9009\u9879"
+          - name: Melee Options
+            local: "\u8FD1\u6218\u9009\u9879"
+          - name: Weapon Options
+            local: "\u6B66\u5668\u9009\u9879"
+          - name: Hit
+            local: "\u6253"
+          - name: Kickback
+            local: "\u56DE\u6263"
+          - name: Surface
+            local: "\u8868\u9762"
+          - name: Create Weapon
+            local: "\u5236\u9020\u6B66\u5668"
+          toggles: []
+          prompts:
+          - name: Weapon Create
+            header: "\u521B\u9020\u6B66\u5668\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u6B66\u5668\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues: []
+        - name: Gun
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5206\u914D\u97F3\u9891\u503C\u3002\n"
+          - name: Aim Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u76EE\u6807\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u52A8\u753B\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u5E93\u5B58\u503C\u3002\n"
+          - name: Shoot Instructions
+            text: "\n\u4F7F\u7528\u4E0B\u9762\u7684\u9009\u9879\u6765\u521B\u5EFA\u3001\u5206\u914D\u6216\u8BBE\u7F6E\u5C04\u51FB\u503C\u3002\n"
+          - name: Shotgun Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E\u9730\u5F39\u67AA\u503C\u3002\n"
+          - name: Shell Eject Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u8BBE\u7F6E shell \u5F39\u51FA\u503C\u3002\n"
+          - name: Weapon Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u521B\u5EFA\u3001\u5206\u914D\u6216\u8BBE\u7F6E\u67AA\u652F\u6B66\u5668\u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u9891\u9009\u9879"
+          - name: Aim Options
+            local: "\u7784\u51C6\u9009\u9879"
+          - name: Animation Options
+            local: "\u52A8\u753B\u9009\u9879"
+          - name: Inventory Options
+            local: "\u5E93\u5B58\u9009\u9879"
+          - name: Shoot Options
+            local: "\u62CD\u6444\u9009\u9879"
+          - name: Shotgun Options
+            local: "\u9730\u5F39\u67AA\u9009\u9879"
+          - name: Shell Eject Options
+            local: "\u5F39\u58F3\u5F39\u51FA\u9009\u9879"
+          - name: Weapon Options
+            local: "\u6B66\u5668\u9009\u9879"
+          - name: Bullet
+            local: "\u5B50\u5F39"
+          - name: Kickback
+            local: "\u56DE\u6263"
+          - name: Muzzle Flash
+            local: "\u67AA\u53E3\u95EA\u5149"
+          - name: Shoot
+            local: "\u5C04\u51FB"
+          - name: Reaction
+            local: "\u53CD\u5E94"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Magazine
+            local: "\u6742\u5FD7"
+          - name: Surface
+            local: "\u8868\u9762"
+          - name: Catch Kickback
+            local: "\u6293\u4F4F\u56DE\u6263"
+          - name: Flash
+            local: "\u95EA\u5149"
+          - name: Light
+            local: "\u5149"
+          - name: Create Muzzle Flash
+            local: "\u521B\u5EFA\u67AA\u53E3\u95EA\u5149"
+          - name: Create Muzzle Light
+            local: "\u521B\u5EFA\u67AA\u53E3\u5149"
+          - name: Type
+            local: "\u7C7B\u578B"
+          - name: Create Weapon
+            local: "\u5236\u9020\u6B66\u5668"
+          toggles: []
+          prompts:
+          - name: Weapon Muzzle Flash Create
+            header: "\u5236\u9020\u67AA\u53E3\u95EA\u5149\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u67AA\u53E3\u706B\u7130\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Weapon Muzzle Flash Light Create
+            header: "\u5236\u9020\u67AA\u53E3\u95EA\u5149\u706F\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u706F\u5149\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Weapon Create
+            header: "\u521B\u9020\u6B66\u5668\uFF1F"
+            message: "\u60A8\u5C06\u8981\u521B\u5EFA\u4E00\u4E2A\u65B0\u7684\u6B66\u5668\u6A21\u578B\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: MUZZLE FLASH ALREADY ASSIGNED!
+            local: "\u67AA\u53E3\u95EA\u5149\u706F\u5DF2\u6307\u5B9A\uFF01"
+          - name: MUZZLE LIGHT ALREADY ASSIGNED!
+            local: "\u67AA\u53E3\u706F\u5DF2\u6307\u5B9A\uFF01"
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\n\u60A8\u7684\u9805\u76EE\u4E2D\u7F3A\u5C11 Weapon Creator \u7248\u672C\u6587\u4EF6\uFF0CWeapon
+              Creator \u6C92\u6709\u5B83\u5C31\u7121\u6CD5\u904B\u884C\uFF01\r\n\r\n\u60A8\u53EF\u4EE5\u5F9E\u8CC7\u7522\u5546\u5E97/\u5305\u7BA1\u7406\u5668\u4E0A\u7684\u8CC7\u7522\u5305\u91CD\u65B0\u5C0E\u5165
+              Weapon Creator Version \u6587\u4EF6\u3002\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u9019\u500B\u64F4\u5C55\u5141\u8A31\u4F60\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u73A9\u5BB6\u6B66\u5668\uFF0C\r\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u958B\u59CB\u8A72\u904E\u7A0B\u3002\n"
+          - name: Language
+            text: "\u5DF2\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Components
+            text: "\u7D44\u4EF6\u672A\u6FC0\u6D3B\uFF01"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Catch Item Switcher
+            local: "\u6355\u7372\u9805\u76EE\u5207\u63DB\u5668"
+          - name: Save Template
+            local: "\u4FDD\u5B58\u6A21\u677F"
+          - name: Load Template
+            local: "\u52A0\u8F09\u6A21\u677F"
+          - name: Create Arms
+            local: "\u5275\u5EFA\u6B66\u5668"
+          - name: Create Weapon
+            local: "\u88FD\u9020\u6B66\u5668"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "\u4FDD\u5B58\u6A21\u677F\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5C07\u7DE8\u8F2F\u5668\u503C\u4FDD\u5B58\u5230\u5206\u914D\u7684\u6A21\u677F\u3002\r\n\u9019\u5C07\u8986\u84CB\u4EFB\u4F55\u73FE\u6709\u503C\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Template Load
+            header: "\u52A0\u8F09\u6A21\u677F\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5411\u7DE8\u8F2F\u5668\u52A0\u8F09\u6A21\u677F\u6578\u64DA\u3002\r\n\u9019\u5C07\u8986\u84CB\u4EFB\u4F55\u73FE\u6709\u503C\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Arms Create
+            header: "\u5275\u9020\u6B66\u5668\uFF1F"
+            message: "\u60A8\u5373\u5C07\u70BA\u60A8\u7684\u73A9\u5BB6\u89D2\u8272\u6DFB\u52A0\u65B0\u7684\u6B66\u5668\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Weapon Create
+            header: "\u5275\u9020\u6B66\u5668\uFF1F"
+            message: "\u60A8\u5C07\u4F7F\u7528\u7DE8\u8F2F\u5668\u4E2D\u8A2D\u7F6E\u200B\u200B\u7684\u503C\u5275\u5EFA\u65B0\u6B66\u5668\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: WEAPON NAME NOT ASSIGNED!
+            local: "\u672A\u6307\u5B9A\u6B66\u5668\u540D\u7A31\uFF01"
+          - name: 'WEAPON NAME : '
+            local: "\u6B66\u5668\u540D\u7A31\uFF1A"
+          - name: ARMS NOT ASSIGNED!
+            local: "\u6B66\u5668\u672A\u5206\u914D\uFF01"
+          - name: 'ARMS ASSIGNED : '
+            local: "\u6307\u5B9A\u6B66\u5668\uFF1A"
+          - name: ITEM SWITCHER NOT ASSIGNED!
+            local: "\u9805\u76EE\u5207\u63DB\u5668\u672A\u5206\u914D\uFF01"
+          - name: ITEM SWITCHER ASSIGNED
+            local: "\u5DF2\u5206\u914D\u9805\u76EE\u5207\u63DB\u5668"
+          - name: ' Saved'
+            local: " \u5DF2\u4FDD\u5B58"
+          - name: ' Loaded'
+            local: " \u5DF2\u52A0\u8F09"
+          - name: ' Created!'
+            local: " \u5DF2\u5275\u5EFA\uFF01"
+          - name: Item Switcher Found!
+            local: "\u627E\u5230\u7269\u54C1\u5207\u63DB\u5668\uFF01"
+          - name: Kickback Found!
+            local: "\u767C\u73FE\u56DE\u6263\uFF01"
+          - name: Arms Created!
+            local: "\u6B66\u5668\u5275\u9020\uFF01"
+          - name: Candle Created!
+            local: "\u881F\u71ED\u5275\u5EFA\uFF01"
+          - name: Candle Assigned!
+            local: "\u881F\u71ED\u5206\u914D\uFF01"
+          - name: Candle Flame Created!
+            local: "\u881F\u71ED\u706B\u7130\u5275\u5EFA\uFF01"
+          - name: Candle Flame Assigned!
+            local: "\u881F\u71ED\u706B\u7130\u5206\u914D\uFF01"
+          - name: Flame Position Assigned!
+            local: "\u706B\u7130\u4F4D\u7F6E\u5DF2\u5206\u914D\uFF01"
+          - name: Candle Light Created!
+            local: "\u71ED\u5149\u5275\u9020\uFF01"
+          - name: Candle Light Assigned!
+            local: "\u71ED\u5149\u5206\u914D\uFF01"
+          - name: Flashlight Created!
+            local: "\u624B\u96FB\u7B52\u5DF2\u5275\u5EFA\uFF01"
+          - name: Flashlight Light Created!
+            local: "\u624B\u96FB\u7B52\u71C8\u5DF2\u5275\u5EFA\uFF01"
+          - name: Flashlight Light Assigned!
+            local: "\u624B\u96FB\u7B52\u71C8\u5DF2\u5206\u914D\uFF01"
+          - name: Lantern Created!
+            local: "\u71C8\u7C60\u88FD\u4F5C\u5B8C\u6210\uFF01"
+          - name: Flame Parent Changed to Lantern Light object (i.e required by Lantern
+              Item script)
+            local: "\u706B\u7130\u7236\u7D1A\u66F4\u6539\u70BA\u71C8\u7C60\u71C8\u5C0D\u8C61\uFF08\u5373\u71C8\u7C60\u9805\u76EE\u8173\u672C\u9700\u8981\uFF09"
+          - name: Old Flame Parent Destroyed (i.e no longer required)
+            local: "\u820A\u7684\u706B\u7130\u7236\u6BCD\u88AB\u6467\u6BC0\uFF08\u5373\u4E0D\u518D\u9700\u8981\uFF09"
+          - name: Lantern Flame Created!
+            local: "\u71C8\u7C60\u706B\u7130\u5DF2\u5275\u5EFA\uFF01"
+          - name: Lantern Light Created!
+            local: "\u71C8\u7C60\u71C8\u5DF2\u5275\u5EFA\uFF01"
+          - name: Lantern Light Assigned!
+            local: "\u71C8\u7C60\u71C8\u5DF2\u5206\u914D\uFF01"
+          - name: Lantern Hinge Created!
+            local: "\u71C8\u7C60\u9278\u93C8\u5DF2\u5275\u5EFA\uFF01"
+          - name: Lantern Hinge Connect Created!
+            local: "\u71C8\u7C60\u9278\u93C8\u9023\u63A5\u5DF2\u5275\u5EFA\uFF01"
+          - name: Lantern Hinge Connect Assigned!
+            local: "\u71C8\u7C60\u9278\u93C8\u9023\u63A5\u5DF2\u5206\u914D\uFF01"
+          - name: Lighter Model Created!
+            local: "\u6253\u706B\u6A5F\u6A21\u578B\u5275\u5EFA\uFF01"
+          - name: Lighter Flame Created!
+            local: "\u6253\u706B\u6A5F\u706B\u7130\u8A95\u751F\uFF01"
+          - name: Lighter Light Created!
+            local: "\u6253\u706B\u6A5F\u4E4B\u5149\u8A95\u751F\uFF01"
+          - name: Melee Weapon Created!
+            local: "\u8FD1\u6230\u6B66\u5668\u8A95\u751F\uFF01"
+          - name: Gun Weapon Created!
+            local: "\u69CD\u652F\u6B66\u5668\u8A95\u751F\uFF01"
+          - name: Gun Muzzle Flash Created!
+            local: "\u69CD\u53E3\u9583\u5149\u5DF2\u5275\u5EFA\uFF01"
+          - name: Gun Muzzle Light Created!
+            local: "\u69CD\u53E3\u71C8\u5DF2\u5275\u5EFA\uFF01"
+          - name: 'Weapon Created : Candle'
+            local: "\u5275\u9020\u7684\u6B66\u5668\uFF1A\u881F\u71ED"
+          - name: 'Weapon Created : Flashlight'
+            local: "\u5275\u9020\u7684\u6B66\u5668\uFF1A\u624B\u96FB\u7B52"
+          - name: 'Weapon Created : Lantern'
+            local: "\u5275\u9020\u7684\u6B66\u5668\uFF1A\u71C8\u7C60"
+          - name: 'Weapon Created : Lighter'
+            local: "\u5275\u9020\u7684\u6B66\u5668\uFF1A\u6253\u706B\u6A5F"
+          - name: 'Weapon Created : Melee'
+            local: "\u5275\u9020\u7684\u6B66\u5668\uFF1A\u8FD1\u6230"
+          - name: 'Weapon Created : Gun'
+            local: "\u5275\u9020\u7684\u6B66\u5668\uFF1A\u69CD"
+          - name: Arms Animations Added!
+            local: "\u6DFB\u52A0\u4E86\u6B66\u5668\u52D5\u756B\uFF01"
+          - name: Arms Animation Sound Events Added!
+            local: "\u6DFB\u52A0\u4E86\u6B66\u5668\u52D5\u756B\u8072\u97F3\u4E8B\u4EF6\uFF01"
+          - name: Arms Audio Source Added!
+            local: "\u6DFB\u52A0\u4E86\u6B66\u5668\u97F3\u983B\u6E90\uFF01"
+          - name: Arms Audio Source Assigned!
+            local: "\u6B66\u5668\u97F3\u983B\u6E90\u5DF2\u5206\u914D\uFF01"
+          - name: 'Arms Animation Event Added : Blow Out'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52D5\u756B\u4E8B\u4EF6\uFF1A\u5439\u6EC5"
+          - name: 'Arms Animation Event Added : Flashlight Click'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52D5\u756B\u4E8B\u4EF6\uFF1A\u624B\u96FB\u7B52\u9EDE\u64CA"
+          - name: 'Arms Animation Event Added : Lighter Open'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52D5\u756B\u4E8B\u4EF6\uFF1A\u6253\u706B\u6A5F\u6253\u958B"
+          - name: 'Arms Animation Event Added : Lighter Close'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52D5\u756B\u4E8B\u4EF6\uFF1A\u6253\u706B\u6A5F\u95DC\u9589"
+          - name: 'Arms Animation Event Added : Lighter On'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52D5\u756B\u4E8B\u4EF6\uFF1A\u6253\u706B\u6A5F"
+          - name: 'Arms Animation Event Added : Lighter Off'
+            local: "\u6DFB\u52A0\u6B66\u5668\u52D5\u756B\u4E8B\u4EF6\uFF1A\u6253\u706B\u6A5F\u95DC\u9589"
+          - name: Lantern Hinge Connect Assigned!
+            local: "\u71C8\u7C60\u9278\u93C8\u9023\u63A5\u5DF2\u5206\u914D\uFF01"
+        - name: Candle
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5206\u914D\u97F3\u983B\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u52D5\u756B\u503C\u3002\n"
+          - name: Candle Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5275\u5EFA\u3001\u5206\u914D\u6216\u8A2D\u7F6E\u881F\u71ED\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u5EAB\u5B58\u503C\u3002"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u983B\u9078\u9805"
+          - name: Animation Options
+            local: "\u52D5\u756B\u9078\u9805"
+          - name: Candle Options
+            local: "\u881F\u71ED\u9078\u9805"
+          - name: Inventory Options
+            local: "\u5EAB\u5B58\u9078\u9805"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Reduction
+            local: "\u6E1B\u5C11"
+          - name: Candle
+            local: "\u881F\u71ED"
+          - name: Flame
+            local: "\u706B\u7130"
+          - name: Light
+            local: "\u5149"
+          - name: Create Candle
+            local: "\u5275\u5EFA\u881F\u71ED"
+          - name: Create Flame
+            local: "\u5275\u9020\u706B\u7130"
+          - name: Create Light
+            local: "\u5275\u9020\u5149"
+          toggles: []
+          prompts:
+          - name: Candle Create
+            header: "\u5275\u9020\u881F\u71ED\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u881F\u71ED\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Candle Flame Create
+            header: "\u5275\u9020\u706B\u7130\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u706B\u7130\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Candle Light Create
+            header: "\u5275\u9020\u5149\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5275\u5EFA\u4E00\u76DE\u65B0\u71C8\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: CANDLE ALREADY ASSIGNED!
+            local: "\u881F\u71ED\u5DF2\u5206\u914D\uFF01"
+          - name: CANDLE FLAME ALREADY ASSIGNED!
+            local: "\u881F\u71ED\u706B\u7130\u5DF2\u7D93\u5206\u914D\uFF01"
+          - name: CANDLE LIGHT ALREADY ASSIGNED!
+            local: "\u71ED\u5149\u5DF2\u5206\u914D\uFF01"
+        - name: Flashlight
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5206\u914D\u97F3\u983B\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u52D5\u756B\u503C\u3002\n"
+          - name: Flashlight Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5275\u5EFA\u3001\u5206\u914D\u6216\u8A2D\u7F6E\u624B\u96FB\u7B52\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u5EAB\u5B58\u503C\u3002"
+          - name: UI Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E UI \u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u983B\u9078\u9805"
+          - name: Animation Options
+            local: "\u52D5\u756B\u9078\u9805"
+          - name: Flashlight Options
+            local: "\u624B\u96FB\u7B52\u9078\u9805"
+          - name: Inventory Options
+            local: "\u5EAB\u5B58\u9078\u9805"
+          - name: UI Options
+            local: "\u7528\u6236\u754C\u9762\u9078\u9805"
+          - name: General
+            local: "\u4E00\u822C\u7684"
+          - name: Extra
+            local: "\u984D\u5916\u7684"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Battery
+            local: "\u96FB\u6C60"
+          - name: Flashlight
+            local: "\u624B\u96FB\u7B52"
+          - name: Light
+            local: "\u5149"
+          - name: Create Flashlight
+            local: "\u5275\u5EFA\u624B\u96FB\u7B52"
+          - name: Create Light
+            local: "\u5275\u9020\u5149"
+          toggles: []
+          prompts:
+          - name: Flashlight Create
+            header: "\u5275\u5EFA\u624B\u96FB\u7B52\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u624B\u96FB\u7B52\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Flashlight Light Create
+            header: "\u5275\u9020\u5149\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5275\u5EFA\u4E00\u76DE\u65B0\u71C8\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: FLASHLIGHT LIGHT ALREADY ASSIGNED!
+            local: "\u624B\u96FB\u7B52\u71C8\u5DF2\u5206\u914D\uFF01"
+        - name: Lantern
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5206\u914D\u97F3\u983B\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u52D5\u756B\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u5EAB\u5B58\u503C\u3002"
+          - name: Lantern Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5275\u5EFA\u3001\u5206\u914D\u6216\u8A2D\u7F6E\u71C8\u7C60\u503C\u3002\n"
+          - name: UI Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E UI \u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u983B\u9078\u9805"
+          - name: Animation Options
+            local: "\u52D5\u756B\u9078\u9805"
+          - name: Inventory Options
+            local: "\u5EAB\u5B58\u9078\u9805"
+          - name: Lantern Options
+            local: "\u71C8\u7C60\u9078\u9805"
+          - name: UI Options
+            local: "\u7528\u6236\u754C\u9762\u9078\u9805"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Hinge
+            local: "\u5408\u9801"
+          - name: Hinge Connect
+            local: "\u9278\u93C8\u9023\u63A5"
+          - name: Lantern
+            local: "\u71C8\u7C60"
+          - name: Flame
+            local: "\u706B\u7130"
+          - name: Light
+            local: "\u5149"
+          - name: Create Lantern
+            local: "\u88FD\u4F5C\u71C8\u7C60"
+          - name: Create Flame
+            local: "\u5275\u9020\u706B\u7130"
+          - name: Create Light
+            local: "\u5275\u9020\u5149"
+          - name: Create Hinge Joint
+            local: "\u5275\u5EFA\u9278\u93C8"
+          - name: Create Hinge Connect
+            local: "\u5275\u5EFA\u9278\u93C8\u9023\u63A5"
+          toggles: []
+          prompts:
+          - name: Lantern Create
+            header: "\u5275\u9020\u71C8\u7C60\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u71C8\u7C60\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lantern Flame Create
+            header: "\u5275\u9020\u706B\u7130\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u706B\u7130\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lantern Light Create
+            header: "\u5275\u9020\u5149\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5275\u5EFA\u4E00\u76DE\u65B0\u71C8\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lantern Hinge Create
+            header: "\u5275\u5EFA\u9278\u93C8\u63A5\u982D\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u9278\u93C8\u95DC\u7BC0\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lantern Hinge Connect Create
+            header: "\u5275\u5EFA\u9278\u93C8\u9023\u63A5\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u9278\u93C8\u9023\u63A5\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN LIGHT FIRST!
+            local: "\u60A8\u5FC5\u9808\u5148\u5275\u5EFA\u6216\u5206\u914D\u71C8\u7C60\u71C8\uFF01"
+          - name: LANTERN FLAME ALREADY ASSIGNED!
+            local: "\u71C8\u7C60\u706B\u7130\u5DF2\u7D93\u5206\u914D\uFF01"
+          - name: LANTERN LIGHT ALREADY ASSIGNED!
+            local: "\u71C8\u7C60\u71C8\u5DF2\u5206\u914D\uFF01"
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN HINGE JOINT FIRST!
+            local: "\u60A8\u5FC5\u9808\u9996\u5148\u5275\u5EFA\u6216\u5206\u914D\u71C8\u7C60\u9278\u93C8\u95DC\u7BC0\uFF01"
+          - name: LANTERN HINGE ALREADY ASSIGNED!
+            local: "\u71C8\u7C60\u9278\u93C8\u5DF2\u5206\u914D\uFF01"
+          - name: LANTERN HINGE CONNECT ALREADY ASSIGNED!
+            local: "\u71C8\u7C60\u9278\u93C8\u9023\u63A5\u5DF2\u5206\u914D\uFF01"
+        - name: Lighter
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5206\u914D\u97F3\u983B\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u52D5\u756B\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u5EAB\u5B58\u503C\u3002"
+          - name: Lighter Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5275\u5EFA\u3001\u5206\u914D\u6216\u8A2D\u7F6E\u66F4\u8F15\u7684\u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u983B\u9078\u9805"
+          - name: Animation Options
+            local: "\u52D5\u756B\u9078\u9805"
+          - name: Inventory Options
+            local: "\u5EAB\u5B58\u9078\u9805"
+          - name: Lighter Options
+            local: "\u6253\u706B\u6A5F\u9078\u9805"
+          - name: Arms
+            local: "\u6253\u706B\u6A5F\u9078\u9805"
+          - name: Lighter
+            local: "\u6253\u706B\u6A5F"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Flame
+            local: "\u706B\u7130"
+          - name: Light
+            local: "\u5149"
+          - name: Create Lighter
+            local: "\u5275\u5EFA\u6253\u706B\u6A5F"
+          - name: Create Flame
+            local: "\u5275\u9020\u706B\u7130"
+          - name: Create Light
+            local: "\u5275\u9020\u5149"
+          toggles: []
+          prompts:
+          - name: Lighter Create
+            header: "\u5275\u9020\u6253\u706B\u6A5F\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u6253\u706B\u6A5F\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lighter Flame Create
+            header: "\u5275\u9020\u706B\u7130\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u706B\u7130\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Lighter Light Create
+            header: "\u5275\u9020\u5149\uFF1F"
+            message: "\u60A8\u5373\u5C07\u5275\u5EFA\u4E00\u76DE\u65B0\u71C8\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: LIGHTER FLAME ALREADY ASSIGNED!
+            local: "\u6253\u706B\u6A5F\u706B\u7130\u5DF2\u7D93\u5206\u914D\uFF01"
+          - name: LIGHTER LIGHT ALREADY ASSIGNED!
+            local: "\u6253\u706B\u6A5F\u71C8\u5DF2\u7D93\u5206\u914D\uFF01"
+        - name: Melee
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5206\u914D\u97F3\u983B\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u52D5\u756B\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u5EAB\u5B58\u503C\u3002"
+          - name: Melee Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u6DF7\u6230\u503C\u3002\n"
+          - name: Weapon Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5275\u5EFA\u3001\u5206\u914D\u6216\u8A2D\u7F6E\u6B66\u5668\u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u983B\u9078\u9805"
+          - name: Animation Options
+            local: "\u52D5\u756B\u9078\u9805"
+          - name: Inventory Options
+            local: "\u5EAB\u5B58\u9078\u9805"
+          - name: Melee Options
+            local: "\u8FD1\u6230\u9078\u9805"
+          - name: Weapon Options
+            local: "\u6B66\u5668\u9078\u9805"
+          - name: Hit
+            local: "\u6253"
+          - name: Kickback
+            local: "\u56DE\u6263"
+          - name: Surface
+            local: "\u8868\u9762"
+          - name: Create Weapon
+            local: "\u88FD\u9020\u6B66\u5668"
+          toggles: []
+          prompts:
+          - name: Weapon Create
+            header: "\u5275\u9020\u6B66\u5668\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u6B66\u5668\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues: []
+        - name: Gun
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5206\u914D\u97F3\u983B\u503C\u3002\n"
+          - name: Aim Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u76EE\u6A19\u503C\u3002\n"
+          - name: Animation Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u52D5\u756B\u503C\u3002\n"
+          - name: Inventory Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u5EAB\u5B58\u503C\u3002"
+          - name: Shoot Instructions
+            text: "\n\u4F7F\u7528\u4E0B\u9762\u7684\u9078\u9805\u4F86\u5275\u5EFA\u3001\u5206\u914D\u6216\u8A2D\u7F6E\u5C04\u64CA\u503C\u3002\n"
+          - name: Shotgun Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E\u9730\u5F48\u69CD\u503C\u3002\n"
+          - name: Shell Eject Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u8A2D\u7F6E shell \u5F48\u51FA\u503C\u3002\n"
+          - name: Weapon Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5275\u5EFA\u3001\u5206\u914D\u6216\u8A2D\u7F6E\u69CD\u652F\u6B66\u5668\u503C\u3002\n"
+          buttons:
+          - name: Audio Options
+            local: "\u97F3\u983B\u9078\u9805"
+          - name: Aim Options
+            local: "\u7784\u6E96\u9078\u9805"
+          - name: Animation Options
+            local: "\u52D5\u756B\u9078\u9805"
+          - name: Inventory Options
+            local: "\u5EAB\u5B58\u9078\u9805"
+          - name: Shoot Options
+            local: "\u62CD\u651D\u9078\u9805"
+          - name: Shotgun Options
+            local: "\u9730\u5F48\u69CD\u9078\u9805"
+          - name: Shell Eject Options
+            local: "\u5F48\u6BBC\u5F48\u51FA\u9078\u9805"
+          - name: Weapon Options
+            local: "\u6B66\u5668\u9078\u9805"
+          - name: Bullet
+            local: "\u5B50\u5F48"
+          - name: Kickback
+            local: "\u56DE\u6263"
+          - name: Muzzle Flash
+            local: "\u69CD\u53E3\u9583\u5149"
+          - name: Shoot
+            local: "\u5C04\u64CA"
+          - name: Reaction
+            local: "\u53CD\u61C9"
+          - name: Model
+            local: "\u6A21\u578B"
+          - name: Magazine
+            local: "\u96DC\u8A8C"
+          - name: Surface
+            local: "\u8868\u9762"
+          - name: Catch Kickback
+            local: "\u6293\u4F4F\u56DE\u6263"
+          - name: Flash
+            local: "\u9583\u5149"
+          - name: Light
+            local: "\u5149"
+          - name: Create Muzzle Flash
+            local: "\u5275\u5EFA\u69CD\u53E3\u9583\u5149"
+          - name: Create Muzzle Light
+            local: "\u5275\u5EFA\u69CD\u53E3\u5149"
+          - name: Type
+            local: "\u985E\u578B"
+          - name: Create Weapon
+            local: "\u88FD\u9020\u6B66\u5668"
+          toggles: []
+          prompts:
+          - name: Weapon Muzzle Flash Create
+            header: "\u88FD\u9020\u69CD\u53E3\u9583\u5149\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u69CD\u53E3\u706B\u7130\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Weapon Muzzle Flash Light Create
+            header: "\u88FD\u9020\u69CD\u53E3\u9583\u5149\u71C8\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u71C8\u5149\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Weapon Create
+            header: "\u5275\u9020\u6B66\u5668\uFF1F"
+            message: "\u60A8\u5C07\u8981\u5275\u5EFA\u4E00\u500B\u65B0\u7684\u6B66\u5668\u6A21\u578B\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: MUZZLE FLASH ALREADY ASSIGNED!
+            local: "\u69CD\u53E3\u9583\u5149\u71C8\u5DF2\u6307\u5B9A\uFF01"
+          - name: MUZZLE LIGHT ALREADY ASSIGNED!
+            local: "\u69CD\u53E3\u71C8\u5DF2\u6307\u5B9A\uFF01"
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\nLe fichier Weapon Creator Version est absent de votre projet,
+              Weapon Creator ne peut pas fonctionner sans lui !\r\n\r\nVous pouvez
+              r\xE9importer le fichier Weapon Creator Version \xE0 partir du pack
+              de ressources sur le magasin de ressources/gestionnaire de packages.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nCette extension vous permet de cr\xE9er une nouvelle arme de
+              joueur,\r\nutilisez les options ci-dessous pour d\xE9marrer le processus.\n"
+          - name: Language
+            text: "Langue enregistr\xE9e"
+          - name: Components
+            text: "COMPOSANTS N'EST PAS ACTIF\_!"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Catch Item Switcher
+            local: Catch Item Switcher
+          - name: Save Template
+            local: "Enregistrer le mod\xE8le"
+          - name: Load Template
+            local: "Charger le mod\xE8le"
+          - name: Create Arms
+            local: "Cr\xE9er des bras"
+          - name: Create Weapon
+            local: "Cr\xE9er une arme"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "Enregistrer le mod\xE8le\_?"
+            message: "Vous \xEAtes sur le point d'enregistrer les valeurs de l'\xE9diteur
+              dans le mod\xE8le attribu\xE9.\r\nCela \xE9crasera toutes les valeurs
+              existantes.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Template Load
+            header: "Charger le mod\xE8le\_?"
+            message: "Vous \xEAtes sur le point de charger les donn\xE9es du mod\xE8le
+              dans l'\xE9diteur.\r\nCela \xE9crasera toutes les valeurs existantes.\r\n\r\nEs-tu
+              s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Arms Create
+            header: "Cr\xE9er des armes\_?"
+            message: "Vous \xEAtes sur le point d'ajouter de nouveaux mod\xE8les
+              d'armes \xE0 votre personnage joueur.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Weapon Create
+            header: Create Weapon?
+            message: "Vous \xEAtes sur le point de cr\xE9er une nouvelle arme en
+              utilisant les valeurs d\xE9finies dans l'\xE9diteur.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues:
+          - name: WEAPON NAME NOT ASSIGNED!
+            local: "NOM D'ARME NON ATTRIBU\xC9\_!"
+          - name: 'WEAPON NAME : '
+            local: "NOM D'ARME\_:"
+          - name: ARMS NOT ASSIGNED!
+            local: "ARMES NON ATTRIBU\xC9ES\_!"
+          - name: 'ARMS ASSIGNED : '
+            local: "ARMES ATTRIBU\xC9ES :"
+          - name: ITEM SWITCHER NOT ASSIGNED!
+            local: "COMMUTATEUR D'ARTICLE NON ATTRIBU\xC9\_!"
+          - name: ITEM SWITCHER ASSIGNED
+            local: "COMMUTATEUR D'ARTICLE ASSIGN\xC9"
+          - name: ' Saved'
+            local: " Enregistr\xE9"
+          - name: ' Loaded'
+            local: " Charg\xE9"
+          - name: ' Created!'
+            local: " Cr\xE9\xE9!"
+          - name: Item Switcher Found!
+            local: "Commutateur d'objets trouv\xE9\_!"
+          - name: Kickback Found!
+            local: "Coup de pied trouv\xE9\_!"
+          - name: Arms Created!
+            local: "Armes cr\xE9\xE9es\_!"
+          - name: Candle Created!
+            local: "Bougie cr\xE9\xE9e\_!"
+          - name: Candle Assigned!
+            local: "Bougie Attribu\xE9e\_!"
+          - name: Candle Flame Created!
+            local: "Flamme de bougie cr\xE9\xE9e\_!"
+          - name: Candle Flame Assigned!
+            local: "Flamme de bougie assign\xE9e\_!"
+          - name: Flame Position Assigned!
+            local: "Position de flamme assign\xE9e\_!"
+          - name: Candle Light Created!
+            local: "Bougie cr\xE9\xE9e\_!"
+          - name: Candle Light Assigned!
+            local: "Candle Light Attribu\xE9\_!"
+          - name: Flashlight Created!
+            local: "Lampe de poche cr\xE9\xE9e\_!"
+          - name: Flashlight Light Created!
+            local: "Lampe de poche cr\xE9\xE9e\_!"
+          - name: Flashlight Light Assigned!
+            local: "Lampe de poche lumi\xE8re assign\xE9e\_!"
+          - name: Lantern Created!
+            local: "Lanterne cr\xE9\xE9e\_!"
+          - name: Flame Parent Changed to Lantern Light object (i.e required by Lantern
+              Item script)
+            local: "Flame Parent chang\xE9 en objet Lantern Light (c'est-\xE0-dire
+              requis par le script Lantern Item)"
+          - name: Old Flame Parent Destroyed (i.e no longer required)
+            local: "Old Flame Parent d\xE9truit (c'est-\xE0-dire qu'il n'est plus
+              n\xE9cessaire)"
+          - name: Lantern Flame Created!
+            local: "Flamme de lanterne cr\xE9\xE9e\_!"
+          - name: Lantern Light Created!
+            local: "Lumi\xE8re de lanterne cr\xE9\xE9e\_!"
+          - name: Lantern Light Assigned!
+            local: "Lumi\xE8re de lanterne assign\xE9e\_!"
+          - name: Lantern Hinge Created!
+            local: "Charni\xE8re de lanterne cr\xE9\xE9e\_!"
+          - name: Lantern Hinge Connect Created!
+            local: "Charni\xE8re de lanterne Connect cr\xE9\xE9e\_!"
+          - name: Lantern Hinge Connect Assigned!
+            local: "Lantern Hinge Connect Attribu\xE9\_!"
+          - name: Lighter Model Created!
+            local: "Mod\xE8le de briquet cr\xE9\xE9\_!"
+          - name: Lighter Flame Created!
+            local: "Briquet Flamme cr\xE9\xE9\_!"
+          - name: Lighter Light Created!
+            local: "Briquet Lumi\xE8re cr\xE9\xE9e\_!"
+          - name: Melee Weapon Created!
+            local: "Arme de m\xEAl\xE9e cr\xE9\xE9e\_!"
+          - name: Gun Weapon Created!
+            local: "Arme \xE0 feu cr\xE9\xE9e\_!"
+          - name: Gun Muzzle Flash Created!
+            local: "Gun Muzzle Flash cr\xE9\xE9\_!"
+          - name: Gun Muzzle Light Created!
+            local: "Lumi\xE8re de bouche de pistolet cr\xE9\xE9e\_!"
+          - name: 'Weapon Created : Candle'
+            local: "Arme cr\xE9\xE9e : Bougie"
+          - name: 'Weapon Created : Flashlight'
+            local: "Arme cr\xE9\xE9e : lampe de poche"
+          - name: 'Weapon Created : Lantern'
+            local: "Arme cr\xE9\xE9e : Lanterne"
+          - name: 'Weapon Created : Lighter'
+            local: "Arme cr\xE9\xE9e : Briquet"
+          - name: 'Weapon Created : Melee'
+            local: "Arme cr\xE9\xE9e : M\xEAl\xE9e"
+          - name: 'Weapon Created : Gun'
+            local: "Arme cr\xE9\xE9e : Pistolet"
+          - name: Arms Animations Added!
+            local: "Animations d'armes ajout\xE9es\_!"
+          - name: Arms Animation Sound Events Added!
+            local: "\xC9v\xE9nements sonores d'animation d'armes ajout\xE9s\_!"
+          - name: Arms Audio Source Added!
+            local: "Ajout de la source audio Arms\_!"
+          - name: Arms Audio Source Assigned!
+            local: "Arme la source audio assign\xE9e\_!"
+          - name: 'Arms Animation Event Added : Blow Out'
+            local: "\xC9v\xE9nement d'animation d'armes ajout\xE9 : Blow Out"
+          - name: 'Arms Animation Event Added : Flashlight Click'
+            local: "\xC9v\xE9nement d'animation d'armes ajout\xE9\_: clic de lampe
+              de poche"
+          - name: 'Arms Animation Event Added : Lighter Open'
+            local: "\xC9v\xE9nement d'animation des armes ajout\xE9\_: ouverture
+              du briquet"
+          - name: 'Arms Animation Event Added : Lighter Close'
+            local: "\xC9v\xE9nement d'animation d'armes ajout\xE9 : Briquet Fermer"
+          - name: 'Arms Animation Event Added : Lighter On'
+            local: "\xC9v\xE9nement d'animation d'armes ajout\xE9\_: briquet activ\xE9"
+          - name: 'Arms Animation Event Added : Lighter Off'
+            local: "\xC9v\xE9nement d'animation d'armes ajout\xE9\_: briquet \xE9teint"
+          - name: Lantern Hinge Connect Assigned!
+            local: "Lantern Hinge Connect Attribu\xE9\_!"
+        - name: Candle
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilisez les options ci-dessous pour attribuer
+              des valeurs audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'animation.\n"
+          - name: Candle Instructions
+            text: "\nUtilisez les options ci-dessous pour cr\xE9er, attribuer ou
+              d\xE9finir des valeurs de bougie.\n"
+          - name: Inventory Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'inventaire.\n"
+          buttons:
+          - name: Audio Options
+            local: Options audio
+          - name: Animation Options
+            local: Options d'animation
+          - name: Candle Options
+            local: Options de bougies
+          - name: Inventory Options
+            local: Options d'inventaire
+          - name: Model
+            local: "Mod\xE8le"
+          - name: Reduction
+            local: "R\xE9duction"
+          - name: Candle
+            local: Bougie
+          - name: Flame
+            local: Flamme
+          - name: Light
+            local: "Lumi\xE8re"
+          - name: Create Candle
+            local: "Cr\xE9er une bougie"
+          - name: Create Flame
+            local: "Cr\xE9er une flamme"
+          - name: Create Light
+            local: "Cr\xE9er de la lumi\xE8re"
+          toggles: []
+          prompts:
+          - name: Candle Create
+            header: "Cr\xE9er une bougie\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de bougie.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Candle Flame Create
+            header: "Cr\xE9er Flamme\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de flamme.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Candle Light Create
+            header: "Cr\xE9er de la lumi\xE8re\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er une nouvelle lumi\xE8re.\r\n\r\nEs-tu
+              s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues:
+          - name: CANDLE ALREADY ASSIGNED!
+            local: "BOUGIE D\xC9J\xC0 ATTRIBU\xC9E !"
+          - name: CANDLE FLAME ALREADY ASSIGNED!
+            local: "FLAMME DE BOUGIE D\xC9J\xC0 ASSIGN\xC9E\_!"
+          - name: CANDLE LIGHT ALREADY ASSIGNED!
+            local: "BOUGIE D\xC9J\xC0 ATTRIBU\xC9E\_!"
+        - name: Flashlight
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilisez les options ci-dessous pour attribuer
+              des valeurs audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'animation.\n"
+          - name: Flashlight Instructions
+            text: "\nUtilisez les options ci-dessous pour cr\xE9er, attribuer ou
+              d\xE9finir des valeurs de lampe de poche.\n"
+          - name: Inventory Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'inventaire.\n"
+          - name: UI Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              de l'interface utilisateur.\n"
+          buttons:
+          - name: Audio Options
+            local: Options audio
+          - name: Animation Options
+            local: Options d'animation
+          - name: Flashlight Options
+            local: Options de lampe de poche
+          - name: Inventory Options
+            local: Options d'inventaire
+          - name: UI Options
+            local: Options de l'interface utilisateur
+          - name: General
+            local: "G\xE9n\xE9ral"
+          - name: Extra
+            local: "Suppl\xE9mentaire"
+          - name: Model
+            local: "Mod\xE8le"
+          - name: Battery
+            local: Batterie
+          - name: Flashlight
+            local: Lampe de poche
+          - name: Light
+            local: "Lumi\xE8re"
+          - name: Create Flashlight
+            local: "Cr\xE9er une lampe de poche"
+          - name: Create Light
+            local: "Cr\xE9er de la lumi\xE8re"
+          toggles: []
+          prompts:
+          - name: Flashlight Create
+            header: "Cr\xE9er une lampe de poche\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de lampe de poche.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Flashlight Light Create
+            header: "Cr\xE9er de la lumi\xE8re\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er une nouvelle lumi\xE8re.\r\n\r\nEs-tu
+              s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues:
+          - name: FLASHLIGHT LIGHT ALREADY ASSIGNED!
+            local: "LAMPE TORCHE D\xC9J\xC0 ASSIGN\xC9E\_!"
+        - name: Lantern
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilisez les options ci-dessous pour attribuer
+              des valeurs audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'animation.\n"
+          - name: Inventory Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'inventaire.\n"
+          - name: Lantern Instructions
+            text: "\nUtilisez les options ci-dessous pour cr\xE9er, attribuer ou
+              d\xE9finir des valeurs de lanterne.\n"
+          - name: UI Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              de l'interface utilisateur.\n"
+          buttons:
+          - name: Audio Options
+            local: Options audio
+          - name: Animation Options
+            local: Options d'animation
+          - name: Inventory Options
+            local: Options d'inventaire
+          - name: Lantern Options
+            local: Options de lanterne
+          - name: UI Options
+            local: Options de l'interface utilisateur
+          - name: Model
+            local: "Mod\xE8le"
+          - name: Hinge
+            local: "Charni\xE8re"
+          - name: Hinge Connect
+            local: "Charni\xE8re Connecter"
+          - name: Lantern
+            local: Lanterne
+          - name: Flame
+            local: Flamme
+          - name: Light
+            local: "Lumi\xE8re"
+          - name: Create Lantern
+            local: "Cr\xE9er une lanterne"
+          - name: Create Flame
+            local: "Cr\xE9er une flamme"
+          - name: Create Light
+            local: "Cr\xE9er de la lumi\xE8re"
+          - name: Create Hinge Joint
+            local: "Cr\xE9er une liaison charni\xE8re"
+          - name: Create Hinge Connect
+            local: "Cr\xE9er une connexion charni\xE8re"
+          toggles: []
+          prompts:
+          - name: Lantern Create
+            header: "Cr\xE9er une lanterne\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de lanterne.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Lantern Flame Create
+            header: "Cr\xE9er Flamme\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de flamme.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Lantern Light Create
+            header: "Cr\xE9er de la lumi\xE8re\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er une nouvelle lumi\xE8re.\r\n\r\nEs-tu
+              s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Lantern Hinge Create
+            header: "Cr\xE9er un joint articul\xE9\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er une nouvelle liaison
+              charni\xE8re.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Lantern Hinge Connect Create
+            header: "Cr\xE9er une connexion charni\xE8re\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er une nouvelle liaison
+              charni\xE8re.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues:
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN LIGHT FIRST!
+            local: "VOUS DEVEZ D'ABORD CR\xC9ER OU ASSIGNER LA LUMI\xC8RE DE LA LANTERNE\_!"
+          - name: LANTERN FLAME ALREADY ASSIGNED!
+            local: "FLAMME DE LANTERNE D\xC9J\xC0 ASSIGN\xC9E\_!"
+          - name: LANTERN LIGHT ALREADY ASSIGNED!
+            local: "LUMI\xC8RE DE LANTERNE D\xC9J\xC0 ASSIGN\xC9E\_!"
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN HINGE JOINT FIRST!
+            local: "VOUS DEVEZ D'ABORD CR\xC9ER OU ASSIGNER LE JOINT DE CHARNI\xC8RE
+              DE LANTERNE\_!"
+          - name: LANTERN HINGE ALREADY ASSIGNED!
+            local: "CHARNI\xC8RE DE LANTERNE D\xC9J\xC0 ASSIGN\xC9E\_!"
+          - name: LANTERN HINGE CONNECT ALREADY ASSIGNED!
+            local: "CHARNI\xC8RE LANTERNE CONNECT D\xC9J\xC0 AFFECT\xC9E\_!"
+        - name: Lighter
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilisez les options ci-dessous pour attribuer
+              des valeurs audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'animation.\n"
+          - name: Inventory Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'inventaire.\n"
+          - name: Lighter Instructions
+            text: "\nUtilisez les options ci-dessous pour cr\xE9er, attribuer ou
+              d\xE9finir des valeurs plus claires.\n"
+          buttons:
+          - name: Audio Options
+            local: Options audio
+          - name: Animation Options
+            local: Options d'animation
+          - name: Inventory Options
+            local: Options d'inventaire
+          - name: Lighter Options
+            local: "Options plus l\xE9g\xE8res"
+          - name: Arms
+            local: Bras
+          - name: Lighter
+            local: "Plus l\xE9ger"
+          - name: Model
+            local: "Mod\xE8le"
+          - name: Flame
+            local: Flamme
+          - name: Light
+            local: "Lumi\xE8re"
+          - name: Create Lighter
+            local: "Cr\xE9er un briquet"
+          - name: Create Flame
+            local: "Cr\xE9er une flamme"
+          - name: Create Light
+            local: "Cr\xE9er de la lumi\xE8re"
+          toggles: []
+          prompts:
+          - name: Lighter Create
+            header: "Cr\xE9er plus l\xE9ger\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de briquet.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Lighter Flame Create
+            header: "Cr\xE9er Flamme\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de flamme.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Lighter Light Create
+            header: "Cr\xE9er de la lumi\xE8re\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er une nouvelle lumi\xE8re.\r\n\r\nEs-tu
+              s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues:
+          - name: LIGHTER FLAME ALREADY ASSIGNED!
+            local: "BRIQUET FLAMME D\xC9J\xC0 ATTRIBU\xC9E\_!"
+          - name: LIGHTER LIGHT ALREADY ASSIGNED!
+            local: "BRIQUET LUMI\xC8RE D\xC9J\xC0 ATTRIBU\xC9E\_!"
+        - name: Melee
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilisez les options ci-dessous pour attribuer
+              des valeurs audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'animation.\n"
+          - name: Inventory Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'inventaire.\n"
+          - name: Melee Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              de m\xEAl\xE9e.\n"
+          - name: Weapon Instructions
+            text: "\nUtilisez les options ci-dessous pour cr\xE9er, attribuer ou
+              d\xE9finir des valeurs d'armes.\n"
+          buttons:
+          - name: Audio Options
+            local: Options audio
+          - name: Animation Options
+            local: Options d'animation
+          - name: Inventory Options
+            local: Options d'inventaire
+          - name: Melee Options
+            local: "Options de m\xEAl\xE9e"
+          - name: Weapon Options
+            local: Options d'armes
+          - name: Hit
+            local: Frapper
+          - name: Kickback
+            local: Rebond
+          - name: Surface
+            local: Surface
+          - name: Create Weapon
+            local: "Cr\xE9er une arme"
+          toggles: []
+          prompts:
+          - name: Weapon Create
+            header: "Cr\xE9er une arme\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              d'arme.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues: []
+        - name: Gun
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilisez les options ci-dessous pour attribuer
+              des valeurs audio.
+
+'
+          - name: Aim Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'objectif.\n"
+          - name: Animation Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'animation.\n"
+          - name: Inventory Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'inventaire.\n"
+          - name: Shoot Instructions
+            text: "\nUtilisez les options ci-dessous pour cr\xE9er, attribuer ou
+              d\xE9finir des valeurs de tir au pistolet.\n"
+          - name: Shotgun Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              du fusil de chasse.\n"
+          - name: Shell Eject Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir les valeurs
+              d'\xE9jection du shell.\n"
+          - name: Weapon Instructions
+            text: "\nUtilisez les options ci-dessous pour cr\xE9er, attribuer ou
+              d\xE9finir des valeurs d'armes \xE0 feu.\n"
+          buttons:
+          - name: Audio Options
+            local: Options audio
+          - name: Aim Options
+            local: "Options de vis\xE9e"
+          - name: Animation Options
+            local: Options d'animation
+          - name: Inventory Options
+            local: Options d'inventaire
+          - name: Shoot Options
+            local: Options de prise de vue
+          - name: Shotgun Options
+            local: Options de fusil de chasse
+          - name: Shell Eject Options
+            local: "Options d'\xE9jection de coque"
+          - name: Weapon Options
+            local: Options d'armes
+          - name: Bullet
+            local: Balle
+          - name: Kickback
+            local: Rebond
+          - name: Muzzle Flash
+            local: Flash de bouche
+          - name: Shoot
+            local: Tirer
+          - name: Reaction
+            local: "R\xE9action"
+          - name: Model
+            local: "Mod\xE8le"
+          - name: Magazine
+            local: Magazine
+          - name: Surface
+            local: Surface
+          - name: Catch Kickback
+            local: Attraper le rebond
+          - name: Flash
+            local: "\xC9clair"
+          - name: Light
+            local: "Lumi\xE8re"
+          - name: Create Muzzle Flash
+            local: "Cr\xE9er un flash de bouche"
+          - name: Create Muzzle Light
+            local: "Cr\xE9er une lumi\xE8re de bouche"
+          - name: Type
+            local: Taper
+          - name: Create Weapon
+            local: "Cr\xE9er une arme"
+          toggles: []
+          prompts:
+          - name: Weapon Muzzle Flash Create
+            header: "Cr\xE9er un flash de bouche\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de flash de bouche.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Weapon Muzzle Flash Light Create
+            header: "Cr\xE9er un flash de bouche\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              de lumi\xE8re.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Weapon Create
+            header: "Cr\xE9er une arme\_?"
+            message: "Vous \xEAtes sur le point de cr\xE9er un nouveau mod\xE8le
+              d'arme.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues:
+          - name: MUZZLE FLASH ALREADY ASSIGNED!
+            local: "MUZZLE FLASH D\xC9J\xC0 ASSIGN\xC9\_!"
+          - name: MUZZLE LIGHT ALREADY ASSIGNED!
+            local: "LUMI\xC8RE DE BOUCHE D\xC9J\xC0 ASSIGN\xC9E\_!"
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\nWeapon Creator \uBC84\uC804 \uD30C\uC77C\uC774 \uD504\uB85C\uC81D\uD2B8\uC5D0\uC11C
+              \uB204\uB77D\uB418\uC5C8\uC2B5\uB2C8\uB2E4. Weapon Creator\uAC00 \uC5C6\uC73C\uBA74
+              \uC2E4\uD589\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4!\r\n\r\n\uC5D0\uC14B
+              \uC2A4\uD1A0\uC5B4/\uD328\uD0A4\uC9C0 \uAD00\uB9AC\uC790\uC758 \uC5D0\uC14B
+              \uD329\uC5D0\uC11C Weapon Creator Version \uD30C\uC77C\uC744 \uB2E4\uC2DC
+              \uAC00\uC838\uC62C \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\uC774 \uD655\uC7A5\uC744 \uD1B5\uD574 \uC0C8\uB85C\uC6B4 \uD50C\uB808\uC774\uC5B4
+              \uBB34\uAE30\uB97C \uB9CC\uB4E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\uC544\uB798
+              \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uD504\uB85C\uC138\uC2A4\uB97C
+              \uC2DC\uC791\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Language
+            text: "\uC5B8\uC5B4 \uC800\uC7A5\uB428"
+          - name: Components
+            text: "\uAD6C\uC131 \uC694\uC18C\uAC00 \uD65C\uC131\uD654\uB418\uC9C0
+              \uC54A\uC558\uC2B5\uB2C8\uB2E4!"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Catch Item Switcher
+            local: "\uD56D\uBAA9 \uC804\uD658\uAE30 \uC7A1\uAE30"
+          - name: Save Template
+            local: "\uD15C\uD50C\uB9BF \uC800\uC7A5"
+          - name: Load Template
+            local: "\uD15C\uD50C\uB9BF \uB85C\uB4DC"
+          - name: Create Arms
+            local: "\uD314 \uB9CC\uB4E4\uAE30"
+          - name: Create Weapon
+            local: "\uBB34\uAE30 \uB9CC\uB4E4\uAE30"
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "\uD15C\uD50C\uB9BF\uC744 \uC800\uC7A5\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uD560\uB2F9\uB41C \uD15C\uD50C\uB9BF\uC5D0 \uD3B8\uC9D1\uAE30
+              \uAC12\uC744 \uC800\uC7A5\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\uC774\uB807\uAC8C
+              \uD558\uBA74 \uAE30\uC874 \uAC12\uC744 \uB36E\uC5B4\uC501\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Template Load
+            header: "\uD15C\uD50C\uB9BF\uC744 \uB85C\uB4DC\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uD3B8\uC9D1\uAE30\uC5D0 \uD15C\uD50C\uB9BF \uB370\uC774\uD130\uB97C
+              \uB85C\uB4DC\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\uC774\uB807\uAC8C
+              \uD558\uBA74 \uAE30\uC874 \uAC12\uC744 \uB36E\uC5B4\uC501\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Arms Create
+            header: "\uD314\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uD50C\uB808\uC774\uC5B4 \uCE90\uB9AD\uD130\uC5D0 \uC0C8 \uD314
+              \uBAA8\uB378\uC744 \uCD94\uAC00\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Weapon Create
+            header: "\uBB34\uAE30\uB97C \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uD3B8\uC9D1\uAE30\uC5D0\uC11C \uC124\uC815\uD55C \uAC12\uC744
+              \uC0AC\uC6A9\uD558\uC5EC \uC0C8 \uBB34\uAE30\uB97C \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          singleValues:
+          - name: WEAPON NAME NOT ASSIGNED!
+            local: "\uBB34\uAE30 \uC774\uB984\uC774 \uC9C0\uC815\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4!"
+          - name: 'WEAPON NAME : '
+            local: "\uBB34\uAE30 \uC774\uB984 : "
+          - name: ARMS NOT ASSIGNED!
+            local: "\uD314\uC774 \uD560\uB2F9\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4!"
+          - name: 'ARMS ASSIGNED : '
+            local: "\uD560\uB2F9\uB41C \uBB34\uAE30 : "
+          - name: ITEM SWITCHER NOT ASSIGNED!
+            local: "\uD56D\uBAA9 \uC804\uD658\uAE30\uAC00 \uD560\uB2F9\uB418\uC9C0
+              \uC54A\uC558\uC2B5\uB2C8\uB2E4!"
+          - name: ITEM SWITCHER ASSIGNED
+            local: "\uC544\uC774\uD15C \uC2A4\uC704\uCC98 \uD560\uB2F9\uB428"
+          - name: ' Saved'
+            local: " \uC800\uC7A5\uB428"
+          - name: ' Loaded'
+            local: " \uC9D0\uC744 \uC2E4\uC740"
+          - name: ' Created!'
+            local: " \uB9CC\uB4E4\uC5B4\uC9C4!"
+          - name: Item Switcher Found!
+            local: "\uC544\uC774\uD15C \uC804\uD658\uAE30 \uBC1C\uACAC!"
+          - name: Kickback Found!
+            local: "\uB9AC\uBCA0\uC774\uD2B8 \uBC1C\uACAC!"
+          - name: Arms Created!
+            local: "\uBB34\uAE30 \uC0DD\uC131!"
+          - name: Candle Created!
+            local: "\uCE94\uB4E4 \uC0DD\uC131!"
+          - name: Candle Assigned!
+            local: "\uCD1B\uBD88 \uD560\uB2F9!"
+          - name: Candle Flame Created!
+            local: "\uCD1B\uBD88 \uBD88\uAF43\uC774 \uB9CC\uB4E4\uC5B4\uC84C\uC2B5\uB2C8\uB2E4!"
+          - name: Candle Flame Assigned!
+            local: "\uCD1B\uBD88 \uBD88\uAF43 \uD560\uB2F9!"
+          - name: Flame Position Assigned!
+            local: "\uD654\uC5FC \uC704\uCE58 \uC9C0\uC815!"
+          - name: Candle Light Created!
+            local: "\uCE94\uB4E4 \uB77C\uC774\uD2B8 \uC0DD\uC131!"
+          - name: Candle Light Assigned!
+            local: "\uCE94\uB4E4 \uB77C\uC774\uD2B8 \uC9C0\uC815!"
+          - name: Flashlight Created!
+            local: "\uC190\uC804\uB4F1\uC774 \uB9CC\uB4E4\uC5B4\uC84C\uC2B5\uB2C8\uB2E4!"
+          - name: Flashlight Light Created!
+            local: "\uC190\uC804\uB4F1 \uB77C\uC774\uD2B8 \uC0DD\uC131!"
+          - name: Flashlight Light Assigned!
+            local: "\uC190\uC804\uB4F1 \uC870\uBA85 \uD560\uB2F9!"
+          - name: Lantern Created!
+            local: "\uB79C\uD134 \uC0DD\uC131!"
+          - name: Flame Parent Changed to Lantern Light object (i.e required by Lantern
+              Item script)
+            local: "Flame Parent\uAC00 Lantern Light \uAC1D\uCCB4\uB85C \uBCC0\uACBD\uB428(\uC989,
+              Lantern Item \uC2A4\uD06C\uB9BD\uD2B8\uC5D0 \uD544\uC694\uD568)"
+          - name: Old Flame Parent Destroyed (i.e no longer required)
+            local: "\uC624\uB798\uB41C \uD654\uC5FC \uBD80\uBAA8\uAC00 \uD30C\uAD34\uB428(\uC989,
+              \uB354 \uC774\uC0C1 \uD544\uC694\uD558\uC9C0 \uC54A\uC74C)"
+          - name: Lantern Flame Created!
+            local: "\uB79C\uD134 \uD50C\uB808\uC784 \uC0DD\uC131!"
+          - name: Lantern Light Created!
+            local: "\uB79C\uD134 \uB77C\uC774\uD2B8 \uC0DD\uC131!"
+          - name: Lantern Light Assigned!
+            local: "\uB79C\uD134 \uB77C\uC774\uD2B8 \uC9C0\uC815!"
+          - name: Lantern Hinge Created!
+            local: "\uB79C\uD134 \uACBD\uCCA9\uC774 \uB9CC\uB4E4\uC5B4\uC84C\uC2B5\uB2C8\uB2E4!"
+          - name: Lantern Hinge Connect Created!
+            local: "\uB79C\uD134 \uACBD\uCCA9 \uC5F0\uACB0 \uC0DD\uC131!"
+          - name: Lantern Hinge Connect Assigned!
+            local: "\uB79C\uD134 \uACBD\uCCA9 \uC5F0\uACB0 \uC9C0\uC815!"
+          - name: Lighter Model Created!
+            local: "\uB77C\uC774\uD130 \uBAA8\uB378\uC774 \uC0DD\uC131\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: Lighter Flame Created!
+            local: "\uB77C\uC774\uD130 \uBD88\uAF43 \uC0DD\uC131!"
+          - name: Lighter Light Created!
+            local: "\uB77C\uC774\uD130 \uB77C\uC774\uD2B8\uAC00 \uB9CC\uB4E4\uC5B4\uC84C\uC2B5\uB2C8\uB2E4!"
+          - name: Melee Weapon Created!
+            local: "\uADFC\uC811 \uBB34\uAE30 \uC0DD\uC131!"
+          - name: Gun Weapon Created!
+            local: "\uCD1D \uBB34\uAE30 \uC0DD\uC131!"
+          - name: Gun Muzzle Flash Created!
+            local: "\uCD1D\uAD6C \uD50C\uB798\uC2DC \uC0DD\uC131!"
+          - name: Gun Muzzle Light Created!
+            local: "\uCD1D\uAD6C \uB77C\uC774\uD2B8 \uC0DD\uC131!"
+          - name: 'Weapon Created : Candle'
+            local: "\uC0DD\uC131\uB41C \uBB34\uAE30 : \uC591\uCD08"
+          - name: 'Weapon Created : Flashlight'
+            local: "\uC0DD\uC131\uB41C \uBB34\uAE30: \uC190\uC804\uB4F1"
+          - name: 'Weapon Created : Lantern'
+            local: "\uC0DD\uC131\uB41C \uBB34\uAE30 : \uB79C\uD134"
+          - name: 'Weapon Created : Lighter'
+            local: "\uC0DD\uC131\uB41C \uBB34\uAE30: \uB77C\uC774\uD130"
+          - name: 'Weapon Created : Melee'
+            local: "\uC0DD\uC131\uB41C \uBB34\uAE30: \uADFC\uC811"
+          - name: 'Weapon Created : Gun'
+            local: "\uC0DD\uC131\uB41C \uBB34\uAE30: \uCD1D"
+          - name: Arms Animations Added!
+            local: "\uBB34\uAE30 \uC560\uB2C8\uBA54\uC774\uC158\uC774 \uCD94\uAC00\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: Arms Animation Sound Events Added!
+            local: "Arms \uC560\uB2C8\uBA54\uC774\uC158 \uC0AC\uC6B4\uB4DC \uC774\uBCA4\uD2B8\uAC00
+              \uCD94\uAC00\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: Arms Audio Source Added!
+            local: "Arms \uC624\uB514\uC624 \uC18C\uC2A4\uAC00 \uCD94\uAC00\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: Arms Audio Source Assigned!
+            local: "Arms \uC624\uB514\uC624 \uC18C\uC2A4\uAC00 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: 'Arms Animation Event Added : Blow Out'
+            local: "Arms \uC560\uB2C8\uBA54\uC774\uC158 \uC774\uBCA4\uD2B8 \uCD94\uAC00
+              : Blow Out"
+          - name: 'Arms Animation Event Added : Flashlight Click'
+            local: "\uBB34\uAE30 \uC560\uB2C8\uBA54\uC774\uC158 \uC774\uBCA4\uD2B8
+              \uCD94\uAC00 : \uC190\uC804\uB4F1 \uD074\uB9AD"
+          - name: 'Arms Animation Event Added : Lighter Open'
+            local: "\uBB34\uAE30 \uC560\uB2C8\uBA54\uC774\uC158 \uC774\uBCA4\uD2B8
+              \uCD94\uAC00 : \uB77C\uC774\uD130 \uC5F4\uAE30"
+          - name: 'Arms Animation Event Added : Lighter Close'
+            local: "\uBB34\uAE30 \uC560\uB2C8\uBA54\uC774\uC158 \uC774\uBCA4\uD2B8
+              \uCD94\uAC00 : \uB77C\uC774\uD130 \uB2EB\uAE30"
+          - name: 'Arms Animation Event Added : Lighter On'
+            local: "\uBB34\uAE30 \uC560\uB2C8\uBA54\uC774\uC158 \uC774\uBCA4\uD2B8
+              \uCD94\uAC00 : \uB77C\uC774\uD130 \uCF1C\uAE30"
+          - name: 'Arms Animation Event Added : Lighter Off'
+            local: "\uBB34\uAE30 \uC560\uB2C8\uBA54\uC774\uC158 \uC774\uBCA4\uD2B8
+              \uCD94\uAC00 : \uB77C\uC774\uD130 \uB044\uAE30"
+          - name: Lantern Hinge Connect Assigned!
+            local: "\uB79C\uD134 \uACBD\uCCA9 \uC5F0\uACB0 \uC9C0\uC815!"
+        - name: Candle
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC624\uB514\uC624
+              \uAC12\uC744 \uD560\uB2F9\uD569\uB2C8\uB2E4.\n"
+          - name: Animation Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC560\uB2C8\uBA54\uC774\uC158
+              \uAC12\uC744 \uC124\uC815\uD569\uB2C8\uB2E4.\n"
+          - name: Candle Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uCD08
+              \uAC12\uC744 \uC0DD\uC131, \uD560\uB2F9 \uB610\uB294 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Inventory Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7AC\uACE0
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          buttons:
+          - name: Audio Options
+            local: "\uC624\uB514\uC624 \uC635\uC158"
+          - name: Animation Options
+            local: "\uC560\uB2C8\uBA54\uC774\uC158 \uC635\uC158"
+          - name: Candle Options
+            local: "\uC591\uCD08 \uC635\uC158"
+          - name: Inventory Options
+            local: "\uC778\uBCA4\uD1A0\uB9AC \uC635\uC158"
+          - name: Model
+            local: "\uBAA8\uB378"
+          - name: Reduction
+            local: "\uC808\uAC10"
+          - name: Candle
+            local: "\uC591\uCD08"
+          - name: Flame
+            local: "\uBD88\uAF43"
+          - name: Light
+            local: "\uBE5B"
+          - name: Create Candle
+            local: "\uC591\uCD08 \uB9CC\uB4E4\uAE30"
+          - name: Create Flame
+            local: "\uBD88\uAF43 \uB9CC\uB4E4\uAE30"
+          - name: Create Light
+            local: "\uBE5B \uB9CC\uB4E4\uAE30"
+          toggles: []
+          prompts:
+          - name: Candle Create
+            header: "\uC591\uCD08\uB97C \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uC591\uCD08 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Candle Flame Create
+            header: "\uBD88\uAF43\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uBD88\uAF43 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Candle Light Create
+            header: "\uBE5B\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uC870\uBA85\uC744 \uB9CC\uB4E4\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          singleValues:
+          - name: CANDLE ALREADY ASSIGNED!
+            local: "\uCD1B\uBD88\uC774 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: CANDLE FLAME ALREADY ASSIGNED!
+            local: "\uCD1B\uBD88 \uBD88\uAF43\uC774 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: CANDLE LIGHT ALREADY ASSIGNED!
+            local: "\uCD1B\uBD88\uC774 \uC774\uBBF8 \uC9C0\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+        - name: Flashlight
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC624\uB514\uC624
+              \uAC12\uC744 \uD560\uB2F9\uD569\uB2C8\uB2E4.\n"
+          - name: Animation Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC560\uB2C8\uBA54\uC774\uC158
+              \uAC12\uC744 \uC124\uC815\uD569\uB2C8\uB2E4.\n"
+          - name: Flashlight Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC190\uC804\uB4F1
+              \uAC12\uC744 \uC0DD\uC131, \uD560\uB2F9 \uB610\uB294 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Inventory Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7AC\uACE0
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: UI Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC UI
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          buttons:
+          - name: Audio Options
+            local: "\uC624\uB514\uC624 \uC635\uC158"
+          - name: Animation Options
+            local: "\uC560\uB2C8\uBA54\uC774\uC158 \uC635\uC158"
+          - name: Flashlight Options
+            local: "\uC190\uC804\uB4F1 \uC635\uC158"
+          - name: Inventory Options
+            local: "\uC778\uBCA4\uD1A0\uB9AC \uC635\uC158"
+          - name: UI Options
+            local: "UI \uC635\uC158"
+          - name: General
+            local: "\uC77C\uBC18\uC801\uC778"
+          - name: Extra
+            local: "\uCD94\uAC00\uC758"
+          - name: Model
+            local: "\uBAA8\uB378"
+          - name: Battery
+            local: "\uBC30\uD130\uB9AC"
+          - name: Flashlight
+            local: "\uD50C\uB798\uC2DC"
+          - name: Light
+            local: "\uBE5B"
+          - name: Create Flashlight
+            local: "\uC190\uC804\uB4F1 \uB9CC\uB4E4\uAE30"
+          - name: Create Light
+            local: "\uBE5B \uB9CC\uB4E4\uAE30"
+          toggles: []
+          prompts:
+          - name: Flashlight Create
+            header: "\uC190\uC804\uB4F1\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uC190\uC804\uB4F1 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Flashlight Light Create
+            header: "\uBE5B\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uC870\uBA85\uC744 \uB9CC\uB4E4\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          singleValues:
+          - name: FLASHLIGHT LIGHT ALREADY ASSIGNED!
+            local: "\uC190\uC804\uB4F1 \uC870\uBA85\uC774 \uC774\uBBF8 \uC9C0\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+        - name: Lantern
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC624\uB514\uC624
+              \uAC12\uC744 \uD560\uB2F9\uD569\uB2C8\uB2E4.\n"
+          - name: Animation Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC560\uB2C8\uBA54\uC774\uC158
+              \uAC12\uC744 \uC124\uC815\uD569\uB2C8\uB2E4.\n"
+          - name: Inventory Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7AC\uACE0
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Lantern Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uB79C\uD134
+              \uAC12\uC744 \uC0DD\uC131, \uD560\uB2F9 \uB610\uB294 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: UI Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC UI
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          buttons:
+          - name: Audio Options
+            local: "\uC624\uB514\uC624 \uC635\uC158"
+          - name: Animation Options
+            local: "\uC560\uB2C8\uBA54\uC774\uC158 \uC635\uC158"
+          - name: Inventory Options
+            local: "\uC778\uBCA4\uD1A0\uB9AC \uC635\uC158"
+          - name: Lantern Options
+            local: "\uB79C\uD134 \uC635\uC158"
+          - name: UI Options
+            local: "UI \uC635\uC158"
+          - name: Model
+            local: "\uBAA8\uB378"
+          - name: Hinge
+            local: "\uB3CC\uCA4C\uADC0"
+          - name: Hinge Connect
+            local: "\uACBD\uCCA9 \uC5F0\uACB0"
+          - name: Lantern
+            local: "\uCE78\uB378\uB77C"
+          - name: Flame
+            local: "\uBD88\uAF43"
+          - name: Light
+            local: "\uBE5B"
+          - name: Create Lantern
+            local: "\uB79C\uD134 \uB9CC\uB4E4\uAE30"
+          - name: Create Flame
+            local: "\uBD88\uAF43 \uB9CC\uB4E4\uAE30"
+          - name: Create Light
+            local: "\uBE5B \uB9CC\uB4E4\uAE30"
+          - name: Create Hinge Joint
+            local: "\uD78C\uC9C0 \uC870\uC778\uD2B8 \uC0DD\uC131"
+          - name: Create Hinge Connect
+            local: "\uACBD\uCCA9 \uC5F0\uACB0 \uB9CC\uB4E4\uAE30"
+          toggles: []
+          prompts:
+          - name: Lantern Create
+            header: "\uB79C\uD134\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uB79C\uD134 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Lantern Flame Create
+            header: "\uBD88\uAF43\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uBD88\uAF43 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Lantern Light Create
+            header: "\uBE5B\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uC870\uBA85\uC744 \uB9CC\uB4E4\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Lantern Hinge Create
+            header: "\uD78C\uC9C0 \uC811\uD569\uC744 \uC791\uC131\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uACBD\uCCA9 \uC870\uC778\uD2B8\uB97C \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Lantern Hinge Connect Create
+            header: "\uACBD\uCCA9 \uC5F0\uACB0\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uACBD\uCCA9 \uC5F0\uACB0\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          singleValues:
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN LIGHT FIRST!
+            local: "\uBA3C\uC800 \uB79C\uD134 \uB77C\uC774\uD2B8\uB97C \uC0DD\uC131\uD558\uAC70\uB098
+              \uD560\uB2F9\uD574\uC57C \uD569\uB2C8\uB2E4!"
+          - name: LANTERN FLAME ALREADY ASSIGNED!
+            local: "\uB79C\uD134 \uBD88\uAF43\uC774 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: LANTERN LIGHT ALREADY ASSIGNED!
+            local: "\uB79C\uD134 \uB77C\uC774\uD2B8\uAC00 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN HINGE JOINT FIRST!
+            local: "LANTERN HINGE JOINT\uB97C \uBA3C\uC800 \uC0DD\uC131\uD558\uAC70\uB098
+              \uD560\uB2F9\uD574\uC57C \uD569\uB2C8\uB2E4!"
+          - name: LANTERN HINGE ALREADY ASSIGNED!
+            local: "\uB79C\uD134 \uACBD\uCCA9\uC774 \uC774\uBBF8 \uC9C0\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: LANTERN HINGE CONNECT ALREADY ASSIGNED!
+            local: "LANTERN HINGE CONNECT\uAC00 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+        - name: Lighter
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC624\uB514\uC624
+              \uAC12\uC744 \uD560\uB2F9\uD569\uB2C8\uB2E4.\n"
+          - name: Animation Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC560\uB2C8\uBA54\uC774\uC158
+              \uAC12\uC744 \uC124\uC815\uD569\uB2C8\uB2E4.\n"
+          - name: Inventory Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7AC\uACE0
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Lighter Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uB354
+              \uBC1D\uC740 \uAC12\uC744 \uC0DD\uC131, \uD560\uB2F9 \uB610\uB294 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          buttons:
+          - name: Audio Options
+            local: "\uC624\uB514\uC624 \uC635\uC158"
+          - name: Animation Options
+            local: "\uC560\uB2C8\uBA54\uC774\uC158 \uC635\uC158"
+          - name: Inventory Options
+            local: "\uC778\uBCA4\uD1A0\uB9AC \uC635\uC158"
+          - name: Lighter Options
+            local: "\uB77C\uC774\uD130 \uC635\uC158"
+          - name: Arms
+            local: "\uBB34\uAE30"
+          - name: Lighter
+            local: "\uAC70\uB8FB\uBC30"
+          - name: Model
+            local: "\uBAA8\uB378"
+          - name: Flame
+            local: "\uBD88\uAF43"
+          - name: Light
+            local: "\uBE5B"
+          - name: Create Lighter
+            local: "\uB77C\uC774\uD130 \uB9CC\uB4E4\uAE30"
+          - name: Create Flame
+            local: "\uBD88\uAF43 \uB9CC\uB4E4\uAE30"
+          - name: Create Light
+            local: "\uBE5B \uB9CC\uB4E4\uAE30"
+          toggles: []
+          prompts:
+          - name: Lighter Create
+            header: "\uB77C\uC774\uD130\uB97C \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uB77C\uC774\uD130 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Lighter Flame Create
+            header: "\uBD88\uAF43\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uBD88\uAF43 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Lighter Light Create
+            header: "\uBE5B\uC744 \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uC870\uBA85\uC744 \uB9CC\uB4E4\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          singleValues:
+          - name: LIGHTER FLAME ALREADY ASSIGNED!
+            local: "\uB354 \uAC00\uBCBC\uC6B4 \uBD88\uAF43\uC774 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: LIGHTER LIGHT ALREADY ASSIGNED!
+            local: "\uB77C\uC774\uD130 \uC870\uBA85\uC774 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+        - name: Melee
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC624\uB514\uC624
+              \uAC12\uC744 \uD560\uB2F9\uD569\uB2C8\uB2E4.\n"
+          - name: Animation Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC560\uB2C8\uBA54\uC774\uC158
+              \uAC12\uC744 \uC124\uC815\uD569\uB2C8\uB2E4.\n"
+          - name: Inventory Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7AC\uACE0
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Melee Instructions
+            text: "\n\uADFC\uC811 \uAC12\uC744 \uC124\uC815\uD558\uB824\uBA74 \uC544\uB798
+              \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Weapon Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uBB34\uAE30
+              \uAC12\uC744 \uC0DD\uC131, \uD560\uB2F9 \uB610\uB294 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          buttons:
+          - name: Audio Options
+            local: "\uC624\uB514\uC624 \uC635\uC158"
+          - name: Animation Options
+            local: "\uC560\uB2C8\uBA54\uC774\uC158 \uC635\uC158"
+          - name: Inventory Options
+            local: "\uC778\uBCA4\uD1A0\uB9AC \uC635\uC158"
+          - name: Melee Options
+            local: "\uADFC\uC811 \uC635\uC158"
+          - name: Weapon Options
+            local: "\uBB34\uAE30 \uC635\uC158"
+          - name: Hit
+            local: "\uB54C\uB9AC\uB2E4"
+          - name: Kickback
+            local: "\uB9AC\uBCA0\uC774\uD2B8"
+          - name: Surface
+            local: "\uD45C\uBA74"
+          - name: Create Weapon
+            local: "\uBB34\uAE30 \uB9CC\uB4E4\uAE30"
+          toggles: []
+          prompts:
+          - name: Weapon Create
+            header: "\uBB34\uAE30\uB97C \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8\uB85C\uC6B4 \uBB34\uAE30 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          singleValues: []
+        - name: Gun
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC624\uB514\uC624
+              \uAC12\uC744 \uD560\uB2F9\uD569\uB2C8\uB2E4.\n"
+          - name: Aim Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uBAA9\uD45C
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Animation Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC560\uB2C8\uBA54\uC774\uC158
+              \uAC12\uC744 \uC124\uC815\uD569\uB2C8\uB2E4.\n"
+          - name: Inventory Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7AC\uACE0
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Shoot Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uCD1D
+              \uC0AC\uACA9 \uAC12\uC744 \uC0DD\uC131, \uC9C0\uC815 \uB610\uB294 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Shotgun Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC0B0\uD0C4\uCD1D
+              \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Shell Eject Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC258
+              \uAEBC\uB0B4\uAE30 \uAC12\uC744 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          - name: Weapon Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uCD1D\uAE30
+              \uBB34\uAE30 \uAC12\uC744 \uC0DD\uC131, \uD560\uB2F9 \uB610\uB294 \uC124\uC815\uD558\uC2ED\uC2DC\uC624.\n"
+          buttons:
+          - name: Audio Options
+            local: "\uC624\uB514\uC624 \uC635\uC158"
+          - name: Aim Options
+            local: "\uC870\uC900 \uC635\uC158"
+          - name: Animation Options
+            local: "\uC560\uB2C8\uBA54\uC774\uC158 \uC635\uC158"
+          - name: Inventory Options
+            local: "\uC778\uBCA4\uD1A0\uB9AC \uC635\uC158"
+          - name: Shoot Options
+            local: "\uCD2C\uC601 \uC635\uC158"
+          - name: Shotgun Options
+            local: "\uC0F7\uAC74 \uC635\uC158"
+          - name: Shell Eject Options
+            local: "\uC258 \uAEBC\uB0B4\uAE30 \uC635\uC158"
+          - name: Weapon Options
+            local: "\uBB34\uAE30 \uC635\uC158"
+          - name: Bullet
+            local: "\uCD1D\uC54C"
+          - name: Kickback
+            local: "\uB9AC\uBCA0\uC774\uD2B8"
+          - name: Muzzle Flash
+            local: "\uCD1D\uAD6C \uC12C\uAD11"
+          - name: Shoot
+            local: "\uC0AC\uACA9"
+          - name: Reaction
+            local: "\uBC18\uC751"
+          - name: Model
+            local: "\uBAA8\uB378"
+          - name: Magazine
+            local: "\uC7A1\uC9C0"
+          - name: Surface
+            local: "\uD45C\uBA74"
+          - name: Catch Kickback
+            local: "\uBC18\uB3D9 \uC7A1\uAE30"
+          - name: Flash
+            local: "\uD50C\uB798\uC2DC"
+          - name: Light
+            local: "\uBE5B"
+          - name: Create Muzzle Flash
+            local: "\uCD1D\uAD6C \uC12C\uAD11 \uB9CC\uB4E4\uAE30"
+          - name: Create Muzzle Light
+            local: "\uCD1D\uAD6C \uC870\uBA85 \uB9CC\uB4E4\uAE30"
+          - name: Type
+            local: "\uC720\uD615"
+          - name: Create Weapon
+            local: "\uBB34\uAE30 \uB9CC\uB4E4\uAE30"
+          toggles: []
+          prompts:
+          - name: Weapon Muzzle Flash Create
+            header: "\uCD1D\uAD6C \uD50C\uB798\uC2DC\uB97C \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uCD1D\uAD6C \uC12C\uAD11 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Weapon Muzzle Flash Light Create
+            header: "\uCD1D\uAD6C \uD50C\uB798\uC2DC \uB77C\uC774\uD2B8\uB97C \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8 \uC870\uBA85 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          - name: Weapon Create
+            header: "\uBB34\uAE30\uB97C \uB9CC\uB4DC\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+            message: "\uC0C8\uB85C\uC6B4 \uBB34\uAE30 \uBAA8\uB378\uC744 \uB9CC\uB4E4\uB824\uACE0
+              \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8\uC694"
+          singleValues:
+          - name: MUZZLE FLASH ALREADY ASSIGNED!
+            local: "\uCD1D\uAD6C \uD50C\uB798\uC2DC\uAC00 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+          - name: MUZZLE LIGHT ALREADY ASSIGNED!
+            local: "\uCD1D\uAD6C \uC870\uBA85\uC774 \uC774\uBBF8 \uD560\uB2F9\uB418\uC5C8\uC2B5\uB2C8\uB2E4!"
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: 
+          texts:
+          - name: Version Missing
+            text: "\nFalta el archivo de la versi\xF3n del creador de armas en su
+              proyecto, \xA1el creador de armas no puede ejecutarse sin \xE9l!\r\n\r\nPuede
+              volver a importar el archivo de la versi\xF3n del creador de armas
+              desde el paquete de activos en la tienda de activos/administrador de
+              paquetes.\n"
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nEsta extensi\xF3n te permite crear un nuevo arma de jugador,\r\nutilice
+              las siguientes opciones para iniciar el proceso.\n"
+          - name: Language
+            text: Idioma guardado
+          - name: Components
+            text: "\xA1LOS COMPONENTES NO EST\xC1N ACTIVOS!"
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Catch Item Switcher
+            local: Conmutador de elementos de captura
+          - name: Save Template
+            local: Guardar plantilla
+          - name: Load Template
+            local: Cargar plantilla
+          - name: Create Arms
+            local: Crear brazos
+          - name: Create Weapon
+            local: Crear arma
+          toggles: []
+          prompts:
+          - name: Template Save
+            header: "\xBFGuardar plantilla?"
+            message: "Est\xE1 a punto de guardar los valores del editor en la plantilla
+              asignada.\r\nEsto sobrescribir\xE1 cualquier valor existente.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Template Load
+            header: "\xBFCargar plantilla?"
+            message: "Est\xE1 a punto de cargar datos de plantilla en el editor.\r\nEsto
+              sobrescribir\xE1 cualquier valor existente.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Arms Create
+            header: "\xBFCrear armas?"
+            message: "Est\xE1s a punto de agregar nuevos modelos de brazos a tu personaje
+              de jugador.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Weapon Create
+            header: "\xBFCrear arma?"
+            message: "Est\xE1 a punto de crear una nueva arma utilizando los valores
+              establecidos en el editor.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues:
+          - name: WEAPON NAME NOT ASSIGNED!
+            local: NOMBRE DEL ARMA NO ASIGNADO!
+          - name: 'WEAPON NAME : '
+            local: 'NOMBRE DEL ARMA : '
+          - name: ARMS NOT ASSIGNED!
+            local: "\xA1ARMAS NO ASIGNADAS!"
+          - name: 'ARMS ASSIGNED : '
+            local: 'ARMAS ASIGNADAS : '
+          - name: ITEM SWITCHER NOT ASSIGNED!
+            local: "\xA1CAMBIADOR DE ART\xCDCULO NO ASIGNADO!"
+          - name: ITEM SWITCHER ASSIGNED
+            local: "CAMBIADOR DE ART\xCDCULO ASIGNADO"
+          - name: ' Saved'
+            local: ' Salvado'
+          - name: ' Loaded'
+            local: ' Cargado'
+          - name: ' Created!'
+            local: " \xA1Creado!"
+          - name: Item Switcher Found!
+            local: "\xA1Intercambiador de art\xEDculos encontrado!"
+          - name: Kickback Found!
+            local: "\xA1Retroceso encontrado!"
+          - name: Arms Created!
+            local: "\xA1Brazos creados!"
+          - name: Candle Created!
+            local: "\xA1Vela creada!"
+          - name: Candle Assigned!
+            local: "\xA1Vela asignada!"
+          - name: Candle Flame Created!
+            local: "\xA1Llama de vela creada!"
+          - name: Candle Flame Assigned!
+            local: "\xA1Llama de vela asignada!"
+          - name: Flame Position Assigned!
+            local: "\xA1Posici\xF3n de llama asignada!"
+          - name: Candle Light Created!
+            local: Luz de vela creada!
+          - name: Candle Light Assigned!
+            local: "\xA1Luz de vela asignada!"
+          - name: Flashlight Created!
+            local: "\xA1Linterna creada!"
+          - name: Flashlight Light Created!
+            local: "\xA1Luz de linterna creada!"
+          - name: Flashlight Light Assigned!
+            local: "\xA1Luz de linterna asignada!"
+          - name: Lantern Created!
+            local: Linterna creada!
+          - name: Flame Parent Changed to Lantern Light object (i.e required by Lantern
+              Item script)
+            local: Flame Parent cambiado a objeto Lantern Light (es decir, requerido
+              por la secuencia de comandos Lantern Item)
+          - name: Old Flame Parent Destroyed (i.e no longer required)
+            local: Old Flame Parent destruido (es decir, ya no es necesario)
+          - name: Lantern Flame Created!
+            local: "\xA1Llama de linterna creada!"
+          - name: Lantern Light Created!
+            local: "\xA1Luz de linterna creada!"
+          - name: Lantern Light Assigned!
+            local: "\xA1Luz de linterna asignada!"
+          - name: Lantern Hinge Created!
+            local: Bisagra de linterna creada!
+          - name: Lantern Hinge Connect Created!
+            local: "\xA1Conexi\xF3n de bisagra de linterna creada!"
+          - name: Lantern Hinge Connect Assigned!
+            local: "\xA1Conexi\xF3n de bisagra de linterna asignada!"
+          - name: Lighter Model Created!
+            local: "\xA1Modelo de encendedor creado!"
+          - name: Lighter Flame Created!
+            local: "\xA1Llama m\xE1s ligera creada!"
+          - name: Lighter Light Created!
+            local: "\xA1Luz m\xE1s ligera creada!"
+          - name: Melee Weapon Created!
+            local: "\xA1Arma cuerpo a cuerpo creada!"
+          - name: Gun Weapon Created!
+            local: "\xA1Arma arma creada!"
+          - name: Gun Muzzle Flash Created!
+            local: "\xA1Destellos de boca de pistola creados!"
+          - name: Gun Muzzle Light Created!
+            local: "\xA1Luz de boca de arma creada!"
+          - name: 'Weapon Created : Candle'
+            local: 'Arma creada: Vela'
+          - name: 'Weapon Created : Flashlight'
+            local: 'Arma creada: Linterna'
+          - name: 'Weapon Created : Lantern'
+            local: 'Arma creada: Linterna'
+          - name: 'Weapon Created : Lighter'
+            local: "Arma creada: M\xE1s ligero"
+          - name: 'Weapon Created : Melee'
+            local: 'Arma creada: Cuerpo a cuerpo'
+          - name: 'Weapon Created : Gun'
+            local: 'Arma creada: Pistola'
+          - name: Arms Animations Added!
+            local: "\xA1Se agregaron animaciones de brazos!"
+          - name: Arms Animation Sound Events Added!
+            local: "\xA1Eventos de sonido de animaci\xF3n de armas agregados!"
+          - name: Arms Audio Source Added!
+            local: "\xA1Se agreg\xF3 la fuente de audio Arms!"
+          - name: Arms Audio Source Assigned!
+            local: "\xA1Fuente de audio de armas asignada!"
+          - name: 'Arms Animation Event Added : Blow Out'
+            local: "Evento de animaci\xF3n de armas agregado: Blow Out"
+          - name: 'Arms Animation Event Added : Flashlight Click'
+            local: "Evento de animaci\xF3n de armas agregado: clic de linterna"
+          - name: 'Arms Animation Event Added : Lighter Open'
+            local: "Evento de animaci\xF3n de armas agregado: Encendedor abierto"
+          - name: 'Arms Animation Event Added : Lighter Close'
+            local: "Evento de animaci\xF3n de armas agregado: cierre m\xE1s ligero"
+          - name: 'Arms Animation Event Added : Lighter On'
+            local: "Evento de animaci\xF3n de armas agregado: Lighter On"
+          - name: 'Arms Animation Event Added : Lighter Off'
+            local: "Evento de animaci\xF3n de armas agregado: encendedor apagado"
+          - name: Lantern Hinge Connect Assigned!
+            local: "\xA1Conexi\xF3n de bisagra de linterna asignada!"
+        - name: Candle
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilice las siguientes opciones para asignar valores
+              de audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilice las siguientes opciones para establecer los valores
+              de animaci\xF3n.\n"
+          - name: Candle Instructions
+            text: '
+
+              Utilice las siguientes opciones para crear, asignar
+              o establecer valores de velas.
+
+'
+          - name: Inventory Instructions
+            text: '
+
+              Utilice las siguientes opciones para establecer
+              valores de inventario.
+
+'
+          buttons:
+          - name: Audio Options
+            local: Opciones de sonido
+          - name: Animation Options
+            local: "Opciones de animaci\xF3n"
+          - name: Candle Options
+            local: Opciones de velas
+          - name: Inventory Options
+            local: Opciones de inventario
+          - name: Model
+            local: Modelo
+          - name: Reduction
+            local: "Reducci\xF3n"
+          - name: Candle
+            local: Vela
+          - name: Flame
+            local: Fuego
+          - name: Light
+            local: Ligero
+          - name: Create Candle
+            local: Crear vela
+          - name: Create Flame
+            local: Crear llama
+          - name: Create Light
+            local: Crear luz
+          toggles: []
+          prompts:
+          - name: Candle Create
+            header: "\xBFCrear vela?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de vela.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Candle Flame Create
+            header: "\xBFCrear llama?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de llama.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Candle Light Create
+            header: "\xBFCrear luz?"
+            message: "Est\xE1s a punto de crear una nueva luz.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues:
+          - name: CANDLE ALREADY ASSIGNED!
+            local: "\xA1VELA YA ASIGNADA!"
+          - name: CANDLE FLAME ALREADY ASSIGNED!
+            local: LLAMA DE VELA YA ASIGNADO!
+          - name: CANDLE LIGHT ALREADY ASSIGNED!
+            local: "\xA1LUZ DE VELA YA ASIGNADA!"
+        - name: Flashlight
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilice las siguientes opciones para asignar valores
+              de audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilice las siguientes opciones para establecer los valores
+              de animaci\xF3n.\n"
+          - name: Flashlight Instructions
+            text: '
+
+              Utilice las siguientes opciones para crear, asignar
+              o establecer valores de linterna.
+
+'
+          - name: Inventory Instructions
+            text: '
+
+              Utilice las siguientes opciones para establecer
+              valores de inventario.
+
+'
+          - name: UI Instructions
+            text: "\nUse las opciones a continuaci\xF3n para establecer los valores
+              de la interfaz de usuario.\n"
+          buttons:
+          - name: Audio Options
+            local: Opciones de sonido
+          - name: Animation Options
+            local: "Opciones de animaci\xF3n"
+          - name: Flashlight Options
+            local: Opciones de linterna
+          - name: Inventory Options
+            local: Opciones de inventario
+          - name: UI Options
+            local: Opciones de interfaz de usuario
+          - name: General
+            local: General
+          - name: Extra
+            local: Extra
+          - name: Model
+            local: Modelo
+          - name: Battery
+            local: "Bater\xEDa"
+          - name: Flashlight
+            local: Linterna
+          - name: Light
+            local: Ligero
+          - name: Create Flashlight
+            local: Crear linterna
+          - name: Create Light
+            local: Crear luz
+          toggles: []
+          prompts:
+          - name: Flashlight Create
+            header: "\xBFCrear linterna?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de linterna.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Flashlight Light Create
+            header: "\xBFCrear luz?"
+            message: "Est\xE1s a punto de crear una nueva luz.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues:
+          - name: FLASHLIGHT LIGHT ALREADY ASSIGNED!
+            local: "\xA1LUZ DE LINTERNA YA ASIGNADA!"
+        - name: Lantern
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilice las siguientes opciones para asignar valores
+              de audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilice las siguientes opciones para establecer los valores
+              de animaci\xF3n.\n"
+          - name: Inventory Instructions
+            text: '
+
+              Utilice las siguientes opciones para establecer
+              valores de inventario.
+
+'
+          - name: Lantern Instructions
+            text: '
+
+              Utilice las siguientes opciones para crear, asignar
+              o establecer valores de linterna.
+
+'
+          - name: UI Instructions
+            text: "\nUse las opciones a continuaci\xF3n para establecer los valores
+              de la interfaz de usuario.\n"
+          buttons:
+          - name: Audio Options
+            local: Opciones de sonido
+          - name: Animation Options
+            local: "Opciones de animaci\xF3n"
+          - name: Inventory Options
+            local: Opciones de inventario
+          - name: Lantern Options
+            local: Opciones de linterna
+          - name: UI Options
+            local: Opciones de interfaz de usuario
+          - name: Model
+            local: Modelo
+          - name: Hinge
+            local: Bisagra
+          - name: Hinge Connect
+            local: "Conexi\xF3n de bisagra"
+          - name: Lantern
+            local: Linterna
+          - name: Flame
+            local: Fuego
+          - name: Light
+            local: Ligero
+          - name: Create Lantern
+            local: Crear Linterna
+          - name: Create Flame
+            local: Crear llama
+          - name: Create Light
+            local: Crear luz
+          - name: Create Hinge Joint
+            local: "Crear articulaci\xF3n de bisagra"
+          - name: Create Hinge Connect
+            local: Crear Bisagra Conectar
+          toggles: []
+          prompts:
+          - name: Lantern Create
+            header: "\xBFCrear Linterna?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de linterna.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Lantern Flame Create
+            header: "\xBFCrear llama?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de llama.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Lantern Light Create
+            header: "\xBFCrear luz?"
+            message: "Est\xE1s a punto de crear una nueva luz.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Lantern Hinge Create
+            header: "\xBFCrear articulaci\xF3n de bisagra?"
+            message: "Est\xE1 a punto de crear una nueva articulaci\xF3n de bisagra.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Lantern Hinge Connect Create
+            header: "\xBFCrear conexi\xF3n de bisagra?"
+            message: "Est\xE1 a punto de crear una nueva conexi\xF3n de bisagra.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues:
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN LIGHT FIRST!
+            local: "\xA1PRIMERO DEBE CREAR O ASIGNAR LA LUZ DE LA LINTERNA!"
+          - name: LANTERN FLAME ALREADY ASSIGNED!
+            local: LLAMA DE LINTERNA YA ASIGNADO!
+          - name: LANTERN LIGHT ALREADY ASSIGNED!
+            local: "\xA1LUZ DE LINTERNA YA ASIGNADA!"
+          - name: YOU MUST CREATE OR ASSIGN THE LANTERN HINGE JOINT FIRST!
+            local: "\xA1PRIMERO DEBE CREAR O ASIGNAR LA JUNTA DE BISAGRA LINTERNA!"
+          - name: LANTERN HINGE ALREADY ASSIGNED!
+            local: Bisagra de la linterna ya asignado!
+          - name: LANTERN HINGE CONNECT ALREADY ASSIGNED!
+            local: "\xA1CONEXI\xD3N DE BISAGRA LINTERNA YA ASIGNADA!"
+        - name: Lighter
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilice las siguientes opciones para asignar valores
+              de audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilice las siguientes opciones para establecer los valores
+              de animaci\xF3n.\n"
+          - name: Inventory Instructions
+            text: '
+
+              Utilice las siguientes opciones para establecer
+              valores de inventario.
+
+'
+          - name: Lighter Instructions
+            text: "\nUtilice las siguientes opciones para crear, asignar o establecer
+              valores m\xE1s ligeros.\n"
+          buttons:
+          - name: Audio Options
+            local: Opciones de sonido
+          - name: Animation Options
+            local: "Opciones de animaci\xF3n"
+          - name: Inventory Options
+            local: Opciones de inventario
+          - name: Lighter Options
+            local: "Opciones m\xE1s ligeras"
+          - name: Arms
+            local: Brazos
+          - name: Lighter
+            local: "M\xE1s ligero"
+          - name: Model
+            local: Modelo
+          - name: Flame
+            local: Fuego
+          - name: Light
+            local: Ligero
+          - name: Create Lighter
+            local: Crear encendedor
+          - name: Create Flame
+            local: Crear llama
+          - name: Create Light
+            local: Crear luz
+          toggles: []
+          prompts:
+          - name: Lighter Create
+            header: "\xBFCrear m\xE1s ligero?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de encendedor.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Lighter Flame Create
+            header: "\xBFCrear llama?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de llama.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Lighter Light Create
+            header: "\xBFCrear luz?"
+            message: "Est\xE1s a punto de crear una nueva luz.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues:
+          - name: LIGHTER FLAME ALREADY ASSIGNED!
+            local: "Llama m\xE1s ligera ya asignado!"
+          - name: LIGHTER LIGHT ALREADY ASSIGNED!
+            local: "M\xE1s ligero ya asignado!"
+        - name: Melee
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilice las siguientes opciones para asignar valores
+              de audio.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilice las siguientes opciones para establecer los valores
+              de animaci\xF3n.\n"
+          - name: Inventory Instructions
+            text: '
+
+              Utilice las siguientes opciones para establecer
+              valores de inventario.
+
+'
+          - name: Melee Instructions
+            text: '
+
+              Usa las siguientes opciones para establecer los
+              valores cuerpo a cuerpo.
+
+'
+          - name: Weapon Instructions
+            text: '
+
+              Utilice las siguientes opciones para crear, asignar
+              o establecer valores de armas.
+
+'
+          buttons:
+          - name: Audio Options
+            local: Opciones de sonido
+          - name: Animation Options
+            local: "Opciones de animaci\xF3n"
+          - name: Inventory Options
+            local: Opciones de inventario
+          - name: Melee Options
+            local: Opciones cuerpo a cuerpo
+          - name: Weapon Options
+            local: Opciones de armas
+          - name: Hit
+            local: Golpear
+          - name: Kickback
+            local: Contragolpe
+          - name: Surface
+            local: Superficie
+          - name: Create Weapon
+            local: Crear arma
+          toggles: []
+          prompts:
+          - name: Weapon Create
+            header: "\xBFCrear arma?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de arma.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues: []
+        - name: Gun
+          local: 
+          texts:
+          - name: Audio Instructions
+            text: '
+
+              Utilice las siguientes opciones para asignar valores
+              de audio.
+
+'
+          - name: Aim Instructions
+            text: '
+
+              Utilice las siguientes opciones para establecer
+              los valores objetivo.
+
+'
+          - name: Animation Instructions
+            text: "\nUtilice las siguientes opciones para establecer los valores
+              de animaci\xF3n.\n"
+          - name: Inventory Instructions
+            text: '
+
+              Utilice las siguientes opciones para establecer
+              valores de inventario.
+
+'
+          - name: Shoot Instructions
+            text: "\nUse las opciones a continuaci\xF3n para crear, asignar o establecer
+              valores de disparo de armas.\n"
+          - name: Shotgun Instructions
+            text: "\nUse las opciones a continuaci\xF3n para establecer los valores
+              de escopeta.\n"
+          - name: Shell Eject Instructions
+            text: "\nUse las opciones a continuaci\xF3n para establecer los valores
+              de expulsi\xF3n de la carcasa.\n"
+          - name: Weapon Instructions
+            text: "\nUse las opciones a continuaci\xF3n para crear, asignar o establecer
+              valores de armas de fuego.\n"
+          buttons:
+          - name: Audio Options
+            local: Opciones de sonido
+          - name: Aim Options
+            local: "Opciones de punter\xEDa"
+          - name: Animation Options
+            local: "Opciones de animaci\xF3n"
+          - name: Inventory Options
+            local: Opciones de inventario
+          - name: Shoot Options
+            local: Opciones de disparo
+          - name: Shotgun Options
+            local: Opciones de escopeta
+          - name: Shell Eject Options
+            local: "Opciones de expulsi\xF3n de carcasa"
+          - name: Weapon Options
+            local: Opciones de armas
+          - name: Bullet
+            local: Bala
+          - name: Kickback
+            local: Contragolpe
+          - name: Muzzle Flash
+            local: Fogonazo
+          - name: Shoot
+            local: Disparar
+          - name: Reaction
+            local: "Reacci\xF3n"
+          - name: Model
+            local: Modelo
+          - name: Magazine
+            local: Revista
+          - name: Surface
+            local: Superficie
+          - name: Catch Kickback
+            local: Atrapar contragolpe
+          - name: Flash
+            local: Destello
+          - name: Light
+            local: Ligero
+          - name: Create Muzzle Flash
+            local: Crear fogonazo
+          - name: Create Muzzle Light
+            local: Crear luz de boca
+          - name: Type
+            local: Tipo
+          - name: Create Weapon
+            local: Crear arma
+          toggles: []
+          prompts:
+          - name: Weapon Muzzle Flash Create
+            header: "\xBFCrear fogonazo?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de fogonazo.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Weapon Muzzle Flash Light Create
+            header: "\xBFCrear luz de flash de bozal?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de luz.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Weapon Create
+            header: "\xBFCrear arma?"
+            message: "Est\xE1 a punto de crear un nuevo modelo de arma.\r\n\r\n\xBFEst\xE1
+              seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues:
+          - name: MUZZLE FLASH ALREADY ASSIGNED!
+            local: "\xA1FLASH DE BOZAL YA ASIGNADO!"
+          - name: MUZZLE LIGHT ALREADY ASSIGNED!
+            local: "\xA1LUZ DE BOCA YA ASIGNADA!"

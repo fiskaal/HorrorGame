@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a138e0a9882b71b40a73dc76ad62054d, type: 3}
+  m_Name: HFPS Version Detect Library (1.6.3)
+  m_EditorClassIdentifier: 
+  content:
+    asset: HFPS
+    version: 1.6.3
+    versions:
+    - name: a
+      library:
+      - name: SaveGameHandlerEditor
+        template: {fileID: 11400000, guid: 4ca23f42efb76b24a88f652fd2b28c23, type: 2}
+    - name: b
+      library:
+      - name: SaveGameHandlerEditor
+        template: {fileID: 11400000, guid: 069f5c805d10a0048ac226a0f346e8dd, type: 2}
+    - name: c
+      library:
+      - name: SaveGameHandlerEditor
+        template: {fileID: 11400000, guid: cde3609b9600b514594c9b0350887379, type: 2}

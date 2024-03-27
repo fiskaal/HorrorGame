@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: HFPS Loc Edit (LocalizationBuilder)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Supported Language Reference Update
+    original: '            public Language language;'
+    edit: '            public TW_Language language;'
+  - name: Supported Language Use Update
+    original: '            public SupportedLanguage(Language language, bool supported)'
+    edit: '            public SupportedLanguage(TW_Language language, bool supported)'
+  - name: Get Supported Language Update
+    original: '                new SupportedLanguage(new Language("None", string.Empty),
+      false)'
+    edit: '                new SupportedLanguage(new TW_Language("None", string.Empty),
+      false)'
+  - name: Get Supported Language Use Update
+    original: "            Language[] languages = TranslatorLanguages.AllLanguages;\r\n           
+      Language[] supportedLangs = (Translator as ITranslator).GetSupportedLanguages();"
+    edit: "            TW_Language[] languages = TranslatorLanguages.AllLanguages;\r\n           
+      TW_Language[] supportedLangs = (Translator as ITranslator).GetSupportedLanguages();"
+  - name: Get Supported Language LCode Update
+    original: '                    Language lg = lang;'
+    edit: '                    TW_Language lg = lang;'
+  - name: Get Supported Language LCode 2 Update
+    original: '                        Language lg = suppLang;'
+    edit: '                        TW_Language lg = suppLang;'

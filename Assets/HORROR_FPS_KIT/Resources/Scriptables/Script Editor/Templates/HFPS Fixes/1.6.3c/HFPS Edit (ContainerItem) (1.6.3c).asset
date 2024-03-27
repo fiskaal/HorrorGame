@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: HFPS Edit (ContainerItem) (1.6.3c)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Select Update
+    original: "        public void Select()\r\n        {\r\n            foreach (var
+      item in inventory.ContainterItemsCache)\r\n            {\r\n               
+      if (item != this) item.Deselect();\r\n            }\r\n\r\n            fadeColor
+      = HoldColor;\r\n            hold = true;\r\n        }"
+    edit: "        public void Select()\r\n        {\r\n            foreach (var
+      item in inventory.ContainterItemsCache)\r\n            {\r\n               
+      if (item != this) item.Deselect();\r\n            }\r\n\r\n            fadeColor
+      = HoldColor;\r\n            hold = true;\r\n\r\n            inventory.ContainerItem_Select(this);\r\n       
+      }"
+  - name: Deselect Update
+    original: "        public void Deselect()\r\n        {\r\n            hold =
+      false;\r\n            fadeColor = NormalColor;\r\n            background.color
+      = NormalColor;\r\n        }"
+    edit: "        public void Deselect()\r\n        {\r\n            hold = false;\r\n           
+      fadeColor = NormalColor;\r\n            background.color = NormalColor;\r\n           
+      \r\n            inventory.ContainerItem_Select(null);\r\n        }"

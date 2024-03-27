@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c889acb6cf0d394092bbee9b6b846d8, type: 3}
+  m_Name: HFPS Edit Library (1.6.3c)
+  m_EditorClassIdentifier: 
+  content:
+    name: HFPS FIXES
+    version: HFPS 1.6.3c
+    library:
+    - name: ContainerItem
+      template: {fileID: 11400000, guid: dab3ffa8d6458e54b987122943ba6af2, type: 2}
+    - name: DynamicObjectController
+      template: {fileID: 11400000, guid: b3345cd49e5e1c74bbeed2c827997734, type: 2}
+    - name: Inventory
+      template: {fileID: 11400000, guid: 34db0f24f5793224685e83abaee2e355, type: 2}
+    - name: InventoryContainer
+      template: {fileID: 11400000, guid: b0b9c2040ffad6848b0f34994be4b06a, type: 2}
+    - name: ItemsContainer
+      template: {fileID: 11400000, guid: 44510935b65232f46ac28419ca192805, type: 2}

@@ -1,0 +1,310 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (PlayerController)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Auto Values
+    original: "        private ParticleSystem foamParticles;\r\n        #endregion"
+    edit: "        private ParticleSystem foamParticles;\r\n        #endregion\r\n       
+      \r\n        public bool useCustomSpeed;\r\n        public float customSpeed;\r\n       
+      \r\n        public bool lockMovement;\r\n        \r\n        public bool lockMoveX;\r\n       
+      public bool limitMoveX;\r\n        public int moveXLimitDir;\r\n        \r\n       
+      public bool lockMoveY;\r\n        public bool limitMoveY;\r\n        public
+      int moveYLimitDir;\r\n        \r\n        public bool noFallDamage;\r\n       
+      public bool lockJump;\r\n        public bool lockPlayState;\r\n        public
+      bool lockSprint;\r\n        public bool lockZoom;"
+  - name: Input Move
+    original: '        private Vector2 inputMovement;'
+    edit: '        public Vector2 inputMovement;'
+  - name: inputX
+    original: '        private float inputX;'
+    edit: '        public float inputX;'
+  - name: inputY
+    original: '        private float inputY;'
+    edit: '        public float inputY;'
+  - name: Move Player
+    original: '        IEnumerator MovePlayer'
+    edit: '        public IEnumerator MovePlayer'
+  - name: Update Get Input
+    original: "            void GetInput()\r\n            {\r\n                Vector2
+      movement;\r\n\r\n                if ((movement = InputHandler.ReadInput<Vector2>(\"Move\"))
+      != null)\r\n                {\r\n                    if (InputHandler.CurrentDevice
+      != InputHandler.Device.MouseKeyboard)\r\n                    {\r\n                       
+      inputX = movement.x;\r\n                        inputY = movement.y;\r\n                       
+      inputMovement = movement;\r\n                    }\r\n                    else\r\n                   
+      {\r\n                        inputY = Mathf.MoveTowards(inputY, movement.y,
+      Time.deltaTime * controllerSettings.inputSmoothing);\r\n                       
+      inputX = Mathf.MoveTowards(inputX, movement.x, Time.deltaTime * controllerSettings.inputSmoothing);\r\n                       
+      inputMovement.y = inputY;\r\n                        inputMovement.x = inputX;\r\n                   
+      }\r\n                }\r\n            }"
+    edit: "            void GetInput()\r\n            {            \r\n               
+      if(!lockMovement){\r\n                \r\n                Vector2 movement;\r\n\r\n               
+      if ((movement = InputHandler.ReadInput<Vector2>(\"Move\")) != null)\r\n               
+      {\r\n                    if (InputHandler.CurrentDevice != InputHandler.Device.MouseKeyboard)\r\n                   
+      {\r\n                        if(!lockMoveX){\r\n                           
+      \r\n                            if(!limitMoveX){\r\n                           
+      \r\n                                inputX = movement.x;\r\n                               
+      inputMovement.x = movement.x;\r\n                        \r\n                           
+      //!limitMoveX\r\n                            } else {\r\n                               
+      \r\n                                inputX = movement.x;\r\n\r\n                               
+      if(moveXLimitDir == 0){\r\n                                \r\n                                   
+      if(movement.x < -0.000001 | movement.x == 0){\r\n\r\n                                       
+      inputMovement.x = movement.x;\r\n                                    \r\n                                   
+      }//movement.x < -0.001\r\n                                \r\n                               
+      }//moveXLimitDir = left\r\n                                \r\n                               
+      if(moveXLimitDir == 1){\r\n                                \r\n                                   
+      if(movement.x > 0.000001 | movement.x == 0){\r\n                                   
+      \r\n                                        inputMovement.x = movement.x;\r\n                                   
+      \r\n                                    }//movement.x > -0.001\r\n                               
+      \r\n                                }//moveXLimitDir = right\r\n\r\n                           
+      }//!limitMoveX\r\n                         \r\n                        //!lockMoveX\r\n                       
+      } else {\r\n                        \r\n                            inputMovement.x
+      = inputX;\r\n                        \r\n                        }//!lockMoveX\r\n                       
+      \r\n                        if(!lockMoveY){\r\n                           
+      \r\n                            if(!limitMoveY){\r\n                           
+      \r\n                                inputY = movement.y;\r\n                               
+      inputMovement.y = movement.y;\r\n                        \r\n                           
+      //!limitMoveY\r\n                            } else {\r\n                           
+      \r\n                                inputY = movement.y;\r\n                           
+      \r\n                                if(moveYLimitDir == 0){\r\n                               
+      \r\n                                    if(movement.y > 0.000001 | movement.y
+      == 0){\r\n\r\n                                        inputMovement.y = movement.y;\r\n                                   
+      \r\n                                    }//movement.y > 0.001\r\n                               
+      \r\n                                }//moveYLimitDir = up\r\n                               
+      \r\n                                if(moveYLimitDir == 1){\r\n                               
+      \r\n                                    if(movement.y < -0.0000001 | movement.y
+      == 0){\r\n                                    \r\n                                       
+      inputMovement.y = movement.y;\r\n                                    \r\n                                   
+      }//movement.y < -0.001\r\n                                \r\n                               
+      }//moveYLimitDir = down\r\n                            \r\n                           
+      }//!limitMoveY\r\n                            \r\n                        //!lockMoveY\r\n                       
+      } else {\r\n                        \r\n                            inputMovement.y
+      = inputY;\r\n                        \r\n                        }//!lockMoveY\r\n                   
+      }\r\n                    else\r\n                    {\r\n                       
+      if(!lockMoveX){\r\n                        \r\n                           
+      if(!limitMoveX){\r\n                            \r\n                               
+      inputX = Mathf.MoveTowards(inputX, movement.x, Time.deltaTime * controllerSettings.inputSmoothing);\r\n                               
+      inputMovement.x = inputX;\r\n                        \r\n                           
+      //!limitMoveX\r\n                            } else {\r\n                           
+      \r\n                                inputX = Mathf.MoveTowards(inputX, movement.x,
+      Time.deltaTime * controllerSettings.inputSmoothing);\r\n\r\n                               
+      if(moveXLimitDir == 0){\r\n                                \r\n                                   
+      if(inputX < -0.001 | inputX == 0){\r\n\r\n                                       
+      inputMovement.x = inputX;\r\n                                    \r\n                                   
+      }//inputX < -0.001\r\n                                \r\n                               
+      }//moveXLimitDir = left\r\n                                \r\n                               
+      if(moveXLimitDir == 1){\r\n                                \r\n                                   
+      if(inputX > 0.001 | inputX == 0){\r\n                                    \r\n                                       
+      inputMovement.x = inputX;\r\n                                    \r\n                                   
+      }//inputX > -0.001\r\n                                \r\n                               
+      }//moveXLimitDir = right\r\n                            \r\n                           
+      }//!limitMoveX\r\n                            \r\n                        //!lockMoveX\r\n                       
+      } else {\r\n                        \r\n                            inputMovement.x
+      = inputX;\r\n                        \r\n                        }//!lockMoveX\r\n                       
+      \r\n                        if(!lockMoveY){\r\n                        \r\n                           
+      if(!limitMoveY){\r\n                            \r\n                               
+      inputY = Mathf.MoveTowards(inputY, movement.y, Time.deltaTime * controllerSettings.inputSmoothing);\r\n                               
+      inputMovement.y = inputY;\r\n                        \r\n                           
+      //!limitMoveY\r\n                            } else {\r\n                           
+      \r\n                                inputY = Mathf.MoveTowards(inputY, movement.y,
+      Time.deltaTime * controllerSettings.inputSmoothing);\r\n                               
+      \r\n                                if(moveYLimitDir == 0){\r\n                               
+      \r\n                                    if(inputY > 0.001 | inputY == 0){\r\n\r\n                                       
+      inputMovement.y = inputY;\r\n                                    \r\n                                   
+      }//inputY < -0.001\r\n                                \r\n                               
+      }//moveYLimitDir = up\r\n                                \r\n                               
+      if(moveYLimitDir == 1){\r\n                                \r\n                                   
+      if(inputY < -0.001 | inputY == 0){\r\n                                    \r\n                                       
+      inputMovement.y = inputY;\r\n                                    \r\n                                   
+      }//inputY > -0.001\r\n                                \r\n                               
+      }//moveYLimitDir = down\r\n                            \r\n                           
+      }//!limitMoveY\r\n                            \r\n                        //!lockMoveY\r\n                       
+      } else {\r\n                        \r\n                            inputMovement.y
+      = inputY;\r\n                        \r\n                        }//!lockMoveY\r\n                   
+      }\r\n                }\r\n                \r\n                }//lockMovement\r\n           
+      }"
+  - name: Lock Zoom
+    original: '                ZoomPressed = InputHandler.ReadButton("Zoom");'
+    edit: "                \r\n                if(!lockZoom){\r\n               
+      \r\n                    ZoomPressed = InputHandler.ReadButton(\"Zoom\");\r\n\r\n               
+      }//!lockZoom\r\n                "
+  - name: Lock Jump
+    original: "                    JumpPressed = InputHandler.ReadButtonOnce(this,
+      \"Jump\") &&\r\n                        (!controllerFeatures.enableStamina
+      || currentStamina > 0);"
+    edit: "                    \r\n                    if(!lockJump){\r\n                       
+      \r\n                        JumpPressed = InputHandler.ReadButtonOnce(this,
+      \"Jump\") && (!controllerFeatures.enableStamina || currentStamina > 0);\r\n               
+      \r\n                    }//!lockJump\r\n                    "
+  - name: Lock Sprint
+    original: "                    if (inputDevice != InputHandler.Device.MouseKeyboard)\r\n                   
+      {\r\n                        if (!controllerFeatures.enableStamina)\r\n                       
+      {\r\n                            if (InputHandler.ReadButtonOnce(this, \"Run\"))\r\n                           
+      {\r\n                                RunPressed = !RunPressed;\r\n                           
+      }\r\n                        }\r\n                        else\r\n                       
+      {\r\n                            if (InputHandler.ReadButtonOnce(this, \"Run\"))\r\n                           
+      {\r\n                                if (!RunPressed && currentStamina > 0)\r\n                               
+      {\r\n                                    RunPressed = true;\r\n                               
+      }\r\n                            }\r\n                            else if (currentStamina
+      < 0)\r\n                            {\r\n                                RunPressed
+      = false;\r\n                            }\r\n                        }\r\n                   
+      }\r\n                    else\r\n                    {\r\n                       
+      if (!controllerFeatures.enableStamina)\r\n                        {\r\n                           
+      RunPressed = InputHandler.ReadButton(\"Run\");\r\n                        }\r\n                       
+      else\r\n                        {\r\n                            RunPressed
+      = InputHandler.ReadButton(\"Run\") && currentStamina > 0;\r\n                       
+      }\r\n                    }"
+    edit: "                    if(!lockSprint){\r\n                \r\n                       
+      if (inputDevice != InputHandler.Device.MouseKeyboard)\r\n                       
+      {\r\n                            if (!controllerFeatures.enableStamina)\r\n                           
+      {\r\n                                if (InputHandler.ReadButtonOnce(this,
+      \"Run\"))\r\n                                {\r\n                                   
+      RunPressed = !RunPressed;\r\n                                }\r\n                           
+      }\r\n                            else\r\n                            {\r\n                               
+      if (InputHandler.ReadButtonOnce(this, \"Run\"))\r\n                               
+      {\r\n                                    if (!RunPressed && currentStamina
+      > 0)\r\n                                    {\r\n                                       
+      RunPressed = true;\r\n                                    }\r\n                               
+      }\r\n                                else if (currentStamina < 0)\r\n                               
+      {\r\n                                    RunPressed = false;\r\n                               
+      }\r\n                            }\r\n                        }\r\n                       
+      else\r\n                        {\r\n                            if (!controllerFeatures.enableStamina)\r\n                           
+      {\r\n                                RunPressed = InputHandler.ReadButton(\"Run\");\r\n                           
+      }\r\n                            else\r\n                            {\r\n                               
+      RunPressed = InputHandler.ReadButton(\"Run\") && currentStamina > 0;\r\n                           
+      }\r\n                        }\r\n                    \r\n                   
+      }//!lockSprint"
+  - name: Lock States
+    original: "                    CrouchPressed = InputHandler.ReadButtonOnce(this,
+      \"Crouch\");\r\n                    PronePressed = InputHandler.ReadButtonOnce(this,
+      \"Prone\");"
+    edit: "                \r\n                    if(!lockPlayState){\r\n                   
+      \r\n                        CrouchPressed = InputHandler.ReadButtonOnce(this,
+      \"Crouch\");\r\n                        PronePressed = InputHandler.ReadButtonOnce(this,
+      \"Prone\");\r\n                \r\n                    }//!lockPlayState\r\n                    "
+  - name: Lock States 2
+    original: "                    bool prone = InputHandler.ReadButton(\"Prone\");\r\n\r\n                   
+      if (prone && !inProne)\r\n                    {\r\n                       
+      proneTimeStart = true;\r\n                        proneTime += Time.deltaTime;\r\n\r\n                       
+      if (proneTime >= controllerSettings.consoleToProneTime)\r\n                       
+      {\r\n                            PronePressed = true;\r\n                           
+      inProne = true;\r\n                        }\r\n                    }\r\n                   
+      else if (proneTimeStart && proneTime < controllerSettings.consoleToProneTime)\r\n                   
+      {\r\n                        CrouchPressed = true;\r\n                       
+      proneTimeStart = false;\r\n                        proneTime = 0;\r\n                   
+      }\r\n                    else\r\n                    {\r\n                       
+      CrouchPressed = false;\r\n                        PronePressed = false;\r\n                       
+      proneTime = 0;\r\n\r\n                        if (!prone && inProne)\r\n                       
+      {\r\n                            inProne = false;\r\n                       
+      }\r\n                    }"
+    edit: "                \r\n                    if(!lockPlayState){\r\n                   
+      \r\n                        bool prone = InputHandler.ReadButton(\"Prone\");\r\n\r\n                       
+      if (prone && !inProne)\r\n                        {\r\n                           
+      proneTimeStart = true;\r\n                            proneTime += Time.deltaTime;\r\n\r\n                           
+      if (proneTime >= controllerSettings.consoleToProneTime)\r\n                           
+      {\r\n                                PronePressed = true;\r\n                               
+      inProne = true;\r\n                            }\r\n                       
+      }\r\n                        else if (proneTimeStart && proneTime < controllerSettings.consoleToProneTime)\r\n                       
+      {\r\n                            CrouchPressed = true;\r\n                           
+      proneTimeStart = false;\r\n                            proneTime = 0;\r\n                       
+      }\r\n                        else\r\n                        {\r\n                           
+      CrouchPressed = false;\r\n                            PronePressed = false;\r\n                           
+      proneTime = 0;\r\n\r\n                            if (!prone && inProne)\r\n                           
+      {\r\n                                inProne = false;\r\n                           
+      }\r\n                        }\r\n                    \r\n                   
+      }//!lockPlayState\r\n                    "
+  - name: Update Input
+    original: "            if (InputHandler.InputIsInitialized && !isPauseMenu)\r\n           
+      {\r\n                inputDevice = InputHandler.CurrentDevice;\r"
+    edit: "            if(!lockMovement){\r\n\r\n            if (InputHandler.InputIsInitialized
+      && !isPauseMenu)\r\n            {\r\n                inputDevice = InputHandler.CurrentDevice;\r"
+  - name: Update Input Close
+    original: "            if (inputDevice.IsGamepadDevice() == 1)\r\n           
+      {"
+    edit: "            }//lockMovement\r\n\r\n            if (inputDevice.IsGamepadDevice()
+      == 1)\r\n            {"
+  - name: Move Speed Walk
+    original: '                                    movementSpeed = basicSettings.walkSpeed;'
+    edit: "                                    if(!useCustomSpeed){\r\n                                   
+      \r\n                                        movementSpeed = basicSettings.walkSpeed;\r\n                               
+      \r\n                                    //!useCustomSpeed\r\n                                   
+      } else {\r\n                                    \r\n                                       
+      movementSpeed = customSpeed;\r\n                                    \r\n                                   
+      }//!useCustomSpeed"
+  - name: Move Speed Crouch
+    original: '                            movementSpeed = basicSettings.crouchSpeed;'
+    edit: "                            if(!useCustomSpeed){\r\n                           
+      \r\n                                movementSpeed = basicSettings.crouchSpeed;\r\n                       
+      \r\n                            //!useCustomSpeed\r\n                           
+      } else {\r\n                                    \r\n                               
+      movementSpeed = customSpeed;\r\n                                    \r\n                           
+      }//!useCustomSpeed"
+  - name: Move Speed Prone
+    original: '                            movementSpeed = basicSettings.proneSpeed;'
+    edit: "                            if(!useCustomSpeed){\r\n                           
+      \r\n                                movementSpeed = basicSettings.proneSpeed;\r\n                       
+      \r\n                            //!useCustomSpeed\r\n                           
+      } else {\r\n                                    \r\n                               
+      movementSpeed = customSpeed;\r\n                                    \r\n                           
+      }//!useCustomSpeed"
+  - name: Apply Fall Damage
+    original: "        void ApplyFallingDamage(float fallDistance)\r\n        {\r\n           
+      healthManager.ApplyDamage((int)(fallDistance * controllerSettings.fallDamageMultiplier));\r\n           
+      if (characterState != CharacterState.Prone) footsteps.OnJump();\r\n           
+      StartCoroutine(ApplyKickback(new Vector3(12, UnityEngine.Random.Range(-2.0f,
+      2.0f), 0), 0.1f));\r\n        }"
+    edit: "        void ApplyFallingDamage(float fallDistance)\r\n        {\r\n           
+      if(!noFallDamage){\r\n        \r\n                healthManager.ApplyDamage((int)(fallDistance
+      * controllerSettings.fallDamageMultiplier));\r\n                if (characterState
+      != CharacterState.Prone) footsteps.OnJump();\r\n                StartCoroutine(ApplyKickback(new
+      Vector3(12, UnityEngine.Random.Range(-2.0f, 2.0f), 0), 0.1f));\r\n        \r\n           
+      }//!noFallDamage\r\n        }"
+  - name: States
+    original: "        IEnumerator AntiSpam()\r\n        {\r\n            antiSpam
+      = true;\r\n            yield return new WaitForSeconds(spamWaitTime);\r\n           
+      antiSpam = false;\r\n        }"
+    edit: "        IEnumerator AntiSpam()\r\n        {\r\n            antiSpam =
+      true;\r\n            yield return new WaitForSeconds(spamWaitTime);\r\n           
+      antiSpam = false;\r\n        }\r\n        \r\n        public void CustomSpeed_State(bool
+      state){\r\n        \r\n            useCustomSpeed = state;\r\n            \r\n       
+      }//CustomSpeed_State\r\n        \r\n        public void CustomSpeed(float speed){\r\n       
+      \r\n            customSpeed = speed;\r\n            \r\n        }//CustomSpeed\r\n       
+      \r\n        public void NoFallDamage_State(bool state){\r\n        \r\n           
+      noFallDamage = state;\r\n        \r\n        }//NoFallDamage_State\r\n       
+      \r\n        public void LockMove_State(bool state){\r\n        \r\n           
+      lockMovement = state;\r\n            \r\n        }//LockMove_State\r\n       
+      \r\n        public void LockMoveX_State(bool state){\r\n        \r\n           
+      lockMoveX = state;\r\n            \r\n        }//LockMoveX_State\r\n       
+      \r\n        public void LimitMoveX_State(bool state){\r\n        \r\n           
+      limitMoveX = state;\r\n            \r\n            if(!state){\r\n           
+      \r\n                moveXLimitDir = -1;\r\n                \r\n           
+      }//!state\r\n            \r\n        }//LimitMoveX_State\r\n        \r\n       
+      public void LimitMoveX_Set(int direction){\r\n        \r\n            moveXLimitDir
+      = direction;\r\n            \r\n        }//LimitMoveX_Set\r\n        \r\n       
+      public void LockMoveY_State(bool state){\r\n        \r\n            lockMoveY
+      = state;\r\n            \r\n        }//LockMoveY_State\r\n        \r\n       
+      public void LimitMoveY_State(bool state){\r\n        \r\n            limitMoveY
+      = state;\r\n            \r\n            if(!state){\r\n            \r\n               
+      moveYLimitDir = -1;\r\n                \r\n            }//!state\r\n           
+      \r\n        }//LimitMoveY_State\r\n        \r\n        public void LimitMoveY_Set(int
+      direction){\r\n        \r\n            moveYLimitDir = direction;\r\n           
+      \r\n        }//LimitMoveY_Set\r\n        \r\n        public void LockJump_State(bool
+      state){\r\n        \r\n            lockJump = state;\r\n            \r\n       
+      }//LockJump_State\r\n        \r\n        public void LockStateInput_State(bool
+      state){\r\n        \r\n            lockPlayState = state;\r\n            \r\n       
+      }//LockStateInput_State\r\n        \r\n        public void LockSprint_State(bool
+      state){\r\n        \r\n            lockSprint = state;\r\n            \r\n       
+      }//LockSprint_State\r\n        \r\n        public void LockZoom_State(bool
+      state){\r\n        \r\n            lockZoom = state;\r\n            \r\n       
+      }//LockZoom_State\r\n"

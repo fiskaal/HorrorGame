@@ -1,0 +1,290 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92efc7996ad665448638566319c901f, type: 3}
+  m_Name: Components Player Template
+  m_EditorClassIdentifier: 
+  templateType: 1
+  addOrUpdateOptions:
+    addAudioFader: 1
+    addDualWield: 1
+    addFOVMan: 1
+    addMaterialCont: 1
+    addPlayerMan: 1
+    addReferences: 1
+    addScreenEvents: 1
+    addSubActions: 1
+    updateProne: 1
+    updateZoom: 1
+  audioFaderOptions:
+    fadeMulti: 0.15
+    sources:
+      ambience: {fileID: 0}
+      music: {fileID: 0}
+      ambName: Ambience
+      musicName: Music
+  dualWieldItems:
+  - name: Flashlight
+    flags: 62
+    canDualWield: 1
+    options:
+    - Lantern
+    - Candle
+    - Glock18
+    - Axe
+    - Shotgun
+    - Lighter
+    selectedOptions:
+    - Candle
+    - Glock18
+    - Axe
+    - Shotgun
+    - Lighter
+  - name: Lantern
+    flags: 28
+    canDualWield: 1
+    options:
+    - Flashlight
+    - Candle
+    - Glock18
+    - Axe
+    - Shotgun
+    - Lighter
+    selectedOptions:
+    - Glock18
+    - Axe
+    - Shotgun
+  - name: Candle
+    flags: 61
+    canDualWield: 1
+    options:
+    - Flashlight
+    - Lantern
+    - Glock18
+    - Axe
+    - Shotgun
+    - Lighter
+    selectedOptions:
+    - Flashlight
+    - Glock18
+    - Axe
+    - Shotgun
+    - Lighter
+  - name: Glock18
+    flags: 39
+    canDualWield: 0
+    options:
+    - Flashlight
+    - Lantern
+    - Candle
+    - Axe
+    - Shotgun
+    - Lighter
+    selectedOptions:
+    - Flashlight
+    - Lantern
+    - Candle
+    - Lighter
+  - name: Axe
+    flags: 39
+    canDualWield: 0
+    options:
+    - Flashlight
+    - Lantern
+    - Candle
+    - Glock18
+    - Shotgun
+    - Lighter
+    selectedOptions:
+    - Flashlight
+    - Lantern
+    - Candle
+    - Lighter
+  - name: Shotgun
+    flags: 39
+    canDualWield: 0
+    options:
+    - Flashlight
+    - Lantern
+    - Candle
+    - Glock18
+    - Axe
+    - Lighter
+    selectedOptions:
+    - Flashlight
+    - Lantern
+    - Candle
+    - Lighter
+  - name: Lighter
+    flags: 61
+    canDualWield: 1
+    options:
+    - Flashlight
+    - Lantern
+    - Candle
+    - Glock18
+    - Axe
+    - Shotgun
+    selectedOptions:
+    - Flashlight
+    - Candle
+    - Glock18
+    - Axe
+    - Shotgun
+  fovOptions:
+    globalZoomMulti: 10
+    globalUnZoomMulti: 5
+    autoFindCameras: 1
+    cameras: []
+    states:
+    - name: Original
+      state: 0
+      FOV: 60
+      zoomMulti: 10
+      unzoomMulti: 5
+    - name: Cutscene
+      state: 1
+      FOV: 40
+      zoomMulti: 10
+      unzoomMulti: 5
+  matContOptions:
+    bodyParts:
+    - name: Arm - Left
+      meshParts:
+      - name: Body_Arms
+        skinnedMesh: {fileID: 0}
+        matSlot: 0
+        originalMat: {fileID: 2100000, guid: 8401378dfd938144796058eb593ebd0b, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Body_Arms
+      - name: Body_Arms_Shadow
+        skinnedMesh: {fileID: 0}
+        matSlot: 0
+        originalMat: {fileID: 2100000, guid: 6132a7abf34151e4c9d5b9108c0cdb88, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Body_Arms_Shadow
+      - name: Shirt_Sleeves
+        skinnedMesh: {fileID: 0}
+        matSlot: 0
+        originalMat: {fileID: 2100000, guid: 8ffc70211c2e66e4183b53482aa17b45, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Shirt_Sleeves
+      - name: Shirt_Sleeves_Shadow
+        skinnedMesh: {fileID: 0}
+        matSlot: 0
+        originalMat: {fileID: 2100000, guid: 9ca22cb3c7f7fff4c87efbb26e95118d, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Shirt_Sleeves_Shadow
+    - name: Arm - Right
+      meshParts:
+      - name: Body_Arms
+        skinnedMesh: {fileID: 0}
+        matSlot: 1
+        originalMat: {fileID: 2100000, guid: 1789e43a3e2c196419613330ea7b068e, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Body_Arms
+      - name: Body_Arms_Shadow
+        skinnedMesh: {fileID: 0}
+        matSlot: 1
+        originalMat: {fileID: 2100000, guid: d3807b8e423eb1a48b550f148a1d1562, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Body_Arms_Shadow
+      - name: Shirt_Sleeves
+        skinnedMesh: {fileID: 0}
+        matSlot: 1
+        originalMat: {fileID: 2100000, guid: 19089ba48ef6c5845b50ffef5259eda5, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Shirt_Sleeves
+      - name: Shirt_Sleeves_Shadow
+        skinnedMesh: {fileID: 0}
+        matSlot: 1
+        originalMat: {fileID: 2100000, guid: 7c5506a58a0236442a54c29aa69bd8d3, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Shirt_Sleeves_Shadow
+    - name: Body
+      meshParts:
+      - name: Boots
+        skinnedMesh: {fileID: 0}
+        matSlot: 0
+        originalMat: {fileID: 2100000, guid: 7474d29166aebd8468e96962c8e62344, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Boots
+      - name: Jeans
+        skinnedMesh: {fileID: 0}
+        matSlot: 0
+        originalMat: {fileID: 2100000, guid: c9f4407ce2fdc4543a4ab02ecf0a0ac2, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Jeans
+      - name: Shirt
+        skinnedMesh: {fileID: 0}
+        matSlot: 0
+        originalMat: {fileID: 2100000, guid: f50732700b85ba74293e0b5c3fcc48b8, type: 2}
+        invisMat: {fileID: 2100000, guid: 6cf66fb67b6aa2f408898f5762bdd0aa, type: 2}
+        nameOfMesh: Shirt
+  playerManOptions:
+    slowDownUse: 0
+    meleeConts:
+    - name: Axe
+      meleeCont: {fileID: 0}
+    weaponConts:
+    - name: Glock18
+      weaponCont: {fileID: 0}
+    - name: Shotgun
+      weaponCont: {fileID: 0}
+  proneOptions:
+    enableProne: 0
+    proneSpeed: 0.5
+    proneCenter: {x: 0, y: -0.5, z: 0}
+  subActionsOptions:
+    subActions:
+    - name: Exit
+      type: 0
+      display: Exit
+      icon: {fileID: 21300000, guid: e3ed2f3cf6333eb48891fe346466cfc0, type: 3}
+      action: {fileID: 0}
+      inputSlot: -1
+      isActive: 0
+      actName: 
+    - name: Coffee
+      type: 1
+      display: Drink Coffee
+      icon: {fileID: 21300000, guid: 6ff5c96963daa574a8e6ae9101200c38, type: 3}
+      action: {fileID: 0}
+      inputSlot: -1
+      isActive: 0
+      actName: SubAction_Coffee
+    actionInputs:
+    - name: Action left
+      input: UseItem4
+      isActive: 0
+      isPressed: 0
+      isHolding: 0
+    - name: Action down
+      input: UseItem3
+      isActive: 0
+      isPressed: 0
+      isHolding: 0
+    - name: Action right
+      input: UseItem2
+      isActive: 0
+      isPressed: 0
+      isHolding: 0
+    - name: Action up
+      input: UseItem1
+      isActive: 0
+      isPressed: 0
+      isHolding: 0
+    useActionDelay: 1
+    actionDelay: 0.35
+    inputType: 1
+    holdTime: 0.3
+    holdMulti: 1
+  zoomType: 2

@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (DynamicObjectEditor)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Serialize StartState
+    original: "        public SerializedProperty sp_interactType;\r\n        public
+      SerializedProperty sp_keyType;\r\n        #endregion"
+    edit: "        public SerializedProperty sp_interactType;\r\n        public SerializedProperty
+      sp_keyType;\r\n        public SerializedProperty sp_startState;\r\n       
+      #endregion"
+  - name: Serialize 2 Start State
+    original: "            sp_interactType = serializedObject.FindProperty(\"interactType\");\r\n           
+      sp_keyType = serializedObject.FindProperty(\"keyType\");\r\n            sp_Animation
+      = serializedObject.FindProperty(\"m_Animation\");"
+    edit: "            sp_interactType = serializedObject.FindProperty(\"interactType\");\r\n           
+      sp_keyType = serializedObject.FindProperty(\"keyType\");\r\n            sp_startState
+      = serializedObject.FindProperty(\"startState\");\r\n            sp_Animation
+      = serializedObject.FindProperty(\"m_Animation\");"
+  - name: Serialize QuickAnim
+    original: "        public SerializedProperty sp_backUseAnim;\r\n        public
+      SerializedProperty sp_DebugAngle;"
+    edit: "        public SerializedProperty sp_backUseAnim;\r\n        public SerializedProperty
+      sp_useQuickAnim;\r\n        public SerializedProperty sp_DebugAngle;"
+  - name: Serialize 2 QuickAnim
+    original: "            sp_useAnim = serializedObject.FindProperty(\"useAnim\");\r\n           
+      sp_backUseAnim = serializedObject.FindProperty(\"backUseAnim\");\r\n           
+      sp_knobAnim = serializedObject.FindProperty(\"knobAnim\");"
+    edit: "            sp_useAnim = serializedObject.FindProperty(\"useAnim\");\r\n           
+      sp_backUseAnim = serializedObject.FindProperty(\"backUseAnim\");\r\n           
+      sp_useQuickAnim = serializedObject.FindProperty(\"useQuickAnim\");\r\n           
+      sp_knobAnim = serializedObject.FindProperty(\"knobAnim\");"
+  - name: Enum Start State
+    original: "            Type_Interact int_type = (Type_Interact)sp_interactType.enumValueIndex;\r\n           
+      Type_Key keyType = (Type_Key)sp_keyType.enumValueIndex;\r\n\r\n           
+      EditorGUILayout.PropertyField(sp_dynamicType);"
+    edit: "            Type_Interact int_type = (Type_Interact)sp_interactType.enumValueIndex;\r\n           
+      Type_Key keyType = (Type_Key)sp_keyType.enumValueIndex;\r\n            Start_State
+      startState = (Start_State)sp_startState.enumValueIndex;\r\n\r\n           
+      EditorGUILayout.PropertyField(sp_dynamicType);"
+  - name: Display Start State
+    original: "            if (dynamicType == Type_Dynamic.Door || dynamicType ==
+      Type_Dynamic.Drawer)\r\n            {\r\n                EditorGUILayout.PropertyField(sp_useType,
+      new GUIContent(\"Use Type\"));"
+    edit: "            if (dynamicType == Type_Dynamic.Door || dynamicType == Type_Dynamic.Drawer)\r\n           
+      {\r\n                EditorGUILayout.PropertyField(sp_useType, new GUIContent(\"Use
+      Type\"));\r\n                EditorGUILayout.PropertyField(sp_startState, new
+      GUIContent(\"Start State\"));"
+  - name: Display QuickAnim
+    original: "                if (dynamicType == Type_Dynamic.Door || dynamicType
+      == Type_Dynamic.Drawer)\r\n                {\r\n                    if (int_type
+      == Type_Interact.Animation)\r\n                    {\r\n                       
+      EditorGUILayout.PropertyField(sp_useAnim, new GUIContent(\"Open Anim\"));\r\n                       
+      EditorGUILayout.PropertyField(sp_backUseAnim, new GUIContent(\"Close Anim\"));\r\n                   
+      }"
+    edit: "                if (dynamicType == Type_Dynamic.Door || dynamicType ==
+      Type_Dynamic.Drawer)\r\n                {\r\n                    if (int_type
+      == Type_Interact.Animation)\r\n                    {\r\n                       
+      EditorGUILayout.PropertyField(sp_useAnim, new GUIContent(\"Open Anim\"));\r\n                       
+      EditorGUILayout.PropertyField(sp_backUseAnim, new GUIContent(\"Close Anim\"));\r\n                       
+      EditorGUILayout.PropertyField(sp_useQuickAnim, new GUIContent(\"Use Quick Anim\"));\r\n                   
+      }"

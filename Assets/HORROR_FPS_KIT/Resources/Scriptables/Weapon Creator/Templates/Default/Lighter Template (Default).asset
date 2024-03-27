@@ -1,0 +1,277 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66e7ab56528eea449de60d31f4865f6, type: 3}
+  m_Name: Lighter Template (Default)
+  m_EditorClassIdentifier: 
+  weaponName: Lighter (New)
+  weaponType: 3
+  armsPrefab: {fileID: 976733765989863546, guid: cee44e1b47ddbae47a4071b39a0cfcea,
+    type: 3}
+  candleSettings:
+    BlowOut: {fileID: 0}
+    IdleAnimation: {fileID: 0}
+    BlowOutAnimation: {fileID: 0}
+    DrawAnimation: {fileID: 0}
+    DrawSpeed: 1
+    HideAnimation: {fileID: 0}
+    HideSpeed: 1
+    candleReduction: 0
+    reductionRate: 0
+    maxScale: 0
+    minScale: 0
+    itemID: 0
+    blowOutKeepCandle: 0
+    scaleKeepCandle: 0
+    Candle: {fileID: 0}
+    CandleLight: {fileID: 0}
+    CandleFlame: {fileID: 0}
+    FlamePosition: {fileID: 0}
+    candleType: 0
+    candleParent: {fileID: 0}
+    candlePrefab: {fileID: 0}
+    flameType: 0
+    candleFlameParent: {fileID: 0}
+    flamePrefab: {fileID: 0}
+    lightType: 0
+    candleLightParent: {fileID: 0}
+    lightPrefab: {fileID: 0}
+  flashlightSettings:
+    clickSound: {fileID: 0}
+    IdleAnim: {fileID: 0}
+    DrawAnim: {fileID: 0}
+    DrawSpeed: 1
+    HideAnim: {fileID: 0}
+    HideSpeed: 1
+    ReloadAnim: {fileID: 0}
+    ReloadSpeed: 1
+    enableExtra: 0
+    ScareAnim: {fileID: 0}
+    ScareAnimSpeed: 1
+    NoPowerAnim: {fileID: 0}
+    NoPowerAnimSpeed: 1
+    infiniteBattery: 0
+    batteryLifeInSec: 0
+    canReloadPercent: 0
+    itemID: 0
+    LightObject: {fileID: 0}
+    flashlightIntensity: 1
+    FlashlightIcon: {fileID: 0}
+    audioSource: {fileID: 0}
+    flashLightType: 0
+    flashlightParent: {fileID: 0}
+    flashlightPrefab: {fileID: 0}
+    lightType: 0
+    lightParent: {fileID: 0}
+    lightPrefab: {fileID: 0}
+  lanternSettings:
+    ShowSound: {fileID: 0}
+    ShowVolume: 1
+    HideSound: {fileID: 0}
+    HideVolume: 1
+    ReloadOilSound: {fileID: 0}
+    ReloadVolume: 1
+    DrawAnim: {fileID: 0}
+    DrawSpeed: 1
+    HideAnim: {fileID: 0}
+    HideSpeed: 1
+    ReloadAnim: {fileID: 0}
+    ReloadSpeed: 1
+    IdleAnim: {fileID: 0}
+    itemID: 0
+    useHingeJoint: 0
+    hingeLantern: {fileID: 0}
+    secondDrawDiff: 0
+    oilLifeInSec: 300
+    oilPercentage: 100
+    lightReductionRate: 5
+    canReloadPercent: 0
+    hideIntensitySpeed: 0
+    oilReloadSpeed: 0
+    timeWaitToReload: 0
+    LanternLight: {fileID: 0}
+    flameMesh: {fileID: 0}
+    ColorString: _Color
+    LanternIcon: {fileID: 0}
+    lanternType: 0
+    lanternParent: {fileID: 0}
+    lanternPrefab: {fileID: 0}
+    flameType: 0
+    flameParent: {fileID: 0}
+    flamePrefab: {fileID: 0}
+    lightType: 0
+    lightParent: {fileID: 0}
+    lightPrefab: {fileID: 0}
+    hingeType: 0
+    hingeParent: {fileID: 0}
+    hingeConType: 0
+    hingeConParent: {fileID: 0}
+    hingeConPrefab: {fileID: 0}
+    hingeConnect: {fileID: 0}
+  lighterSettings:
+    soundLibrary:
+    - name: Blow Out
+      source: {fileID: 0}
+      clip: {fileID: 8300000, guid: 63cebb37ad21da147bff63ab6e1bf6f0, type: 3}
+      volume: 0.5
+    - name: Lighter Open
+      source: {fileID: 0}
+      clip: {fileID: 8300000, guid: c3de0efdce5c8f14f989668b08697e5e, type: 3}
+      volume: 0.5
+    - name: Lighter Close
+      source: {fileID: 0}
+      clip: {fileID: 8300000, guid: 3efec301af260d048b78787932d41100, type: 3}
+      volume: 0.5
+    - name: Lighter On
+      source: {fileID: 0}
+      clip: {fileID: 8300000, guid: 840062fe028cd504a8c1999479dcc720, type: 3}
+      volume: 0.5
+    IdleAnimation: {fileID: 7400000, guid: 5719ecb88745fbf44a3ffd4b1f322e2e, type: 2}
+    DrawAnimation: {fileID: 7400000, guid: 563467c5076a4414a82d52f6d3de340e, type: 2}
+    DrawSpeed: 1
+    HideAnimation: {fileID: 7400000, guid: 901abdbe71feb0e49b952dba4007614a, type: 2}
+    HideSpeed: 1
+    lighterAnimation: {fileID: 0}
+    lighterOpenAnimation: {fileID: 7400000, guid: 7a5480036718f564fbe8c7eaa911a1d0,
+      type: 2}
+    lighterCloseAnimation: {fileID: 7400000, guid: c9559f516e8b56b4d9775452ae2846a9,
+      type: 2}
+    itemID: 23
+    flame: {fileID: 0}
+    light: {fileID: 0}
+    FlamePosition: {fileID: 0}
+    lighterType: 1
+    lighterParent: {fileID: 0}
+    lighterPrefab: {fileID: 0}
+    flameType: 1
+    flameParent: {fileID: 0}
+    flamePrefab: {fileID: 0}
+    lightType: 1
+    lightParent: {fileID: 0}
+    lightPrefab: {fileID: 0}
+  meleeSettings:
+    DrawSound: {fileID: 0}
+    DrawVolume: 1
+    HideSound: {fileID: 0}
+    HideVolume: 1
+    SwaySound: {fileID: 0}
+    SwayVolume: 1
+    DrawAnim: {fileID: 0}
+    DrawSpeed: 1
+    HideAnim: {fileID: 0}
+    HideSpeed: 1
+    AttackAnim: {fileID: 0}
+    AttackSpeed: 1
+    itemID: 0
+    surfaceID: 1
+    surfaceDetails: {fileID: 0}
+    defaultSurfaceID: 0
+    HitLayer:
+      serializedVersion: 2
+      m_Bits: 0
+    HitDistance: 0
+    HitForce: 0
+    HitWaitDelay: 0
+    AttackDamage: {x: 0, y: 0}
+    SwayKickback: {x: 0, y: 0, z: 0}
+    SwaySpeed: 0.1
+    audioSource: {fileID: 0}
+    weaponType: 0
+    weaponParent: {fileID: 0}
+    weaponPrefab: {fileID: 0}
+  gunSettings:
+    weaponType: 0
+    bulletType: 0
+    raycastMask:
+      serializedVersion: 2
+      m_Bits: 0
+    soundReactionMask:
+      serializedVersion: 2
+      m_Bits: 0
+    audioSettings:
+      reloadSound: 1
+      soundDraw: {fileID: 0}
+      volumeDraw: 1
+      soundFire: {fileID: 0}
+      volumeFire: 1
+      soundEmpty: {fileID: 0}
+      volumeEmpty: 1
+      soundReload: {fileID: 0}
+      volumeReload: 1
+      impactVolume: 1
+    aimingSettings:
+      enableAiming: 1
+      steadyAim: 1
+      aimPosition: {x: 0, y: 0, z: 0}
+      aimSpeed: 0.25
+      zoomFOVSmooth: 10
+      unzoomFOVSmooth: 5
+      zoomFOV: 40
+    animationSettings:
+      hideAnim: Hide
+      fireAnim: Fire
+      reloadAnim: Reload
+      beforeReloadAnim: BeforeReload
+      afterReloadAnim: AfterReload
+      afterReloadEmptyAnim: AfterReloadEmpty
+    inventorySettings:
+      weaponID: 0
+      bulletsID: 0
+    bulletSettings:
+      surfaceID: 1
+      FleshTag: Flesh
+      defaultSurfaceID: 0
+      bulletsInMag: 0
+      bulletsPerMag: 0
+      bulletsPerShot: 1
+      keepReloadMagBullets: 0
+      soundOnImpact: 0
+    bulletModelSettings:
+      barrelEndPosition: {fileID: 0}
+      bulletPrefab: {fileID: 0}
+      bulletRotation: {x: 0, y: 0, z: 0}
+      bulletForce: 10
+    surfaceDetails: {fileID: 0}
+    kickbackSettings:
+      kickUp: 1
+      kickSideways: 1
+      kickTime: 0.1
+      kickReturnSpeed: 6
+    kickback: {fileID: 0}
+    muzzleFlashSettings:
+      enableMuzzleFlash: 0
+      muzzleRotation: {x: 0, y: 0, z: 0}
+      muzzleFlash: {fileID: 0}
+      muzzleLight: {fileID: 0}
+    weaponSettings:
+      weaponDamage: 20
+      shootRange: 250
+      hitforce: 20
+      fireRate: 0.1
+      recoil: 0.1
+    shotgunSettings:
+      ejectPosition: {fileID: 0}
+      shellPrefab: {fileID: 0}
+      shellRotation: {x: 0, y: 0, z: 0}
+      ejectSpeed: 10
+    npcReactionSettings:
+      soundReactionRadius: 20
+      enableSoundReaction: 0
+    audioSource: {fileID: 0}
+    weapModelType: 0
+    weaponParent: {fileID: 0}
+    weaponPrefab: {fileID: 0}
+    muzzleFlashType: 0
+    muzzleFlashParent: {fileID: 0}
+    muzzleFlashPrefab: {fileID: 0}
+    muzzleLightType: 0
+    muzzleLightParent: {fileID: 0}
+    muzzleLightPrefab: {fileID: 0}

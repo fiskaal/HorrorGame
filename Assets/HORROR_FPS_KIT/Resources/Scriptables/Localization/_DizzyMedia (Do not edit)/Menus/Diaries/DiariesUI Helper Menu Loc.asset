@@ -1,0 +1,831 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0a624cf1a2146418cc4dd7a92ac8aa, type: 3}
+  m_Name: DiariesUI Helper Menu Loc
+  m_EditorClassIdentifier: 
+  localization:
+    languages:
+    - name: English
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Info
+            text: '
+
+              The Diaries UI Helper Version file is missing
+              from your project, Diaries UI Helper cannot run without it!
+
+
+              You
+              can re-import the Diaries UI Helper Version file from the Audio / Text
+              Diaries asset pack(s) on the
+
+              asset store / package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: '
+
+              This extension allows you to easily add default
+              or custom UI setups for Diaries systems (i.e Audio Diaries, Text Diaries
+              and Simple Subtitles)
+
+
+              Assign the UI Root object below
+              and apply any custom settings in the indicated areas.
+
+'
+          - name: Features Instructions
+            text: '
+
+              Activate the toggles for the features you want
+              to add.
+
+'
+          - name: Audio Diaries Instructions
+            text: '
+
+              Use the options below to define how Audio Diaries
+              will be created in your scene.
+
+'
+          - name: Text Diaries Instructions
+            text: '
+
+              Use the options below to define how Text Diaries
+              will be created in your scene.
+
+'
+          - name: Simple Subs Instructions
+            text: '
+
+              Use the options below to define how Simple Subtitles
+              will be created in your scene.
+
+'
+          buttons:
+          - name: Save Language
+            local: Save Language
+          - name: Features Options
+            local: Features Options
+          - name: Audio Diaries
+            local: Audio Diaries
+          - name: Text Diaries
+            local: Text Diaries
+          - name: Simple Subtitles
+            local: Simple Subtitles
+          - name: Activate All Toggles
+            local: Activate All Toggles
+          - name: Deactivate All Toggles
+            local: Deactivate All Toggles
+          - name: Create
+            local: Create
+          - name: Reset AD Settings
+            local: Reset AD Settings
+          - name: Reset TD Settings
+            local: Reset TD Settings
+          - name: General Options
+            local: General Options
+          - name: Menu Options
+            local: Menu Options
+          - name: Panel Options
+            local: Panel Options
+          toggles: []
+          prompts:
+          - name: Create Handlers
+            header: Create Handlers
+            message: "You are about to create Diaries Handlers on your \nUI Root
+              object. \n\nAre you sure?"
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Reset AD Values
+            header: Reset Audio Diaries Values
+            message: 'You are about to reset all the values here in the editor for
+              Audio Diaries.
+
+
+              Are you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          - name: Reset TD Values
+            header: Reset Text Diaries Values
+            message: 'You are about to reset all the values here in the editor for
+              Text Diaries.
+
+
+              Are you sure?'
+            buttons:
+            - name: Yes
+              local: Yes
+            - name: No
+              local: No
+          singleValues:
+          - name: Language Saved
+            local: Language Saved
+          - name: NOTHING ACTIVATED
+            local: NOTHING ACTIVATED
+          - name: AUDIO DIARIES NOT ACTIVATED / PRESENT
+            local: AUDIO DIARIES NOT ACTIVATED / PRESENT
+          - name: TEXT DIARIES NOT ACTIVATED / PRESENT
+            local: TEXT DIARIES NOT ACTIVATED / PRESENT
+          - name: Diaries
+            local: Diaries
+          - name: Subtitles
+            local: Subtitles
+          - name: Audio Custom UI NOT set
+            local: Audio Custom UI NOT set
+          - name: Text Custom UI NOT set
+            local: Text Custom UI NOT set
+          - name: Audio Diaries Created
+            local: Audio Diaries Created
+          - name: Text Diaries Created
+            local: Text Diaries Created
+          - name: Simple Dialogue Created
+            local: Simple Dialogue Created
+          - name: Pause Buttons Layout Updated
+            local: Pause Buttons Layout Updated
+          - name: AD Values Reset!
+            local: AD Values Reset!
+          - name: TD Values Reset!
+            local: TD Values Reset!
+    - name: Chinese Simplified
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Info
+            text: '
+
+              The Diaries UI Helper Version file is missing
+              from your project, Diaries UI Helper cannot run without it!
+
+
+              You
+              can re-import the Diaries UI Helper Version file from the Audio / Text
+              Diaries asset pack(s) on the
+
+              asset store / package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u6269\u5C55\u5141\u8BB8\u60A8\u8F7B\u677E\u5730\u4E3A\u65E5\u8BB0\u7CFB\u7EDF\uFF08\u5373\u97F3\u9891\u65E5\u8BB0\u3001\u6587\u672C\u65E5\u8BB0\u548C\u7B80\u5355\u5B57\u5E55\uFF09\u6DFB\u52A0\u9ED8\u8BA4\u6216\u81EA\u5B9A\u4E49
+              UI \u8BBE\u7F6E\r\n\r\n\u5206\u914D\u4E0B\u9762\u7684 UI Root \u5BF9\u8C61\u5E76\u5728\u6307\u5B9A\u533A\u57DF\u5E94\u7528\u4EFB\u4F55\u81EA\u5B9A\u4E49\u8BBE\u7F6E\u3002\n"
+          - name: Features Instructions
+            text: "\n\u6FC0\u6D3B\u8981\u6DFB\u52A0\u7684\u529F\u80FD\u7684\u5F00\u5173\u3002\n"
+          - name: Audio Diaries Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5B9A\u4E49\u5982\u4F55\u5728\u573A\u666F\u4E2D\u521B\u5EFA\u97F3\u9891\u65E5\u8BB0\u3002\n"
+          - name: Text Diaries Instructions
+            text: "\n\u4F7F\u7528\u4E0B\u9762\u7684\u9009\u9879\u6765\u5B9A\u4E49\u6587\u672C\u65E5\u8BB0\u5C06\u5982\u4F55\u5728\u60A8\u7684\u573A\u666F\u4E2D\u521B\u5EFA\u3002\n"
+          - name: Simple Subs Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9009\u9879\u5B9A\u4E49\u5982\u4F55\u5728\u573A\u666F\u4E2D\u521B\u5EFA\u7B80\u5355\u5B57\u5E55\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8BED\u8A00"
+          - name: Features Options
+            local: "\u529F\u80FD\u9009\u9879"
+          - name: Audio Diaries
+            local: "\u97F3\u9891\u65E5\u8BB0"
+          - name: Text Diaries
+            local: "\u6587\u5B57\u65E5\u8BB0"
+          - name: Simple Subtitles
+            local: "\u7B80\u5355\u5B57\u5E55"
+          - name: Activate All Toggles
+            local: "\u6FC0\u6D3B\u6240\u6709\u5207\u6362"
+          - name: Deactivate All Toggles
+            local: "\u505C\u7528\u6240\u6709\u5207\u6362"
+          - name: Create
+            local: "\u521B\u9020"
+          - name: Reset AD Settings
+            local: "\u91CD\u7F6E\u5E7F\u544A\u8BBE\u7F6E"
+          - name: Reset TD Settings
+            local: "\u91CD\u7F6E\u9053\u660E\u8BBE\u7F6E"
+          - name: General Options
+            local: "\u5E38\u89C4\u9009\u9879"
+          - name: Menu Options
+            local: "\u83DC\u5355\u9009\u9879"
+          - name: Panel Options
+            local: "\u9762\u677F\u9009\u9879"
+          toggles: []
+          prompts:
+          - name: Create Handlers
+            header: "\u521B\u5EFA\u5904\u7406\u7A0B\u5E8F"
+            message: "\u60A8\u5373\u5C06\u5728\u60A8\u7684\r\nUI \u6839\u5BF9\u8C61\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Reset AD Values
+            header: "\u91CD\u7F6E\u97F3\u9891\u65E5\u8BB0\u503C"
+            message: "\u60A8\u5C06\u5728\u97F3\u9891\u65E5\u8BB0\u7684\u7F16\u8F91\u5668\u4E2D\u91CD\u7F6E\u6B64\u5904\u7684\u6240\u6709\u503C\u3002\r\n\r\n\u4F60\u786E\u5B9A\u5417\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Reset TD Values
+            header: "\u91CD\u7F6E\u6587\u672C\u65E5\u8BB0\u503C"
+            message: 'You are about to reset all the values here in the editor for
+              Text Diaries.
+
+
+              Are you sure?'
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: Language Saved
+            local: "\u5DF2\u4FDD\u5B58\u8BED\u8A00"
+          - name: NOTHING ACTIVATED
+            local: "\u6CA1\u6709\u6FC0\u6D3B"
+          - name: AUDIO DIARIES NOT ACTIVATED / PRESENT
+            local: "\u97F3\u9891\u65E5\u5FD7\u672A\u6FC0\u6D3B / \u5B58\u5728"
+          - name: TEXT DIARIES NOT ACTIVATED / PRESENT
+            local: "\u6587\u672C\u65E5\u8BB0\u672A\u6FC0\u6D3B / \u5F53\u524D"
+          - name: Diaries
+            local: "\u65E5\u8BB0"
+          - name: Subtitles
+            local: "\u5B57\u5E55"
+          - name: Audio Custom UI NOT set
+            local: "\u672A\u8BBE\u7F6E\u97F3\u9891\u81EA\u5B9A\u4E49 UI"
+          - name: Text Custom UI NOT set
+            local: "\u6587\u672C\u81EA\u5B9A\u4E49 UI \u672A\u8BBE\u7F6E"
+          - name: Audio Diaries Created
+            local: "\u97F3\u9891\u65E5\u8BB0\u521B\u5EFA"
+          - name: Text Diaries Created
+            local: "\u521B\u5EFA\u7684\u6587\u672C\u65E5\u8BB0"
+          - name: Simple Dialogue Created
+            local: "\u521B\u5EFA\u4E86\u7B80\u5355\u7684\u5BF9\u8BDD"
+          - name: Pause Buttons Layout Updated
+            local: "\u6682\u505C\u6309\u94AE\u5E03\u5C40\u5DF2\u66F4\u65B0"
+          - name: AD Values Reset!
+            local: "\u5E7F\u544A\u503C\u91CD\u7F6E\uFF01"
+          - name: TD Values Reset!
+            local: "TD\u503C\u91CD\u7F6E\uFF01"
+    - name: Chinese Traditional
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Info
+            text: '
+
+              The Diaries UI Helper Version file is missing
+              from your project, Diaries UI Helper cannot run without it!
+
+
+              You
+              can re-import the Diaries UI Helper Version file from the Audio / Text
+              Diaries asset pack(s) on the
+
+              asset store / package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\u6B64\u64F4\u5C55\u5141\u8A31\u60A8\u8F15\u9B06\u5730\u70BA\u65E5\u8A18\u7CFB\u7D71\uFF08\u5373\u97F3\u983B\u65E5\u8A18\u3001\u6587\u672C\u65E5\u8A18\u548C\u7C21\u55AE\u5B57\u5E55\uFF09\u6DFB\u52A0\u9ED8\u8A8D\u6216\u81EA\u5B9A\u7FA9
+              UI \u8A2D\u7F6E\r\n\r\n\u5206\u914D\u4E0B\u9762\u7684 UI Root \u5C0D\u8C61\u4E26\u5728\u6307\u5B9A\u5340\u57DF\u61C9\u7528\u4EFB\u4F55\u81EA\u5B9A\u7FA9\u8A2D\u7F6E\u3002\n"
+          - name: Features Instructions
+            text: "\n\u6FC0\u6D3B\u8981\u6DFB\u52A0\u7684\u529F\u80FD\u7684\u958B\u95DC\u3002\n"
+          - name: Audio Diaries Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5B9A\u7FA9\u5982\u4F55\u5728\u5834\u666F\u4E2D\u5275\u5EFA\u97F3\u983B\u65E5\u8A18\u3002\n"
+          - name: Text Diaries Instructions
+            text: "\n\u4F7F\u7528\u4E0B\u9762\u7684\u9078\u9805\u5B9A\u7FA9\u5982\u4F55\u5728\u5834\u666F\u4E2D\u5275\u5EFA\u6587\u672C\u65E5\u8A18\u3002\n"
+          - name: Simple Subs Instructions
+            text: "\n\u4F7F\u7528\u4EE5\u4E0B\u9078\u9805\u5B9A\u7FA9\u5982\u4F55\u5728\u5834\u666F\u4E2D\u5EFA\u7ACB\u7C21\u55AE\u5B57\u5E55\u3002\n"
+          buttons:
+          - name: Save Language
+            local: "\u4FDD\u5B58\u8A9E\u8A00"
+          - name: Features Options
+            local: "\u529F\u80FD\u9078\u9805"
+          - name: Audio Diaries
+            local: "\u97F3\u983B\u65E5\u8A18"
+          - name: Text Diaries
+            local: "\u6587\u5B57\u65E5\u8A18"
+          - name: Simple Subtitles
+            local: "\u7C21\u55AE\u5B57\u5E55"
+          - name: Activate All Toggles
+            local: "\u6FC0\u6D3B\u6240\u6709\u5207\u63DB"
+          - name: Deactivate All Toggles
+            local: "\u505C\u7528\u6240\u6709\u5207\u63DB"
+          - name: Create
+            local: "\u5275\u9020"
+          - name: Reset AD Settings
+            local: "\u91CD\u7F6E\u5EE3\u544A\u8A2D\u7F6E"
+          - name: Reset TD Settings
+            local: "\u91CD\u7F6E\u9053\u660E\u8A2D\u7F6E"
+          - name: General Options
+            local: "\u5E38\u898F\u9078\u9805"
+          - name: Menu Options
+            local: "\u83DC\u55AE\u9078\u9805"
+          - name: Panel Options
+            local: "\u9762\u677F\u9078\u9805"
+          toggles: []
+          prompts:
+          - name: Create Handlers
+            header: "\u5275\u5EFA\u8655\u7406\u7A0B\u5E8F"
+            message: "\u60A8\u5373\u5C07\u5728\u60A8\u7684\r\nUI \u6839\u5C0D\u8C61\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Reset AD Values
+            header: "\u91CD\u7F6E\u97F3\u983B\u65E5\u8A18\u503C"
+            message: "\u60A8\u5C07\u5728\u97F3\u983B\u65E5\u8A18\u7684\u7DE8\u8F2F\u5668\u4E2D\u91CD\u7F6E\u6B64\u8655\u7684\u6240\u6709\u503C\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          - name: Reset TD Values
+            header: "\u91CD\u7F6E\u6587\u672C\u65E5\u8A18\u503C"
+            message: "\u60A8\u5C07\u5728\u6587\u672C\u65E5\u8A18\u7684\u7DE8\u8F2F\u5668\u4E2D\u91CD\u7F6E\u6B64\u8655\u7684\u6240\u6709\u503C\u3002\r\n\r\n\u4F60\u78BA\u5B9A\u55CE\uFF1F"
+            buttons:
+            - name: Yes
+              local: "\u662F\u7684"
+            - name: No
+              local: "\u4E0D"
+          singleValues:
+          - name: Language Saved
+            local: "\u5DF2\u4FDD\u5B58\u8A9E\u8A00"
+          - name: NOTHING ACTIVATED
+            local: "\u6C92\u6709\u6FC0\u6D3B"
+          - name: AUDIO DIARIES NOT ACTIVATED / PRESENT
+            local: "\u97F3\u983B\u65E5\u8A8C\u672A\u6FC0\u6D3B / \u5B58\u5728"
+          - name: TEXT DIARIES NOT ACTIVATED / PRESENT
+            local: "\u6587\u672C\u65E5\u8A18\u672A\u6FC0\u6D3B / \u7576\u524D"
+          - name: Diaries
+            local: "\u65E5\u8A18"
+          - name: Subtitles
+            local: "\u5B57\u5E55"
+          - name: Audio Custom UI NOT set
+            local: "\u672A\u8A2D\u7F6E\u97F3\u983B\u81EA\u5B9A\u7FA9 UI"
+          - name: Text Custom UI NOT set
+            local: "\u6587\u672C\u81EA\u5B9A\u7FA9 UI \u672A\u8A2D\u7F6E"
+          - name: Audio Diaries Created
+            local: "\u97F3\u983B\u65E5\u8A18\u5275\u5EFA"
+          - name: Text Diaries Created
+            local: "\u5275\u5EFA\u7684\u6587\u672C\u65E5\u8A18"
+          - name: Simple Dialogue Created
+            local: "\u5275\u5EFA\u4E86\u7C21\u55AE\u7684\u5C0D\u8A71"
+          - name: Pause Buttons Layout Updated
+            local: "\u66AB\u505C\u6309\u9215\u4F48\u5C40\u5DF2\u66F4\u65B0"
+          - name: AD Values Reset!
+            local: "\u5EE3\u544A\u503C\u91CD\u7F6E\uFF01"
+          - name: TD Values Reset!
+            local: "TD\u503C\u91CD\u7F6E\uFF01"
+    - name: French
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Info
+            text: '
+
+              The Diaries UI Helper Version file is missing
+              from your project, Diaries UI Helper cannot run without it!
+
+
+              You
+              can re-import the Diaries UI Helper Version file from the Audio / Text
+              Diaries asset pack(s) on the
+
+              asset store / package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nCette extension vous permet d'ajouter facilement des configurations
+              d'interface utilisateur par d\xE9faut ou personnalis\xE9es pour les
+              syst\xE8mes Diaries (c.-\xE0-d. Audio Diaries, Text Diaries et Simple
+              Subtitles)\r\n\r\nAttribuez l'objet racine de l'interface utilisateur
+              ci-dessous et appliquez tous les param\xE8tres personnalis\xE9s dans
+              les zones indiqu\xE9es.\n"
+          - name: Features Instructions
+            text: "\nActivez les bascules pour les fonctionnalit\xE9s que vous souhaitez
+              ajouter.\n"
+          - name: Audio Diaries Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir comment les
+              journaux audio seront cr\xE9\xE9s dans votre sc\xE8ne.\n"
+          - name: Text Diaries Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir comment les
+              journaux de texte seront cr\xE9\xE9s dans votre sc\xE8ne."
+          - name: Simple Subs Instructions
+            text: "\nUtilisez les options ci-dessous pour d\xE9finir la mani\xE8re
+              dont les sous-titres simples seront cr\xE9\xE9s dans votre sc\xE8ne.\n"
+          buttons:
+          - name: Save Language
+            local: Enregistrer la langue
+          - name: Features Options
+            local: "Options de fonctionnalit\xE9s"
+          - name: Audio Diaries
+            local: Journaux audio
+          - name: Text Diaries
+            local: Journaux de texte
+          - name: Simple Subtitles
+            local: Sous-titres simples
+          - name: Activate All Toggles
+            local: Activer toutes les bascules
+          - name: Deactivate All Toggles
+            local: "D\xE9sactiver toutes les bascules"
+          - name: Create
+            local: "Cr\xE9er"
+          - name: Reset AD Settings
+            local: "R\xE9initialiser les param\xE8tres AD"
+          - name: Reset TD Settings
+            local: "R\xE9initialiser les param\xE8tres TD"
+          - name: General Options
+            local: "Options g\xE9n\xE9rales"
+          - name: Menu Options
+            local: Options de menu
+          - name: Panel Options
+            local: Options du panneau
+          toggles: []
+          prompts:
+          - name: Create Handlers
+            header: "Cr\xE9er des gestionnaires"
+            message: "Vous \xEAtes sur le point de cr\xE9er des gestionnaires d'agendas
+              sur votre\r\nObjet racine de l'interface utilisateur.\r\n\r\nEs-tu
+              s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Reset AD Values
+            header: "R\xE9initialiser les valeurs des journaux audio"
+            message: "Vous \xEAtes sur le point de r\xE9initialiser toutes les valeurs
+              ici dans l'\xE9diteur pour les journaux audio.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          - name: Reset TD Values
+            header: "R\xE9initialiser les valeurs des journaux de texte"
+            message: "Vous \xEAtes sur le point de r\xE9initialiser toutes les valeurs
+              ici dans l'\xE9diteur pour les journaux de texte.\r\n\r\nEs-tu s\xFBr?"
+            buttons:
+            - name: Yes
+              local: Oui
+            - name: No
+              local: Non
+          singleValues:
+          - name: Language Saved
+            local: "Langue enregistr\xE9e"
+          - name: NOTHING ACTIVATED
+            local: "RIEN D'ACTIV\xC9"
+          - name: AUDIO DIARIES NOT ACTIVATED / PRESENT
+            local: "JOURNAL AUDIO NON ACTIV\xC9S / PR\xC9SENTS"
+          - name: TEXT DIARIES NOT ACTIVATED / PRESENT
+            local: JOURNAL TEXTE NON ACTIVE / PRESENT
+          - name: Diaries
+            local: Agendas
+          - name: Subtitles
+            local: Les sous-titres
+          - name: Audio Custom UI NOT set
+            local: "Interface utilisateur audio personnalis\xE9e NON d\xE9finie"
+          - name: Text Custom UI NOT set
+            local: "Texte UI personnalis\xE9 NON d\xE9fini"
+          - name: Audio Diaries Created
+            local: "Journal audio cr\xE9\xE9"
+          - name: Text Diaries Created
+            local: "Journaux de texte cr\xE9\xE9s"
+          - name: Simple Dialogue Created
+            local: "Dialogue simple cr\xE9\xE9"
+          - name: Pause Buttons Layout Updated
+            local: "Disposition des boutons de pause mise \xE0 jour"
+          - name: AD Values Reset!
+            local: "R\xE9initialisation des valeurs AD\_!"
+          - name: TD Values Reset!
+            local: "R\xE9initialisation des valeurs TD\_!"
+    - name: Korean
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Info
+            text: '
+
+              The Diaries UI Helper Version file is missing
+              from your project, Diaries UI Helper cannot run without it!
+
+
+              You
+              can re-import the Diaries UI Helper Version file from the Audio / Text
+              Diaries asset pack(s) on the
+
+              asset store / package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\n\uC774 \uD655\uC7A5\uC744 \uC0AC\uC6A9\uD558\uBA74 \uC77C\uAE30
+              \uC2DC\uC2A4\uD15C(\uC608: \uC624\uB514\uC624 \uC77C\uAE30, \uD14D\uC2A4\uD2B8
+              \uC77C\uAE30 \uBC0F \uAC04\uB2E8\uD55C \uC790\uB9C9)\uC5D0 \uB300\uD55C
+              \uAE30\uBCF8 \uB610\uB294 \uC0AC\uC6A9\uC790 \uC9C0\uC815 UI \uC124\uC815\uC744
+              \uC27D\uAC8C \uCD94\uAC00\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\r\n\uC544\uB798\uC758
+              UI \uB8E8\uD2B8 \uAC1C\uCCB4\uB97C \uD560\uB2F9\uD558\uACE0 \uD45C\uC2DC\uB41C
+              \uC601\uC5ED\uC5D0 \uC0AC\uC6A9\uC790 \uC9C0\uC815 \uC124\uC815\uC744
+              \uC801\uC6A9\uD569\uB2C8\uB2E4.\n"
+          - name: Features Instructions
+            text: "\n\uCD94\uAC00\uD558\uB824\uB294 \uAE30\uB2A5\uC758 \uD1A0\uAE00\uC744
+              \uD65C\uC131\uD654\uD569\uB2C8\uB2E4."
+          - name: Audio Diaries Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7A5\uBA74\uC5D0\uC11C
+              \uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uAC00 \uC0DD\uC131\uB418\uB294
+              \uBC29\uC2DD\uC744 \uC815\uC758\uD569\uB2C8\uB2E4.\n"
+          - name: Text Diaries Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7A5\uBA74\uC5D0\uC11C
+              Text Diaries\uAC00 \uC0DD\uC131\uB418\uB294 \uBC29\uC2DD\uC744 \uC815\uC758\uD569\uB2C8\uB2E4."
+          - name: Simple Subs Instructions
+            text: "\n\uC544\uB798 \uC635\uC158\uC744 \uC0AC\uC6A9\uD558\uC5EC \uC7A5\uBA74\uC5D0\uC11C
+              \uB2E8\uC21C \uC790\uB9C9\uC774 \uC0DD\uC131\uB418\uB294 \uBC29\uC2DD\uC744
+              \uC815\uC758\uD558\uC138\uC694.\n"
+          buttons:
+          - name: Save Language
+            local: "\uC5B8\uC5B4 \uC800\uC7A5"
+          - name: Features Options
+            local: "\uAE30\uB2A5 \uC635\uC158"
+          - name: Audio Diaries
+            local: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC"
+          - name: Text Diaries
+            local: "\uBB38\uC790 \uC77C\uAE30"
+          - name: Simple Subtitles
+            local: "\uAC04\uB2E8\uD55C \uC790\uB9C9"
+          - name: Activate All Toggles
+            local: "\uBAA8\uB4E0 \uD1A0\uAE00 \uD65C\uC131\uD654"
+          - name: Deactivate All Toggles
+            local: "\uBAA8\uB4E0 \uD1A0\uAE00 \uBE44\uD65C\uC131\uD654"
+          - name: Create
+            local: "\uCC3D\uC870\uD558\uB2E4"
+          - name: Reset AD Settings
+            local: "\uAD11\uACE0 \uC124\uC815 \uC7AC\uC124\uC815"
+          - name: Reset TD Settings
+            local: "TD \uC124\uC815 \uC7AC\uC124\uC815"
+          - name: General Options
+            local: "\uC77C\uBC18 \uC635\uC158"
+          - name: Menu Options
+            local: "\uBA54\uB274 \uC635\uC158"
+          - name: Panel Options
+            local: "\uD328\uB110 \uC635\uC158"
+          toggles: []
+          prompts:
+          - name: Create Handlers
+            header: "\uD578\uB4E4\uB7EC \uB9CC\uB4E4\uAE30"
+            message: "\uC5D0 Diaries Handler\uB97C \uB9CC\uB4E4\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\nUI
+              \uB8E8\uD2B8 \uAC1D\uCCB4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8"
+          - name: Reset AD Values
+            header: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC \uAC12 \uC7AC\uC124\uC815"
+            message: "Audio Diaries \uD3B8\uC9D1\uAE30\uC5D0\uC11C \uBAA8\uB4E0 \uAC12\uC744
+              \uC7AC\uC124\uC815\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8"
+          - name: Reset TD Values
+            header: "\uD14D\uC2A4\uD2B8 \uB2E4\uC774\uC5B4\uB9AC \uAC12 \uC7AC\uC124\uC815"
+            message: "Text Diaries \uD3B8\uC9D1\uAE30\uC5D0\uC11C \uBAA8\uB4E0 \uAC12\uC744
+              \uC7AC\uC124\uC815\uD558\uB824\uACE0 \uD569\uB2C8\uB2E4.\r\n\r\n\uD655\uC2E4\uD569\uB2C8\uAE4C?"
+            buttons:
+            - name: Yes
+              local: "\uC608"
+            - name: No
+              local: "\uC544\uB2C8"
+          singleValues:
+          - name: Language Saved
+            local: "\uC5B8\uC5B4 \uC800\uC7A5\uB428"
+          - name: NOTHING ACTIVATED
+            local: "\uC544\uBB34\uAC83\uB3C4 \uD65C\uC131\uD654\uB418\uC9C0 \uC54A\uC74C"
+          - name: AUDIO DIARIES NOT ACTIVATED / PRESENT
+            local: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC\uAC00 \uD65C\uC131\uD654\uB418\uC9C0
+              \uC54A\uC74C / \uC788\uC74C"
+          - name: TEXT DIARIES NOT ACTIVATED / PRESENT
+            local: "\uD14D\uC2A4\uD2B8 \uB2E4\uC774\uC5B4\uB9AC\uAC00 \uD65C\uC131\uD654\uB418\uC9C0
+              \uC54A\uC74C / \uC788\uC74C"
+          - name: Diaries
+            local: "\uC77C\uAE30"
+          - name: Subtitles
+            local: "\uC790\uB9C9"
+          - name: Audio Custom UI NOT set
+            local: "\uC624\uB514\uC624 \uB9DE\uCDA4 UI\uAC00 \uC124\uC815\uB418\uC9C0
+              \uC54A\uC74C"
+          - name: Text Custom UI NOT set
+            local: "\uD14D\uC2A4\uD2B8 \uB9DE\uCDA4 UI\uAC00 \uC124\uC815\uB418\uC9C0
+              \uC54A\uC74C"
+          - name: Audio Diaries Created
+            local: "\uC624\uB514\uC624 \uB2E4\uC774\uC5B4\uB9AC \uC0DD\uC131"
+          - name: Text Diaries Created
+            local: "\uD14D\uC2A4\uD2B8 \uB2E4\uC774\uC5B4\uB9AC \uC0DD\uC131\uB428"
+          - name: Simple Dialogue Created
+            local: "\uAC04\uB2E8\uD55C \uB300\uD654 \uC0DD\uC131\uB428"
+          - name: Pause Buttons Layout Updated
+            local: "\uC77C\uC2DC\uC815\uC9C0 \uBC84\uD2BC \uB808\uC774\uC544\uC6C3
+              \uC5C5\uB370\uC774\uD2B8\uB428"
+          - name: AD Values Reset!
+            local: "AD\uAC12 \uCD08\uAE30\uD654!"
+          - name: TD Values Reset!
+            local: "TD \uAC12 \uC7AC\uC124\uC815!"
+    - name: Spanish
+      windows:
+      - name: Editor
+        sections:
+        - name: Version Missing
+          local: Version Missing
+          texts:
+          - name: Version Info
+            text: '
+
+              The Diaries UI Helper Version file is missing
+              from your project, Diaries UI Helper cannot run without it!
+
+
+              You
+              can re-import the Diaries UI Helper Version file from the Audio / Text
+              Diaries asset pack(s) on the
+
+              asset store / package manager.
+
+'
+          buttons: []
+          toggles: []
+          prompts: []
+          singleValues: []
+        - name: Main
+          local: 
+          texts:
+          - name: Instructions
+            text: "\nEsta extensi\xF3n le permite agregar f\xE1cilmente configuraciones
+              de interfaz de usuario predeterminadas o personalizadas para sistemas
+              de diarios (es decir, diarios de audio, diarios de texto y subt\xEDtulos
+              simples)\r\n\r\nAsigne el objeto ra\xEDz de la interfaz de usuario
+              a continuaci\xF3n y aplique cualquier configuraci\xF3n personalizada
+              en las \xE1reas indicadas.\n"
+          - name: Features Instructions
+            text: '
+
+              Active los conmutadores para las funciones que
+              desea agregar.
+
+'
+          - name: Audio Diaries Instructions
+            text: "\nUse las opciones a continuaci\xF3n para definir c\xF3mo se crear\xE1n
+              los diarios de audio en su escena."
+          - name: Text Diaries Instructions
+            text: "\nUtilice las siguientes opciones para definir c\xF3mo se crear\xE1n
+              los diarios de texto en su escena."
+          - name: Simple Subs Instructions
+            text: "\nUtilice las siguientes opciones para definir c\xF3mo se crear\xE1n
+              los subt\xEDtulos simples en su escena.\n"
+          buttons:
+          - name: Save Language
+            local: Guardar idioma
+          - name: Features Options
+            local: "Caracter\xEDsticas Opciones"
+          - name: Audio Diaries
+            local: Diarios de audio
+          - name: Text Diaries
+            local: diarios de texto
+          - name: Simple Subtitles
+            local: "Subt\xEDtulos simples"
+          - name: Activate All Toggles
+            local: Activar todos los conmutadores
+          - name: Deactivate All Toggles
+            local: Desactivar todos los conmutadores
+          - name: Create
+            local: Crear
+          - name: Reset AD Settings
+            local: "Restablecer configuraci\xF3n de AD"
+          - name: Reset TD Settings
+            local: "Restablecer configuraci\xF3n de TD"
+          - name: General Options
+            local: Opciones generales
+          - name: Menu Options
+            local: "Opciones de men\xFA"
+          - name: Panel Options
+            local: Opciones de paneles
+          toggles: []
+          prompts:
+          - name: Create Handlers
+            header: Crear controladores
+            message: "Est\xE1 a punto de crear Manejadores de Diarios en su\r\nObjeto
+              ra\xEDz de la interfaz de usuario.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Reset AD Values
+            header: Restablecer valores de diarios de audio
+            message: "Est\xE1 a punto de restablecer todos los valores aqu\xED en
+              el editor de Audio Diaries.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          - name: Reset TD Values
+            header: Restablecer valores de diarios de texto
+            message: "Est\xE1 a punto de restablecer todos los valores aqu\xED en
+              el editor de Diarios de texto.\r\n\r\n\xBFEst\xE1 seguro?"
+            buttons:
+            - name: Yes
+              local: "S\xED"
+            - name: No
+              local: No
+          singleValues:
+          - name: Language Saved
+            local: Idioma guardado
+          - name: NOTHING ACTIVATED
+            local: NADA ACTIVADO
+          - name: AUDIO DIARIES NOT ACTIVATED / PRESENT
+            local: AUDIO DIARIOS NO ACTIVADO / PRESENTE
+          - name: TEXT DIARIES NOT ACTIVATED / PRESENT
+            local: DIARIOS DE TEXTO NO ACTIVADOS / PRESENTES
+          - name: Diaries
+            local: diarios
+          - name: Subtitles
+            local: "subt\xEDtulos"
+          - name: Audio Custom UI NOT set
+            local: Interfaz de usuario personalizada de audio NO configurada
+          - name: Text Custom UI NOT set
+            local: IU personalizada de texto NO configurada
+          - name: Audio Diaries Created
+            local: Diarios de audio creados
+          - name: Text Diaries Created
+            local: Diarios de texto creados
+          - name: Simple Dialogue Created
+            local: "Di\xE1logo simple creado"
+          - name: Pause Buttons Layout Updated
+            local: "Dise\xF1o de botones de pausa actualizado"
+          - name: AD Values Reset!
+            local: "\xA1Restablecimiento de valores de AD!"
+          - name: TD Values Reset!
+            local: "\xA1Restablecimiento de valores de TD!"

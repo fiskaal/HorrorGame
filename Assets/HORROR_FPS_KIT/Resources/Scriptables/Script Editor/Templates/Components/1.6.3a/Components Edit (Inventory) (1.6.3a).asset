@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45863857d1a5194c9a608711007a40f, type: 3}
+  m_Name: Components Edit (Inventory) (1.6.3a)
+  m_EditorClassIdentifier: 
+  removable: 0
+  content:
+  - name: Custom Lock State
+    original: '        void OnEnable()'
+    edit: "        public bool customLock;\r\n        \r\n        public void CustomLock_State(bool
+      state){\r\n        \r\n            customLock = state;\r\n            \r\n       
+      }//CustomLock_State\r\n\r\n        void OnEnable()"
+  - name: Update
+    original: '            if(gameManager) preventUse = gameManager.isInventoryShown
+      || gameManager.isPaused;'
+    edit: "            if(gameManager){ \r\n            \r\n                if(customLock){\r\n               
+      \r\n                    preventUse = true;\r\n                \r\n               
+      //customLock\r\n                } else {\r\n                \r\n                   
+      preventUse = gameManager.isInventoryShown || gameManager.isPaused;\r\n               
+      \r\n                }//customLock\r\n\r\n            }//gameManager"
+  - name: Add Item To Slot Custom create
+    original: "        /// <summary>\r\n        /// Function to add new Item to Inventory.\r\n       
+      /// </summary>\r\n        /// <returns>Auto Shortcut Input</returns>\r\n       
+      public string AddItem(int itemID, int amount = 1, ItemData customData = null,
+      bool autoShortcut = false)"
+    edit: "        /// <summary>\r\n        /// Function to add a new item to an
+      specific inventory slot.\r\n        /// </summary>\r\n        /// <returns>Auto
+      Shortcut Input</returns>\r\n        public string AddItemToSlotCustom(int slotID,
+      int itemID, int amount = 1, InventoryItemData invItemData = null, bool autoShortcut
+      = false)\r\n        {\r\n            // get item from inventory database and
+      set item amount\r\n            Item item = GetItem(itemID);\r\n           
+      amount = amount <= 0 ? 1 : amount;\r\n\r\n            // check if there is
+      a space in the inventory\r\n            if (CheckInventorySpace())\r\n           
+      {\r\n                // get item data if the item is already in the slot\r\n               
+      InventoryItemData itemData = ItemDataOfItem(item.ID, slotID);\r\n\r\n               
+      if (item.Toggles.isStackable && IsItemInSlot(slotID, itemID))\r\n               
+      {\r\n                    // increase item amount\r\n                    if
+      (itemData != null) itemData.itemAmount += amount;\r\n                }\r\n               
+      else\r\n                {\r\n                    // iterate each slot\r\n                   
+      for (int i = 0; i < Slots.Count; i++)\r\n                    {\r\n                       
+      // check if the slot index is equal to slotID\r\n                        if
+      (i == slotID)\r\n                        {\r\n                            //
+      create a new item object and set the item data\r\n                           
+      GameObject uiItem = Instantiate(prefabs.InventoryItem, Slots[i].transform);\r\n                           
+      itemData = uiItem.GetComponent<InventoryItemData>();\r\n                           
+      itemData.item = item;\r\n                            itemData.itemAmount =
+      amount;\r\n                            itemData.slotID = i;\r\n                           
+      itemData.shortcut = invItemData.shortcut;\r\n                            itemData.InitializeData();\r\n\r\n                           
+      // set item custom data\r\n                            \r\n                           
+      if(invItemData.data != null){\r\n                            \r\n                               
+      itemData.data = invItemData.data;\r\n                            \r\n                           
+      //data != null\r\n                            } else {\r\n                           
+      \r\n                                Debug.Log(\"Item Data = null\");\r\n                               
+      \r\n                            }//data != null\r\n                           
+      \r\n                            // add the item and item data to the slot component\r\n                           
+      InventorySlot slotData = Slots[i].GetComponent<InventorySlot>();\r\n                           
+      slotData.slotItem = item;\r\n                            slotData.itemData
+      = itemData;\r\n\r\n                            // change slot background\r\n                           
+      Image slotImage = Slots[i].GetComponent<Image>();\r\n                           
+      slotImage.sprite = slotSprites.SlotWithItem;\r\n                           
+      slotImage.enabled = true;\r\n\r\n                            // change the
+      item object sprite to item sprite\r\n                            uiItem.GetComponent<Image>().sprite
+      = item.ItemSprite;\r\n                            uiItem.GetComponent<RectTransform>().position
+      = Vector2.zero;\r\n                            uiItem.name = item.Title;\r\n\r\n                           
+      // add an inventory item to the item cache\r\n                            ItemsCache.Add(new
+      InventoryItem(item, invItemData.data));\r\n                            break;\r\n                       
+      }\r\n                    }\r\n\r\n                    // if auto-shortcut is
+      enabled, link the shortcut to the item and return the shortcut action name\r\n                   
+      if (autoShortcut)\r\n                    {\r\n                        return
+      AutoBindShortcut(slotID, itemID);\r\n                    }\r\n               
+      }\r\n            }\r\n\r\n            return string.Empty;\r\n        }\r\n\r\n       
+      /// <summary>\r\n        /// Function to add new Item to Inventory.\r\n       
+      /// </summary>\r\n        /// <returns>Auto Shortcut Input</returns>\r\n       
+      public string AddItem(int itemID, int amount = 1, ItemData customData = null,
+      bool autoShortcut = false)"
+  - name: Shortcut Bind Custom create
+    original: "        /// <summary>\r\n        /// Update Shortcut slot with binded
+      Control\r\n        /// </summary>\r\n        public void UpdateShortcut(string
+      control, int newSlotID)"
+    edit: "        /// <summary>\r\n        /// Bind new or Exchange Inventory Shortcut\r\n       
+      /// </summary>\r\n        public void ShortcutBindCustom(int itemID, int slotID,
+      string control)\r\n        {\r\n            Item item = GetItem(itemID);\r\n\r\n           
+      if (Shortcuts.Count > 0)\r\n            {\r\n                if (Shortcuts.All(s
+      => s.slot != slotID && !s.shortcut.Equals(control)))\r\n                {\r\n                   
+      // shortcut does not exist\r\n                    Shortcuts.Add(new ShortcutModel(item,
+      slotID, control));\r\n                    ItemDataOfSlot(slotID).shortcut =
+      control;\r\n                }\r\n                else\r\n                {\r\n                   
+      // shortcut already exist\r\n                    for (int i = 0; i < Shortcuts.Count;
+      i++)\r\n                    {\r\n                        if (Shortcuts.Any(s
+      => s.slot == slotID))\r\n                        {\r\n                           
+      if (Shortcuts[i].slot == slotID)\r\n                            {\r\n                               
+      \r\n                                // change shortcut key\r\n                               
+      if (Shortcuts.Any(s => s.shortcut.Equals(control)))\r\n                               
+      {\r\n                                    // find equal shortcut with key and
+      exchange it\r\n                                    foreach (var equal in Shortcuts)\r\n                                   
+      {\r\n                                        if (equal.shortcut.Equals(control))\r\n                                       
+      {\r\n                                            equal.shortcut = Shortcuts[i].shortcut;\r\n                                           
+      ItemDataOfSlot(equal.slot).shortcut = Shortcuts[i].shortcut;\r\n                                       
+      }\r\n                                    }\r\n                               
+      }\r\n\r\n                                // change actual shortcut key\r\n                               
+      Shortcuts[i].shortcut = control;\r\n                                ItemDataOfSlot(Shortcuts[i].slot).shortcut
+      = Shortcuts[i].shortcut;\r\n                                break;\r\n                           
+      }\r\n                        }\r\n                        else if (Shortcuts[i].shortcut.Equals(control))\r\n                       
+      {\r\n                            // change shortcut item\r\n                           
+      if(IsAnyItemInSlot(Shortcuts[i].slot)){\r\n                            \r\n                               
+      ItemDataOfSlot(Shortcuts[i].slot).shortcut = string.Empty;\r\n                           
+      \r\n                            }//any item in slot\r\n                           
+      \r\n                            ItemDataOfSlot(slotID).shortcut = control;\r\n                           
+      Shortcuts[i].slot = slotID;\r\n                            Shortcuts[i].item
+      = item;\r\n                            break;\r\n                        }\r\n                   
+      }\r\n                }\r\n            }\r\n            else\r\n           
+      {\r\n                Shortcuts.Add(new ShortcutModel(item, slotID, control));\r\n               
+      ItemDataOfSlot(slotID).shortcut = control;\r\n            }\r\n\r\n           
+      isShortcutBind = false;\r\n            fader.FadeOutSignal();\r\n           
+      ResetInventory();\r\n            \r\n        }//ShortcutBindCustom\r\n       
+      \r\n        /// <summary>\r\n        /// Update Shortcut slot with binded Control\r\n       
+      /// </summary>\r\n        public void UpdateShortcut(string control, int newSlotID)"
+  - name: Get Item Slot ID update
+    original: '        int GetItemSlotID(int itemID, bool reverse = false)'
+    edit: '        public int GetItemSlotID(int itemID, bool reverse = false)'
