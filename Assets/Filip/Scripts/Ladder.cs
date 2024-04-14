@@ -9,7 +9,7 @@ public class Ladder : MonoBehaviour
     bool inside = false;
     public float speed = 3f;
     public ExamplePlayerController player;
-    public AudioSource sound;
+    //public AudioSource sound;
 
 
 
@@ -67,13 +67,13 @@ public class Ladder : MonoBehaviour
 
         if (inside == true && Input.GetKey("w"))
         {
-            sound.enabled = true;
-            sound.loop = true;
+            //sound.enabled = true;
+            //sound.loop = true;
         }
         else
         {
-            sound.enabled = false;
-            sound.loop = false;
+            //sound.enabled = false;
+            //sound.loop = false;
         }
 
 

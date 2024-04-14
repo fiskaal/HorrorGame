@@ -7,7 +7,7 @@ public class Doors : MonoBehaviour
     public Animator door;
     public GameObject openText;
 
-    public AudioSource doorSound;
+    //public AudioSource doorSound;
 
 
     public bool inReach;
@@ -61,16 +61,16 @@ public class Doors : MonoBehaviour
     }
     void DoorOpens()
     {
-        Debug.Log("It Opens");
+        //Debug.Log("It Opens");
         door.SetBool("Open", true);
         door.SetBool("Closed", false);
-        doorSound.Play();
+        //doorSound.Play();
 
     }
 
     void DoorCloses()
     {
-        Debug.Log("It Closes");
+        //Debug.Log("It Closes");
         door.SetBool("Open", false);
         door.SetBool("Closed", true);
     }
