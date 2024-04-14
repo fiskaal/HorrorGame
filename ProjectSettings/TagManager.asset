@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Ladder
   - Reach
+  - Enemy
+  - Pickup
+  - SDAS
+  - SDAM
+  - SDAL
   layers:
   - Default
   - TransparentFX
