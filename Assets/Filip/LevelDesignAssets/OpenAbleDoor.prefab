@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8705712250777025609}
   - component: {fileID: 5275386241225601883}
   - component: {fileID: 5275386241225601880}
-  - component: {fileID: 5275386241225601881}
+  - component: {fileID: 7889497121256781862}
   m_Layer: 0
   m_Name: OpenAbleDoor
   m_TagString: Untagged
@@ -166,7 +166,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5275386241225601881
+--- !u!114 &7889497121256781862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,9 +175,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4767500624288873422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38a4314175c85b849a2efea8df8d3bb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0119483e84ab0d74c9d15897f3a1b708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 5275386241225601880}
-  openText: {fileID: 0}
-  inReach: 0

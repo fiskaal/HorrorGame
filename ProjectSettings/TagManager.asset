@@ -11,6 +11,7 @@ TagManager:
   - SDAS
   - SDAM
   - SDAL
+  - InteractiveObject
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Interact
   - 
   - 
   - 
