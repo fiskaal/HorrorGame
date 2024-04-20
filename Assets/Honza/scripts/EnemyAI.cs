@@ -41,10 +41,11 @@ public class EnemyAI : MonoBehaviour
         StartPatroling();
         Debug.Log("StartPatroling called");
     }
-    public void InvestigateWaypoint(Transform waypoint)
+    public void InvestigateWaypoint(Transform waypoint, float speed)
     {
         Debug.Log("InvestigateWaypoint called");
         agent.isStopped.Equals("true");
+        agent.speed = speed;
         agent.destination = waypoint.position;
     }
     void ChasePlayer()

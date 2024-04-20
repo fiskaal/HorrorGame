@@ -14,10 +14,10 @@ public class GameController : MonoBehaviour
     [SerializeField] private SphereCollider soundDetectAreaLarge;
     [SerializeField] private CapsuleCollider playerCollider;
 
-    public void CreateWaypoint()
+    public void CreateWaypoint(float speed)
     {
         GameObject waypoint = Instantiate(waypointPrefab, player.transform.position, player.transform.rotation);
-        enemyAI.InvestigateWaypoint(waypoint.transform);
+        enemyAI.InvestigateWaypoint(waypoint.transform, speed);
     }
 
 }
