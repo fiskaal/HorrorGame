@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.occasoftware.super-simple-skybox": {
+      "version": "file:com.occasoftware.super-simple-skybox",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.shadergraph": "12.1.6"
+      }
+    },
     "com.unity.burst": {
       "version": "1.6.5",
       "depth": 1,
