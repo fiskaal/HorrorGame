@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
 
     public void CreateWaypoint(float speed)
     {
+        Debug.Log("CreateWaypoint called with speed: " + speed);
         GameObject waypoint = Instantiate(waypointPrefab, player.transform.position, player.transform.rotation);
         enemyAI.InvestigateWaypoint(waypoint.transform, speed);
     }

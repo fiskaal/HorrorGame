@@ -48,6 +48,10 @@ public class EnemyAI : MonoBehaviour
         agent.speed = speed;
         agent.destination = waypoint.position;
     }
+    public void ResetSpeed()
+    {
+        agent.speed = 6;
+    }
     void ChasePlayer()
     {
         agent.destination = player.position;

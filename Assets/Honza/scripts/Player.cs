@@ -8,32 +8,67 @@ public class Player : MonoBehaviour
     private float speedSDAS = 8F;
     private float speedSDAM = 6F;
     private float speedSDAL = 4.5F;
+    [SerializeField] private bool playerInSDAS = false;
+    [SerializeField] private bool playerInSDAM = false;
+    [SerializeField] private bool playerInSDAL = false;
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("Pickup"))
         {
             other.GetComponent<PickUp>().HidePickUp();
-            //Debug.Log("createWaypoint called");
-            //gameController.CreateWaypoint();
-            if (other.CompareTag("SDAS"))
-            {
-                Debug.Log("createWaypoint SDAS called");
-                gameController.CreateWaypoint(speedSDAS);
-            }
-            else if (other.CompareTag("SDAM"))
-            {
-                Debug.Log("createWaypoint SDAM called");
-                gameController.CreateWaypoint(speedSDAM);
-            }
-            else if (other.CompareTag("SDAL"))
-            {
-                Debug.Log("createWaypoint SDAL called");
-                gameController.CreateWaypoint(speedSDAL);
-            }
+            PlayerInSDACheck();
         }
-        /*if ((other.CompareTag("SDAS") || other.CompareTag("SDAM") || other.CompareTag("SDAL")) && *Input.GetKey(KeyCode.F))
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SDAS"))
         {
-            gameController.CreateWaypoint();
-        }*/
+            Debug.Log("player entered SDAS");
+            playerInSDAS = true;
+        }
+        if (other.CompareTag("SDAM"))
+        {
+            Debug.Log("player entered SDAM");
+            playerInSDAM = true;
+        }
+        if (other.CompareTag("SDAL"))
+        {
+            Debug.Log("player entered SDAL");
+            playerInSDAL = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("SDAS"))
+        {
+            Debug.Log("player left SDAS");
+            playerInSDAS = false;
+        }
+        if (other.CompareTag("SDAM"))
+        {
+            Debug.Log("player left SDAM");
+            playerInSDAM = false;
+        }
+        if (other.CompareTag("SDAL"))
+        {
+            Debug.Log("player left SDAL");
+            playerInSDAL = false;
+        }
+    }
+    private void PlayerInSDACheck()
+    {
+        Debug.Log("PlayerInSDACheck called");
+        if (playerInSDAS)
+        {
+            gameController.CreateWaypoint(speedSDAS);
+        }
+        else if (playerInSDAM)
+        {
+            gameController.CreateWaypoint(speedSDAM);
+        }
+        else if (playerInSDAL)
+        {
+            gameController.CreateWaypoint(speedSDAL);
+        }
     }
 }
