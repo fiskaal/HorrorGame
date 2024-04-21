@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private SphereCollider soundDetectAreaMedium;
     [SerializeField] private SphereCollider soundDetectAreaLarge;
     private int lastPatrolWaypoint = -1;
+    public bool investigatingWaypoint = false;
 
     void Start()
     {
@@ -47,6 +48,7 @@ public class EnemyAI : MonoBehaviour
         agent.isStopped.Equals("true");
         agent.speed = speed;
         agent.destination = waypoint.position;
+        investigatingWaypoint = true;
     }
     public void ResetSpeed()
     {
