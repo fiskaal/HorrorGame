@@ -25787,6 +25787,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 1404424609}
+  playerInSDAS: 0
+  playerInSDAM: 0
+  playerInSDAL: 0
 --- !u!43 &718432105
 Mesh:
   m_ObjectHideFlags: 0
@@ -53481,11 +53484,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1989908133183539344, guid: a057d2ba0ac82494f93be1e28e9615ae,
-        type: 3}
-      propertyPath: m_Radius
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4396491165112900372, guid: a057d2ba0ac82494f93be1e28e9615ae,
         type: 3}
@@ -86832,18 +86830,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 28217076}
     - target: {fileID: 680349812, guid: a986566c19f1eba4bb373ad004f34da6, type: 3}
-      propertyPath: soundDetectAreaLarge
-      value: 
-      objectReference: {fileID: 1654310885}
-    - target: {fileID: 680349812, guid: a986566c19f1eba4bb373ad004f34da6, type: 3}
-      propertyPath: soundDetectAreaSmall
-      value: 
-      objectReference: {fileID: 1189241167}
-    - target: {fileID: 680349812, guid: a986566c19f1eba4bb373ad004f34da6, type: 3}
-      propertyPath: soundDetectAreaMedium
-      value: 
-      objectReference: {fileID: 374330051}
-    - target: {fileID: 680349812, guid: a986566c19f1eba4bb373ad004f34da6, type: 3}
       propertyPath: patrolWaypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1619557345}
@@ -86859,14 +86845,6 @@ PrefabInstance:
       propertyPath: patrolWaypoints.Array.data[3]
       value: 
       objectReference: {fileID: 337791545}
-    - target: {fileID: 680349813, guid: a986566c19f1eba4bb373ad004f34da6, type: 3}
-      propertyPath: m_Speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 680349813, guid: a986566c19f1eba4bb373ad004f34da6, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 181641089539110466, guid: a986566c19f1eba4bb373ad004f34da6,
         type: 3}
       propertyPath: m_RootOrder
@@ -86922,25 +86900,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1168049804110434719, guid: a986566c19f1eba4bb373ad004f34da6,
-        type: 3}
-      propertyPath: m_TagString
-      value: SDAL
-      objectReference: {fileID: 0}
-    - target: {fileID: 1674141035051390928, guid: a986566c19f1eba4bb373ad004f34da6,
-        type: 3}
-      propertyPath: m_TagString
-      value: SDAS
-      objectReference: {fileID: 0}
     - target: {fileID: 2872766382184305903, guid: a986566c19f1eba4bb373ad004f34da6,
         type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 9065767678750299641, guid: a986566c19f1eba4bb373ad004f34da6,
-        type: 3}
-      propertyPath: m_TagString
-      value: SDAM
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a986566c19f1eba4bb373ad004f34da6, type: 3}
