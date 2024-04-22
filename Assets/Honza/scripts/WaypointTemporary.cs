@@ -11,6 +11,8 @@ public class WaypointTemporary : MonoBehaviour
             return;
 
         EnemyAI enemyAI = other.gameObject.GetComponent<EnemyAI>();
+        enemyAI.ResetSpeed();
+        enemyAI.investigatingWaypoint = false;
         StartCoroutine(enemyAI.ChangePatrolWaypoint());
         Debug.Log("waypoint collision");
     }
@@ -19,6 +21,10 @@ public class WaypointTemporary : MonoBehaviour
         if (!other.gameObject.CompareTag("Enemy"))
             return;
 
+        ClearWaypoint();
+    }
+    public void ClearWaypoint()
+    {
         Destroy(gameObject);
     }
 }

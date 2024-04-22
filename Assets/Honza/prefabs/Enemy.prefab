@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2962128115111399430}
   m_Layer: 0
   m_Name: SoundDetectAreaLarge
-  m_TagString: Untagged
+  m_TagString: SDAL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 1545734594044563973}
   m_Layer: 0
   m_Name: SoundDetectAreaSmall
-  m_TagString: Untagged
+  m_TagString: SDAS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,9 +228,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  soundDetectAreaLarge: {fileID: 0}
-  soundDetectAreaMedium: {fileID: 0}
-  soundDetectAreaSmall: {fileID: 0}
+  soundDetectAreaSmall: {fileID: 1545734594044563973}
+  soundDetectAreaMedium: {fileID: 1439979164762473520}
+  soundDetectAreaLarge: {fileID: 2962128115111399430}
+  investigatingWaypoint: 0
 --- !u!195 &680349813
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -265,7 +266,7 @@ GameObject:
   - component: {fileID: 1439979164762473520}
   m_Layer: 0
   m_Name: SoundDetectAreaMedium
-  m_TagString: Untagged
+  m_TagString: SDAM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

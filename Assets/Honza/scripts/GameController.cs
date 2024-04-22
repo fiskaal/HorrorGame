@@ -14,10 +14,19 @@ public class GameController : MonoBehaviour
     [SerializeField] private SphereCollider soundDetectAreaLarge;
     [SerializeField] private CapsuleCollider playerCollider;
 
-    public void CreateWaypoint()
+    private GameObject currentTempWaypoint;
+
+    public void CreateWaypoint(float speed)
     {
+        Debug.Log("CreateWaypoint called with speed: " + speed);
         GameObject waypoint = Instantiate(waypointPrefab, player.transform.position, player.transform.rotation);
-        enemyAI.InvestigateWaypoint(waypoint.transform);
+        if (enemyAI.investigatingWaypoint)
+        {
+            WaypointTemporary waypointTemporary = currentTempWaypoint.GetComponent<WaypointTemporary>();
+            waypointTemporary.ClearWaypoint();
+        }
+        currentTempWaypoint = waypoint;
+        enemyAI.InvestigateWaypoint(waypoint.transform, speed);
     }
 
 }
