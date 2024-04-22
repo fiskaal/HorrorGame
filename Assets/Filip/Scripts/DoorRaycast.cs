@@ -58,7 +58,7 @@ public class DoorRaycast : MonoBehaviour
 
     void CrosshairChange(bool on)
     {
-        if(on && !doOnce)
+        if(on )
         {
             imageE.SetActive(true);
         }
