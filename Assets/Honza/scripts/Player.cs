@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
             other.GetComponent<PickUp>().HidePickUp();
             PlayerInSDACheck();
         }
+        if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("HidingSpot"))
+        {
+            other.GetComponent<HidingSpot>().SwitchView();
+            PlayerInSDACheck();
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
