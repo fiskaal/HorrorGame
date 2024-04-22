@@ -11,6 +11,11 @@ public class Player : MonoBehaviour
     [SerializeField] private bool playerInSDAS = false;
     [SerializeField] private bool playerInSDAM = false;
     [SerializeField] private bool playerInSDAL = false;
+
+    [SerializeField] private bool isHiding = false;
+    private Vector3 positionBeforeHiding;
+    private Quaternion rotationBeforeHiding;
+
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("Pickup"))
@@ -18,9 +23,20 @@ public class Player : MonoBehaviour
             other.GetComponent<PickUp>().HidePickUp();
             PlayerInSDACheck();
         }
-        if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("HidingSpot"))
+        if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("HidingSpot") && !isHiding)
         {
-            other.GetComponent<HidingSpot>().SwitchView();
+            positionBeforeHiding = transform.position;
+            rotationBeforeHiding = transform.rotation;
+            transform.position = other.transform.position;
+            transform.rotation = other.transform.rotation;
+            isHiding = true;
+            PlayerInSDACheck();
+        }
+        if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("HidingSpot") && isHiding)
+        {
+            transform.position = positionBeforeHiding;
+            transform.rotation = rotationBeforeHiding;
+            isHiding = false;
             PlayerInSDACheck();
         }
     }
