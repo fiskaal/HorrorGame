@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private GameController gameController;
+    [SerializeField] private CharacterController characterController;
     private float speedSDAS = 8F;
     private float speedSDAM = 6F;
     private float speedSDAL = 4.5F;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
         {
             positionBeforeHiding = transform.position;
             rotationBeforeHiding = transform.rotation;
+            characterController.Move(other.transform.position - transform.position);
             transform.position = other.transform.position;
             transform.rotation = other.transform.rotation;
             isHiding = true;
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("HidingSpot") && isHiding)
         {
+            characterController.Move(positionBeforeHiding);
             transform.position = positionBeforeHiding;
             transform.rotation = rotationBeforeHiding;
             isHiding = false;

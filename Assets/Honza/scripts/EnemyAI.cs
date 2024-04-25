@@ -52,7 +52,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void ResetSpeed()
     {
-        agent.speed = 6;
+        agent.speed = 4.5F;
     }
     void ChasePlayer()
     {
