@@ -5,14 +5,8 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject enemy;
     [SerializeField] private EnemyAI enemyAI;
     [SerializeField] private GameObject waypointPrefab;
-
-    [SerializeField] private SphereCollider soundDetectAreaSmall;
-    [SerializeField] private SphereCollider soundDetectAreaMedium;
-    [SerializeField] private SphereCollider soundDetectAreaLarge;
-    [SerializeField] private CapsuleCollider playerCollider;
 
     private GameObject currentTempWaypoint;
 
