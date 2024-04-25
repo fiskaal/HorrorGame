@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace KeySystem { 
 
@@ -8,6 +9,12 @@ namespace KeySystem {
     {
         [SerializeField] private bool redDoor = false;
         [SerializeField] private bool redKey = false;
+
+        [SerializeField] private bool orangeDoor = false;
+        [SerializeField] private bool orangeKey = false;
+
+        [SerializeField] private UnityEvent pickUpEvent;
+
 
         [SerializeField] private KeyInventory _keyInventory = null;
 
@@ -17,6 +24,11 @@ namespace KeySystem {
         {
             if (redDoor) 
             { 
+                doorObject = GetComponent<KeyDoorController>();
+            }
+
+            if (orangeDoor)
+            {
                 doorObject = GetComponent<KeyDoorController>();
             }
         }
@@ -29,6 +41,18 @@ namespace KeySystem {
             }else if (redKey)
             {
                 _keyInventory.hasRedKey = true;
+                pickUpEvent.Invoke();
+                gameObject.SetActive(false);
+            }
+
+            if (orangeDoor)
+            {
+                doorObject.PlayAnimation();
+            }
+            else if (orangeKey)
+            {
+                _keyInventory.hasOrangeKey = true;
+                pickUpEvent.Invoke();
                 gameObject.SetActive(false);
             }
         }
