@@ -10,17 +10,33 @@ public class ExamplePlayerController : MonoBehaviour
     public float jumpHeight = 1.0f;
     public Camera playerCamera;
     public float crouchHeight = 0.5f;
-    public float mouseSensitivity = 100f;
+    public float mouseSensitivity = 50f;
 
     private float originalHeight;
     private Vector3 velocity;
     private bool isCrouching = false;
     private float xRotation = 0f;
 
+    /*
+    [Header("Headbob stats")]
+    [SerializeField] private float walkBobSpeed = 14f;
+    [SerializeField] private float walkBobAmount = 0.5f;
+
+    [SerializeField] private float sprintBobSpeed = 18f;
+    [SerializeField] private float sprintBobAmount = 1f;
+
+    [SerializeField] private float crouchBobSpeed = 8f;
+    [SerializeField] private float crouchBobAmount = 0.25f;
+
+    private float defaultYpos;
+    private float timer;
+    */
+
     void Start()
     {
         originalHeight = controller.height;
         Cursor.lockState = CursorLockMode.Locked;
+        //defaultYpos = playerCamera.transform.localPosition.y;
     }
 
     void Update()
@@ -75,5 +91,10 @@ public class ExamplePlayerController : MonoBehaviour
 
         playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
+    }
+
+    public void HandleHeadbob()
+    {
+
     }
 }
