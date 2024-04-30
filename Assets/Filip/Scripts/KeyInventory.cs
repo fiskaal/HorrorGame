@@ -9,6 +9,7 @@ namespace KeySystem
     {
         public bool hasRedKey = false;
         public bool hasOrangeKey = false;
+        public bool hasBlueKey = false;
 
     }
 }

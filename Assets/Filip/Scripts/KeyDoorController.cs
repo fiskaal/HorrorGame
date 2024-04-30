@@ -56,6 +56,9 @@ namespace KeySystem {
             else if (_keyInventory.hasOrangeKey)
             {
                 OpenDoor();
+            }else if (_keyInventory.hasBlueKey)
+            {
+                OpenDoor();
             }
             else
             {
