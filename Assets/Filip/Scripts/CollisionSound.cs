@@ -7,7 +7,7 @@ public class CollisionSound : MonoBehaviour
 {
     public AudioClip collisionSound;  // The sound to be played on collision
     public AudioSource audioSource;   // Reference to the AudioSource component
-    public GameObject gameObject;
+    public GameObject itself;
 
 
 
@@ -37,7 +37,7 @@ public class CollisionSound : MonoBehaviour
             
             
             audioSource.Play();
-            gameObject.SetActive(false);
+            itself.SetActive(false);
         }
 
     }
