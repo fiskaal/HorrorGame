@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 234054388534977384}
   - component: {fileID: 234054388534977391}
   - component: {fileID: 234054388534977390}
+  - component: {fileID: 7864445496013580271}
   - component: {fileID: 234054388534977387}
   - component: {fileID: 6387391748248190627}
   - component: {fileID: 5005094699526501517}
@@ -476,6 +477,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7864445496013580271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234054388534977389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f4d32114f4c754cbb425685231b2ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
+  characterController: {fileID: 234054388534977387}
+  playerInSDAS: 0
+  playerInSDAM: 0
+  playerInSDAL: 0
 --- !u!114 &234054388534977387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +515,8 @@ MonoBehaviour:
   playerCamera: {fileID: 234054386754756768}
   crouchHeight: 0.5
   mouseSensitivity: 750
+  isWalking: 0
+  isRunning: 0
 --- !u!114 &6387391748248190627
 MonoBehaviour:
   m_ObjectHideFlags: 0
