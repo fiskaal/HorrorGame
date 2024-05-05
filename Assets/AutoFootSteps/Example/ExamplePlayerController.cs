@@ -1,21 +1,25 @@
 using UnityEngine;
+using System.Collections;
 
 public class ExamplePlayerController : MonoBehaviour
 {
-    public CharacterController controller;
-    public float speed = 5.0f;
-    public float runSpeed = 10.0f;
-    public float crouchSpeed = 2.5f;
-    public float gravity = -9.81f;
-    public float jumpHeight = 1.0f;
-    public Camera playerCamera;
-    public float crouchHeight = 0.5f;
-    public float mouseSensitivity = 50f;
+    [SerializeField] private CharacterController controller;
+    [SerializeField] private float speed = 5.0f;
+    [SerializeField] private float runSpeed = 10.0f;
+    [SerializeField] private float crouchSpeed = 2.5f;
+    [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private float jumpHeight = 1.0f;
+    [SerializeField] private Camera playerCamera;
+    [SerializeField] private float crouchHeight = 0.5f;
+    [SerializeField] private float mouseSensitivity = 50f;
 
     private float originalHeight;
     private Vector3 velocity;
     private bool isCrouching = false;
     private float xRotation = 0f;
+
+    public bool isWalking = false;
+    public bool isRunning = false;
 
     /*
     [Header("Headbob stats")]
@@ -41,6 +45,11 @@ public class ExamplePlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+        {
+            isWalking = false;
+            isRunning = false;
+        }
         // Movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -51,14 +60,20 @@ public class ExamplePlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             move *= runSpeed;
+            isRunning = true;
+            isWalking = false;
         }
         else if (isCrouching)
         {
             move *= crouchSpeed;
+            isWalking = false;
+            isRunning = false;
         }
         else
         {
             move *= speed;
+            isWalking = true;
+            isRunning = false;
         }
 
         controller.Move(move * Time.deltaTime);
