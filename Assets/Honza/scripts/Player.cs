@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private float speedSDAS = 8F;
     private float speedSDAM = 6F;
     private float speedSDAL = 4.5F;
+    private int pickupNoise = 1;
     [SerializeField] private bool playerInSDAS = false;
     [SerializeField] private bool playerInSDAM = false;
     [SerializeField] private bool playerInSDAL = false;
@@ -22,25 +23,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("Pickup"))
         {
             other.GetComponent<PickUp>().HidePickUp();
-            PlayerInSDACheck();
-        }
-        if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("HidingSpot") && !isHiding)
-        {
-            positionBeforeHiding = transform.position;
-            rotationBeforeHiding = transform.rotation;
-            characterController.Move(other.transform.position - transform.position);
-            transform.position = other.transform.position;
-            transform.rotation = other.transform.rotation;
-            isHiding = true;
-            PlayerInSDACheck();
-        }
-        if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("HidingSpot") && isHiding)
-        {
-            characterController.Move(positionBeforeHiding);
-            transform.position = positionBeforeHiding;
-            transform.rotation = rotationBeforeHiding;
-            isHiding = false;
-            PlayerInSDACheck();
+            PlayerInSDACheck(pickupNoise);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -79,20 +62,20 @@ public class Player : MonoBehaviour
             playerInSDAL = false;
         }
     }
-    private void PlayerInSDACheck()
+    private void PlayerInSDACheck(int noiseValue)
     {
         Debug.Log("PlayerInSDACheck called");
         if (playerInSDAS)
         {
-            gameController.CreateWaypoint(speedSDAS);
+            gameController.CreateWaypoint(speedSDAS, noiseValue + 3);
         }
         else if (playerInSDAM)
         {
-            gameController.CreateWaypoint(speedSDAM);
+            gameController.CreateWaypoint(speedSDAM, noiseValue + 2);
         }
         else if (playerInSDAL)
         {
-            gameController.CreateWaypoint(speedSDAL);
+            gameController.CreateWaypoint(speedSDAL, noiseValue + 1);
         }
     }
 }

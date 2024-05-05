@@ -10,17 +10,27 @@ public class GameController : MonoBehaviour
 
     private GameObject currentTempWaypoint;
 
-    public void CreateWaypoint(float speed)
+    public void CreateWaypoint(float speed, int noiseValue)
     {
-        Debug.Log("CreateWaypoint called with speed: " + speed);
+        Debug.Log("CreateWaypoint called with speed: " + speed + " and noise value of : " + noiseValue);
         GameObject waypoint = Instantiate(waypointPrefab, player.transform.position, player.transform.rotation);
-        if (enemyAI.investigatingWaypoint)
+        WaypointTemporary waypointTemporary = waypoint.GetComponent<WaypointTemporary>();
+        waypointTemporary.noiseValue = noiseValue;
+        if (!enemyAI.investigatingWaypoint)
         {
-            WaypointTemporary waypointTemporary = currentTempWaypoint.GetComponent<WaypointTemporary>();
+            currentTempWaypoint = waypoint;
+            enemyAI.InvestigateWaypoint(waypoint.transform, speed);
+        }
+        else if (enemyAI.investigatingWaypoint && (waypointTemporary.noiseValue >= currentTempWaypoint.GetComponent<WaypointTemporary>().noiseValue))
+        {
+            currentTempWaypoint.GetComponent<WaypointTemporary>().ClearWaypoint();
+            currentTempWaypoint = waypoint;
+            enemyAI.InvestigateWaypoint(waypoint.transform, speed);
+        }
+        else if (enemyAI.investigatingWaypoint && (waypointTemporary.noiseValue < currentTempWaypoint.GetComponent<WaypointTemporary>().noiseValue))
+        {
             waypointTemporary.ClearWaypoint();
         }
-        currentTempWaypoint = waypoint;
-        enemyAI.InvestigateWaypoint(waypoint.transform, speed);
     }
 
 }
