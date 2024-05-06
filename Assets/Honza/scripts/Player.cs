@@ -6,12 +6,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private GameController gameController;
     [SerializeField] private ExamplePlayerController characterController;
+
     private float speedSDAS = 8F;
     private float speedSDAM = 6F;
     private float speedSDAL = 4.5F;
     private int pickupNoise = 1;
     private int walkingNoise = 1;
     private int runningNoise = 2;
+
     [SerializeField] private bool playerInSDAS = false;
     [SerializeField] private bool playerInSDAM = false;
     [SerializeField] private bool playerInSDAL = false;

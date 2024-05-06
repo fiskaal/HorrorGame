@@ -5,13 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private Transform player;
     private NavMeshAgent agent;
     [SerializeField] private Transform[] patrolWaypoints = new Transform[4];
-    //private Transform followTarget;
-    [SerializeField] private SphereCollider soundDetectAreaSmall;
-    [SerializeField] private SphereCollider soundDetectAreaMedium;
-    [SerializeField] private SphereCollider soundDetectAreaLarge;
     private int lastPatrolWaypoint = -1;
     public bool investigatingWaypoint = false;
 
@@ -53,9 +48,5 @@ public class EnemyAI : MonoBehaviour
     public void ResetSpeed()
     {
         agent.speed = 4.5F;
-    }
-    void ChasePlayer()
-    {
-        agent.destination = player.position;
     }
 }
