@@ -45,11 +45,6 @@ public class ExamplePlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
-        {
-            isWalking = false;
-            isRunning = false;
-        }
         // Movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -72,8 +67,16 @@ public class ExamplePlayerController : MonoBehaviour
         else
         {
             move *= speed;
-            isWalking = true;
-            isRunning = false;
+            if (move.magnitude > 1)
+            {
+                isWalking = true;
+                isRunning = false;
+            }
+            else
+            {
+                isWalking = false;
+                isRunning = false;
+            }
         }
 
         controller.Move(move * Time.deltaTime);
