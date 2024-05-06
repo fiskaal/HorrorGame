@@ -72,8 +72,11 @@ public class ExamplePlayerController : MonoBehaviour
         else
         {
             move *= speed;
-            isWalking = true;
-            isRunning = false;
+            if (move.magnitude > 1)
+            {
+                isWalking = true;
+                isRunning = false;
+            }
         }
 
         controller.Move(move * Time.deltaTime);
