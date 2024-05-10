@@ -3,7 +3,12 @@ guid: 7059c96d8065f6e4da7bbcdb1118804e
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atlas_Bathroom
+    second: {fileID: 2100000, guid: 4977114d57e12704da1f80c45e085337, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

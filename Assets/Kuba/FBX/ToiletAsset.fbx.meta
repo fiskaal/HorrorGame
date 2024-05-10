@@ -3,7 +3,12 @@ guid: f428b09562b80db47a822e16bfad4a14
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atlas_LockerBench
+    second: {fileID: 2100000, guid: 4977114d57e12704da1f80c45e085337, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
