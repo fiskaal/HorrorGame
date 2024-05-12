@@ -10,10 +10,18 @@ public class EnemyAI : MonoBehaviour
     private int lastPatrolWaypoint = -1;
     public bool investigatingWaypoint = false;
 
+    Vector3 velocity = Vector3.zero;
+    private float smoothTime = 0.3F;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.updatePosition = false;
         StartPatroling();
+    }
+    private void Update()
+    {
+        transform.position = Vector3.SmoothDamp(transform.position, agent.nextPosition, ref velocity, smoothTime);
     }
 
     void StartPatroling()
@@ -25,9 +33,8 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("patroling loop with index: " + randomIndex);
         } while (randomIndex.Equals(lastPatrolWaypoint));
 
-        agent.destination = patrolWaypoints[randomIndex].position;
+        agent.SetDestination(patrolWaypoints[randomIndex].position);
         lastPatrolWaypoint = randomIndex;
-
     }
     public IEnumerator ChangePatrolWaypoint()
     {
@@ -42,7 +49,7 @@ public class EnemyAI : MonoBehaviour
         Debug.Log("InvestigateWaypoint called");
         agent.isStopped.Equals("true");
         agent.speed = speed;
-        agent.destination = waypoint.position;
+        agent.SetDestination(waypoint.position);
         investigatingWaypoint = true;
     }
     public void ResetSpeed()
