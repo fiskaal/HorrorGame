@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class LockerRaycast : MonoBehaviour
 {
+    [SerializeField] private Player player;
+    [SerializeField] private GameController gameController;
     [SerializeField] private int rayLength = 5;
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string excludeLayerName = null;
 
     //private LockerController raycastedObj;
     private LockerController lc;
+    private int openDoorNoise = -1;
 
     [SerializeField] private KeyCode openDoorKey = KeyCode.E;
 
@@ -42,6 +45,7 @@ public class LockerRaycast : MonoBehaviour
 
                 if (Input.GetKeyDown(openDoorKey))
                 {
+                    player.PlayerInSDACheck(openDoorNoise);
                     lc.PlayAnimation();
                 }
             }

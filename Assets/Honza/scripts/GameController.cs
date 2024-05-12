@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
         GameObject waypoint = Instantiate(waypointPrefab, player.transform.position, player.transform.rotation);
         WaypointTemporary waypointTemporary = waypoint.GetComponent<WaypointTemporary>();
         waypointTemporary.noiseValue = noiseValue;
-        if (!enemyAI.investigatingWaypoint)
+        if (!enemyAI.investigatingWaypoint && noiseValue > 0)
         {
             currentTempWaypoint = waypoint;
             enemyAI.InvestigateWaypoint(waypoint.transform, speed);
