@@ -94,6 +94,11 @@ public class Player : MonoBehaviour
             //Debug.Log("player entered SDAL");
             playerInSDAL = true;
         }
+        if (other.CompareTag("CDA"))
+        {
+            Debug.Log("game over triggered");
+            gameController.GameOver();
+        }
     }
     private void OnTriggerExit(Collider other)
     {
