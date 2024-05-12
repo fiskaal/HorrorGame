@@ -10,9 +10,9 @@ public class Player : MonoBehaviour
     private float speedSDAS = 8F;
     private float speedSDAM = 6F;
     private float speedSDAL = 4.5F;
-    private int pickupNoise = 1;
-    private int walkingNoise = 1;
-    private int runningNoise = 2;
+    private int pickupNoise = -2;
+    private int walkingNoise = -2;
+    private int runningNoise = -1;
 
     [SerializeField] private bool playerInSDAS = false;
     [SerializeField] private bool playerInSDAM = false;
@@ -69,14 +69,6 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.75F);
         StartCoroutine(PlayerRunning());
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if (Input.GetKeyDown(KeyCode.F) && other.CompareTag("Pickup"))
-        {
-            other.GetComponent<PickUp>().HidePickUp();
-            PlayerInSDACheck(pickupNoise);
-        }
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("SDAS"))
@@ -93,6 +85,11 @@ public class Player : MonoBehaviour
         {
             //Debug.Log("player entered SDAL");
             playerInSDAL = true;
+        }
+        if (other.CompareTag("CDA"))
+        {
+            Debug.Log("game over triggered");
+            gameController.GameOver();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -113,7 +110,7 @@ public class Player : MonoBehaviour
             playerInSDAL = false;
         }
     }
-    private void PlayerInSDACheck(int noiseValue)
+    public void PlayerInSDACheck(int noiseValue)
     {
         Debug.Log("PlayerInSDACheck called");
         if (playerInSDAS)

@@ -12,7 +12,7 @@ TagManager:
   - SDAM
   - SDAL
   - InteractiveObject
-  - HidingSpot
+  - CDA
   layers:
   - Default
   - TransparentFX

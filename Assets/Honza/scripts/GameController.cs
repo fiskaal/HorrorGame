@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class GameController : MonoBehaviour
         GameObject waypoint = Instantiate(waypointPrefab, player.transform.position, player.transform.rotation);
         WaypointTemporary waypointTemporary = waypoint.GetComponent<WaypointTemporary>();
         waypointTemporary.noiseValue = noiseValue;
-        if (!enemyAI.investigatingWaypoint)
+        if (!enemyAI.investigatingWaypoint && noiseValue > 0)
         {
             currentTempWaypoint = waypoint;
             enemyAI.InvestigateWaypoint(waypoint.transform, speed);
@@ -31,6 +32,10 @@ public class GameController : MonoBehaviour
         {
             waypointTemporary.ClearWaypoint();
         }
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

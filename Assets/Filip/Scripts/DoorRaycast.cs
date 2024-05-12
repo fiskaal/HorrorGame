@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class DoorRaycast : MonoBehaviour
 {
+    [SerializeField] private Player player;
     [SerializeField] private int rayLength = 5;
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string excludeLayerName = null;
 
     private DoorController raycastedObj;
+    private int openDoorNoise = -1;
 
     [SerializeField] private KeyCode openDoorKey = KeyCode.E;
 
@@ -41,6 +43,7 @@ public class DoorRaycast : MonoBehaviour
 
                 if (Input.GetKeyDown(openDoorKey))
                 {
+                    player.PlayerInSDACheck(openDoorNoise);
                     raycastedObj.PlayAnimation();
                 }
             }
