@@ -43,7 +43,7 @@ public class DoorRaycast : MonoBehaviour
 
                 if (Input.GetKeyDown(openDoorKey))
                 {
-                    player.PlayerInSDACheck(openDoorNoise);
+                    //player.PlayerInSDACheck(openDoorNoise);
                     raycastedObj.PlayAnimation();
                 }
             }
