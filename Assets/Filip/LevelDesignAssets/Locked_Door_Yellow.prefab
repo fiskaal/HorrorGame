@@ -216,7 +216,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -618,6 +618,11 @@ MonoBehaviour:
   redKey: 0
   orangeDoor: 0
   orangeKey: 1
+  blueDoor: 0
+  blueKey: 0
+  pickUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _keyInventory: {fileID: 726174203283024183}
 --- !u!1 &726174203283024182
 GameObject:
@@ -665,6 +670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasRedKey: 0
   hasOrangeKey: 0
+  hasBlueKey: 0
 --- !u!1 &726174203824989047
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,7 +759,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -918,7 +924,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1157,4 +1163,9 @@ MonoBehaviour:
   redKey: 0
   orangeDoor: 1
   orangeKey: 0
+  blueDoor: 0
+  blueKey: 0
+  pickUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _keyInventory: {fileID: 726174203283024183}
