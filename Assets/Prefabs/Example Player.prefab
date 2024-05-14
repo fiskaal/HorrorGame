@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3d93a6ab93c5c4abab163304600503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   rayLength: 5
   layerMaskInteract:
     serializedVersion: 2
@@ -193,6 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: addf28e4d3091f3479dcce25a0fc7e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  gameController: {fileID: 0}
   rayLength: 5
   layerMaskInteract:
     serializedVersion: 2
@@ -494,6 +497,8 @@ MonoBehaviour:
   playerInSDAS: 0
   playerInSDAM: 0
   playerInSDAL: 0
+  isWalkingPrev: 0
+  isRunningPrev: 0
 --- !u!114 &234054388534977387
 MonoBehaviour:
   m_ObjectHideFlags: 0
