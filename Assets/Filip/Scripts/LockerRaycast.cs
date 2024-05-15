@@ -45,8 +45,9 @@ public class LockerRaycast : MonoBehaviour
 
                 if (Input.GetKeyDown(openDoorKey))
                 {
-                    player.PlayerInSDACheck(openDoorNoise);
+                    //player.PlayerInSDACheck(openDoorNoise);
                     lc.PlayAnimation();
+                    player.PlayerInSDACheck(openDoorNoise);
                 }
             }
         }
