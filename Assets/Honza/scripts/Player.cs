@@ -115,15 +115,15 @@ public class Player : MonoBehaviour
         Debug.Log("PlayerInSDACheck called");
         if (playerInSDAS)
         {
-            gameController.CreateWaypoint(speedSDAS, noiseValue + 3);
+            gameController.CreateWaypoint(speedSDAS, noiseValue + 3, transform.position, transform.rotation);
         }
         else if (playerInSDAM)
         {
-            gameController.CreateWaypoint(speedSDAM, noiseValue + 2);
+            gameController.CreateWaypoint(speedSDAM, noiseValue + 2, transform.position, transform.rotation);
         }
         else if (playerInSDAL)
         {
-            gameController.CreateWaypoint(speedSDAL, noiseValue + 1);
+            gameController.CreateWaypoint(speedSDAL, noiseValue + 1, transform.position, transform.rotation);
         }
     }
 }

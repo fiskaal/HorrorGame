@@ -11,10 +11,10 @@ public class GameController : MonoBehaviour
 
     private GameObject currentTempWaypoint;
 
-    public void CreateWaypoint(float speed, int noiseValue)
+    public void CreateWaypoint(float speed, int noiseValue, Vector3 waypointPosition, Quaternion waypointRotation)
     {
         Debug.Log("CreateWaypoint called with speed: " + speed + " and noise value of : " + noiseValue);
-        GameObject waypoint = Instantiate(waypointPrefab, player.transform.position, player.transform.rotation);
+        GameObject waypoint = Instantiate(waypointPrefab, waypointPosition, waypointRotation);
         WaypointTemporary waypointTemporary = waypoint.GetComponent<WaypointTemporary>();
         waypointTemporary.noiseValue = noiseValue;
         if (!enemyAI.investigatingWaypoint && noiseValue > 0)
