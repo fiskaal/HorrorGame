@@ -39,7 +39,7 @@ public class ExamplePlayerController : MonoBehaviour
     void Start()
     {
         originalHeight = controller.height;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         //defaultYpos = playerCamera.transform.localPosition.y;
     }
 

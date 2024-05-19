@@ -12,7 +12,7 @@ public class FadeOut : MonoBehaviour
 
     private void Awake()
     {
-
+        image.gameObject.SetActive(true);
         Time.timeScale = 0;
         image.raycastTarget = true;
         

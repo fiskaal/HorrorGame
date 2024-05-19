@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SceneLoader : MonoBehaviour
 {
     public Image image;
+    public GameObject image2;
     [SerializeField] private Animator imageAnimator;
     public float waitTime = 1f;
     public string sceneName;
@@ -16,12 +17,23 @@ public class SceneLoader : MonoBehaviour
     public void Awake()
     {
         image.raycastTarget = false;
+        image2.gameObject.SetActive(false);
     }
 
     public void LoadGameScene(string sceneName)
     {
+        Time.timeScale = 1;
         image.raycastTarget = true;
         imageAnimator.Play("ImageFadeIn");
+        StartCoroutine(WaitAndLoad(waitTime, sceneName));
+    }
+
+    public void LoadGameSceneWithGamePaused(string sceneName)
+    {
+        Time.timeScale = 1;
+        image.raycastTarget = true;
+        image2.gameObject.SetActive(true);
+        imageAnimator.Play("ImageFadeIn", 0, .5f);
         StartCoroutine(WaitAndLoad(waitTime, sceneName));
     }
 
@@ -51,8 +63,8 @@ public class SceneLoader : MonoBehaviour
     IEnumerator WaitAndLoad(float waitTime, string sceneName)
     {
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene(sceneName);
-        //SceneManager.LoadSceneAsync(sceneName);
+        //SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
         //AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
     }
 }
