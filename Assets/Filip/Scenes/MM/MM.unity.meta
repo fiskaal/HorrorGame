@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Filip/Scenes/MM/MM.unity.meta
 guid: 4e2f3c611f9fe054683791b10bfa7010
 DefaultImporter:
+========
+guid: 3ae27181921c4234694b48e50adfabf0
+PrefabImporter:
+>>>>>>>> e962fbed9d7c85fed3a903a99d96ad2fcfbd6777:Assets/Honza/prefabs/Rock.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
