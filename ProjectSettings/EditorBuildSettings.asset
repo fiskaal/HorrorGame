@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Filip/Scenes/MM/MM.unity
+    guid: 4e2f3c611f9fe054683791b10bfa7010
+  - enabled: 1
+    path: Assets/Filip/Scenes/AP2/GameScene.unity
+    guid: aebac2a10c4188340a8ca2d2744e0e6d
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Honza/AP2/AP2.unity
     guid: a773a2bec8c52eb40aa92c283f530ce1
   m_configObjects: {}

@@ -2,21 +2,57 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadGameScene()
+    public Image image;
+    [SerializeField] private Animator imageAnimator;
+    public float waitTime = 1f;
+    public string sceneName;
+   
+    
+
+    public void Awake()
     {
-        SceneManager.LoadScene("GameScene");
+        image.raycastTarget = false;
     }
 
-    public void LoadFungusScene()
+    public void LoadGameScene(string sceneName)
     {
-        SceneManager.LoadScene("FungusGameScene");
+        image.raycastTarget = true;
+        imageAnimator.Play("ImageFadeIn");
+        StartCoroutine(WaitAndLoad(waitTime, sceneName));
     }
 
-    public void LoadFungusMenu()
+    public void LoadMainMenu()
     {
-        SceneManager.LoadScene("FungusMainMenuScene");
+        SceneManager.LoadScene("MM");
+    }
+
+    public void TestAnimation(string sceneName)
+    {
+        image.raycastTarget = true;
+        imageAnimator.Play("ImageFadeIn");
+        StartCoroutine(WaitAndLoad(waitTime, sceneName));
+
+    }
+
+    public void FadeInImage()
+    {
+        image.raycastTarget = true;
+    }
+
+    public void FadeOutImage()
+    {
+
+    }
+
+    IEnumerator WaitAndLoad(float waitTime, string sceneName)
+    {
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadSceneAsync(sceneName);
+        //AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
     }
 }

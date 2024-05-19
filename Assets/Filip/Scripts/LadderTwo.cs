@@ -8,7 +8,7 @@ public class LadderTwo : MonoBehaviour
 
 	public Transform chController;
 	bool inside = false;
-	public float speedUpDown = 3.2f;
+	public float speedUpDown = 5f;
 	public ExamplePlayerController FPSInput;
 
 	void Start()
