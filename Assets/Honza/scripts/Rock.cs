@@ -24,38 +24,20 @@ public class Rock : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("SDAS"))
-        {
-            //Debug.Log("player entered SDAS");
             rockInSDAS = true;
-        }
         if (other.CompareTag("SDAM"))
-        {
-            //Debug.Log("player entered SDAM");
             rockInSDAM = true;
-        }
         if (other.CompareTag("SDAL"))
-        {
-            //Debug.Log("player entered SDAL");
             rockInSDAL = true;
-        }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("SDAS"))
-        {
-            //Debug.Log("player left SDAS");
             rockInSDAS = false;
-        }
         if (other.CompareTag("SDAM"))
-        {
-            //Debug.Log("player left SDAM");
             rockInSDAM = false;
-        }
         if (other.CompareTag("SDAL"))
-        {
-            //Debug.Log("player left SDAL");
             rockInSDAL = false;
-        }
     }
     public void RockInSDACheck(int noiseValue)
     {

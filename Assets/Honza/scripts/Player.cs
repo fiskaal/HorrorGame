@@ -26,13 +26,11 @@ public class Player : MonoBehaviour
         {
             if (characterController.isWalking)
             {
-                Debug.Log("character is walking");
                 StartCoroutine(PlayerWalking());
                 isWalkingPrev = characterController.isWalking;
             }
             else if (!characterController.isWalking)
             {
-                Debug.Log("character stopped walking");
                 StopAllCoroutines();
                 isWalkingPrev = characterController.isWalking;
             }
@@ -41,13 +39,11 @@ public class Player : MonoBehaviour
         {
             if (characterController.isRunning)
             {
-                Debug.Log("character is running");
                 StartCoroutine(PlayerRunning());
                 isRunningPrev = characterController.isRunning;
             }
             else if (!characterController.isRunning)
             {
-                Debug.Log("character stopped running");
                 StopAllCoroutines();
                 isRunningPrev = characterController.isRunning;
             }
@@ -55,7 +51,6 @@ public class Player : MonoBehaviour
     }
     private IEnumerator PlayerWalking()
     {
-        Debug.Log("walking playerSDACheck called");
         PlayerInSDACheck(walkingNoise);
 
         yield return new WaitForSeconds(1.0F);
@@ -63,7 +58,6 @@ public class Player : MonoBehaviour
     }
     private IEnumerator PlayerRunning()
     {
-        Debug.Log("running playerSDACheck called");
         PlayerInSDACheck(runningNoise);
 
         yield return new WaitForSeconds(0.75F);
@@ -72,47 +66,25 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("SDAS"))
-        {
-            //Debug.Log("player entered SDAS");
             playerInSDAS = true;
-        }
         if (other.CompareTag("SDAM"))
-        {
-            //Debug.Log("player entered SDAM");
             playerInSDAM = true;
-        }
         if (other.CompareTag("SDAL"))
-        {
-            //Debug.Log("player entered SDAL");
             playerInSDAL = true;
-        }
         if (other.CompareTag("CDA"))
-        {
-            Debug.Log("game over triggered");
             gameController.GameOver();
-        }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("SDAS"))
-        {
-            //Debug.Log("player left SDAS");
             playerInSDAS = false;
-        }
         if (other.CompareTag("SDAM"))
-        {
-            //Debug.Log("player left SDAM");
             playerInSDAM = false;
-        }
         if (other.CompareTag("SDAL"))
-        {
-            //Debug.Log("player left SDAL");
             playerInSDAL = false;
-        }
     }
     public void PlayerInSDACheck(int noiseValue)
     {
-        Debug.Log("PlayerInSDACheck called");
         if (playerInSDAS)
         {
             gameController.CreateWaypoint(speedSDAS, noiseValue + 3, transform.position, transform.rotation);

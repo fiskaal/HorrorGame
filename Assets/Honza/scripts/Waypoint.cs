@@ -6,7 +6,6 @@ public class Waypoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("trigger collision");
         if (!other.gameObject.CompareTag("Enemy"))
             return;
 
