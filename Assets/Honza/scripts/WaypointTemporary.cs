@@ -8,7 +8,6 @@ public class WaypointTemporary : MonoBehaviour
     public int noiseValue;
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("trigger collision");
         if (!other.gameObject.CompareTag("Enemy"))
             return;
 

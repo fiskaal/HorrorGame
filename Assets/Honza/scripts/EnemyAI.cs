@@ -37,7 +37,6 @@ public class EnemyAI : MonoBehaviour
         do
         {
             randomIndex = Random.Range(0, patrolWaypoints.Length);
-            Debug.Log("patroling loop with index: " + randomIndex);
         } while (randomIndex.Equals(lastPatrolWaypoint));
 
         agent.SetDestination(patrolWaypoints[randomIndex].position);
@@ -45,11 +44,9 @@ public class EnemyAI : MonoBehaviour
     }
     public IEnumerator ChangePatrolWaypoint()
     {
-        Debug.Log("ChangePatrolWaypoint called");
         yield return new WaitForSeconds(5.0f);
 
         StartPatroling();
-        Debug.Log("StartPatroling called");
     }
     public void InvestigateWaypoint(Transform waypoint, float speed)
     {
