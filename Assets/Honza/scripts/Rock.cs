@@ -10,6 +10,7 @@ public class Rock : MonoBehaviour
     private float speedSDAM = 6F;
     private float speedSDAL = 4.5F;
     private int rockImpactNoise = 2;
+    private bool rockSDAChecked = false;
 
     [SerializeField] private bool rockInSDAS = false;
     [SerializeField] private bool rockInSDAM = false;
@@ -18,7 +19,8 @@ public class Rock : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         gameController = FindObjectOfType<GameController>();
-        RockInSDACheck(rockImpactNoise);
+        if (collision.gameObject.tag.Equals("Untagged"))
+            RockInSDACheck(rockImpactNoise);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,17 +44,18 @@ public class Rock : MonoBehaviour
     public void RockInSDACheck(int noiseValue)
     {
         Debug.Log("RockInSDACheck called");
-        if (rockInSDAS)
+        if (rockInSDAS && !rockSDAChecked)
         {
             gameController.CreateWaypoint(speedSDAS, noiseValue + 3, transform.position, transform.rotation);
         }
-        else if (rockInSDAM)
+        else if (rockInSDAM && !rockSDAChecked)
         {
             gameController.CreateWaypoint(speedSDAM, noiseValue + 2, transform.position, transform.rotation);
         }
-        else if (rockInSDAL)
+        else if (rockInSDAL && !rockSDAChecked)
         {
             gameController.CreateWaypoint(speedSDAL, noiseValue + 1, transform.position, transform.rotation);
         }
+        rockSDAChecked = true;
     }
 }

@@ -16,8 +16,8 @@ GameObject:
   m_Name: ToiletAsset (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &598909892018646607
 Transform:
@@ -116,8 +116,8 @@ GameObject:
   m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &1261039876020987133
 Transform:
@@ -212,8 +212,8 @@ GameObject:
   m_Name: FullLid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &7563511306140437748
 Transform:
@@ -295,8 +295,8 @@ GameObject:
   m_Name: HoleLid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &2775513891147503409
 Transform:

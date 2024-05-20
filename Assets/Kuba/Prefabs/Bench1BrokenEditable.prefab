@@ -15,8 +15,8 @@ GameObject:
   m_Name: BenchBroken2.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &9026883424952919272
 Transform:
@@ -98,8 +98,8 @@ GameObject:
   m_Name: BenchBroken2.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &3938976761322371243
 Transform:
@@ -182,8 +182,8 @@ GameObject:
   m_Name: Bench1BrokenEditable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &4361382162580104313
 Transform:
@@ -282,8 +282,8 @@ GameObject:
   m_Name: BenchBroken2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &2875974859154869737
 Transform:
@@ -365,8 +365,8 @@ GameObject:
   m_Name: BenchBroken2.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 87
   m_IsActive: 1
 --- !u!4 &3942900457803543013
 Transform:
