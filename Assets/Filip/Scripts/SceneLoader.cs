@@ -66,5 +66,6 @@ public class SceneLoader : MonoBehaviour
         //SceneManager.LoadScene(sceneName);
         SceneManager.LoadSceneAsync(sceneName);
         //AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        Time.timeScale = 1;
     }
 }
