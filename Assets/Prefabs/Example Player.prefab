@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 6008391356279275744}
   - component: {fileID: 2728444055895259406}
   - component: {fileID: 7078199666193891334}
+  - component: {fileID: 6722066884401565562}
   m_Layer: 0
   m_Name: Example Player
   m_TagString: Untagged
@@ -702,6 +703,21 @@ MonoBehaviour:
   chController: {fileID: 234054388534977386}
   speedUpDown: 20
   FPSInput: {fileID: 0}
+--- !u!114 &6722066884401565562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234054388534977389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c461dff2506b9548b2079c129fc832f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasRedKey: 0
+  hasOrangeKey: 0
+  hasBlueKey: 0
 --- !u!1 &415955965635545396
 GameObject:
   m_ObjectHideFlags: 0
