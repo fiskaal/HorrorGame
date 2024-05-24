@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 7188684441700310484}
   - component: {fileID: 3846188805198360595}
   - component: {fileID: 7680546140218357671}
+  - component: {fileID: 8232874538335147400}
+  - component: {fileID: 6905371454011987545}
+  - component: {fileID: 232331601678819793}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -205,6 +208,69 @@ MonoBehaviour:
   openDoorKey: 101
   crossHair: {fileID: 5261273130181256711}
   imageE: {fileID: 4080193722792994075}
+--- !u!114 &8232874538335147400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234054386754756774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e327dcd562342948a8077c79edb411e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayLength: 2
+  layerMaskInteract:
+    serializedVersion: 2
+    m_Bits: 64
+  excludeLayerName: 
+  openDoorKey: 101
+  crossHair: {fileID: 5261273130181256711}
+  imageE: {fileID: 4080193722792994075}
+--- !u!114 &6905371454011987545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234054386754756774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165d12c33cf899844a018e8d87b7efa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  gameController: {fileID: 0}
+  rayLength: 2
+  layerMaskInteract:
+    serializedVersion: 2
+    m_Bits: 64
+  excludeLayerName: 
+  dc: {fileID: 0}
+  openDoorKey: 101
+  crossHair: {fileID: 5261273130181256711}
+  imageE: {fileID: 4080193722792994075}
+--- !u!114 &232331601678819793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234054386754756774}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a2f9c1910500a42aa4f8fae2cfaf1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayLength: 2
+  layerMaskInteract:
+    serializedVersion: 2
+    m_Bits: 64
+  excludeLayerName: 
+  openDoorKey: 101
+  crosshair: {fileID: 5261273130181256711}
+  imageE: {fileID: 415955965635545396}
 --- !u!1 &234054388497201680
 GameObject:
   m_ObjectHideFlags: 0
