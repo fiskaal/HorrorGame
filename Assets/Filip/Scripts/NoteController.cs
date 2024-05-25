@@ -25,6 +25,8 @@ public class NoteController : MonoBehaviour
     [SerializeField] private UnityEvent openEvent;
     [SerializeField] private UnityEvent hideEvent;
     private bool isOpen = false;
+
+    private string noteName;
     public void ShowNote()
     {
         noteTextAreaUI.text = noteText;
@@ -33,6 +35,8 @@ public class NoteController : MonoBehaviour
         //paperSound.PlayOneShot(paper);
         DisablePlayer(true);
         isOpen = true;
+        noteName = gameObject.name;
+        NoteOpened();
     }
 
     void HideNote()
@@ -59,6 +63,25 @@ public class NoteController : MonoBehaviour
                 HideNote();
             }
 
+
+        }
+    }
+    private void NoteOpened()
+    {
+        switch (noteName)
+        {
+            case "Note1":
+                player.GetComponent<Map>().note1Opened = true;
+                player.GetComponent<Map>().LootedZoneCheck();
+                break;
+            case "Note2":
+                player.GetComponent<Map>().note2Opened = true;
+                player.GetComponent<Map>().LootedZoneCheck();
+                break;
+            case "Note3":
+                player.GetComponent<Map>().note3Opened = true;
+                player.GetComponent<Map>().LootedZoneCheck();
+                break;
 
         }
     }

@@ -9,6 +9,9 @@ public class Map : MonoBehaviour
     [SerializeField] private GameObject mapUI;
 
     [SerializeField] private GameObject lobbyZoneMarker;
+    public bool note1Opened = false;
+    public bool note2Opened = false;
+    public bool note3Opened = false;
 
     private bool isMapOpen = false;
 
@@ -28,6 +31,13 @@ public class Map : MonoBehaviour
             mapUI.SetActive(true);
         else
             mapUI.SetActive(false);
+    }
+
+    public void LootedZoneCheck()
+    {
+        if (note1Opened && note2Opened)
+            MarkZoneAsLooted(lobbyZoneMarker);
+
     }
 
     public void MarkZoneAsLooted(GameObject zone)
