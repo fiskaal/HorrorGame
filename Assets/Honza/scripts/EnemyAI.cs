@@ -62,8 +62,16 @@ public class EnemyAI : MonoBehaviour
     }
     private IEnumerator AwarnessMeterDecay()
     {
+        Debug.Log("AwarnessMeterDecay called");
         if (AwarnessMeter > 0)
             AwarnessMeter--;
+        if (AwarnessMeter < 10 && chasingPlayer)
+        {
+            chasingPlayer = false;
+            //StopAllCoroutines();
+            ResetSpeed();
+            StartCoroutine(ChangePatrolWaypoint());
+        }
 
         yield return new WaitForSeconds(1.0f);
 
@@ -74,7 +82,7 @@ public class EnemyAI : MonoBehaviour
         AwarnessMeter += value;
         if (AwarnessMeter >= 10)
         {
-            StopAllCoroutines();
+            //StopAllCoroutines();
             chasingPlayer = true;
             agent.speed = 8F;
         }
