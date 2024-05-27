@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 8762513270022123626}
   - component: {fileID: 3549931303764648156}
   - component: {fileID: 7994812844109416387}
+  - component: {fileID: 454324405300883885}
   m_Layer: 0
   m_Name: TableLegBack
   m_TagString: Untagged
@@ -428,6 +429,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &454324405300883885
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611072539006852972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0005296212, y: 0.0005296212, z: 0.0070000007}
+  m_Center: {x: -0.000000060021875, y: -2.862642e-10, z: 0.0035000013}
 --- !u!1 &5691716939865658335
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +744,7 @@ GameObject:
   - component: {fileID: 4819142601715977241}
   - component: {fileID: 2912944844893624972}
   - component: {fileID: 8730670900343884578}
+  - component: {fileID: 9172860117858471600}
   m_Layer: 0
   m_Name: TableLegFront
   m_TagString: Untagged
@@ -802,6 +817,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9172860117858471600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344778174770068678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0005296212, y: 0.0005296212, z: 0.0070000007}
+  m_Center: {x: -0.000000060021875, y: 0.000000059187414, z: 0.0035000013}
 --- !u!1 &9017672873860597466
 GameObject:
   m_ObjectHideFlags: 0
