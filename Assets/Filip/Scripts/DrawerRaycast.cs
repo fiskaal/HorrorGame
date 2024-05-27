@@ -12,7 +12,7 @@ public class DrawerRaycast : MonoBehaviour
     [SerializeField] private string excludeLayerName = null;
 
     //private LockerController raycastedObj;
-    public DrawerController dc;
+    private DrawerController dc;
     private int openDoorNoise = -1;
 
     [SerializeField] private KeyCode openDoorKey = KeyCode.E;

@@ -7,9 +7,9 @@ public class HeadBobController : MonoBehaviour
 
     [SerializeField] private bool _enabled = true;
     [SerializeField, Range(0, 0.1f)] private float amplitude = 0.015f;
-    [SerializeField, Range(0, 20f)] private float frequency = 10f;
+    [SerializeField, Range(0, 30f)] private float frequency = 10f;
 
-    [SerializeField] private Transform camera;
+    [SerializeField] private Transform _camera;
     [SerializeField] private Transform cameraHolder;
 
     private float toggleSpeed = 3.0f;
@@ -19,7 +19,7 @@ public class HeadBobController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        startPos = camera.localPosition;
+        startPos = _camera.localPosition;
     }
 
     // Update is called once per frame
@@ -29,6 +29,7 @@ public class HeadBobController : MonoBehaviour
 
         CheckMotion();
         ResetPosition();
+        _camera.LookAt(FocusTarget());
         
     }
 
@@ -48,12 +49,24 @@ public class HeadBobController : MonoBehaviour
 
         if (!controller.isGrounded) return;
 
-        //PlayMotion(FootStepMotion);
+        PlayMotion(FootStepMotion());
     }
 
     private void ResetPosition()
     {
-        if (camera.localPosition == startPos) return;
-        camera.localPosition = Vector3.Lerp(camera.localPosition, startPos, 1 * Time.deltaTime);
+        if (_camera.localPosition == startPos) return;
+        _camera.localPosition = Vector3.Lerp(_camera.localPosition, startPos, 1 * Time.deltaTime);
+    }
+
+    private void PlayMotion(Vector3 motion)
+    {
+        _camera.localPosition += motion;
+    }
+
+    private Vector3 FocusTarget()
+    {
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y + cameraHolder.localPosition.y, transform.position.z);
+        pos += cameraHolder.forward * 15.0f;
+        return pos;
     }
 }
