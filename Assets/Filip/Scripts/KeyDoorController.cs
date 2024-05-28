@@ -18,7 +18,7 @@ namespace KeySystem {
         [SerializeField] private int timeToShowUI = 1;
         [SerializeField] private GameObject showDoorLockedUI = null;
 
-        [SerializeField] private KeyInventory _keyInventory = null;
+        [SerializeField] private Inventory _keyInventory = null;
 
         [SerializeField] private int waitTimer = 1;
         [SerializeField] private bool pauseInteraction = false;

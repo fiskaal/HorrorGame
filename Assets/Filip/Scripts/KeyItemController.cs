@@ -19,7 +19,7 @@ namespace KeySystem {
         [SerializeField] private UnityEvent pickUpEvent;
 
 
-        [SerializeField] private KeyInventory _keyInventory = null;
+        [SerializeField] private Inventory _keyInventory = null;
 
         private KeyDoorController doorObject;
 

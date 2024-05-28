@@ -323,7 +323,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   excludeLayerName: 
-  dc: {fileID: 0}
   openDoorKey: 101
   crossHair: {fileID: 5261273130181256711}
   imageE: {fileID: 4080193722792994075}
@@ -827,7 +826,7 @@ MonoBehaviour:
   throwPoint: {fileID: 6572275552138568123}
   RockPrefab: {fileID: 5667485888679893680, guid: 3ae27181921c4234694b48e50adfabf0,
     type: 3}
-  totalRocks: 3
+  inventory: {fileID: 6722066884401565562}
   throwCooldown: 5
   throwKey: 323
   throwForce: 0
@@ -856,12 +855,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 234054388534977389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c461dff2506b9548b2079c129fc832f, type: 3}
+  m_Script: {fileID: 11500000, guid: cf7b5d50762ef1e4188df55b0a8fb7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasRedKey: 0
   hasOrangeKey: 0
   hasBlueKey: 0
+  totalRocks: 10
 --- !u!114 &7019661936054449812
 MonoBehaviour:
   m_ObjectHideFlags: 0

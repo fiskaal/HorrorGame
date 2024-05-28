@@ -8,7 +8,7 @@ public class RockThrowing : MonoBehaviour
     [SerializeField] private Transform throwPoint;
     [SerializeField] private GameObject RockPrefab;
 
-    [SerializeField] private int totalRocks;
+    [SerializeField] private Inventory inventory;
     [SerializeField] private int throwCooldown;
 
     [SerializeField] private KeyCode throwKey = KeyCode.Mouse0;
@@ -19,7 +19,7 @@ public class RockThrowing : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(throwKey) && readyToThrow && totalRocks > 0)
+        if (Input.GetKeyDown(throwKey) && readyToThrow && inventory.totalRocks > 0)
         {
             Throw();
         }
@@ -31,7 +31,7 @@ public class RockThrowing : MonoBehaviour
         Rigidbody rockProjectileRB = rockPorjectile.GetComponent<Rigidbody>();
         Vector3 forceToAdd = cam.transform.forward * throwForce + transform.up * throwUpwardForce;
         rockProjectileRB.AddForce(forceToAdd, ForceMode.Impulse);
-        totalRocks--;
+        inventory.totalRocks--;
 
         Invoke(nameof(ResetThrow), throwCooldown);
     }
