@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Animator imageAnimator;
     public bool isGamePaused = false;
     [SerializeField] private GameObject crossHair;
+    public bool noteOpened = false;
 
     public void Start()
     {
@@ -26,7 +27,7 @@ public class PauseMenu : MonoBehaviour
         //    pauseMenu.SetActive(true);
         //}
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !noteOpened)
         {
             if (isGamePaused)
             {

@@ -27,6 +27,7 @@ public class NoteController : MonoBehaviour
     private bool isOpen = false;
 
     private string noteName;
+    [SerializeField] private PauseMenu pauseMenu;
     public void ShowNote()
     {
         noteTextAreaUI.text = noteText;
@@ -35,6 +36,7 @@ public class NoteController : MonoBehaviour
         //paperSound.PlayOneShot(paper);
         DisablePlayer(true);
         isOpen = true;
+        pauseMenu.noteOpened = true;
         noteName = gameObject.name;
         NoteOpened();
     }
@@ -45,7 +47,13 @@ public class NoteController : MonoBehaviour
         hideEvent.Invoke();
         DisablePlayer(false);
         isOpen = false;
+        StartCoroutine(NoteClosed());
 
+    }   
+    IEnumerator NoteClosed()
+    {
+        yield return new WaitForSeconds(0.1F);
+        pauseMenu.noteOpened = false;
     }
 
     void DisablePlayer(bool disable)
@@ -58,12 +66,10 @@ public class NoteController : MonoBehaviour
     {
         if (isOpen)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (/*Input.GetKeyDown(KeyCode.E) ||*/ Input.GetKeyDown(KeyCode.Escape))
             {
                 HideNote();
             }
-
-
         }
     }
     private void NoteOpened()
