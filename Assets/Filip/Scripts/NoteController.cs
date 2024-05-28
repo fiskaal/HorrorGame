@@ -24,7 +24,7 @@ public class NoteController : MonoBehaviour
     [Space(10)]
     [SerializeField] private UnityEvent openEvent;
     [SerializeField] private UnityEvent hideEvent;
-    private bool isOpen = false;
+    [SerializeField] private bool isOpen = false;
 
     private string noteName;
     [SerializeField] private PauseMenu pauseMenu;
@@ -66,7 +66,7 @@ public class NoteController : MonoBehaviour
     {
         if (isOpen)
         {
-            if (/*Input.GetKeyDown(KeyCode.E) ||*/ Input.GetKeyDown(KeyCode.Escape))
+            if (/*Input.GetKeyDown(KeyCode.E) || */Input.GetKeyDown(KeyCode.Escape))
             {
                 HideNote();
             }
