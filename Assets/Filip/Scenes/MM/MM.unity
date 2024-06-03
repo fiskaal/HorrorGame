@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 86269380}
   - component: {fileID: 86269379}
   m_Layer: 0
-  m_Name: L10
+  m_Name: L10(splash)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 381198319}
   - component: {fileID: 381198318}
   m_Layer: 0
-  m_Name: L6
+  m_Name: L7(character)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,7 +604,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 553339340}
   - component: {fileID: 553339339}
   m_Layer: 0
-  m_Name: L3
+  m_Name: L3(pillars)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1361,7 +1361,7 @@ GameObject:
   - component: {fileID: 836050522}
   - component: {fileID: 836050521}
   m_Layer: 0
-  m_Name: L7
+  m_Name: L6(charShadow)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: 5
+  offsetMultiplier: -5
   smoothTime: 0.5
   cam: {fileID: 1762625380}
 --- !u!212 &836050522
@@ -1447,7 +1447,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1466,7 +1466,7 @@ GameObject:
   - component: {fileID: 859243671}
   - component: {fileID: 859243670}
   m_Layer: 0
-  m_Name: L11
+  m_Name: L11(charFace)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1895,7 +1895,7 @@ GameObject:
   - component: {fileID: 960870246}
   - component: {fileID: 960870245}
   m_Layer: 0
-  m_Name: L4
+  m_Name: L4(pool)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2000,7 +2000,7 @@ GameObject:
   - component: {fileID: 976220900}
   - component: {fileID: 976220899}
   m_Layer: 0
-  m_Name: L12
+  m_Name: L12(poolCloud)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2105,7 +2105,7 @@ GameObject:
   - component: {fileID: 986555962}
   - component: {fileID: 986555961}
   m_Layer: 0
-  m_Name: L8
+  m_Name: L8(poolDetail2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2738,7 +2738,7 @@ GameObject:
   - component: {fileID: 1830290031}
   - component: {fileID: 1830290030}
   m_Layer: 0
-  m_Name: L1
+  m_Name: L1(background1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2843,7 +2843,7 @@ GameObject:
   - component: {fileID: 1861099753}
   - component: {fileID: 1861099752}
   m_Layer: 0
-  m_Name: L5
+  m_Name: L5(poolDetail1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2948,7 +2948,7 @@ GameObject:
   - component: {fileID: 1928261073}
   - component: {fileID: 1928261072}
   m_Layer: 0
-  m_Name: L2
+  m_Name: L2(background2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3340,7 +3340,7 @@ GameObject:
   - component: {fileID: 2133914592}
   - component: {fileID: 2133914591}
   m_Layer: 0
-  m_Name: L9
+  m_Name: L9(poolDeatil3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
