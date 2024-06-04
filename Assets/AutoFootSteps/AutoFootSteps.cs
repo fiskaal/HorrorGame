@@ -36,9 +36,9 @@ public class AutoFootSteps : MonoBehaviour
     /// <summary>
     /// The Type of Material the player is standing on, by name. (Rock, Grass, etc - defined in the supplied FootProfile.)
     /// </summary>
-    [HideInInspector] public string CurrentFootMaterialName;
-    [HideInInspector] public TerrainCollider CurrentTerrain;
-    [HideInInspector] public float[,,] CurrentTerrainAlphas;
+    public string CurrentFootMaterialName;
+    public TerrainCollider CurrentTerrain;
+    public float[,,] CurrentTerrainAlphas;
 
     /// <summary>
     /// The speed that the player currently crouches at.

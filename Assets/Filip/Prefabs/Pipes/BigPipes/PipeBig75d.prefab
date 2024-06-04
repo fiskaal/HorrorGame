@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2270111324128899451}
   - component: {fileID: 594646232545750521}
   - component: {fileID: -4102362887478724116}
+  - component: {fileID: 6011705361855851220}
   m_Layer: 0
   m_Name: PipeBig75d
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3550844695968398720, guid: adee8cd2d443ba24a989c1fb70d20981, type: 3}
+--- !u!114 &6011705361855851220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324807043324367022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5e72951cb5e1243aa56edbab75ebc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaterialName: Metal

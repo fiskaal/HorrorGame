@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 692914334119685284}
   - component: {fileID: 3348794262109689966}
   - component: {fileID: 6892470667900377158}
+  - component: {fileID: 3027026188823115278}
   m_Layer: 0
   m_Name: PipeSmallLong
   m_TagString: Untagged
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.005000001, y: 0.04000001, z: 0.0047552837}
   m_Center: {x: -5.820766e-10, y: 0.020000005, z: 0}
+--- !u!114 &3027026188823115278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3853307578524481979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5e72951cb5e1243aa56edbab75ebc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaterialName: Metal

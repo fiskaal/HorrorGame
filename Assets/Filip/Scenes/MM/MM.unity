@@ -1913,7 +1913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: -14
+  offsetMultiplier: 0
   smoothTime: 0.5
   cam: {fileID: 1762625380}
 --- !u!212 &960870246
@@ -2756,7 +2756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: -42
+  offsetMultiplier: -50
   smoothTime: 0.5
   cam: {fileID: 1762625380}
 --- !u!212 &1830290031
@@ -2861,7 +2861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: -7
+  offsetMultiplier: 0
   smoothTime: 0.5
   cam: {fileID: 1762625380}
 --- !u!212 &1861099753

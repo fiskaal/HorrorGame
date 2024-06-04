@@ -82,7 +82,7 @@ public class ExamplePlayerController : MonoBehaviour
         controller.Move(move * Time.deltaTime);
 
         // Jumping
-        if (Input.GetButtonDown("Jump") && Physics.Raycast(transform.TransformPoint(new Vector3(0, -.9f, 0)), Vector3.down, .2f))
+        if (Input.GetKey(KeyCode.Space) && Physics.Raycast(transform.TransformPoint(new Vector3(0, -.9f, 0)), Vector3.down, .2f))
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1791152378210298286}
   - component: {fileID: 4557507380899929444}
   - component: {fileID: 6146625408353553295}
+  - component: {fileID: 6716195023078740582}
   m_Layer: 0
   m_Name: PipeBigLong
   m_TagString: Untagged
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.010000002, y: 0.04000001, z: 0.009510567}
   m_Center: {x: -0.0000000011641532, y: 0.020000005, z: 0}
+--- !u!114 &6716195023078740582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611938940800564401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5e72951cb5e1243aa56edbab75ebc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaterialName: Metal
