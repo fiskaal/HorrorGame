@@ -65,7 +65,7 @@ public class Inventory : MonoBehaviour
         inventory.SetActive(true);
         crossHair.SetActive(false);
         isOpen = true;
-        Time.timeScale = 0;
+        Time.timeScale = 0.1F;
         //imageAnimator.Play("Image50FadeIn");
 
     }
