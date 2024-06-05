@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class FlashLightOffset : MonoBehaviour
 {
-    [SerializeField]private Vector3 vectOffset;
-    [SerializeField]private GameObject goFollow;
+    [SerializeField] private Vector3 vectOffset;
+    [SerializeField] private GameObject goFollow;
     [SerializeField] private float speed = 3.0f;
 
     
     private void Start()
     {
-        //goFollow = Camera.main.gameObject;
         vectOffset = transform.position - goFollow.transform.position;
     }
 
