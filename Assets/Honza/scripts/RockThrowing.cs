@@ -20,9 +20,7 @@ public class RockThrowing : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(throwKey) && readyToThrow && inventory.totalRocks > 0)
-        {
             Throw();
-        }
     }
     private void Throw()
     {
@@ -31,7 +29,7 @@ public class RockThrowing : MonoBehaviour
         Rigidbody rockProjectileRB = rockPorjectile.GetComponent<Rigidbody>();
         Vector3 forceToAdd = cam.transform.forward * throwForce + transform.up * throwUpwardForce;
         rockProjectileRB.AddForce(forceToAdd, ForceMode.Impulse);
-        inventory.totalRocks--;
+        inventory.SubstractRock();
 
         Invoke(nameof(ResetThrow), throwCooldown);
     }

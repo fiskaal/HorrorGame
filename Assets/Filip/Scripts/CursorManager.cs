@@ -12,7 +12,7 @@ public class CursorManager : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        else if (Time.timeScale == 0)
+        else if (Time.timeScale < 0.2)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;

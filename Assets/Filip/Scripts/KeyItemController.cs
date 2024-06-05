@@ -19,7 +19,7 @@ namespace KeySystem {
         [SerializeField] private UnityEvent pickUpEvent;
 
 
-        [SerializeField] private Inventory _keyInventory = null;
+        [SerializeField] private Inventory inventory = null;
 
         private KeyDoorController doorObject;
 
@@ -48,7 +48,7 @@ namespace KeySystem {
                 doorObject.PlayAnimation();
             }else if (redKey)
             {
-                _keyInventory.hasRedKey = true;
+                inventory.PickedUpRedKey();
                 pickUpEvent.Invoke();
                 gameObject.SetActive(false);
             }
@@ -59,7 +59,7 @@ namespace KeySystem {
             }
             else if (orangeKey)
             {
-                _keyInventory.hasOrangeKey = true;
+                inventory.PickedUpOrangeKey();
                 pickUpEvent.Invoke();
                 gameObject.SetActive(false);
             }
@@ -70,7 +70,7 @@ namespace KeySystem {
             }
             else if (blueKey)
             {
-                _keyInventory.hasBlueKey = true;
+                inventory.PickedUpBlueKey();
                 pickUpEvent.Invoke();
                 gameObject.SetActive(false);
             }
