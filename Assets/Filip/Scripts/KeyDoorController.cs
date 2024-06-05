@@ -18,7 +18,7 @@ namespace KeySystem {
         [SerializeField] private int timeToShowUI = 1;
         [SerializeField] private GameObject showDoorLockedUI = null;
 
-        [SerializeField] private Inventory _keyInventory = null;
+        [SerializeField] private Inventory inventory = null;
 
         [SerializeField] private int waitTimer = 1;
         [SerializeField] private bool pauseInteraction = false;
@@ -49,14 +49,14 @@ namespace KeySystem {
 
         public void PlayAnimation()
         {
-            if (_keyInventory.hasRedKey)
+            if (inventory.hasRedKey)
             {
                 OpenDoor();
             }
-            else if (_keyInventory.hasOrangeKey)
+            else if (inventory.hasOrangeKey)
             {
                 OpenDoor();
-            }else if (_keyInventory.hasBlueKey)
+            }else if (inventory.hasBlueKey)
             {
                 OpenDoor();
             }

@@ -8,36 +8,55 @@ public class Inventory : MonoBehaviour
     public bool hasRedKey = false;
     public bool hasOrangeKey = false;
     public bool hasBlueKey = false;
-    public int totalRocks = 10;
+    public int totalRocks = 3;
 
-    [SerializeField] private GameObject inventoryUI;
+    [SerializeField] private GameObject inventory;
     private bool isOpen = false;
 
-    [SerializeField] private GameObject RedKey;
-    [SerializeField] private GameObject OrangeKey;
-    [SerializeField] private GameObject BlueKey;
-    [SerializeField] private GameObject Rocks;
+    [SerializeField] private GameObject redKey;
+    [SerializeField] private GameObject orangeKey;
+    [SerializeField] private GameObject blueKey;
+    [SerializeField] private GameObject[] rocks = new GameObject[3];
+    private int rocksArrayIndex = 2;
 
     public void Update()
     {
         if (!isOpen && (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.B)))
         {
-            inventoryUI.SetActive(true);
+            inventory.SetActive(true);
             isOpen = true;
         }
         else if (isOpen && (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Escape)))
         {
-            inventoryUI.SetActive(false);
+            inventory.SetActive(false);
             isOpen = false;
         }
     }
-
-    private void ShowItem(GameObject item)
+    public void SubstractRock()
     {
-        item.SetActive(true);
+        rocks[rocksArrayIndex].gameObject.SetActive(false);
+        rocksArrayIndex--;
+        totalRocks--;
     }
-    private void HideItem(GameObject item)
+    public void AddtRock()
     {
-        item.SetActive(false);
+        totalRocks++;
+        rocksArrayIndex++;
+        rocks[rocksArrayIndex].gameObject.SetActive(true);
+    }
+    public void PickedUpRedKey()
+    {
+        hasRedKey = true;
+        redKey.SetActive(true);
+    }
+    public void PickedUpOrangeKey()
+    {
+        hasOrangeKey = true;
+        orangeKey.SetActive(true);
+    }
+    public void PickedUpBlueKey()
+    {
+        hasBlueKey = true;
+        blueKey.SetActive(true);
     }
 }
