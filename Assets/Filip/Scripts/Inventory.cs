@@ -18,18 +18,19 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject blueKey;
     [SerializeField] private GameObject[] rocks = new GameObject[3];
     private int rocksArrayIndex = 2;
+    [SerializeField] private GameObject crossHair;
 
     public void Update()
     {
         if (!isOpen && (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.B)))
         {
-            inventory.SetActive(true);
-            isOpen = true;
+            StartCoroutine(WaitForUI(.5f));
+            Debug.Log("inventory open");
         }
         else if (isOpen && (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Escape)))
         {
-            inventory.SetActive(false);
-            isOpen = false;
+            ContinueGame();
+            Debug.Log("inventory closed");
         }
     }
     public void SubstractRock()
@@ -58,5 +59,39 @@ public class Inventory : MonoBehaviour
     {
         hasBlueKey = true;
         blueKey.SetActive(true);
+    }
+    public void PauseGame()
+    {
+        inventory.SetActive(true);
+        crossHair.SetActive(false);
+        isOpen = true;
+        Time.timeScale = 0;
+        //imageAnimator.Play("Image50FadeIn");
+
+    }
+    public void ContinueGame()
+    {
+        inventory.SetActive(false);
+        crossHair.SetActive(true);
+        isOpen = false;
+        Time.timeScale = 1;
+    }
+
+    IEnumerator WaitAndPlay(float waitTime)
+    {
+        yield return new WaitForSecondsRealtime(waitTime);
+        Time.timeScale = 1;
+        PauseGame();
+        ContinueGame();
+
+    }
+
+    IEnumerator WaitForUI(float waitTime)
+    {
+        yield return new WaitForSecondsRealtime(.5f);
+        Time.timeScale = 0;
+        PauseGame();
+
+
     }
 }
