@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public bool isGamePaused = false;
     [SerializeField] private GameObject crossHair;
     public bool noteOpened = false;
+    public bool inventoryOpened = false;
 
     public void Start()
     {
@@ -27,7 +28,7 @@ public class PauseMenu : MonoBehaviour
         //    pauseMenu.SetActive(true);
         //}
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !noteOpened)
+        if (Input.GetKeyDown(KeyCode.Escape) && !noteOpened && !inventoryOpened)
         {
             if (isGamePaused)
             {

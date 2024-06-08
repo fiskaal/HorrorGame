@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject[] rocks = new GameObject[3];
     private int rocksArrayIndex = 2;
     [SerializeField] private GameObject crossHair;
+    [SerializeField] private PauseMenu pauseMenu;
 
     public void Update()
     {
@@ -65,6 +66,7 @@ public class Inventory : MonoBehaviour
         inventory.SetActive(true);
         crossHair.SetActive(false);
         isOpen = true;
+        pauseMenu.inventoryOpened = true;
         Time.timeScale = 0.1F;
         //imageAnimator.Play("Image50FadeIn");
 
@@ -74,6 +76,7 @@ public class Inventory : MonoBehaviour
         inventory.SetActive(false);
         crossHair.SetActive(true);
         isOpen = false;
+        pauseMenu.inventoryOpened = false;
         Time.timeScale = 1;
     }
 
