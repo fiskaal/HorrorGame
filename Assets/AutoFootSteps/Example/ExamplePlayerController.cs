@@ -20,6 +20,9 @@ public class ExamplePlayerController : MonoBehaviour
 
     public bool isWalking = false;
     public bool isRunning = false;
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private float groundCheckDistance;
+    [SerializeField] private LayerMask groundMask;
 
     /*
     [Header("Headbob stats")]
@@ -45,6 +48,16 @@ public class ExamplePlayerController : MonoBehaviour
 
     void Update()
     {
+        //GroundCheck
+        Vector3 capsuleBottom = transform.position + controller.center - Vector3.up * (controller.height / 2);
+        Vector3 capsuleTop = transform.position + controller.center + Vector3.up * (controller.height / 2);
+        isGrounded = Physics.CheckCapsule(capsuleBottom, capsuleTop, controller.radius + groundCheckDistance, groundMask);
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f; // Ensure the character stays grounded
+        }
+
         // Movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
