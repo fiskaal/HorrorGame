@@ -16,6 +16,7 @@ TagManager:
   - LadderTwo
   - Ground
   - JumpPoint
+  - Rock
   layers:
   - Default
   - TransparentFX

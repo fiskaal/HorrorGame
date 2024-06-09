@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject redKey;
     [SerializeField] private GameObject orangeKey;
     [SerializeField] private GameObject blueKey;
+    [SerializeField] private GameObject[] rockArray = new GameObject[3];
     private int rocksArrayIndex = 2;
     [SerializeField] private GameObject crossHair;
     [SerializeField] private PauseMenu pauseMenu;
@@ -24,6 +25,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private LayerMask inventoryItemLayer; // Layer mask for the inventory items
     [SerializeField] private Transform itemHoldingPoint;
     [SerializeField] private RockThrowing rockThrowing;
+    [SerializeField] private GameObject activeItem;
+    [SerializeField] private GameObject lastActiveItem;
 
     public void Update()
     {
@@ -58,16 +61,22 @@ public class Inventory : MonoBehaviour
         // Implement your logic here to handle the click event for the inventory item
         Debug.Log("Clicked on: " + item.name);
         // Example: Select the item, trigger an action, etc.
-        GameObject activeItem = Instantiate(
+        if (activeItem != null)
+        {
+            lastActiveItem.SetActive(true);
+            Destroy(activeItem);
+        }
+
+        activeItem = Instantiate(
             item,
             itemHoldingPoint.position,
             itemHoldingPoint.rotation);
         activeItem.transform.SetParent(itemHoldingPoint);
-        /*if (activeItem.name.Equals("Rock 1") || activeItem.name.Equals("Rock 2") || activeItem.name.Equals("Rock 3"))
+        if (activeItem.tag.Equals("Rock"))
         {
             rockThrowing.ReadyThrow(activeItem);
-        }*/
-        rockThrowing.ReadyThrow(activeItem);
+        }
+        lastActiveItem = item;
         item.SetActive(false);
     }
     public void SubstractRock()
@@ -77,8 +86,23 @@ public class Inventory : MonoBehaviour
     }
     public void AddtRock()
     {
-        totalRocks++;
-        rocksArrayIndex++;
+        if (totalRocks < 3)
+        {
+            for (int i = 0; i < totalRocks; i++)
+            {
+                if (!rockArray[i].active)
+                {
+                    rockArray[i].SetActive(true);
+                    totalRocks++;
+                    rocksArrayIndex++;
+                    break;
+                }
+            }
+        }
+    }
+    public void ActiveItemUsed()
+    {
+        activeItem = null;
     }
     public void PickedUpRedKey()
     {

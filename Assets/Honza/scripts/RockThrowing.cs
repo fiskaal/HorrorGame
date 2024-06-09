@@ -26,10 +26,12 @@ public class RockThrowing : MonoBehaviour
     {
         readyToThrow = false;
         Vector3 forceToAdd = cam.transform.forward * throwForce + transform.up * throwUpwardForce;
+        rockObject.layer = default;
         rockObjectRB.useGravity = true;
         rockObject.transform.SetParent(null);
         rockObjectRB.AddForce(forceToAdd, ForceMode.Impulse);
         inventory.SubstractRock();
+        inventory.ActiveItemUsed();
     }
     public void ReadyThrow(GameObject rock)
     {
