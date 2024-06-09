@@ -6,10 +6,10 @@ public class RockThrowing : MonoBehaviour
 {
     [SerializeField] private Transform cam;
     [SerializeField] private Transform throwPoint;
-    [SerializeField] private GameObject RockPrefab;
+    [SerializeField] private GameObject rockObject;
+    [SerializeField] private Rigidbody rockObjectRB;
 
     [SerializeField] private Inventory inventory;
-    [SerializeField] private int throwCooldown;
 
     [SerializeField] private KeyCode throwKey = KeyCode.Mouse0;
     [SerializeField] private float throwForce;
@@ -25,16 +25,16 @@ public class RockThrowing : MonoBehaviour
     private void Throw()
     {
         readyToThrow = false;
-        GameObject rockPorjectile = Instantiate(RockPrefab, throwPoint.position, cam.rotation);
-        Rigidbody rockProjectileRB = rockPorjectile.GetComponent<Rigidbody>();
         Vector3 forceToAdd = cam.transform.forward * throwForce + transform.up * throwUpwardForce;
-        rockProjectileRB.AddForce(forceToAdd, ForceMode.Impulse);
+        rockObjectRB.useGravity = true;
+        rockObject.transform.SetParent(null);
+        rockObjectRB.AddForce(forceToAdd, ForceMode.Impulse);
         inventory.SubstractRock();
-
-        Invoke(nameof(ResetThrow), throwCooldown);
     }
-    private void ResetThrow()
+    public void ReadyThrow(GameObject rock)
     {
         readyToThrow = true;
+        rockObject = rock;
+        rockObjectRB = rock.GetComponent<Rigidbody>();
     }
 }

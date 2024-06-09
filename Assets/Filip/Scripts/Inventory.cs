@@ -16,10 +16,14 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject redKey;
     [SerializeField] private GameObject orangeKey;
     [SerializeField] private GameObject blueKey;
-    [SerializeField] private GameObject[] rocks = new GameObject[3];
     private int rocksArrayIndex = 2;
     [SerializeField] private GameObject crossHair;
     [SerializeField] private PauseMenu pauseMenu;
+
+    [SerializeField] private Camera playerCamera; // Reference to the player's camera
+    [SerializeField] private LayerMask inventoryItemLayer; // Layer mask for the inventory items
+    [SerializeField] private Transform itemHoldingPoint;
+    [SerializeField] private RockThrowing rockThrowing;
 
     public void Update()
     {
@@ -33,10 +37,41 @@ public class Inventory : MonoBehaviour
             ContinueGame();
             Debug.Log("inventory closed");
         }
+
+        if (Input.GetMouseButtonDown(0)) // Check for left mouse button click
+        {
+            // Cast a ray from the cursor position into the scene
+            Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            // Check for intersections with the inventory items
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, inventoryItemLayer))
+            {
+                // Handle the click event for the inventory item
+                GameObject clickedObject = hit.collider.gameObject;
+                HandleItemClick(clickedObject);
+            }
+        }
+    }
+    void HandleItemClick(GameObject item)
+    {
+        // Implement your logic here to handle the click event for the inventory item
+        Debug.Log("Clicked on: " + item.name);
+        // Example: Select the item, trigger an action, etc.
+        GameObject activeItem = Instantiate(
+            item,
+            itemHoldingPoint.position,
+            itemHoldingPoint.rotation);
+        activeItem.transform.SetParent(itemHoldingPoint);
+        /*if (activeItem.name.Equals("Rock 1") || activeItem.name.Equals("Rock 2") || activeItem.name.Equals("Rock 3"))
+        {
+            rockThrowing.ReadyThrow(activeItem);
+        }*/
+        rockThrowing.ReadyThrow(activeItem);
+        item.SetActive(false);
     }
     public void SubstractRock()
     {
-        rocks[rocksArrayIndex].gameObject.SetActive(false);
         rocksArrayIndex--;
         totalRocks--;
     }
@@ -44,7 +79,6 @@ public class Inventory : MonoBehaviour
     {
         totalRocks++;
         rocksArrayIndex++;
-        rocks[rocksArrayIndex].gameObject.SetActive(true);
     }
     public void PickedUpRedKey()
     {
