@@ -9,9 +9,11 @@ public class FlashLight : MonoBehaviour
     private bool OnOff = false;
     public AudioSource OnOffSound;
     // Start is called before the first frame update
+
+    
     void Start()
     {
-        baterka.gameObject.SetActive(false);
+        baterka.gameObject.SetActive(true);
         
     }
 
