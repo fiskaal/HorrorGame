@@ -52,13 +52,17 @@ namespace KeySystem {
             if (inventory.hasRedKey)
             {
                 OpenDoor();
+                inventory.ActiveItemUsed();
             }
             else if (inventory.hasOrangeKey)
             {
                 OpenDoor();
-            }else if (inventory.hasBlueKey)
+                inventory.ActiveItemUsed();
+            }
+            else if (inventory.hasBlueKey)
             {
                 OpenDoor();
+                inventory.ActiveItemUsed();
             }
             else
             {
