@@ -4,6 +4,7 @@ using System.Collections;
 public class ExamplePlayerController : MonoBehaviour
 {
     [SerializeField] private CharacterController controller;
+    [SerializeField] private GameController gameController;
     [SerializeField] private float speed = 5.0f;
     [SerializeField] private float runSpeed = 10.0f;
     [SerializeField] private float crouchSpeed = 2.5f;
@@ -12,6 +13,7 @@ public class ExamplePlayerController : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float crouchHeight = 0.5f;
     [SerializeField] private float mouseSensitivity = 50f;
+    [SerializeField] private float fallThresholdVelocity = 7.5f;
 
     private float originalHeight;
     private Vector3 velocity;
@@ -23,6 +25,7 @@ public class ExamplePlayerController : MonoBehaviour
     [SerializeField] private bool isGrounded;
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] private bool brokenLeg = false;
 
     /*
     [Header("Headbob stats")]
@@ -48,36 +51,47 @@ public class ExamplePlayerController : MonoBehaviour
 
     void Update()
     {
+        bool wasGrounded = isGrounded;
         //GroundCheck
         Vector3 capsuleBottom = transform.position + controller.center - Vector3.up * (controller.height / 2);
         Vector3 capsuleTop = transform.position + controller.center + Vector3.up * (controller.height / 2);
         isGrounded = Physics.CheckCapsule(capsuleBottom, capsuleTop, controller.radius + groundCheckDistance, groundMask);
 
+        if (!wasGrounded && isGrounded)
+        {
+            //Debug.Log("Do damage: " + (controller.velocity.y < -fallThresholdVelocity));
+            if (controller.velocity.y < -fallThresholdVelocity)
+            {
+                BrokenLeg();
+            }
+        }
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f; // Ensure the character stays grounded
+            
         }
 
         // Movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 move = transform.right * x + transform.forward * z;
-        if (move.magnitude > 1)
+        if (move.magnitude > 1 && !brokenLeg)
             move = move.normalized;
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && !brokenLeg)
         {
             move *= runSpeed;
             isRunning = true;
             isWalking = false;
         }
-        else if (isCrouching)
+        else if (isCrouching && !brokenLeg)
         {
             move *= crouchSpeed;
             isWalking = false;
             isRunning = false;
         }
-        else
+        else if (!brokenLeg)
         {
             move *= speed;
             if (move.magnitude > 1)
@@ -92,16 +106,17 @@ public class ExamplePlayerController : MonoBehaviour
             }
         }
 
-        controller.Move(move * Time.deltaTime);
+        if (!brokenLeg)
+            controller.Move(move * Time.deltaTime);
 
         // Jumping
-        if (Input.GetKey(KeyCode.Space) && Physics.Raycast(transform.TransformPoint(new Vector3(0, -.9f, 0)), Vector3.down, .2f))
+        if (Input.GetKey(KeyCode.Space) && Physics.Raycast(transform.TransformPoint(new Vector3(0, -.9f, 0)), Vector3.down, .2f) && !brokenLeg)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
         // Crouching
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !brokenLeg)
         {
             isCrouching = !isCrouching;
             Vector3 change = transform.localScale;
@@ -123,7 +138,11 @@ public class ExamplePlayerController : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
     }
-
+    private void BrokenLeg()
+    {
+        brokenLeg = true;
+        gameController.CreateWaypoint(8, 10, transform.position, transform.rotation);
+    }
     public void HandleHeadbob()
     {
 
