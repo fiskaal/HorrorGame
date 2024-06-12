@@ -15,7 +15,7 @@ public class WardrobeController : MonoBehaviour
 
     private void Awake()
     {
-       // wardrobeAnim = gameObject.GetComponent<Animator>();
+       //wardrobeAnim = gameObject.GetComponent<Animator>();
     }
     public void PlayAnimation()
     {
