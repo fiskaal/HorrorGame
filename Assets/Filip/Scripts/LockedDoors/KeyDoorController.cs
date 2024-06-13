@@ -7,8 +7,9 @@ using UnityEngine.Events;
 namespace KeySystem { 
     public class KeyDoorController : MonoBehaviour
     {
-        private Animator doorAnim;
+        public Animator doorAnim;
         private bool doorOpen = false;
+        private bool safeOpen = false;
 
         //[Header("Animation Names")]
         //[SerializeField] private string openAnimationName = "Open";
@@ -29,7 +30,7 @@ namespace KeySystem {
 
         private void Awake()
         {
-            doorAnim = gameObject.GetComponent<Animator>();
+            //doorAnim = gameObject.GetComponent<Animator>();
         }
 
         private IEnumerator PauseDoorInteraction()
@@ -69,6 +70,41 @@ namespace KeySystem {
                 doorAnim.Play("Locked", 0, 0.0f);
                 lockedEvent.Invoke();
                 StartCoroutine(ShowDoorLocked());
+            }
+        }
+
+        public void PlaySafeAnimation()
+        {
+            if (inventory.hasSafeKey)
+            {
+                OpenSafe();
+                inventory.ActiveItemUsed();
+            }
+            
+            else
+            {
+                doorAnim.Play("LockedSafe", 0, 0.0f);
+                lockedEvent.Invoke();
+                StartCoroutine(ShowDoorLocked());
+            }
+
+        }
+
+        void OpenSafe()
+        {
+            if (!safeOpen && !pauseInteraction)
+            {
+                doorAnim.Play("OpenSafe", 0, 0.0f);
+                safeOpen = true;
+                openEvent.Invoke();
+                StartCoroutine(PauseDoorInteraction());
+            }
+            else if (safeOpen && !pauseInteraction)
+            {
+                doorAnim.Play("CloseSafe", 0, 0.0f);
+                safeOpen = false;
+                closeEvent.Invoke();
+                StartCoroutine(PauseDoorInteraction());
             }
         }
 

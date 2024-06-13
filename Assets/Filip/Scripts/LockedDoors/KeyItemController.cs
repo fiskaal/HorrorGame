@@ -16,6 +16,9 @@ namespace KeySystem {
         [SerializeField] private bool blueDoor = false;
         [SerializeField] private bool blueKey = false;
 
+        [SerializeField] private bool safeDoor = false;
+        [SerializeField] private bool safeKey = false;
+
         [SerializeField] private UnityEvent pickUpEvent;
 
 
@@ -36,6 +39,11 @@ namespace KeySystem {
             }
 
             if (blueDoor)
+            {
+                doorObject = GetComponent<KeyDoorController>();
+            }
+
+            if (safeDoor)
             {
                 doorObject = GetComponent<KeyDoorController>();
             }
@@ -71,6 +79,17 @@ namespace KeySystem {
             else if (blueKey)
             {
                 inventory.PickedUpBlueKey();
+                pickUpEvent.Invoke();
+                gameObject.SetActive(false);
+            }
+
+            if (safeDoor)
+            {
+                doorObject.PlaySafeAnimation();
+            }
+            else if (safeKey)
+            {
+                inventory.PickedUpSafeKey();
                 pickUpEvent.Invoke();
                 gameObject.SetActive(false);
             }
