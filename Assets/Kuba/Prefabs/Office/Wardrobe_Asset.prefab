@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc5d8b01b7a83e42b29be38532ced6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wardrobeAnim: {fileID: 0}
+  wardrobeAnim: {fileID: 6257756896910301773}
   openEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cc5d8b01b7a83e42b29be38532ced6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wardrobeAnim: {fileID: 0}
+  wardrobeAnim: {fileID: 6257756896910301773}
   openEvent:
     m_PersistentCalls:
       m_Calls: []
