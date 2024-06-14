@@ -16,8 +16,8 @@ GameObject:
   m_Name: SunBedLegs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 91
   m_IsActive: 1
 --- !u!4 &2363228658550947012
 Transform:
@@ -113,8 +113,8 @@ GameObject:
   m_Name: SunBed_Asset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 91
   m_IsActive: 1
 --- !u!4 &9150403474056143352
 Transform:

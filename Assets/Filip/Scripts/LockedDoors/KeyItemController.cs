@@ -19,8 +19,12 @@ namespace KeySystem {
         [SerializeField] private bool safeDoor = false;
         [SerializeField] private bool safeKey = false;
 
-        [SerializeField] private UnityEvent pickUpEvent;
+        [SerializeField] private bool redDoorLocked = true;
+        [SerializeField] private bool orangeDoorLocked = true;
+        [SerializeField] private bool blueDoorLocked = true;
 
+        [SerializeField] private UnityEvent pickUpEvent;
+        [SerializeField] private UnityEvent unlockedEvent;
 
         [SerializeField] private Inventory inventory = null;
 
@@ -53,7 +57,14 @@ namespace KeySystem {
         {
             if (redDoor)
             {
-                doorObject.PlayAnimation();
+                if (redDoorLocked && inventory.hasRedKey)
+                {
+                    unlockedEvent.Invoke();
+                    redDoorLocked = false;
+                }
+                else
+                    doorObject.PlayAnimation();
+
             }else if (redKey)
             {
                 inventory.PickedUpRedKey();
@@ -63,7 +74,13 @@ namespace KeySystem {
 
             if (orangeDoor)
             {
-                doorObject.PlayAnimation();
+                if (orangeDoorLocked && inventory.hasOrangeKey)
+                {
+                    unlockedEvent.Invoke();
+                    orangeDoorLocked = false;
+                }
+                else
+                    doorObject.PlayAnimation();
             }
             else if (orangeKey)
             {
@@ -74,7 +91,13 @@ namespace KeySystem {
 
             if (blueDoor)
             {
-                doorObject.PlayAnimation();
+                if (blueDoorLocked && inventory.hasBlueKey)
+                {
+                    unlockedEvent.Invoke();
+                    blueDoorLocked = false;
+                }
+                else
+                    doorObject.PlayAnimation();
             }
             else if (blueKey)
             {
