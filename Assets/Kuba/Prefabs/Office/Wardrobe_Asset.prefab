@@ -17,8 +17,8 @@ GameObject:
   m_Name: WardrobeDoorRight
   m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7463050373562414786
 Transform:
@@ -134,8 +134,8 @@ GameObject:
   m_Name: Wardrobe_Asset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &3515392462602225726
 Transform:
@@ -256,8 +256,8 @@ GameObject:
   m_Name: WardrobeDoorLeft
   m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5137525760427116443
 Transform:
@@ -370,8 +370,8 @@ GameObject:
   m_Name: WardrobeOpenSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &589380179666399954
 Transform:
@@ -498,8 +498,8 @@ GameObject:
   m_Name: WardrobeCloseSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5238109975658335801
 Transform:

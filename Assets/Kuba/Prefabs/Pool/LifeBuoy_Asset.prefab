@@ -16,8 +16,8 @@ GameObject:
   m_Name: LifeBuoy_Asset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 123
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 83
   m_IsActive: 1
 --- !u!4 &8097322842945913493
 Transform:

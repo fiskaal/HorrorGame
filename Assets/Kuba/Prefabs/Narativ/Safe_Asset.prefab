@@ -19,8 +19,8 @@ GameObject:
   m_Name: SafeKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &406158899625814694
 Transform:
@@ -365,7 +365,13 @@ MonoBehaviour:
   blueKey: 0
   safeDoor: 0
   safeKey: 1
+  redDoorLocked: 1
+  orangeDoorLocked: 1
+  blueDoorLocked: 1
   pickUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  unlockedEvent:
     m_PersistentCalls:
       m_Calls: []
   inventory: {fileID: 0}
@@ -384,8 +390,8 @@ GameObject:
   m_Name: SafeHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1424769736447040336
 Transform:
@@ -466,8 +472,8 @@ GameObject:
   m_Name: SafeLockedSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5751512068435980646
 Transform:
@@ -596,8 +602,8 @@ GameObject:
   m_Name: SafeDoor
   m_TagString: InteractiveObject
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &3129637290396176265
 Transform:
@@ -692,8 +698,8 @@ GameObject:
   m_Name: SafeOpenSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5950804410186694524
 Transform:
@@ -820,8 +826,8 @@ GameObject:
   m_Name: SafeCloseSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5950804411453437063
 Transform:
@@ -951,8 +957,8 @@ GameObject:
   m_Name: Safe_Asset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &6133683237454575746
 Transform:
