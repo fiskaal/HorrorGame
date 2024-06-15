@@ -26,6 +26,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Camera playerCamera; // Reference to the player's camera
     [SerializeField] private LayerMask inventoryItemLayer; // Layer mask for the inventory items
     [SerializeField] private Transform itemHoldingPoint;
+    [SerializeField] private Transform ThrowingPoint;
     [SerializeField] private RockThrowing rockThrowing;
     [SerializeField] private GameObject activeItem;
     [SerializeField] private GameObject lastActiveItem;
@@ -68,15 +69,22 @@ public class Inventory : MonoBehaviour
             lastActiveItem.SetActive(true);
             Destroy(activeItem);
         }
-
-        activeItem = Instantiate(
+        if (item.tag.Equals("Rock"))
+        {
+            activeItem = Instantiate(
+            item,
+            ThrowingPoint.position,
+            ThrowingPoint.rotation);
+            activeItem.transform.SetParent(ThrowingPoint);
+            rockThrowing.ReadyThrow(activeItem);
+        }
+        else
+        {
+            activeItem = Instantiate(
             item,
             itemHoldingPoint.position,
             itemHoldingPoint.rotation);
-        activeItem.transform.SetParent(itemHoldingPoint);
-        if (activeItem.tag.Equals("Rock"))
-        {
-            rockThrowing.ReadyThrow(activeItem);
+            activeItem.transform.SetParent(itemHoldingPoint);
         }
         lastActiveItem = item;
         item.SetActive(false);
