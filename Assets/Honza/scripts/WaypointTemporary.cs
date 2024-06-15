@@ -15,7 +15,7 @@ public class WaypointTemporary : MonoBehaviour
         enemyAI.ResetSpeed();
         enemyAI.investigatingWaypoint = false;
         StartCoroutine(enemyAI.ChangePatrolWaypoint());
-        Debug.Log("waypoint collision");
+        Debug.Log("Temp waypoint collision");
     }
     private void OnTriggerExit(Collider other)
     {
