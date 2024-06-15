@@ -19,14 +19,14 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.updatePosition = false;
+        //agent.updatePosition = false;
         StartPatroling();
         StartCoroutine(AwarnessMeterDecay());
         
     }
     private void Update()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, agent.nextPosition, ref velocity, smoothTime);
+        //transform.position = Vector3.SmoothDamp(transform.position, agent.nextPosition, ref velocity, smoothTime);
         if (chasingPlayer)
             ChasePlayer();
     }
@@ -62,7 +62,7 @@ public class EnemyAI : MonoBehaviour
     }
     private IEnumerator AwarnessMeterDecay()
     {
-        Debug.Log("AwarnessMeterDecay called");
+        //Debug.Log("AwarnessMeterDecay called");
         if (AwarnessMeter > 0)
             AwarnessMeter--;
         if (AwarnessMeter < 10 && chasingPlayer)
@@ -91,4 +91,21 @@ public class EnemyAI : MonoBehaviour
     {
         agent.SetDestination(playerTransform.position);
     }
+    /*private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DoorClosedCollider"))
+        {
+            ResetSpeed();
+            investigatingWaypoint = false;
+            StartCoroutine(ChangePatrolWaypoint());
+            Debug.Log("door collision");
+        }
+    }*/
+    /*public void DoorCollision()
+    {
+        ResetSpeed();
+        investigatingWaypoint = false;
+        StartCoroutine(ChangePatrolWaypoint());
+        Debug.Log("door collision");
+    }*/
 }

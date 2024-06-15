@@ -6,10 +6,11 @@ public class Waypoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.gameObject.CompareTag("Enemy"))
+        EnemyAI enemyAI = other.gameObject.GetComponent<EnemyAI>();
+
+        if (!other.gameObject.CompareTag("Enemy") || enemyAI.investigatingWaypoint)
             return;
 
-        EnemyAI enemyAI = other.gameObject.GetComponent<EnemyAI>();
         StartCoroutine(enemyAI.ChangePatrolWaypoint());
         Debug.Log("waypoint collision");
     }
