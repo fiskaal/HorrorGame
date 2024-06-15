@@ -249,7 +249,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 381
+  m_VersionIndex: 384
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -598,6 +598,8 @@ GameObject:
   - component: {fileID: 3105354871560658863}
   - component: {fileID: 5526749784966977085}
   - component: {fileID: 5950804411369529202}
+  - component: {fileID: 1929620972135881893}
+  - component: {fileID: 5594682591212407909}
   m_Layer: 6
   m_Name: SafeDoor
   m_TagString: InteractiveObject
@@ -684,6 +686,99 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.003206198, y: 0.0009297294, z: 0.0045674457}
   m_Center: {x: 0.001603099, y: 0.00004674226, z: 0.000016943068}
+--- !u!114 &1929620972135881893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157281878766860265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff215254a67e8540bb399de2ea068f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redDoor: 0
+  redKey: 0
+  orangeDoor: 0
+  orangeKey: 0
+  blueDoor: 0
+  blueKey: 0
+  safeDoor: 1
+  safeKey: 0
+  redDoorLocked: 1
+  orangeDoorLocked: 1
+  blueDoorLocked: 1
+  pickUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  unlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  inventory: {fileID: 0}
+--- !u!114 &5594682591212407909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157281878766860265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa0213b0ac658c42ac16c6baee38f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnim: {fileID: 5950804411369529207}
+  timeToShowUI: 1
+  showDoorLockedUI: {fileID: 0}
+  inventory: {fileID: 0}
+  waitTimer: 1
+  pauseInteraction: 0
+  openEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5950804410186694523}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  closeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5950804411453437062}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  lockedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3064007125735414628}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5950804410186694525
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,7 +1049,7 @@ GameObject:
   - component: {fileID: 5950804411369529204}
   - component: {fileID: 5950804411369529207}
   m_Layer: 0
-  m_Name: Safe_Asset
+  m_Name: Safe_Asset 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
