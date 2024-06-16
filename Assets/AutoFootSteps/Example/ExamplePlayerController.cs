@@ -141,7 +141,7 @@ public class ExamplePlayerController : MonoBehaviour
     private void BrokenLeg()
     {
         brokenLeg = true;
-        gameController.CreateWaypoint(8, 10, transform.position, transform.rotation);
+        gameController.BrokenLeg();
     }
     public void HandleHeadbob()
     {

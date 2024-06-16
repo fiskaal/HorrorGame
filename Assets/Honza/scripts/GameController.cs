@@ -38,5 +38,9 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void BrokenLeg()
+    {
+        enemyAI.AwarnessMeterUpdate(100);
+    }
 
 }
