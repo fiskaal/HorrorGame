@@ -28,6 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8057850638039069445}
   - {fileID: 4818770726989530503}
   m_Father: {fileID: 5500666438915385955}
   m_RootOrder: 0
@@ -811,10 +812,18 @@ MonoBehaviour:
   orangeKey: 0
   blueDoor: 0
   blueKey: 0
+  safeDoor: 0
+  safeKey: 0
+  redDoorLocked: 1
+  orangeDoorLocked: 1
+  blueDoorLocked: 1
   pickUpEvent:
     m_PersistentCalls:
       m_Calls: []
-  _keyInventory: {fileID: 0}
+  unlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  inventory: {fileID: 0}
 --- !u!1 &5500666438915385954
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,13 +879,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 414942658363723517, guid: 9bf25b4217f29754b98e8588827f7235,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 414942658363723517, guid: 9bf25b4217f29754b98e8588827f7235,
+        type: 3}
       propertyPath: m_TagString
       value: InteractiveObject
       objectReference: {fileID: 0}
     - target: {fileID: 1047646060716840007, guid: 9bf25b4217f29754b98e8588827f7235,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1047646060716840007, guid: 9bf25b4217f29754b98e8588827f7235,
         type: 3}
@@ -990,10 +1004,18 @@ MonoBehaviour:
   orangeKey: 0
   blueDoor: 0
   blueKey: 0
+  safeDoor: 0
+  safeKey: 0
+  redDoorLocked: 1
+  orangeDoorLocked: 1
+  blueDoorLocked: 1
   pickUpEvent:
     m_PersistentCalls:
       m_Calls: []
-  _keyInventory: {fileID: 0}
+  unlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  inventory: {fileID: 0}
 --- !u!114 &5500666438372708855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,9 +1028,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa0213b0ac658c42ac16c6baee38f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorAnim: {fileID: 0}
   timeToShowUI: 1
   showDoorLockedUI: {fileID: 0}
-  _keyInventory: {fileID: 0}
+  inventory: {fileID: 0}
   waitTimer: 1
   pauseInteraction: 0
   openEvent:
@@ -1056,3 +1079,194 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &7519187339386836206
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1732449745757606951}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Asset
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_TagString
+      value: InteractiveObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 5092708244707826562, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617835151230357669, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f2eda1e2c047f3a4a8141afcfdb784dd, type: 3}
+--- !u!1 &7248804021833132479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 7519187339386836206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6541964973736706328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248804021833132479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.0008257951, z: 0.020000005}
+  m_Center: {x: -0.005000015, y: -1.4551911e-10, z: 0.010000002}
+--- !u!95 &5748962072464574125
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248804021833132479}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f07c0d4e2d9bedf4d9bf742d564bee6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2084087875468746268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248804021833132479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff215254a67e8540bb399de2ea068f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redDoor: 1
+  redKey: 0
+  orangeDoor: 0
+  orangeKey: 0
+  blueDoor: 0
+  blueKey: 0
+  safeDoor: 0
+  safeKey: 0
+  redDoorLocked: 1
+  orangeDoorLocked: 1
+  blueDoorLocked: 1
+  pickUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  unlockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  inventory: {fileID: 0}
+--- !u!114 &7676664180195337331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248804021833132479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa0213b0ac658c42ac16c6baee38f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorAnim: {fileID: 0}
+  timeToShowUI: 1
+  showDoorLockedUI: {fileID: 0}
+  inventory: {fileID: 0}
+  waitTimer: 1
+  pauseInteraction: 0
+  openEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  closeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &8057850638039069445 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f2eda1e2c047f3a4a8141afcfdb784dd,
+    type: 3}
+  m_PrefabInstance: {fileID: 7519187339386836206}
+  m_PrefabAsset: {fileID: 0}
