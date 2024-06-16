@@ -47,7 +47,7 @@ public class EnemyAI : MonoBehaviour
     {
         jefAnimator.Play("Attentione", 0, 0.0f);
 
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(8.0f);
 
         StartPatroling();
     }
