@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610f65e80b7d767479b4d530905a740a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jefAnimator: {fileID: 0}
   patrolWaypoints:
   - {fileID: 0}
   - {fileID: 0}

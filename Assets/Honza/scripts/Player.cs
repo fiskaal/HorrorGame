@@ -7,9 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField] private GameController gameController;
     [SerializeField] private ExamplePlayerController characterController;
 
-    private float speedSDAS = 8F;
-    private float speedSDAM = 6F;
-    private float speedSDAL = 4.5F;
+    private float speedSDAS = 4.5F;
+    private float speedSDAM = 3.5F;
+    private float speedSDAL = 2.5F;
     private int pickupNoise = -2;
     private int walkingNoise = -2;
     private int runningNoise = -1;

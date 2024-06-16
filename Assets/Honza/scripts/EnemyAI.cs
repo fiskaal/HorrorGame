@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     private NavMeshAgent agent;
+    [SerializeField] private Animator jefAnimator;
     [SerializeField] private Transform[] patrolWaypoints = new Transform[4];
     [SerializeField] private Transform playerTransform;
     private int lastPatrolWaypoint = -1;
@@ -38,18 +39,21 @@ public class EnemyAI : MonoBehaviour
         {
             randomIndex = Random.Range(0, patrolWaypoints.Length);
         } while (randomIndex.Equals(lastPatrolWaypoint));
-
+        jefAnimator.Play("Walk", 0, 0.0f);
         agent.SetDestination(patrolWaypoints[randomIndex].position);
         lastPatrolWaypoint = randomIndex;
     }
     public IEnumerator ChangePatrolWaypoint()
     {
-        yield return new WaitForSeconds(5.0f);
+        jefAnimator.Play("Attentione", 0, 0.0f);
+
+        yield return new WaitForSeconds(8.0f);
 
         StartPatroling();
     }
     public void InvestigateWaypoint(Transform waypoint, float speed)
     {
+        jefAnimator.Play("Walk", 0, 0.0f);
         Debug.Log("InvestigateWaypoint called");
         agent.isStopped.Equals("true");
         agent.speed = speed;
@@ -58,7 +62,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void ResetSpeed()
     {
-        agent.speed = 4.5F;
+        agent.speed = 2.5F;
     }
     private IEnumerator AwarnessMeterDecay()
     {
@@ -73,7 +77,7 @@ public class EnemyAI : MonoBehaviour
             StartCoroutine(ChangePatrolWaypoint());
         }
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(2.0f);
 
         StartCoroutine(AwarnessMeterDecay());
     }
@@ -82,13 +86,15 @@ public class EnemyAI : MonoBehaviour
         AwarnessMeter += value;
         if (AwarnessMeter >= 10)
         {
+            investigatingWaypoint = false;
             //StopAllCoroutines();
             chasingPlayer = true;
-            agent.speed = 8F;
+            agent.speed = 4.5F;
         }
     }
     private void ChasePlayer()
     {
+        jefAnimator.Play("Walk", 0, 0.0f);
         agent.SetDestination(playerTransform.position);
     }
     /*private void OnTriggerEnter(Collider other)
