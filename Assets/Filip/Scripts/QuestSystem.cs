@@ -9,7 +9,7 @@ public class QuestSystem : MonoBehaviour
 {
     public GameObject hideCurrentQuest;
     public GameObject showNextQuest;
-    
+    public Animator animator;
     [SerializeField] private TMP_Text noteTextAreaUI;
     [SerializeField] [TextArea] private string questText;
     [SerializeField] private UnityEvent newQuestSoundEvent;
@@ -20,7 +20,7 @@ public class QuestSystem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
+            animator.Play("QuestAnim", 0, 0.0f);
             newQuestSoundEvent.Invoke();
             noteTextAreaUI.text = questText;
             hideCurrentQuest.SetActive(false);

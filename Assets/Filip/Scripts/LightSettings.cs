@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 
 public class LightSettings : MonoBehaviour
@@ -16,8 +17,13 @@ public class LightSettings : MonoBehaviour
         light.shadowNearPlane = 1f;
         light.shadowBias = 0f;
         QualitySettings.shadowNearPlaneOffset = 1f;
+        //light.GetUniversalAdditionalLightData();
+        
+
         
     }
+
+    
 
     // Update is called once per frame
     void Update()
