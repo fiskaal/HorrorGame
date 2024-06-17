@@ -27,7 +27,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void Update()
     {
-        //transform.position = Vector3.SmoothDamp(transform.position, agent.nextPosition, ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, agent.nextPosition, ref velocity, smoothTime);
         if (chasingPlayer)
             ChasePlayer();
     }
