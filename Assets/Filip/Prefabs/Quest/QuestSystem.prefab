@@ -356,10 +356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bba5405fd893a2468e5d7eebfd9a00e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newQuestSound: {fileID: 8300000, guid: 01b31201f70ba9c4e8c196ee2d1d47e0, type: 3}
-  audioSource: {fileID: 3907944846067801382}
-  currentQuest: {fileID: 3907944845560663247}
-  nextQuest: {fileID: 0}
+  hideCurrentQuest: {fileID: 0}
+  showNextQuest: {fileID: 0}
+  animator: {fileID: 0}
   noteTextAreaUI: {fileID: 0}
   questText: '- Quest #1'
   newQuestSoundEvent:
@@ -377,6 +376,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  inventory: {fileID: 0}
 --- !u!1 &3907944845560663247
 GameObject:
   m_ObjectHideFlags: 0

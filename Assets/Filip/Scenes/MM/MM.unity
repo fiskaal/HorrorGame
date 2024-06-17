@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: POOL OF PERIL
+  m_text: Splash of Fear
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c63c7491067fbfc4184d8f58053e6d39, type: 2}
   m_sharedMaterial: {fileID: -8227689739098242683, guid: c63c7491067fbfc4184d8f58053e6d39,
@@ -2290,7 +2290,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535

@@ -13,6 +13,7 @@ public class QuestSystem : MonoBehaviour
     [SerializeField] private TMP_Text noteTextAreaUI;
     [SerializeField] [TextArea] private string questText;
     [SerializeField] private UnityEvent newQuestSoundEvent;
+    public Inventory inventory;
 
     
 
