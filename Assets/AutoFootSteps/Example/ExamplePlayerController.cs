@@ -26,6 +26,7 @@ public class ExamplePlayerController : MonoBehaviour
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private bool brokenLeg = false;
+    [SerializeField] private GameObject inventory;
 
     /*
     [Header("Headbob stats")]
@@ -122,6 +123,14 @@ public class ExamplePlayerController : MonoBehaviour
             Vector3 change = transform.localScale;
             change.y *= isCrouching ? .5f : 2f;
             transform.localScale = change;
+
+            Vector3 changeInvScale = inventory.transform.localScale;
+            changeInvScale.y *= isCrouching ? 2f : 0.5f;
+            inventory.transform.localScale = changeInvScale;
+
+            Vector3 changeInvPosition = inventory.transform.localPosition;
+            changeInvPosition.y -= isCrouching ? 0.5f : -0.5f;
+            inventory.transform.localPosition = changeInvPosition;
         }
 
         // Gravity
