@@ -98,6 +98,9 @@ public class EnemyAI : MonoBehaviour
     }
     public void AwarnessMeterUpdate(int value)
     {
+        if (value <= 0)
+            return;
+
         AwarnessMeter += value;
         if (AwarnessMeter >= 10 && !chasingPlayer)
         {
