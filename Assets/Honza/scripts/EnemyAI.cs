@@ -63,7 +63,6 @@ public class EnemyAI : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         growlEvent3.Invoke();
         yield return new WaitForSeconds(2.0f);
-
         StartPatroling();
     }
     public void InvestigateWaypoint(Transform waypoint, float speed)

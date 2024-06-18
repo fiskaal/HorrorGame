@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
             currentTempWaypoint = waypoint;
             enemyAI.InvestigateWaypoint(waypoint.transform, speed);
         }
-        else if (enemyAI.investigatingWaypoint && (waypointTemporary.noiseValue < currentTempWaypoint.GetComponent<WaypointTemporary>().noiseValue))
+        else
         {
             Debug.Log("waypoint deleted");
             waypointTemporary.ClearWaypoint();
