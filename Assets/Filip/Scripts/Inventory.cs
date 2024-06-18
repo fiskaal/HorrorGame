@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public bool hasOrangeKey = false;
     public bool hasBlueKey = false;
     public bool hasSafeKey = false;
+    public bool hasDoubleKey = false;
     public int totalRocks = 3;
 
     [SerializeField] private GameObject inventory;
@@ -18,6 +19,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject orangeKey;
     [SerializeField] private GameObject blueKey;
     [SerializeField] private GameObject safeKey;
+    [SerializeField] private GameObject doubleKey;
     [SerializeField] private GameObject[] rockArray = new GameObject[3];
     private int rocksArrayIndex = 2;
     [SerializeField] private GameObject crossHair;
@@ -134,6 +136,12 @@ public class Inventory : MonoBehaviour
     {
         hasSafeKey = true;
         safeKey.SetActive(true);
+    }
+
+    public void PickedUpDoubleKey()
+    {
+        hasDoubleKey = true;
+        doubleKey.SetActive(true);
     }
     public void PauseGame()
     {

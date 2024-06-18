@@ -8,8 +8,10 @@ namespace KeySystem {
     public class KeyDoorController : MonoBehaviour
     {
         public Animator doorAnim;
+        public Animator doubleDoorPushAnim;
         private bool doorOpen = false;
         private bool safeOpen = false;
+        private bool doubleOpen = false;
 
         //[Header("Animation Names")]
         //[SerializeField] private string openAnimationName = "Open";
@@ -90,6 +92,22 @@ namespace KeySystem {
 
         }
 
+        public void PlayDoubleDoorAnimation()
+        {
+            if (inventory.hasDoubleKey)
+            {
+                OpenDoubleDoor();
+                inventory.ActiveItemUsed();
+            }
+
+            else
+            {
+                doorAnim.Play("LockedDDP", 0, 0.0f);
+                lockedEvent.Invoke();
+                StartCoroutine(ShowDoorLocked());
+            }
+        }
+
         void OpenSafe()
         {
             if (!safeOpen && !pauseInteraction)
@@ -121,6 +139,24 @@ namespace KeySystem {
             {
                 doorAnim.Play("Closed", 0, 0.0f);
                 doorOpen = false;
+                closeEvent.Invoke();
+                StartCoroutine(PauseDoorInteraction());
+            }
+        }
+
+        void OpenDoubleDoor()
+        {
+            if (!doubleOpen && !pauseInteraction)
+            {
+                doorAnim.Play("OpenDDP", 0, 0.0f);
+                doubleOpen = true;
+                openEvent.Invoke();
+                StartCoroutine(PauseDoorInteraction());
+            }
+            else if (doubleOpen && !pauseInteraction)
+            {
+                doorAnim.Play("CloseDDP", 0, 0.0f);
+                doubleOpen = false;
                 closeEvent.Invoke();
                 StartCoroutine(PauseDoorInteraction());
             }

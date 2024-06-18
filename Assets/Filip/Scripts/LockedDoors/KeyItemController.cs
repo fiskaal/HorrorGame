@@ -19,9 +19,17 @@ namespace KeySystem {
         [SerializeField] private bool safeDoor = false;
         [SerializeField] private bool safeKey = false;
 
+        [SerializeField] private bool doubleDoor = false;
+        [SerializeField] private bool doubleKey = false;
+
+
         [SerializeField] private bool redDoorLocked = true;
         [SerializeField] private bool orangeDoorLocked = true;
         [SerializeField] private bool blueDoorLocked = true;
+        [SerializeField] private bool doubleDoorLocked = true;
+        [SerializeField] private GameObject chain;
+
+        [SerializeField] private bool safeDoorLocked = true;
 
         [SerializeField] private UnityEvent pickUpEvent;
         [SerializeField] private UnityEvent unlockedEvent;
@@ -48,6 +56,11 @@ namespace KeySystem {
             }
 
             if (safeDoor)
+            {
+                doorObject = GetComponent<KeyDoorController>();
+            }
+
+            if (doubleDoor)
             {
                 doorObject = GetComponent<KeyDoorController>();
             }
@@ -116,6 +129,28 @@ namespace KeySystem {
                 pickUpEvent.Invoke();
                 gameObject.SetActive(false);
             }
+
+            if (doubleDoor)
+            {
+                if (doubleDoorLocked && inventory.hasDoubleKey)
+                {
+                    unlockedEvent.Invoke();
+                    doubleDoorLocked = false;
+                    
+                }
+                else
+                    doorObject.PlayDoubleDoorAnimation();
+            }
+            else if (doubleKey)
+            {
+                inventory.PickedUpDoubleKey();
+                pickUpEvent.Invoke();
+                gameObject.SetActive(false);
+                chain.SetActive(false);
+            }
+
+
+
         }
 
     }
