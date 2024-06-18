@@ -813,9 +813,14 @@ MonoBehaviour:
   blueKey: 0
   safeDoor: 0
   safeKey: 0
+  doubleDoor: 0
+  doubleKey: 0
   redDoorLocked: 1
   orangeDoorLocked: 1
   blueDoorLocked: 1
+  doubleDoorLocked: 1
+  chain: {fileID: 0}
+  safeDoorLocked: 1
   pickUpEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -866,6 +871,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1732449745757606951}
     m_Modifications:
+    - target: {fileID: -9038148191102185406, guid: 2f3cf7e1e4972324880aa9cff1896b71,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9038148191102185406, guid: 2f3cf7e1e4972324880aa9cff1896b71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2f3cf7e1e4972324880aa9cff1896b71,
         type: 3}
       propertyPath: m_RootOrder
@@ -921,6 +936,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5985622164953750118, guid: 2f3cf7e1e4972324880aa9cff1896b71,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5985622164953750118, guid: 2f3cf7e1e4972324880aa9cff1896b71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2f3cf7e1e4972324880aa9cff1896b71,
         type: 3}
       propertyPath: m_Name
@@ -935,6 +960,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: InteractiveObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f3cf7e1e4972324880aa9cff1896b71,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f3cf7e1e4972324880aa9cff1896b71,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f3cf7e1e4972324880aa9cff1896b71, type: 3}
@@ -990,6 +1025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 4948369438612239235}
+  doubleDoorPushAnim: {fileID: 0}
   timeToShowUI: 1
   showDoorLockedUI: {fileID: 0}
   inventory: {fileID: 0}
@@ -1024,9 +1060,14 @@ MonoBehaviour:
   blueKey: 0
   safeDoor: 0
   safeKey: 0
+  doubleDoor: 0
+  doubleKey: 0
   redDoorLocked: 1
   orangeDoorLocked: 1
   blueDoorLocked: 1
+  doubleDoorLocked: 1
+  chain: {fileID: 0}
+  safeDoorLocked: 1
   pickUpEvent:
     m_PersistentCalls:
       m_Calls: []

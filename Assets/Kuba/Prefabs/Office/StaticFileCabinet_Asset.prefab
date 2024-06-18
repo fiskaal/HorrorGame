@@ -16,8 +16,8 @@ GameObject:
   m_Name: FileCabinetDrawer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2784201526059313167
 Transform:
@@ -113,8 +113,8 @@ GameObject:
   m_Name: StaticFileCabinet_Asset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5537616015464782170
 Transform:
@@ -214,8 +214,8 @@ GameObject:
   m_Name: FileCabinetDrawer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5245671086331343959
 Transform:
@@ -311,8 +311,8 @@ GameObject:
   m_Name: FileCabinetDrawer4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8701968565892062394
 Transform:
@@ -408,8 +408,8 @@ GameObject:
   m_Name: FileCabinetDrawer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1862540683124486235
 Transform:

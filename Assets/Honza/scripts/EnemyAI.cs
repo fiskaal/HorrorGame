@@ -11,7 +11,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Transform[] patrolWaypoints = new Transform[4];
     [SerializeField] private Transform playerTransform;
     [SerializeField] private UnityEvent walkingEvent;
-    [SerializeField] private UnityEvent growlEvent;
+    [SerializeField] private UnityEvent growlEvent1;
+    [SerializeField] private UnityEvent growlEvent2;
+    [SerializeField] private UnityEvent growlEvent3;
     [SerializeField] private AudioSource footstepsAudio;
     private int lastPatrolWaypoint = -1;
     public bool investigatingWaypoint = false;
@@ -52,9 +54,13 @@ public class EnemyAI : MonoBehaviour
     {
         jefAnimator.Play("Attentione", 0, 0.0f);
         footstepsAudio.mute = true;
-        growlEvent.Invoke();
-
-        yield return new WaitForSeconds(8.0f);
+        yield return new WaitForSeconds(1.0f);
+        growlEvent1.Invoke();
+        yield return new WaitForSeconds(3.0f);
+        growlEvent2.Invoke();
+        yield return new WaitForSeconds(2.0f);
+        growlEvent3.Invoke();
+        yield return new WaitForSeconds(2.0f);
 
         StartPatroling();
     }
