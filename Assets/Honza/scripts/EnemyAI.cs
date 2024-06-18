@@ -15,6 +15,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private UnityEvent growlEvent2;
     [SerializeField] private UnityEvent growlEvent3;
     [SerializeField] private AudioSource footstepsAudio;
+    [SerializeField] private UnityEvent HuntingEventStart;
+    [SerializeField] private UnityEvent HuntingEventStop;
     private int lastPatrolWaypoint = -1;
     public bool investigatingWaypoint = false;
     private bool chasingPlayer = false;
@@ -85,6 +87,7 @@ public class EnemyAI : MonoBehaviour
         if (AwarnessMeter < 10 && chasingPlayer)
         {
             chasingPlayer = false;
+            HuntingEventStop.Invoke();
             //StopAllCoroutines();
             ResetSpeed();
             StartCoroutine(ChangePatrolWaypoint());
@@ -97,11 +100,12 @@ public class EnemyAI : MonoBehaviour
     public void AwarnessMeterUpdate(int value)
     {
         AwarnessMeter += value;
-        if (AwarnessMeter >= 10)
+        if (AwarnessMeter >= 10 && !chasingPlayer)
         {
             investigatingWaypoint = false;
             //StopAllCoroutines();
             chasingPlayer = true;
+            HuntingEventStart.Invoke();
             agent.speed = 4.5F;
         }
     }

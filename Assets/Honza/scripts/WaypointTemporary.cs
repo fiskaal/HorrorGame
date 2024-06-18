@@ -26,6 +26,7 @@ public class WaypointTemporary : MonoBehaviour
     }
     public void ClearWaypoint()
     {
+        Debug.Log("destroyed waypoint temp");
         Destroy(gameObject);
     }
 }

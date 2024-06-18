@@ -20,17 +20,20 @@ public class GameController : MonoBehaviour
         enemyAI.AwarnessMeterUpdate(noiseValue);
         if (!enemyAI.investigatingWaypoint && noiseValue > 0)
         {
+            Debug.Log("waypoint created");
             currentTempWaypoint = waypoint;
             enemyAI.InvestigateWaypoint(waypoint.transform, speed);
         }
         else if (enemyAI.investigatingWaypoint && (waypointTemporary.noiseValue >= currentTempWaypoint.GetComponent<WaypointTemporary>().noiseValue))
         {
+            Debug.Log("waypoint updated, old one deleted");
             currentTempWaypoint.GetComponent<WaypointTemporary>().ClearWaypoint();
             currentTempWaypoint = waypoint;
             enemyAI.InvestigateWaypoint(waypoint.transform, speed);
         }
         else if (enemyAI.investigatingWaypoint && (waypointTemporary.noiseValue < currentTempWaypoint.GetComponent<WaypointTemporary>().noiseValue))
         {
+            Debug.Log("waypoint deleted");
             waypointTemporary.ClearWaypoint();
         }
     }
