@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class ExamplePlayerController : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class ExamplePlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private bool brokenLeg = false;
     [SerializeField] private GameObject inventory;
+    [SerializeField] private UnityEvent brokenLegSound;
+    [SerializeField] private UnityEvent screamingSound;
 
     /*
     [Header("Headbob stats")]
@@ -149,6 +152,8 @@ public class ExamplePlayerController : MonoBehaviour
     }
     private void BrokenLeg()
     {
+        brokenLegSound.Invoke();
+        screamingSound.Invoke();
         brokenLeg = true;
         gameController.BrokenLeg();
     }

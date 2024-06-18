@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Animator jefAnimator;
     [SerializeField] private Transform[] patrolWaypoints = new Transform[4];
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private UnityEvent walkingEvent;
+    [SerializeField] private UnityEvent growlEvent;
+    [SerializeField] private AudioSource footstepsAudio;
     private int lastPatrolWaypoint = -1;
     public bool investigatingWaypoint = false;
     private bool chasingPlayer = false;
@@ -34,6 +38,7 @@ public class EnemyAI : MonoBehaviour
 
     void StartPatroling()
     {
+        footstepsAudio.mute = false;
         int randomIndex;
         do
         {
@@ -46,6 +51,8 @@ public class EnemyAI : MonoBehaviour
     public IEnumerator ChangePatrolWaypoint()
     {
         jefAnimator.Play("Attentione", 0, 0.0f);
+        footstepsAudio.mute = true;
+        growlEvent.Invoke();
 
         yield return new WaitForSeconds(8.0f);
 
