@@ -43,7 +43,7 @@ public class Rock : MonoBehaviour
     }
     public void RockInSDACheck(int noiseValue)
     {
-        Debug.Log("RockInSDACheck called");
+        //Debug.Log("RockInSDACheck called");
         if (rockInSDAS && !rockSDAChecked)
         {
             gameController.CreateWaypoint(speedSDAS, noiseValue + 3, transform.position, transform.rotation);

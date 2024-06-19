@@ -15,7 +15,7 @@ public class RockThrowing : MonoBehaviour
     [SerializeField] private float throwForce;
     [SerializeField] private float throwUpwardForce;
 
-    bool readyToThrow = true;
+    bool readyToThrow = false;
 
     private void Update()
     {
