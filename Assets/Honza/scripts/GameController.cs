@@ -57,8 +57,8 @@ public class GameController : MonoBehaviour
     public void PauseGame()
     {
         gameOverUI.SetActive(true);
-        Time.timeScale = 0.1F;
-        imageAnimator.Play("Image50FadeIn");
+        Time.timeScale = 0F;
+        imageAnimator.Play("ImageFadeIn");
     }
 
 }
