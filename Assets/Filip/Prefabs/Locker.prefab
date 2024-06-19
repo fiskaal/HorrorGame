@@ -134,6 +134,11 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7447854367629111442, guid: bc2dff5033a085a49960b2c1c159f8c9,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8426129896019130296, guid: bc2dff5033a085a49960b2c1c159f8c9,
         type: 3}
       propertyPath: m_audioClip

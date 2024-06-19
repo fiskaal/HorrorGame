@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: 20
-  smoothTime: 0.5
+  offsetMultiplier: 30
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &86269380
 SpriteRenderer:
@@ -378,11 +378,11 @@ RectTransform:
   m_Father: {fileID: 549733626}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 120, y: 0}
-  m_SizeDelta: {x: 320, y: 240}
-  m_Pivot: {x: 0, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 80}
+  m_SizeDelta: {x: 1500, y: 120}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &256991080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 256991078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -400,7 +400,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetMultiplier: 0
-  smoothTime: 0.5
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &381198319
 SpriteRenderer:
@@ -792,8 +792,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: -28
-  smoothTime: 0.5
+  offsetMultiplier: -30
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &553339340
 SpriteRenderer:
@@ -1379,8 +1379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: -5
-  smoothTime: 0.5
+  offsetMultiplier: -10
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &836050522
 SpriteRenderer:
@@ -1485,7 +1485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetMultiplier: 0
-  smoothTime: 0.5
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &859243671
 SpriteRenderer:
@@ -1736,7 +1736,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917543309}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -1792,7 +1792,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917543309}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -1914,7 +1914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetMultiplier: 0
-  smoothTime: 0.5
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &960870246
 SpriteRenderer:
@@ -2018,8 +2018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: 30
-  smoothTime: 0.5
+  offsetMultiplier: 0
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &976220900
 SpriteRenderer:
@@ -2123,8 +2123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: 10
-  smoothTime: 0.5
+  offsetMultiplier: 15
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &986555962
 SpriteRenderer:
@@ -2231,11 +2231,11 @@ RectTransform:
   m_Father: {fileID: 549733626}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 120, y: -120}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -80}
   m_SizeDelta: {x: 1500, y: 150}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &988279128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2256,7 +2256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Splash of Fear
+  m_text: The Aquatica Matter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c63c7491067fbfc4184d8f58053e6d39, type: 2}
   m_sharedMaterial: {fileID: -8227689739098242683, guid: c63c7491067fbfc4184d8f58053e6d39,
@@ -2291,7 +2291,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 16
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2884,8 +2884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: -50
-  smoothTime: 0.5
+  offsetMultiplier: -55
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &1830290031
 SpriteRenderer:
@@ -2990,7 +2990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetMultiplier: 0
-  smoothTime: 0.5
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &1861099753
 SpriteRenderer:
@@ -3094,8 +3094,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: -35
-  smoothTime: 0.5
+  offsetMultiplier: -40
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &1928261073
 SpriteRenderer:
@@ -3486,8 +3486,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674ecbea91b00004e8ee707e206799b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetMultiplier: 15
-  smoothTime: 0.5
+  offsetMultiplier: 20
+  smoothTime: 0.25
   cam: {fileID: 1762625380}
 --- !u!212 &2133914592
 SpriteRenderer:
