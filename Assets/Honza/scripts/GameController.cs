@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private EnemyAI enemyAI;
     [SerializeField] private GameObject waypointPrefab;
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private Animator imageAnimator;
 
     private GameObject currentTempWaypoint;
 
@@ -39,11 +41,24 @@ public class GameController : MonoBehaviour
     }
     public void GameOver()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartCoroutine(WaitForUI(.5f));
+        //gameOverUI.SetActive(true);
     }
     public void BrokenLeg()
     {
         enemyAI.AwarnessMeterUpdate(100);
+    }
+    IEnumerator WaitForUI(float waitTime)
+    {
+        yield return new WaitForSecondsRealtime(.5f);
+        Time.timeScale = 0;
+        PauseGame();
+    }
+    public void PauseGame()
+    {
+        gameOverUI.SetActive(true);
+        Time.timeScale = 0F;
+        imageAnimator.Play("ImageFadeIn");
     }
 
 }
