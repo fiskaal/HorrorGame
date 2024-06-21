@@ -621,7 +621,7 @@ MonoBehaviour:
   openEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 85003417816370864}
+      - m_Target: {fileID: 230480969895889670}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -636,7 +636,7 @@ MonoBehaviour:
   closeEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 230480969895889670}
+      - m_Target: {fileID: 85003417816370864}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
