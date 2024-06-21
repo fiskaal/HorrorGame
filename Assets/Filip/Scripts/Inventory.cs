@@ -32,6 +32,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private RockThrowing rockThrowing;
     [SerializeField] private GameObject activeItem;
     [SerializeField] private GameObject lastActiveItem;
+    [SerializeField] private Light flashlight;
 
     public void Update()
     {
@@ -147,6 +148,7 @@ public class Inventory : MonoBehaviour
     {
         inventory.SetActive(true);
         crossHair.SetActive(false);
+        flashlight.intensity = 10;
         isOpen = true;
         pauseMenu.inventoryOpened = true;
         Time.timeScale = 0.1F;
@@ -157,6 +159,7 @@ public class Inventory : MonoBehaviour
     {
         inventory.SetActive(false);
         crossHair.SetActive(true);
+        flashlight.intensity = 100;
         isOpen = false;
         pauseMenu.inventoryOpened = false;
         Time.timeScale = 1;
